@@ -3,7 +3,7 @@
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "AssemblyDefinition"
+        "Scripts"
     ],
     "includePlatforms": [
         "Editor",

@@ -7,23 +7,31 @@ public class Player : MonoBehaviour
 	public float gravity = 20;
 	private CharacterController controller;
 
-	void Start()
+	public void Start()
     {
         controller = GetComponent<CharacterController>();
     }
 
     void Update()
 	{
-        Vector3 velocity = controller.velocity;
+		Move(Input.GetAxis("Horizontal"), Input.GetButtonDown("Jump"));
+	}
 
-		velocity.x = Input.GetAxis("Horizontal") * speed;
+	public void Move(float horizontalInput, bool jumpPressed)
+    {
+		Vector3 velocity = controller.velocity;
+		velocity = CalculateMovement(velocity, horizontalInput, jumpPressed, Time.deltaTime);
+		controller.Move(velocity * Time.deltaTime);
+	}
 
-		if (Input.GetButtonDown("Jump"))
+	public Vector3 CalculateMovement(Vector3 currentMovement, float horizontalInput, bool jumpPressed, float deltaTime)
+    {
+		currentMovement.x = horizontalInput * speed;
+		if (jumpPressed)
 		{
-			velocity.y = jumpForce;
+			currentMovement.y = jumpForce;
 		}
-		
-        velocity.y -= gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime); 
-    }
+		currentMovement.y -= gravity * deltaTime;
+		return currentMovement;
+	}
 }
