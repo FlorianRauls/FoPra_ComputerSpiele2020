@@ -406,8 +406,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537fc67903665f846b8b5341d3cae4f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  content: {fileID: 0}
-  levelSelectorPrefab: {fileID: 0}
+  content: {fileID: 734914535}
+  levelSelectorPrefab: {fileID: 2180737142470480092, guid: 259e769262f8fd1438f371d6f63ce18b,
+    type: 3}
 --- !u!1 &433359378
 GameObject:
   m_ObjectHideFlags: 0
