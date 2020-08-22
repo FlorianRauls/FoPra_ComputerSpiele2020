@@ -8,21 +8,24 @@ namespace Tests
 {
     public class WaspTest
     {
-        // A Test behaves as an ordinary method
+        // Tests Wether Or Not The Projectile Will Be Spawned sucessfully
         [Test]
-        public void NewTestScriptSimplePasses()
+        public void TestProjectileSpawning()
         {
-            // Use the Assert class to test conditions
+            GameObject waspObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Wasp"));
+            WaspEnemy wasp = waspObject.GetComponent<WaspEnemy>();
+            Assert.AreNotEqual(wasp.shootProjectile(null),  null);
+  
         }
 
-        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-        // `yield return null;` to skip a frame.
-        [UnityTest]
-        public IEnumerator NewTestScriptWithEnumeratorPasses()
+        // Tests Wether Or Not The Projectile Will Be Spawned In The Right Direction
+        [Test]
+        public void TestProjectileDirection()
         {
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
-            yield return null;
+            
         }
+
+
+
     }
 }

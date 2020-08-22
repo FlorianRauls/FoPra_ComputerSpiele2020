@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaspEnemy : Enemy
+public class Projectile : Enemy
 {
-    public GameObject projectilePrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,13 +15,4 @@ public class WaspEnemy : Enemy
     {
         
     }
-
-    public GameObject shootProjectile(GameObject target)
-    {
-        Vector2 direction = transform.position - target.transform.position;
-
-        return projectile;
-    }
-
-
 }
