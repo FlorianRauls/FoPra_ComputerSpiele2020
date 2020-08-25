@@ -18,14 +18,21 @@ namespace Tests
   
         }
 
-        // Tests Wether Or Not The Projectile Will Be Spawned In The Right Direction
+        // Tests Wether Or Not The Projectile Will Be Fired In The Right Direction
         [Test]
         public void TestProjectileDirection()
         {
             
         }
 
-
-
+        [Test]
+        public void TestOnlyFireInRange()
+        {
+            
+        }
+        public void TestOnlyFireAfterCooldownTime()
+        {
+            
+        }
     }
 }
