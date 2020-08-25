@@ -41,7 +41,21 @@ namespace Tests
         [Test]
         public void TestOnlyFireInRange()
         {
-            
+            GameObject waspObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Wasp"));
+            WaspEnemy wasp = waspObject.GetComponent<WaspEnemy>();
+            waspObject.transform.position = new Vector3(1, 1, 0);
+
+            GameObject targetObjectInRange = new GameObject();
+            targetObjectInRange.transform.position = new Vector3(0, 0, 0);     
+
+            GameObject targetObjectOutRange = new GameObject();
+            targetObjectOutRange.transform.position = new Vector3(50, 50, 50);      
+
+            GameObject projectile = wasp.shootProjectile(targetObjectInRange);
+            GameObject failedProjectile = wasp.shootProjectile(targetObjectOutRange);  
+
+            Assert.AreNotEqual(null, projectile);
+            Assert.AreEqual(null, failedProjectile);
         }
         public void TestOnlyFireAfterCooldownTime()
         {
