@@ -23,8 +23,13 @@ public class WaspEnemy : Enemy
 
     public GameObject shootProjectile(GameObject target)
     {
+        // get direction to target and normalize it by dividing through distance to target
         Vector2 direction = transform.position - target.transform.position;
-        GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.rotation);
+        float distance = direction.magnitude;
+        direction = direction / distance;
+
+        
+        GameObject projectile = Instantiate(projectilePrefab, transform.position + new Vector3(direction.x, direction.y, 0f), transform.rotation);
         
 
         return projectile;
