@@ -69,24 +69,27 @@ namespace Tests
             Assert.AreNotEqual(null, projectile);
             Assert.AreEqual(null, failedProjectile);
         }
+
+        [Test]
         public void TestOnlyFireAfterCooldownTime()
         {
             GameObject waspObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Wasp"));
             WaspEnemy wasp = waspObject.GetComponent<WaspEnemy>();
-            wasp.setRange(2f);
+            wasp.setRange(5f);
             wasp.setCooldown(1f);
             waspObject.transform.position = new Vector3(1, 1, 0);
 
             GameObject targetObjectInRange = new GameObject();
             targetObjectInRange.transform.position = new Vector3(0, 0, 0);     
 
+            wasp.setTimer(2f);
             GameObject success = wasp.shootProjectile(targetObjectInRange);
             GameObject fail = wasp.shootProjectile(targetObjectInRange);
 
             Assert.AreNotEqual(null, success);
             Assert.AreEqual(null, fail);            
-
-
         }
+
+
     }
 }
