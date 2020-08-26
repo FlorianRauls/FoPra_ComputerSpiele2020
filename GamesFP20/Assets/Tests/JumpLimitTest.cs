@@ -19,9 +19,12 @@ namespace Tests
             boy.Move(0f, true);
             Assert.IsTrue(boyObject.transform.position.y > beforeTransform.x);
 
+            float diff = boyObject.transform.position.y - beforeTransform.x;
+
             beforeTransform = boyObject.transform.position;
+            boy.setGrounded(false);
             boy.Move(0f, true);
-            Assert.IsTrue(boyObject.transform.position.y == beforeTransform.y);
+            Assert.IsTrue(boyObject.transform.position.y < beforeTransform.y+diff);
         }
     }
 }

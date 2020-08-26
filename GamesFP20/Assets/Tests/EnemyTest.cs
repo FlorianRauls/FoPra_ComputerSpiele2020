@@ -8,18 +8,7 @@ namespace Tests
 {
     public class EnemyTest
     {
-        // Test whether the GameObject holding the Enemy
-        // Component gets destroyed through death
-        [Test]
-        public void EnemyDeathTest()
-        {
-            GameObject enemyObject = new GameObject();
-            enemyObject.AddComponent<Enemy>();
 
-            enemyObject.GetComponent<Enemy>().Die();
-
-            Assert.AreEqual(enemyObject, null);
-        }
 
         [Test]
         public void EnemyBasicMovementTest()

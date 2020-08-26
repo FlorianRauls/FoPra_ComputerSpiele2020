@@ -44,4 +44,19 @@ public class Player : MonoBehaviour
 		currentMovement.y -= gravity * deltaTime;
 		return currentMovement;
 	}
+
+	public bool getGrounded()
+	{
+		return grounded;
+	}
+
+	public void setGrounded(bool newGrounding)
+	{
+		grounded = newGrounding;
+	}
+
+	public float getGravity()
+	{
+		return gravity;
+	}
 }

@@ -23,18 +23,25 @@ public class WaspEnemy : Enemy
     {
 
         timer = timer + Time.deltaTime;
+
         if(target != null)
         {
-            if(timer > cooldown)
-            {
-                timer = 0f;
-                shootProjectile(target);
-            }
+
+            shootProjectile(target);
+            
         }
     }
 
     public GameObject shootProjectile(GameObject target)
     {
+        if(timer < cooldown)
+        {
+            return null;
+        }
+        else
+        {
+            timer = 0f;
+        }
         // get direction to target and normalize it by dividing through distance to target
         Vector2 direction = directionToTarget(target);
         float distance = distanceToTarget(direction);
@@ -45,6 +52,8 @@ public class WaspEnemy : Enemy
             return null;
         }
 
+
+
         GameObject projectile = Instantiate(projectilePrefab,
          transform.position + new Vector3(normalized_direction.x,
             normalized_direction.y, 0f), transform.rotation);
@@ -53,12 +62,12 @@ public class WaspEnemy : Enemy
         return projectile;
     }
 
-    public float directionToTarget(GameObject target)
+    public Vector3 directionToTarget(GameObject target)
     {
         return transform.position - target.transform.position;
     }
 
-    public float distanceToTarget(Vector2 direction)
+    public float distanceToTarget(Vector3 direction)
     {
         return direction.magnitude;
     }
