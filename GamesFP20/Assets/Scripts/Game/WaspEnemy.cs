@@ -5,8 +5,11 @@ using UnityEngine;
 public class WaspEnemy : Enemy
 {
     public GameObject projectilePrefab;
+    GameObject target;
     
     float cooldown = 3f;
+
+    float timer = 0f;
     float range = 15f;
     GameObject projectile;
     // Start is called before the first frame update
@@ -18,21 +21,46 @@ public class WaspEnemy : Enemy
     // Update is called once per frame
     void Update()
     {
-        
+
+        timer = timer + Time.deltaTime;
+        if(target != null)
+        {
+            if(timer > cooldown)
+            {
+                timer = 0f;
+                shootProjectile(target);
+            }
+        }
     }
 
     public GameObject shootProjectile(GameObject target)
     {
         // get direction to target and normalize it by dividing through distance to target
-        Vector2 direction = transform.position - target.transform.position;
-        float distance = direction.magnitude;
-        direction = direction / distance;
+        Vector2 direction = directionToTarget(target);
+        float distance = distanceToTarget(direction);
+        Vector2 normalized_direction = direction / distance;
 
-        
-        GameObject projectile = Instantiate(projectilePrefab, transform.position + new Vector3(direction.x, direction.y, 0f), transform.rotation);
+        if(distance > range)
+        {
+            return null;
+        }
+
+        GameObject projectile = Instantiate(projectilePrefab,
+         transform.position + new Vector3(normalized_direction.x,
+            normalized_direction.y, 0f), transform.rotation);
         
 
         return projectile;
+    }
+
+    public float directionToTarget(GameObject target)
+    {
+        return transform.position - target.transform.position;
+    }
+
+    public float distanceToTarget(Vector2 direction)
+    {
+        return direction.magnitude;
     }
 
 
