@@ -43,8 +43,8 @@ namespace Tests
             Vector3 shouldBe = waspObject.transform.position + direction;
 
 
-            Assert.AreEqual(shouldBe.x, projectile.transform.position.x); 
-            Assert.AreEqual(shouldBe.y, projectile.transform.position.y);   
+            Assert.IsTrue(shouldBe.x - projectile.transform.position.x < 0.15f); 
+            Assert.IsTrue(shouldBe.y - projectile.transform.position.y < 0.15f);   
         }
 
         [Test]
