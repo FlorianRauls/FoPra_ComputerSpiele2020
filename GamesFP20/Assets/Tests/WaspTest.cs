@@ -39,7 +39,6 @@ namespace Tests
             direction = direction / distance;
 
             GameObject projectile = wasp.shootProjectile(targetObject);
-            Debug.Log(projectile);
             Vector3 shouldBe = waspObject.transform.position + direction;
 
 
@@ -52,16 +51,19 @@ namespace Tests
         {
             GameObject waspObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Wasp"));
             WaspEnemy wasp = waspObject.GetComponent<WaspEnemy>();
-            wasp.setRange(2f);
+            wasp.setCooldown(0f);
+            wasp.setRange(5f);
             waspObject.transform.position = new Vector3(1, 1, 0);
 
             GameObject targetObjectInRange = new GameObject();
             targetObjectInRange.transform.position = new Vector3(0, 0, 0);     
 
             GameObject targetObjectOutRange = new GameObject();
-            targetObjectOutRange.transform.position = new Vector3(50, 50, 50);      
+            targetObjectOutRange.transform.position = new Vector3(50, 50, 50);    
 
+            wasp.setTimer(5f);
             GameObject projectile = wasp.shootProjectile(targetObjectInRange);
+            wasp.setTimer(5f);
             GameObject failedProjectile = wasp.shootProjectile(targetObjectOutRange);  
 
             Assert.AreNotEqual(null, projectile);
