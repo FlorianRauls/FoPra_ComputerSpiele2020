@@ -121,7 +121,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &1007902067
+--- !u!114 &273016531
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f09f0f82599b5448579854e622a4c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1983019465
+--- !u!1 &687712936
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,10 +141,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1983019469}
-  - component: {fileID: 1983019468}
-  - component: {fileID: 1983019467}
-  - component: {fileID: 1983019466}
+  - component: {fileID: 687712939}
+  - component: {fileID: 687712938}
+  - component: {fileID: 687712937}
   m_Layer: 0
   m_Name: Code-based tests runner
   m_TagString: Untagged
@@ -152,37 +151,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1983019466
+--- !u!114 &687712937
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983019465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20793418366caf14293b29c55df5e9ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1983019467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983019465}
+  m_GameObject: {fileID: 687712936}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3cf5cb9e1ef590c48b1f919f2a7bd895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1983019468
+--- !u!114 &687712938
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983019465}
+  m_GameObject: {fileID: 687712936}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 102e512f651ee834f951a2516c1ea3b8, type: 3}
@@ -194,7 +181,7 @@ MonoBehaviour:
   testStartedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1983019467}
+      - m_Target: {fileID: 687712937}
         m_MethodName: TestStarted
         m_Mode: 0
         m_Arguments:
@@ -205,7 +192,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1983019466}
+      - m_Target: {fileID: 1641470976}
         m_MethodName: TestStarted
         m_Mode: 0
         m_Arguments:
@@ -216,7 +203,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1007902067}
+      - m_Target: {fileID: 1951787899}
+        m_MethodName: TestStarted
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 273016531}
         m_MethodName: TestStarted
         m_Mode: 0
         m_Arguments:
@@ -230,7 +228,7 @@ MonoBehaviour:
   testFinishedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1983019467}
+      - m_Target: {fileID: 687712937}
         m_MethodName: TestFinished
         m_Mode: 0
         m_Arguments:
@@ -241,7 +239,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1983019466}
+      - m_Target: {fileID: 1641470976}
         m_MethodName: TestFinished
         m_Mode: 0
         m_Arguments:
@@ -252,7 +250,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1007902067}
+      - m_Target: {fileID: 1951787899}
+        m_MethodName: TestFinished
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 273016531}
         m_MethodName: TestFinished
         m_Mode: 0
         m_Arguments:
@@ -266,7 +275,7 @@ MonoBehaviour:
   runStartedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1983019467}
+      - m_Target: {fileID: 687712937}
         m_MethodName: RunStarted
         m_Mode: 0
         m_Arguments:
@@ -277,7 +286,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1983019466}
+      - m_Target: {fileID: 1641470976}
         m_MethodName: RunStarted
         m_Mode: 0
         m_Arguments:
@@ -288,7 +297,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1007902067}
+      - m_Target: {fileID: 1951787899}
+        m_MethodName: RunStarted
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 273016531}
         m_MethodName: RunStarted
         m_Mode: 0
         m_Arguments:
@@ -302,7 +322,7 @@ MonoBehaviour:
   runFinishedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1983019467}
+      - m_Target: {fileID: 687712937}
         m_MethodName: RunFinished
         m_Mode: 0
         m_Arguments:
@@ -313,7 +333,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1983019466}
+      - m_Target: {fileID: 1641470976}
         m_MethodName: RunFinished
         m_Mode: 0
         m_Arguments:
@@ -324,7 +344,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1007902067}
+      - m_Target: {fileID: 1951787899}
+        m_MethodName: RunFinished
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 273016531}
         m_MethodName: RunFinished
         m_Mode: 0
         m_Arguments:
@@ -345,14 +376,14 @@ MonoBehaviour:
       synchronousOnly: 0
     sceneBased: 0
     originalScene: 
-    bootstrapScene: Assets/InitTestScene637340678243561701.unity
---- !u!4 &1983019469
+    bootstrapScene: Assets/InitTestScene637340727747815483.unity
+--- !u!4 &687712939
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983019465}
+  m_GameObject: {fileID: 687712936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -360,3 +391,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1641470976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d44e6804bc58be84ea71a619b468f150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1951787899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e1b3cbf3fac6a459b1a602167ad311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -14,7 +14,8 @@ namespace Tests
         {
             GameObject waspObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Wasp"));
             WaspEnemy wasp = waspObject.GetComponent<WaspEnemy>();
-            Assert.AreNotEqual(wasp.shootProjectile(null),  null);
+            wasp.setTimer(5f);
+            Assert.AreNotEqual(wasp.shootProjectile(new GameObject()),  null);
   
         }
 
@@ -24,18 +25,26 @@ namespace Tests
         {
             GameObject waspObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Wasp"));
             WaspEnemy wasp = waspObject.GetComponent<WaspEnemy>();
+            waspObject.transform.position = new Vector3(1, 1, 1);
+            wasp.setCooldown(0f);
+            wasp.setTimer(1f);
+            wasp.setRange(15f);
 
             GameObject targetObject = new GameObject();
             targetObject.transform.position = new Vector3(0, 0, 0);
 
 
-            Vector2 direction = waspObject.transform.position - targetObject.transform.position;
+            Vector3 direction = waspObject.transform.position - targetObject.transform.position;
             float distance = direction.magnitude;
             direction = direction / distance;
 
             GameObject projectile = wasp.shootProjectile(targetObject);
+            Debug.Log(projectile);
+            Vector3 shouldBe = waspObject.transform.position + direction;
 
-            Assert.AreEqual(waspObject.transform.position + new Vector3(direction.x, direction.y, 0), projectile.transform.position);    
+
+            Assert.AreEqual(shouldBe.x, projectile.transform.position.x); 
+            Assert.AreEqual(shouldBe.y, projectile.transform.position.y);   
         }
 
         [Test]

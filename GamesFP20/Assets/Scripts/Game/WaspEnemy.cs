@@ -42,13 +42,21 @@ public class WaspEnemy : Enemy
         {
             timer = 0f;
         }
+
         // get direction to target and normalize it by dividing through distance to target
         Vector2 direction = directionToTarget(target);
         float distance = distanceToTarget(direction);
+
+        if(distance == 0f)
+        {
+            distance = 0.0000001f;
+        }
+
         Vector2 normalized_direction = direction / distance;
 
         if(distance > range)
         {
+            
             return null;
         }
 
@@ -72,7 +80,6 @@ public class WaspEnemy : Enemy
         return direction.magnitude;
     }
 
-
     public void setCooldown(float newCooldown)
     {
         cooldown = newCooldown;
@@ -91,6 +98,16 @@ public class WaspEnemy : Enemy
     public float getRange()
     {
         return range;
+    }
+
+    public void setTimer(float newTimer)
+    {
+        timer = newTimer;
+    }
+
+    public float getTimer()
+    {
+        return timer;
     }
 
 
