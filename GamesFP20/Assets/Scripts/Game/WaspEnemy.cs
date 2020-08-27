@@ -123,7 +123,8 @@ public class WaspEnemy : Enemy
          transform.position - new Vector3(normalized_direction.x,
             normalized_direction.y, 0f), transform.rotation);
         
-
+        projectile.GetComponent<Projectile>().setTarget(target);
+        projectile.GetComponent<Projectile>().setTargetLocation(target.transform.position);
         return projectile;
     }
 
