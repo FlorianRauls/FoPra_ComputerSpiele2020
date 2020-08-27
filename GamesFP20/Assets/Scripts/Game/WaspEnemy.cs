@@ -39,8 +39,12 @@ public class WaspEnemy : Enemy
         Vector3 copyPosition = transform.position;
         copyPosition.y += Mathf.Sin (Time.fixedTime * Mathf.PI * frequency) * amplitude;
         transform.position = copyPosition;
+
+        Debug.Log(target);
     }
 
+
+    // TODO: refactor this function such that it does not take so much lines of code
     public GameObject SearchTarget(GameObject[] candidates)
     {
         if(candidates == null ||candidates.Length == 0)
@@ -48,9 +52,25 @@ public class WaspEnemy : Enemy
             return null;
         }
         
-        if(target != null & distanceToTarget(directionToTarget(target)) < range)
+        if(target != null)
         {
-            return target;
+            if(distanceToTarget(directionToTarget(target)) < range)
+                return target;
+            else
+            {
+                GameObject closestEnemy = candidates[0];
+                float shortestDist = distanceToTarget(directionToTarget(closestEnemy));
+                foreach(GameObject candidate in candidates)
+                {
+                    float currentDist = distanceToTarget(directionToTarget(candidate));
+                    if(currentDist < shortestDist);
+                    {
+                        shortestDist = currentDist;
+                        closestEnemy = candidate;
+                    }
+                }
+                return closestEnemy;                
+            }
         }
         else
         {
