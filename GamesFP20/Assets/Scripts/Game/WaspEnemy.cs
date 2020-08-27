@@ -10,7 +10,10 @@ public class WaspEnemy : Enemy
     float cooldown = 3f;
 
     float timer = 0f;
-    float range = 15f;
+    public float range = 15f;
+
+    public float amplitude = 0.3f;
+    public float frequency = 0.3f;
     GameObject projectile;
     GameObject[] possibleTargets = new GameObject[2];
     // Start is called before the first frame update
@@ -32,6 +35,10 @@ public class WaspEnemy : Enemy
         }
 
         target = SearchTarget(possibleTargets);
+
+        Vector3 copyPosition = transform.position;
+        copyPosition.y += Mathf.Sin (Time.fixedTime * Mathf.PI * frequency) * amplitude;
+        transform.position = copyPosition;
     }
 
     public GameObject SearchTarget(GameObject[] candidates)

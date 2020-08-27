@@ -257,6 +257,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wasp
       objectReference: {fileID: 0}
+    - target: {fileID: 8642478923799706575, guid: 02134a5166e213e40a7db5c4c85a5e70,
+        type: 3}
+      propertyPath: amplitude
+      value: 0.001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02134a5166e213e40a7db5c4c85a5e70, type: 3}
 --- !u!1 &705507993
