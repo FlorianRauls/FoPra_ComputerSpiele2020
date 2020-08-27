@@ -1,31 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CoverageReport scope="Summary">
   <Summary>
-    <Generatedon>27.08.2020 - 11:53:11</Generatedon>
+    <Generatedon>27.08.2020 - 13:45:50</Generatedon>
     <Parser>MultiReportParser (3x OpenCoverParser)</Parser>
     <Assemblies>2</Assemblies>
     <Classes>13</Classes>
     <Files>13</Files>
-    <Coveredlines>196</Coveredlines>
-    <Uncoveredlines>69</Uncoveredlines>
-    <Coverablelines>265</Coverablelines>
-    <Totallines>570</Totallines>
-    <Linecoverage>73.9</Linecoverage>
+    <Coveredlines>285</Coveredlines>
+    <Uncoveredlines>77</Uncoveredlines>
+    <Coverablelines>362</Coverablelines>
+    <Totallines>677</Totallines>
+    <Linecoverage>78.7</Linecoverage>
     <Coveredbranches>0</Coveredbranches>
     <Totalbranches>0</Totalbranches>
   </Summary>
   <Coverage>
-    <Assembly name="Scripts" classes="7" coverage="59.5" coveredlines="87" coverablelines="146" totallines="314" branchcoverage="" coveredbranches="0" totalbranches="0">
-      <Class name="Enemy" coverage="55.5" coveredlines="10" coverablelines="18" totallines="45" branchcoverage="" coveredbranches="0" totalbranches="0" />
+    <Assembly name="Scripts" classes="7" coverage="69.9" coveredlines="156" coverablelines="223" totallines="392" branchcoverage="" coveredbranches="0" totalbranches="0">
+      <Class name="Enemy" coverage="72.2" coveredlines="13" coverablelines="18" totallines="45" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="LevelLoader" coverage="0" coveredlines="0" coverablelines="7" totallines="20" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="LevelSelectGenerator" coverage="0" coveredlines="0" coverablelines="14" totallines="28" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Menu" coverage="0" coveredlines="0" coverablelines="6" totallines="17" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Player" coverage="82.8" coveredlines="29" coverablelines="35" totallines="62" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="Projectile" coverage="50" coveredlines="2" coverablelines="4" totallines="18" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="WaspEnemy" coverage="74.1" coveredlines="46" coverablelines="62" totallines="124" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Projectile" coverage="80" coveredlines="16" coverablelines="20" totallines="39" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="WaspEnemy" coverage="79.6" coveredlines="98" coverablelines="123" totallines="181" branchcoverage="" coveredbranches="0" totalbranches="0" />
     </Assembly>
-    <Assembly name="Tests" classes="6" coverage="91.5" coveredlines="109" coverablelines="119" totallines="256" branchcoverage="" coveredbranches="0" totalbranches="0">
-      <Class name="ProjectileTest" coverage="0" coveredlines="0" coverablelines="6" totallines="23" branchcoverage="" coveredbranches="0" totalbranches="0" />
+    <Assembly name="Tests" classes="6" coverage="92.8" coveredlines="129" coverablelines="139" totallines="285" branchcoverage="" coveredbranches="0" totalbranches="0">
+      <Class name="ProjectileTest" coverage="76.9" coveredlines="20" coverablelines="26" totallines="52" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Tests.EnemyTest" coverage="100" coveredlines="9" coverablelines="9" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Tests.JumpLimitTest" coverage="100" coveredlines="13" coverablelines="13" totallines="30" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Tests.MovementTest" coverage="100" coveredlines="21" coverablelines="21" totallines="42" branchcoverage="" coveredbranches="0" totalbranches="0" />

@@ -1,23 +1,52 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.TestTools;
 
 public class ProjectileTest : MonoBehaviour
 {
-        public void TestDamageDealt()
-        {
 
-  
+
+        [Test]
+        public void TestNotDyingOnCollisionWithEnemy()
+        {
+            GameObject projectileObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Projectile"));
+            Projectile projectile = projectileObject.GetComponent<Projectile>();
+
+            GameObject gameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Wasp"));
+
+
+            projectile.collide(gameObject);
+            
+            Assert.IsTrue(!projectile.getDestroyed());
         }
+
+        [Test]
         public void TestDyingOnCollisionWithPlayer()
         {
+            GameObject projectileObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Projectile"));
+            Projectile projectile = projectileObject.GetComponent<Projectile>();
 
-  
+            GameObject gameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
+
+
+            projectile.collide(gameObject);
+            
+            Assert.IsTrue(projectile.getDestroyed());
         }
-        public void TestDyingOnCollisionWithGround()
+                
+        // Tests Destruction Of Projectile After Collision With ground
+        [Test]
+        public void TestDestructionOnGroundCollision()
         {
+            GameObject projectileObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Projectile"));
+            Projectile projectile = projectileObject.GetComponent<Projectile>();
 
-  
+            GameObject gameObject = new GameObject();
+
+            projectile.collide(gameObject);
+            
+            Assert.IsTrue(projectile.getDestroyed());
         }
-
 }
