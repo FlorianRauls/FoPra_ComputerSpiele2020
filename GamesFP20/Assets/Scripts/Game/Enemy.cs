@@ -41,5 +41,10 @@ public class Enemy : MonoBehaviour
 		return currentMovement;
 	}
 
+    public void collide(GameObject other)
+    {
+
+    }
+
 
 }
