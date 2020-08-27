@@ -49,4 +49,30 @@ public class ProjectileTest : MonoBehaviour
             
             Assert.IsTrue(projectile.getDestroyed());
         }
+
+        [Test]
+        public void TestReceivingTarget()
+        {
+            GameObject projectileObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Projectile"));
+            Projectile projectile = projectileObject.GetComponent<Projectile>();
+
+            GameObject gameObject = new GameObject();
+
+            projectile.setTarget(gameObject);
+            
+            Assert.AreEqual(projectile.getTarget(9), gameObject);
+        }
+
+        [Test]
+        public void TestGettingTargetLocation()
+        {
+             GameObject projectileObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Projectile"));
+            Projectile projectile = projectileObject.GetComponent<Projectile>();
+
+            GameObject gameObject = new GameObject();
+
+            projectile.setTargetLocation(gameObject.transform.position);
+            
+            Assert.AreEqual(projectile.getTargetLocation(), gameObject.transform.position);               
+        }
 }
