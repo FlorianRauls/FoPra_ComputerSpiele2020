@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2020-08-27_15-52-38" tag="">
+  <assembly name="Scripts">
+    <class name="Enemy" coveredlines="15" coverablelines="20" totallines="50" coveredbranches="0" totalbranches="0" />
+    <class name="LevelLoader" coveredlines="0" coverablelines="7" totallines="20" coveredbranches="0" totalbranches="0" />
+    <class name="LevelSelectGenerator" coveredlines="0" coverablelines="14" totallines="28" coveredbranches="0" totalbranches="0" />
+    <class name="Menu" coveredlines="0" coverablelines="6" totallines="17" coveredbranches="0" totalbranches="0" />
+    <class name="Player" coveredlines="33" coverablelines="39" totallines="69" coveredbranches="0" totalbranches="0" />
+    <class name="Projectile" coveredlines="32" coverablelines="33" totallines="61" coveredbranches="0" totalbranches="0" />
+    <class name="WaspEnemy" coveredlines="98" coverablelines="123" totallines="181" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="Tests">
+    <class name="ProjectileTest" coveredlines="35" coverablelines="40" totallines="78" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.EnemyTest" coveredlines="9" coverablelines="9" totallines="27" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.JumpLimitTest" coveredlines="13" coverablelines="13" totallines="30" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.MovementTest" coveredlines="21" coverablelines="21" totallines="42" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.NewTestScript" coveredlines="5" coverablelines="5" totallines="28" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.WaspTest" coveredlines="61" coverablelines="65" totallines="106" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>

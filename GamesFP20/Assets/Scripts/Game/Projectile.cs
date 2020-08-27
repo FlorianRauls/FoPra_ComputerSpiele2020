@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Projectile : Enemy
 {
+    GameObject target;
+    Vector3 targetPosition;
 
     bool destroyed = false;
     // Start is called before the first frame update
@@ -35,5 +37,25 @@ public class Projectile : Enemy
     public void setDetroyed(bool newDestroyed)
     {
         destroyed = newDestroyed;
+    }
+
+    public GameObject getTarget()
+    {
+        return target;
+    }
+
+    public void setTarget(GameObject newTarget)
+    {
+        target = newTarget;
+    }
+
+    public Vector3 getTargetLocation()
+    {
+        return targetPosition;
+    }
+
+    public void setTargetLocation(Vector3 newLocation)
+    {
+        targetPosition = newLocation;
     }
 }

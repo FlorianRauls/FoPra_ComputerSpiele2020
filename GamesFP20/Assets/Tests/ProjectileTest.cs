@@ -60,7 +60,7 @@ public class ProjectileTest : MonoBehaviour
 
             projectile.setTarget(gameObject);
             
-            Assert.AreEqual(projectile.getTarget(9), gameObject);
+            Assert.AreEqual(projectile.getTarget(), gameObject);
         }
 
         [Test]
