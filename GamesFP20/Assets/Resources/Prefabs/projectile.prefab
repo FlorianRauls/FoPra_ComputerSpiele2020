@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2715944092618146015}
   - component: {fileID: 5648049229219739883}
   - component: {fileID: 5754231955304663013}
-  - component: {fileID: 3734623003210437396}
+  - component: {fileID: -2125578389571371021}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Enemy
@@ -96,29 +96,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
---- !u!61 &3734623003210437396
-BoxCollider2D:
+--- !u!65 &-2125578389571371021
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152940583346416372}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 10.8}
-    newSize: {x: 19.2, y: 10.8}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 19.2, y: 10.8}
-  m_EdgeRadius: 0
+  m_Size: {x: 19.2, y: 10.8, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}

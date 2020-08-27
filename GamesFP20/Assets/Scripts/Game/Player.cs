@@ -59,4 +59,11 @@ public class Player : MonoBehaviour
 	{
 		return gravity;
 	}
+
+	void OnControllerColliderHit(ControllerColliderHit hit)
+	{
+		if(hit.gameObject.tag == "Enemy")
+    		hit.transform.SendMessage("collide", this.gameObject);
+ 	}
+
 }
