@@ -39,7 +39,7 @@ namespace Tests
             direction = direction / distance;
 
             GameObject projectile = wasp.shootProjectile(targetObject);
-            Vector3 shouldBe = waspObject.transform.position + direction;
+            Vector3 shouldBe = waspObject.transform.position - direction;
 
 
             Assert.IsTrue(shouldBe.x - projectile.transform.position.x < 0.15f); 
