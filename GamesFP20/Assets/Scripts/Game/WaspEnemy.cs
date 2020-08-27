@@ -12,10 +12,11 @@ public class WaspEnemy : Enemy
     float timer = 0f;
     float range = 15f;
     GameObject projectile;
+    GameObject[] possibleTargets = new GameObject[2];
     // Start is called before the first frame update
     void Start()
     {
-        
+        possibleTargets = GameObject.FindGameObjectsWithTag("Player");
     }
 
     // Update is called once per frame
@@ -23,12 +24,41 @@ public class WaspEnemy : Enemy
     {
 
         timer = timer + Time.deltaTime;
-
         if(target != null)
         {
-
-            shootProjectile(target);
+            if(timer > cooldown)
+                shootProjectile(target);
             
+        }
+
+        target = SearchTarget(possibleTargets);
+    }
+
+    public GameObject SearchTarget(GameObject[] candidates)
+    {
+        if(candidates == null ||candidates.Length == 0)
+        {
+            return null;
+        }
+        
+        if(target != null & distanceToTarget(directionToTarget(target)) < range)
+        {
+            return target;
+        }
+        else
+        {
+            GameObject closestEnemy = candidates[0];
+            float shortestDist = distanceToTarget(directionToTarget(closestEnemy));
+            foreach(GameObject candidate in candidates)
+            {
+                float currentDist = distanceToTarget(directionToTarget(candidate));
+                if(currentDist < shortestDist);
+                {
+                    shortestDist = currentDist;
+                    closestEnemy = candidate;
+                }
+            }
+            return closestEnemy;
         }
     }
 
