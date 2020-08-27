@@ -18,7 +18,7 @@ public class Projectile : Enemy
     void Update()
     {
         float step =  speed * Time.deltaTime; // calculate distance to move
-        transform.position = Vector3.MoveTowards(transform.position, targetDirection, -step);
+        transform.position = Vector3.MoveTowards(transform.position, targetDirection + transform.position, -step);
     }
 
 
