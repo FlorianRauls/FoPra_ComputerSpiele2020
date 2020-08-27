@@ -120,7 +120,7 @@ public class WaspEnemy : Enemy
 
 
         GameObject projectile = Instantiate(projectilePrefab,
-         transform.position + new Vector3(normalized_direction.x,
+         transform.position - new Vector3(normalized_direction.x,
             normalized_direction.y, 0f), transform.rotation);
         
 
