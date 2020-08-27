@@ -90,6 +90,17 @@ namespace Tests
             Assert.AreEqual(null, fail);            
         }
 
+        [Test]
 
+        public void TestFindTarget()
+        {
+            GameObject waspObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Wasp"));
+            WaspEnemy wasp = waspObject.GetComponent<WaspEnemy>();        
+
+            GameObject targetObjectInRange = new GameObject();
+            wasp.setTarget(targetObjectInRange);
+
+            Assert.AreEqual(wasp.getTarget(), targetObjectInRange);       
+        }
     }
 }

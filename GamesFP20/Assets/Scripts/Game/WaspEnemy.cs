@@ -110,5 +110,15 @@ public class WaspEnemy : Enemy
         return timer;
     }
 
+    public GameObject getTarget()
+    {
+        return target;
+    }
+
+    public void setTarget(GameObject newTarget)
+    {
+        target = newTarget;
+    }
+
 
 }
