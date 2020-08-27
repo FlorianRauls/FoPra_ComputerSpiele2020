@@ -8,6 +8,12 @@ public class Projectile : Enemy
     Vector3 targetDirection;
 
     bool destroyed = false;
+
+   public Vector3 rotationDirection = new Vector3(0,0,1);
+   public float smoothTime = 5f;
+   private float convertedTime = 200;
+   private float smooth = 5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +25,9 @@ public class Projectile : Enemy
     {
         float step =  speed * Time.deltaTime; // calculate distance to move
         transform.position = Vector3.MoveTowards(transform.position, targetDirection + transform.position, -step);
+
+        float smooth = Time.deltaTime * smoothTime * convertedTime;
+        transform.Rotate(rotationDirection * smooth);
     }
 
 

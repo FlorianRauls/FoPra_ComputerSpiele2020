@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  rotationDirection: {x: 0, y: 0, z: 1}
+  smoothTime: 2
 --- !u!65 &-2125578389571371021
 BoxCollider:
   m_ObjectHideFlags: 0
