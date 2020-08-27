@@ -71,8 +71,8 @@ public class ProjectileTest : MonoBehaviour
 
             GameObject gameObject = new GameObject();
 
-            projectile.setTargetLocation(gameObject.transform.position);
+            projectile.setTargetDirection(gameObject.transform.position);
             
-            Assert.AreEqual(projectile.getTargetLocation(), gameObject.transform.position);               
+            Assert.AreEqual(projectile.getTargetDirection(), gameObject.transform.position);               
         }
 }

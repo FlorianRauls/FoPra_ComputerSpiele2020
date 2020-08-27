@@ -124,7 +124,7 @@ public class WaspEnemy : Enemy
             normalized_direction.y, 0f), transform.rotation);
         
         projectile.GetComponent<Projectile>().setTarget(target);
-        projectile.GetComponent<Projectile>().setTargetLocation(target.transform.position);
+        projectile.GetComponent<Projectile>().setTargetDirection(normalized_direction);
         return projectile;
     }
 

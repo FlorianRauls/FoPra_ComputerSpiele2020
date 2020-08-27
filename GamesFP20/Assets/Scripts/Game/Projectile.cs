@@ -5,7 +5,7 @@ using UnityEngine;
 public class Projectile : Enemy
 {
     GameObject target;
-    Vector3 targetPosition;
+    Vector3 targetDirection;
 
     bool destroyed = false;
     // Start is called before the first frame update
@@ -18,7 +18,7 @@ public class Projectile : Enemy
     void Update()
     {
         float step =  speed * Time.deltaTime; // calculate distance to move
-        transform.position = Vector3.MoveTowards(transform.position, target.transform.position, step);
+        transform.position = Vector3.MoveTowards(transform.position, targetDirection, -step);
     }
 
 
@@ -50,13 +50,13 @@ public class Projectile : Enemy
         target = newTarget;
     }
 
-    public Vector3 getTargetLocation()
+    public Vector3 getTargetDirection()
     {
-        return targetPosition;
+        return targetDirection;
     }
 
-    public void setTargetLocation(Vector3 newLocation)
+    public void setTargetDirection(Vector3 newLocation)
     {
-        targetPosition = newLocation;
+        targetDirection = newLocation;
     }
 }
