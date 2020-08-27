@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="0.0.0.0">
-  <Summary numSequencePoints="346" visitedSequencePoints="269" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="77.75" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="11" numClasses="15" visitedMethods="41" numMethods="56" />
+  <Summary numSequencePoints="346" visitedSequencePoints="274" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="79.19" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="11" numClasses="15" visitedMethods="43" numMethods="56" />
   <Modules>
     <Module>
-      <Summary numSequencePoints="130" visitedSequencePoints="127" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="97.69" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="7" numClasses="7" visitedMethods="14" numMethods="14" />
+      <Summary numSequencePoints="130" visitedSequencePoints="128" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="98.46" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="7" numClasses="7" visitedMethods="14" numMethods="14" />
       <ModuleTime>0001-01-01T00:00:00</ModuleTime>
       <ModuleName>Tests</ModuleName>
       <Files>
@@ -16,11 +16,11 @@
       </Files>
       <Classes>
         <Class>
-          <Summary numSequencePoints="21" visitedSequencePoints="20" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="95.24" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="3" numMethods="3" />
+          <Summary numSequencePoints="21" visitedSequencePoints="21" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="3" numMethods="3" />
           <FullName>ProjectileTest</FullName>
           <Methods>
-            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="85.71" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
-              <Summary numSequencePoints="7" visitedSequencePoints="6" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="85.71" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="7" visitedSequencePoints="7" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
               <MetadataToken>100663297</MetadataToken>
               <Name>System.Void ProjectileTest::TestNotDyingOnCollisionWithEnemy()</Name>
               <FileRef uid="1" />
@@ -31,7 +31,7 @@
                 <SequencePoint vc="1" uspid="4" ordinal="0" offset="24" sl="17" sc="13" el="17" ec="13" bec="0" bev="0" fileid="1" />
                 <SequencePoint vc="1" uspid="5" ordinal="0" offset="40" sl="20" sc="13" el="20" ec="13" bec="0" bev="0" fileid="1" />
                 <SequencePoint vc="1" uspid="6" ordinal="0" offset="48" sl="22" sc="13" el="22" ec="13" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="0" uspid="7" ordinal="0" offset="63" sl="23" sc="9" el="23" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="7" ordinal="0" offset="63" sl="23" sc="9" el="23" ec="9" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -316,7 +316,7 @@
       </Classes>
     </Module>
     <Module>
-      <Summary numSequencePoints="216" visitedSequencePoints="142" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="65.74" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="4" numClasses="8" visitedMethods="27" numMethods="42" />
+      <Summary numSequencePoints="216" visitedSequencePoints="146" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="67.59" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="4" numClasses="8" visitedMethods="29" numMethods="42" />
       <ModuleTime>0001-01-01T00:00:00</ModuleTime>
       <ModuleName>Scripts</ModuleName>
       <Files>
@@ -361,9 +361,9 @@
               <Name>System.Void Enemy::Die()</Name>
               <FileRef uid="7" />
               <SequencePoints>
-                <SequencePoint vc="3" uspid="135" ordinal="0" offset="0" sl="25" sc="5" el="25" ec="5" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="3" uspid="136" ordinal="0" offset="1" sl="26" sc="9" el="26" ec="9" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="3" uspid="137" ordinal="0" offset="13" sl="27" sc="5" el="27" ec="5" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="2" uspid="135" ordinal="0" offset="0" sl="25" sc="5" el="25" ec="5" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="2" uspid="136" ordinal="0" offset="1" sl="26" sc="9" el="26" ec="9" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="2" uspid="137" ordinal="0" offset="13" sl="27" sc="5" el="27" ec="5" bec="0" bev="0" fileid="7" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -402,7 +402,7 @@
               <Name>Enemy::Enemy()</Name>
               <FileRef uid="7" />
               <SequencePoints>
-                <SequencePoint vc="16" uspid="149" ordinal="0" offset="0" sl="9" sc="2" el="9" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="15" uspid="149" ordinal="0" offset="0" sl="9" sc="2" el="9" ec="2" bec="0" bev="0" fileid="7" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -562,28 +562,28 @@
           </Methods>
         </Class>
         <Class>
-          <Summary numSequencePoints="18" visitedSequencePoints="14" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="77.78" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="4" numMethods="6" />
+          <Summary numSequencePoints="18" visitedSequencePoints="18" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="6" numMethods="6" />
           <FullName>Projectile</FullName>
           <Methods>
-            <Method visited="false" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="0.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
-              <Summary numSequencePoints="2" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="2" visitedSequencePoints="2" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
               <MetadataToken>100663315</MetadataToken>
               <Name>System.Void Projectile::Start()</Name>
               <FileRef uid="10" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="192" ordinal="0" offset="0" sl="11" sc="0" el="11" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="193" ordinal="0" offset="1" sl="13" sc="0" el="13" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="1" uspid="192" ordinal="0" offset="0" sl="11" sc="5" el="11" ec="5" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="1" uspid="193" ordinal="0" offset="1" sl="13" sc="5" el="13" ec="5" bec="0" bev="0" fileid="10" />
               </SequencePoints>
               <BranchPoints />
             </Method>
-            <Method visited="false" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="0.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
-              <Summary numSequencePoints="2" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="2" visitedSequencePoints="2" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
               <MetadataToken>100663316</MetadataToken>
               <Name>System.Void Projectile::Update()</Name>
               <FileRef uid="10" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="194" ordinal="0" offset="0" sl="17" sc="0" el="17" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="195" ordinal="0" offset="1" sl="19" sc="0" el="19" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="9" uspid="194" ordinal="0" offset="0" sl="17" sc="5" el="17" ec="5" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="9" uspid="195" ordinal="0" offset="1" sl="19" sc="5" el="19" ec="5" bec="0" bev="0" fileid="10" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -595,10 +595,10 @@
               <SequencePoints>
                 <SequencePoint vc="3" uspid="196" ordinal="0" offset="0" sl="23" sc="5" el="23" ec="5" bec="0" bev="0" fileid="10" />
                 <SequencePoint vc="3" uspid="197" ordinal="0" offset="1" sl="24" sc="9" el="24" ec="9" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="3" uspid="198" ordinal="0" offset="60" sl="25" sc="9" el="25" ec="9" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="3" uspid="199" ordinal="0" offset="61" sl="26" sc="13" el="26" ec="13" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="3" uspid="200" ordinal="0" offset="69" sl="27" sc="13" el="27" ec="13" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="3" uspid="201" ordinal="0" offset="76" sl="28" sc="9" el="28" ec="9" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="2" uspid="198" ordinal="0" offset="60" sl="25" sc="9" el="25" ec="9" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="2" uspid="199" ordinal="0" offset="61" sl="26" sc="13" el="26" ec="13" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="2" uspid="200" ordinal="0" offset="69" sl="27" sc="13" el="27" ec="13" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="2" uspid="201" ordinal="0" offset="76" sl="28" sc="9" el="28" ec="9" bec="0" bev="0" fileid="10" />
                 <SequencePoint vc="3" uspid="202" ordinal="0" offset="77" sl="29" sc="5" el="29" ec="5" bec="0" bev="0" fileid="10" />
               </SequencePoints>
               <BranchPoints />
@@ -621,9 +621,9 @@
               <Name>System.Void Projectile::setDetroyed(System.Boolean)</Name>
               <FileRef uid="10" />
               <SequencePoints>
-                <SequencePoint vc="3" uspid="206" ordinal="0" offset="0" sl="36" sc="5" el="36" ec="5" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="3" uspid="207" ordinal="0" offset="1" sl="37" sc="9" el="37" ec="9" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="3" uspid="208" ordinal="0" offset="8" sl="38" sc="5" el="38" ec="5" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="2" uspid="206" ordinal="0" offset="0" sl="36" sc="5" el="36" ec="5" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="2" uspid="207" ordinal="0" offset="1" sl="37" sc="9" el="37" ec="9" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="2" uspid="208" ordinal="0" offset="8" sl="38" sc="5" el="38" ec="5" bec="0" bev="0" fileid="10" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -633,7 +633,7 @@
               <Name>Projectile::Projectile()</Name>
               <FileRef uid="10" />
               <SequencePoints>
-                <SequencePoint vc="8" uspid="209" ordinal="0" offset="0" sl="8" sc="5" el="8" ec="5" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="7" uspid="209" ordinal="0" offset="0" sl="8" sc="5" el="8" ec="5" bec="0" bev="0" fileid="10" />
               </SequencePoints>
               <BranchPoints />
             </Method>
