@@ -82,7 +82,12 @@ public class Player : MonoBehaviour
 
 	public void defeat()
 	{
-
+		if(!getInAccomplishedMenu() & !getInLevelMenu())
+		{
+			setDefeated(true);
+			setInDefeatMenu(true);
+			controller.enabled = false;
+		}
 	}
 
 	public void setDefeated(bool newDefeated)
