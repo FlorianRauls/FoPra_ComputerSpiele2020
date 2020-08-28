@@ -66,7 +66,7 @@ public class Slingshot : MonoBehaviour
     {
         return timer;
     }
-    public float setTimer(float newTimer)
+    public void setTimer(float newTimer)
     {
         timer = newTimer;
     }

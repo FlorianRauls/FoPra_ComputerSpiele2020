@@ -26,7 +26,6 @@ public class SlingshotTest : MonoBehaviour
             boyObject.transform.position = new Vector3(1, 1, 1);
             sling.setCooldown(0f);
             sling.setTimer(1f);
-            sling.setRange(15f);
 
             GameObject targetObject = new GameObject();
             targetObject.transform.position = new Vector3(0, 0, 0);
@@ -49,7 +48,6 @@ public class SlingshotTest : MonoBehaviour
         {
             GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
             Slingshot sling = boyObject.GetComponent<Slingshot>();
-            sling.setRange(5f);
             sling.setCooldown(1f);
             boyObject.transform.position = new Vector3(1, 1, 0);
 
