@@ -48,9 +48,10 @@ public class Slingshot : MonoBehaviour
         GameObject projectile = Instantiate(projectilePrefab,
          transform.position - new Vector3(normalized_direction.x,
             normalized_direction.y, 0f), transform.rotation);
-        
-        projectile.GetComponent<Projectile>().setTarget(target);
-        projectile.GetComponent<Projectile>().setTargetDirection(normalized_direction);
+
+   
+        projectile.GetComponent<FriendlyProjectile>().setTarget(target);
+        projectile.GetComponent<FriendlyProjectile>().setTargetDirection(normalized_direction);
         return projectile;
     }
     public float getCooldown()
