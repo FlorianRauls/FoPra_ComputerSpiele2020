@@ -15,9 +15,9 @@ public class CombatTest : MonoBehaviour
         Player boy = boyObject.GetComponent<Player>();
         boy.Start();
 
-        boy.Defeat();
+        boy.defeat();
 
-        Assert.AreEqual(boy.getDefeatMenuOpen(), true);
+        Assert.AreEqual(boy.getInDefeatMenu(), true);
 
     }
 
@@ -69,7 +69,7 @@ public class CombatTest : MonoBehaviour
         Player boy = boyObject.GetComponent<Player>();
         boy.Start();
 
-        boy.setInAccomplisedMenu(true);
+        boy.setInAccomplishedMenu(true);
 
         boy.defeat();
 

@@ -66,4 +66,54 @@ public class Player : MonoBehaviour
     		hit.transform.SendMessage("collide", this.gameObject);
  	}
 
+	public void collide(GameObject other)
+	{
+
+	}
+
+	public void defeat()
+	{
+
+	}
+
+	public void setDefeated()
+	{
+
+	}
+
+	public bool getDefeated()
+	{
+
+	}
+
+	public void setInDefeatMenu()
+	{
+
+	}
+
+	public bool getInDefeatMenu()
+	{
+
+	}
+
+	public void setInAccomplishedMenu()
+	{
+
+	}
+
+	public bool getInAccomplishedMenu()
+	{
+
+	}
+
+	public void setInLevelMenu(bool newLevelMenuBool)
+	{
+
+	}
+
+	public bool getInLevelMenu()
+	{
+
+	}
+
 }
