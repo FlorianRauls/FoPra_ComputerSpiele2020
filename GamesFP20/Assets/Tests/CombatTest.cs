@@ -9,13 +9,31 @@ public class CombatTest : MonoBehaviour
 {
 
     [Test]
-    public void ReloadSceneOnDeath()
+    public void TestOpenDefeatMenuOnDefeat()
     {
 
     }
 
     [Test]
-    public void DieOnCollisionWithEnemy()
+    public void TestDefeatOnCollisionWithEnemy()
+    {
+        
+    }
+
+    [Test]
+    public void TestDisableMovementOnDefeat()
+    {
+
+    }
+
+    [Test]
+    public void TestUndefeatableInLevelMenu()
+    {
+
+    }
+
+    [Test]
+    public void TestUndefeatableInLevelAccomplisedMenu()
     {
         
     }
