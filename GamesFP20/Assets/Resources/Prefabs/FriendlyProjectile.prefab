@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8252464921425757630
+--- !u!114 &883817033342362901
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4426874223962088410}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa88f927a9c161247a0b71a6fb481d0c, type: 3}
+  m_Script: {fileID: 11500000, guid: 17d515e47d5cf14439e1fe1fe5077fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
   rotationDirection: {x: 0, y: 0, z: 1}
   smoothTime: 5
+  speed: 4
 --- !u!1001 &8516500501330572523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25,7 +25,12 @@ PrefabInstance:
     - target: {fileID: 5431300140510566193, guid: 715b501a59b5831408d8d9bb035f057a,
         type: 3}
       propertyPath: m_Name
-      value: DUMMYSlingshotProjectile Variant
+      value: FriendlyProjectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431300140510566193, guid: 715b501a59b5831408d8d9bb035f057a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Friendly
       objectReference: {fileID: 0}
     - target: {fileID: 8763992407067078229, guid: 715b501a59b5831408d8d9bb035f057a,
         type: 3}

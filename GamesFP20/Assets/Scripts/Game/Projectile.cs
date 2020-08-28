@@ -33,7 +33,7 @@ public class Projectile : Enemy
 
     public void collide(GameObject other)
     {
-        if(other.tag == "Player" || other.tag == "Untagged" || other.tag == "Ground")
+        if(other.tag == "Player" || other.tag == "Untagged" || other.tag == "Ground" || other.tag =="Friendly")
         {
             setDetroyed(true);
             Die();

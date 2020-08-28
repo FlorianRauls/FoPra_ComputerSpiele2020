@@ -38,7 +38,7 @@ public class FriendlyProjectileTest : MonoBehaviour
         {
             GameObject projectileObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/FriendlyProjectile"));
             FriendlyProjectile projectile = projectileObject.GetComponent<FriendlyProjectile>();
-
+            
             GameObject gameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Wasp"));
 
 

@@ -31,7 +31,6 @@ public class FriendlyProjectile : MonoBehaviour
         float smooth = Time.deltaTime * smoothTime * convertedTime;
         transform.Rotate(rotationDirection * smooth);
     }
-
     public void Die()
     {
         Destroy(this.gameObject);

@@ -39,8 +39,6 @@ public class WaspEnemy : Enemy
         Vector3 copyPosition = transform.position;
         copyPosition.y += Mathf.Sin (Time.fixedTime * Mathf.PI * frequency) * amplitude;
         transform.position = copyPosition;
-
-        Debug.Log(target);
     }
 
 
