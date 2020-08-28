@@ -8,8 +8,8 @@ public class FriendlyProjectileTest : MonoBehaviour
 {
         public void TestGettingTargetLocation()
         {
-             GameObject projectileObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Projectile"));
-            Projectile projectile = projectileObject.GetComponent<Projectile>();
+            GameObject projectileObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/FriendlyProjectile"));
+            FriendlyProjectile projectile = projectileObject.GetComponent<FriendlyProjectile>();
 
             GameObject gameObject = new GameObject();
 
@@ -22,7 +22,7 @@ public class FriendlyProjectileTest : MonoBehaviour
         public void TestNotDyingOnCollisionWithPlayer()
         {
             GameObject projectileObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
-            Projectile projectile = projectileObject.GetComponent<Projectile>();
+            FriendlyProjectile projectile = projectileObject.GetComponent<FriendlyProjectile>();
 
             GameObject gameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
 
@@ -35,10 +35,10 @@ public class FriendlyProjectileTest : MonoBehaviour
         [Test]
         public void TestDyingOnCollisionWithEnemy()
         {
-            GameObject projectileObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Projectile"));
-            Projectile projectile = projectileObject.GetComponent<Projectile>();
+            GameObject projectileObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/FriendlyProjectile"));
+            FriendlyProjectile projectile = projectileObject.GetComponent<FriendlyProjectile>();
 
-            GameObject gameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
+            GameObject gameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Wasp"));
 
 
             projectile.collide(gameObject);
@@ -50,7 +50,7 @@ public class FriendlyProjectileTest : MonoBehaviour
         [Test]
         public void TestDestructionOnGroundCollision()
         {
-            GameObject projectileObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Projectile"));
+            GameObject projectileObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/FriendlyProjectile"));
             Projectile projectile = projectileObject.GetComponent<Projectile>();
 
             GameObject gameObject = new GameObject();
