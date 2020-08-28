@@ -8,6 +8,12 @@ public class Player : MonoBehaviour
 	// contains information to whether or not the character touched
 	// ground at the last frame
 	private bool grounded = true;
+
+	private bool defeated = false;
+	private bool inLevelMenu;
+	private bool inAccomplishedMenu;
+	private bool inDefeatedMenu;
+	
 	private CharacterController controller;
 
 
@@ -68,7 +74,10 @@ public class Player : MonoBehaviour
 
 	public void collide(GameObject other)
 	{
-
+		if(other.tag == "Enemy")
+		{
+			defeat();
+		}
 	}
 
 	public void defeat()
@@ -76,44 +85,44 @@ public class Player : MonoBehaviour
 
 	}
 
-	public void setDefeated()
+	public void setDefeated(bool newDefeated)
 	{
-
+		defeated = newDefeated;
 	}
 
 	public bool getDefeated()
 	{
-
+		return defeated;
 	}
 
-	public void setInDefeatMenu()
+	public void setInDefeatMenu(bool newInDefeatMenu)
 	{
-
+		inDefeatedMenu = newInDefeatMenu;
 	}
 
 	public bool getInDefeatMenu()
 	{
-
+		return inDefeatedMenu;
 	}
 
-	public void setInAccomplishedMenu()
+	public void setInAccomplishedMenu(bool newInAccomplishedMenu)
 	{
-
+		inAccomplishedMenu = newInAccomplishedMenu;
 	}
 
 	public bool getInAccomplishedMenu()
 	{
-
+		return inAccomplishedMenu;
 	}
 
 	public void setInLevelMenu(bool newLevelMenuBool)
 	{
-
+		inLevelMenu = newLevelMenuBool;
 	}
 
 	public bool getInLevelMenu()
 	{
-
+		return inLevelMenu;
 	}
 
 }
