@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2020-08-28_23-30-10" tag="">
+  <assembly name="Scripts">
+    <class name="Enemy" coveredlines="13" coverablelines="20" totallines="50" coveredbranches="0" totalbranches="0" />
+    <class name="FriendlyProjectile" coveredlines="36" coverablelines="42" totallines="77" coveredbranches="0" totalbranches="0" />
+    <class name="LevelLoader" coveredlines="0" coverablelines="7" totallines="20" coveredbranches="0" totalbranches="0" />
+    <class name="LevelSelectGenerator" coveredlines="0" coverablelines="14" totallines="28" coveredbranches="0" totalbranches="0" />
+    <class name="Menu" coveredlines="0" coverablelines="6" totallines="17" coveredbranches="0" totalbranches="0" />
+    <class name="Player" coveredlines="85" coverablelines="90" totallines="133" coveredbranches="0" totalbranches="0" />
+    <class name="Projectile" coveredlines="40" coverablelines="41" totallines="71" coveredbranches="0" totalbranches="0" />
+    <class name="Slingshot" coveredlines="29" coverablelines="43" totallines="83" coveredbranches="0" totalbranches="0" />
+    <class name="WaspEnemy" coveredlines="100" coverablelines="129" totallines="180" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="Tests">
+    <class name="CombatTest" coveredlines="38" coverablelines="38" totallines="78" coveredbranches="0" totalbranches="0" />
+    <class name="FriendlyProjectileTest" coveredlines="24" coverablelines="28" totallines="63" coveredbranches="0" totalbranches="0" />
+    <class name="ProjectileTest" coveredlines="35" coverablelines="40" totallines="78" coveredbranches="0" totalbranches="0" />
+    <class name="SlingshotTest" coveredlines="26" coverablelines="35" totallines="64" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.EnemyTest" coveredlines="9" coverablelines="9" totallines="27" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.JumpLimitTest" coveredlines="13" coverablelines="13" totallines="30" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.MovementTest" coveredlines="21" coverablelines="21" totallines="42" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.NewTestScript" coveredlines="5" coverablelines="5" totallines="28" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.WaspTest" coveredlines="61" coverablelines="65" totallines="106" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>

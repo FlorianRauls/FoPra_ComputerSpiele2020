@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CoverageReport scope="Summary">
   <Summary>
-    <Generatedon>28.08.2020 - 23:18:34</Generatedon>
+    <Generatedon>28.08.2020 - 23:30:13</Generatedon>
     <Parser>MultiReportParser (3x OpenCoverParser)</Parser>
     <Assemblies>2</Assemblies>
     <Classes>18</Classes>
     <Files>18</Files>
-    <Coveredlines>534</Coveredlines>
-    <Uncoveredlines>112</Uncoveredlines>
+    <Coveredlines>535</Coveredlines>
+    <Uncoveredlines>111</Uncoveredlines>
     <Coverablelines>646</Coverablelines>
     <Totallines>1175</Totallines>
-    <Linecoverage>82.6</Linecoverage>
+    <Linecoverage>82.8</Linecoverage>
     <Coveredbranches>0</Coveredbranches>
     <Totalbranches>0</Totalbranches>
   </Summary>
   <Coverage>
-    <Assembly name="Scripts" classes="9" coverage="77" coveredlines="302" coverablelines="392" totallines="659" branchcoverage="" coveredbranches="0" totalbranches="0">
+    <Assembly name="Scripts" classes="9" coverage="77.2" coveredlines="303" coverablelines="392" totallines="659" branchcoverage="" coveredbranches="0" totalbranches="0">
       <Class name="Enemy" coverage="65" coveredlines="13" coverablelines="20" totallines="50" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="FriendlyProjectile" coverage="85.7" coveredlines="36" coverablelines="42" totallines="77" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="LevelLoader" coverage="0" coveredlines="0" coverablelines="7" totallines="20" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="LevelSelectGenerator" coverage="0" coveredlines="0" coverablelines="14" totallines="28" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Menu" coverage="0" coveredlines="0" coverablelines="6" totallines="17" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="Player" coverage="93.3" coveredlines="84" coverablelines="90" totallines="133" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Player" coverage="94.4" coveredlines="85" coverablelines="90" totallines="133" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Projectile" coverage="97.5" coveredlines="40" coverablelines="41" totallines="71" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Slingshot" coverage="67.4" coveredlines="29" coverablelines="43" totallines="83" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="WaspEnemy" coverage="77.5" coveredlines="100" coverablelines="129" totallines="180" branchcoverage="" coveredbranches="0" totalbranches="0" />
