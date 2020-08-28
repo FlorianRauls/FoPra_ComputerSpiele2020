@@ -6,6 +6,7 @@ using UnityEngine.TestTools;
 
 public class FriendlyProjectileTest : MonoBehaviour
 {
+    [Test]
         public void TestGettingTargetLocation()
         {
             GameObject projectileObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/FriendlyProjectile"));
