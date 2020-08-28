@@ -39,4 +39,14 @@ public class Slingshot : MonoBehaviour
     {
         timer = newTimer;
     }
+
+    public Vector3 directionToTarget(GameObject target)
+    {
+        return transform.position - target.transform.position;
+    }
+
+    public float distanceToTarget(Vector3 direction)
+    {
+        return direction.magnitude;
+    }
 }
