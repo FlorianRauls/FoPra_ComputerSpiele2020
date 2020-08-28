@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CoverageReport scope="Summary">
   <Summary>
-    <Generatedon>28.08.2020 - 23:50:54</Generatedon>
+    <Generatedon>28.08.2020 - 23:58:01</Generatedon>
     <Parser>MultiReportParser (3x OpenCoverParser)</Parser>
     <Assemblies>2</Assemblies>
     <Classes>18</Classes>
     <Files>18</Files>
-    <Coveredlines>552</Coveredlines>
-    <Uncoveredlines>94</Uncoveredlines>
+    <Coveredlines>556</Coveredlines>
+    <Uncoveredlines>90</Uncoveredlines>
     <Coverablelines>646</Coverablelines>
     <Totallines>1176</Totallines>
-    <Linecoverage>85.4</Linecoverage>
+    <Linecoverage>86</Linecoverage>
     <Coveredbranches>0</Coveredbranches>
     <Totalbranches>0</Totalbranches>
   </Summary>
@@ -26,9 +26,9 @@
       <Class name="Slingshot" coverage="79" coveredlines="34" coverablelines="43" totallines="84" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="WaspEnemy" coverage="77.5" coveredlines="100" coverablelines="129" totallines="180" branchcoverage="" coveredbranches="0" totalbranches="0" />
     </Assembly>
-    <Assembly name="Tests" classes="9" coverage="94.8" coveredlines="241" coverablelines="254" totallines="516" branchcoverage="" coveredbranches="0" totalbranches="0">
+    <Assembly name="Tests" classes="9" coverage="96.4" coveredlines="245" coverablelines="254" totallines="516" branchcoverage="" coveredbranches="0" totalbranches="0">
       <Class name="CombatTest" coverage="100" coveredlines="38" coverablelines="38" totallines="78" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="FriendlyProjectileTest" coverage="85.7" coveredlines="24" coverablelines="28" totallines="63" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="FriendlyProjectileTest" coverage="100" coveredlines="28" coverablelines="28" totallines="63" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="ProjectileTest" coverage="87.5" coveredlines="35" coverablelines="40" totallines="78" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="SlingshotTest" coverage="100" coveredlines="35" coverablelines="35" totallines="64" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Tests.EnemyTest" coverage="100" coveredlines="9" coverablelines="9" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" />

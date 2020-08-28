@@ -22,7 +22,7 @@ public class FriendlyProjectileTest : MonoBehaviour
         [Test]
         public void TestNotDyingOnCollisionWithPlayer()
         {
-            GameObject projectileObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
+            GameObject projectileObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/FriendlyProjectile"));
             FriendlyProjectile projectile = projectileObject.GetComponent<FriendlyProjectile>();
 
             GameObject gameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
@@ -52,7 +52,7 @@ public class FriendlyProjectileTest : MonoBehaviour
         public void TestDestructionOnGroundCollision()
         {
             GameObject projectileObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/FriendlyProjectile"));
-            Projectile projectile = projectileObject.GetComponent<Projectile>();
+            FriendlyProjectile projectile = projectileObject.GetComponent<FriendlyProjectile>();
 
             GameObject gameObject = new GameObject();
 
