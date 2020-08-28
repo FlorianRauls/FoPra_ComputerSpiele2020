@@ -42,6 +42,10 @@ public class CombatTest : MonoBehaviour
         Player boy = boyObject.GetComponent<Player>();
         boy.Start();
 
+        boy.defeat();
+
+        Assert.AreEqual(boy.GetComponent<CharacterController>().enabled, false);
+
     }
 
     [Test]
@@ -51,6 +55,11 @@ public class CombatTest : MonoBehaviour
         Player boy = boyObject.GetComponent<Player>();
         boy.Start();
 
+        boy.setInLevelMenu(true);
+
+        boy.defeat();
+
+        Assert.AreEqual(boy.getDefeated(), false);
     }
 
     [Test]
@@ -60,5 +69,10 @@ public class CombatTest : MonoBehaviour
         Player boy = boyObject.GetComponent<Player>();
         boy.Start();
 
+        boy.setInAccomplisedMenu(true);
+
+        boy.defeat();
+
+        Assert.AreEqual(boy.getDefeated(), false);
     }
 }
