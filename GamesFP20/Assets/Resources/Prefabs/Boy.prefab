@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3551005677319299533}
   - component: {fileID: 1554307869991439112}
   - component: {fileID: 7403622898665929637}
+  - component: {fileID: 5892982613704949989}
   m_Layer: 0
   m_Name: Boy
   m_TagString: Player
@@ -67,6 +68,21 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
   m_Center: {x: 0.05, y: -0.05, z: 0}
+--- !u!114 &5892982613704949989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4682917402606282641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02a327ed97065d74a9a54b5b363f2550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 4426874223962088410, guid: cc4ba1ae6e3ebfd4f83d3969e079854e,
+    type: 3}
+  cooldown: 4
 --- !u!1 &6408497990279821737
 GameObject:
   m_ObjectHideFlags: 0

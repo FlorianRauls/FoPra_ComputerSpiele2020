@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8252464921425757630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4426874223962088410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa88f927a9c161247a0b71a6fb481d0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  rotationDirection: {x: 0, y: 0, z: 1}
+  smoothTime: 5
+--- !u!1001 &8516500501330572523
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5431300140510566193, guid: 715b501a59b5831408d8d9bb035f057a,
+        type: 3}
+      propertyPath: m_Name
+      value: DUMMYSlingshotProjectile Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763992407067078229, guid: 715b501a59b5831408d8d9bb035f057a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763992407067078229, guid: 715b501a59b5831408d8d9bb035f057a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763992407067078229, guid: 715b501a59b5831408d8d9bb035f057a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763992407067078229, guid: 715b501a59b5831408d8d9bb035f057a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763992407067078229, guid: 715b501a59b5831408d8d9bb035f057a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763992407067078229, guid: 715b501a59b5831408d8d9bb035f057a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763992407067078229, guid: 715b501a59b5831408d8d9bb035f057a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763992407067078229, guid: 715b501a59b5831408d8d9bb035f057a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763992407067078229, guid: 715b501a59b5831408d8d9bb035f057a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763992407067078229, guid: 715b501a59b5831408d8d9bb035f057a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763992407067078229, guid: 715b501a59b5831408d8d9bb035f057a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 715b501a59b5831408d8d9bb035f057a, type: 3}
+--- !u!1 &4426874223962088410 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5431300140510566193, guid: 715b501a59b5831408d8d9bb035f057a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8516500501330572523}
+  m_PrefabAsset: {fileID: 0}
