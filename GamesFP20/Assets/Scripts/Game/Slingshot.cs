@@ -22,6 +22,37 @@ public class Slingshot : MonoBehaviour
         
     }
 
+    public GameObject shootProjectile(GameObject target)
+    {
+        if(timer < cooldown)
+        {
+            return null;
+        }
+        else
+        {
+            timer = 0f;
+        }
+
+        // get direction to target and normalize it by dividing through distance to target
+        Vector2 direction = directionToTarget(target);
+        float distance = distanceToTarget(direction);
+
+        if(distance == 0f)
+        {
+            distance = 0.0000001f;
+        }
+
+        Vector2 normalized_direction = direction / distance;
+
+
+        GameObject projectile = Instantiate(projectilePrefab,
+         transform.position - new Vector3(normalized_direction.x,
+            normalized_direction.y, 0f), transform.rotation);
+        
+        projectile.GetComponent<Projectile>().setTarget(target);
+        projectile.GetComponent<Projectile>().setTargetDirection(normalized_direction);
+        return projectile;
+    }
     public float getCooldown()
     {
         return cooldown;
