@@ -11,7 +11,7 @@ public class LevelSelectGenerator : MonoBehaviour
 	{
 		var rect = GetComponent<RectTransform>();
 
-		for (int i = 0; Resources.Load<GameObject>($"Prefabs/Level/Level{i}") != null; i++)
+		for (int i = 1; Resources.Load<GameObject>($"Prefabs/Level/Level{i}") != null; i++)
 		{
 			var selector = Instantiate(levelSelectorPrefab, content.transform);
 			selector.transform.localPosition = new Vector3(0, -40 - i * 50, 0);
