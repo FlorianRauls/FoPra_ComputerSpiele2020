@@ -974,10 +974,10 @@
               <Name>System.Void Player::OnControllerColliderHit(UnityEngine.ControllerColliderHit)</Name>
               <FileRef uid="13" />
               <SequencePoints>
-                <SequencePoint vc="10" uspid="347" ordinal="0" offset="0" sl="70" sc="2" el="70" ec="2" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="10" uspid="348" ordinal="0" offset="1" sl="71" sc="3" el="71" ec="3" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="9" uspid="347" ordinal="0" offset="0" sl="70" sc="2" el="70" ec="2" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="9" uspid="348" ordinal="0" offset="1" sl="71" sc="3" el="71" ec="3" bec="0" bev="0" fileid="13" />
                 <SequencePoint vc="2" uspid="349" ordinal="0" offset="26" sl="72" sc="7" el="72" ec="7" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="10" uspid="350" ordinal="0" offset="49" sl="73" sc="3" el="73" ec="3" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="9" uspid="350" ordinal="0" offset="49" sl="73" sc="3" el="73" ec="3" bec="0" bev="0" fileid="13" />
               </SequencePoints>
               <BranchPoints />
             </Method>

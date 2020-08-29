@@ -15,11 +15,16 @@ public class Player : MonoBehaviour
 	private bool inDefeatedMenu;
 	
 	private CharacterController controller;
+	private Slingshot slingshot;
+
+	public GameObject mousePositionObject;
 
 
 	public void Start()
     {
         controller = GetComponent<CharacterController>();
+		slingshot = GetComponent<Slingshot>();
+		mousePositionObject = new GameObject();
     }
 
     void Update()
@@ -29,6 +34,12 @@ public class Player : MonoBehaviour
 		// the ground last frame
 		grounded = controller.isGrounded;
 		Move(Input.GetAxis("Horizontal"), Input.GetButtonDown("Jump"));
+		mousePositionObject.transform.position = Input.mousePosition;
+
+		if(Input.GetButtonDown("Fire1"))
+		{
+			slingshot.shootProjectile(mousePositionObject);
+		}
 	}
 
 	public void Move(float horizontalInput, bool jumpPressed)
