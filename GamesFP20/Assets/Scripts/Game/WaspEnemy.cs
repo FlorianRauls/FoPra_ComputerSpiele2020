@@ -180,4 +180,12 @@ private void OnCollisionEnter(Collision other) {
     collide(other.gameObject);
 }
 
+public void collide(GameObject other)
+{
+    if(other.tag == "Friendly")
+    {
+        Die();
+    }
+}
+
 }

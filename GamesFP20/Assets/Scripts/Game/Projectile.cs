@@ -72,4 +72,5 @@ public class Projectile : Enemy
     private void OnCollisionEnter(Collision other) {
         collide(other.gameObject);
     }
+
 }
