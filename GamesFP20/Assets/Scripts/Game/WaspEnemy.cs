@@ -176,5 +176,8 @@ public class WaspEnemy : Enemy
         target = newTarget;
     }
 
+private void OnCollisionEnter(Collision other) {
+    collide(other.gameObject);
+}
 
 }
