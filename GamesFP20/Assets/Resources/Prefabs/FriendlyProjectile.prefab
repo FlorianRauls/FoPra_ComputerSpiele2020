@@ -15,6 +15,19 @@ MonoBehaviour:
   rotationDirection: {x: 0, y: 0, z: 1}
   smoothTime: 5
   speed: 4
+--- !u!65 &-7135588548287513042
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4426874223962088410}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &8516500501330572523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102,7 +115,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4041126018548354827, guid: 715b501a59b5831408d8d9bb035f057a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 715b501a59b5831408d8d9bb035f057a, type: 3}
 --- !u!1 &4426874223962088410 stripped
 GameObject:

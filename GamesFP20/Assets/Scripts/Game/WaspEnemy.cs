@@ -182,6 +182,7 @@ private void OnCollisionEnter(Collision other) {
 
 public void collide(GameObject other)
 {
+    Debug.Log(other.tag);
     if(other.tag == "Friendly")
     {
         Die();

@@ -81,7 +81,11 @@ public class Player : MonoBehaviour
 	void OnControllerColliderHit(ControllerColliderHit hit)
 	{
 		if(hit.gameObject.tag == "Enemy")
+		{
     		hit.transform.SendMessage("collide", this.gameObject);
+			collide(hit.gameObject);
+		}
+
  	}
 
 	void OnTriggerEnter(Collider collider)
