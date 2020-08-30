@@ -38,7 +38,8 @@ public class Player : MonoBehaviour
 
 		if(Input.GetButtonDown("Fire1"))
 		{
-			slingshot.shootProjectile(mousePositionObject);
+		
+			GameObject shot = slingshot.shootProjectile(mousePositionObject);
 		}
 	}
 
