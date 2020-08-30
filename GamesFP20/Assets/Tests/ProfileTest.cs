@@ -100,6 +100,8 @@ namespace Tests
             Assert.IsTrue(profileManager.GetProfile().GetCurrentLevel() == 1);
             Assert.IsTrue(profileManager.GetProfile().GetMaxLevel() == 1);
             Assert.IsTrue(profileManager.GetProfile().GetAutoRespawn() == false);
+
+            Assert.IsTrue(profileManager.GetProfileCount() == 2);
         }
     }
 }

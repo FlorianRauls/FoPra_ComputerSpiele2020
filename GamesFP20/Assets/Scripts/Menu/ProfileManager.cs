@@ -104,4 +104,14 @@ public class ProfileManager : MonoBehaviour
     {
         profileID = id;
     }
+
+    public int GetProfileCount()
+    {
+        return profiles.Length;
+    }
+
+    public Profile GetProfile(int id)
+    {
+        return profiles[id];
+    }
 }
