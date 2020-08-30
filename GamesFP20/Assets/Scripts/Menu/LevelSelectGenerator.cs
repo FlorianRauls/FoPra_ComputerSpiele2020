@@ -15,6 +15,7 @@ public class LevelSelectGenerator : MonoBehaviour
 		{
 			var selector = Instantiate(levelSelectorPrefab, content.transform);
 			selector.transform.localPosition = new Vector3(0, -40 - i * 50, 0);
+			selector.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Level " + i;
 
 			int level = i;
 			selector.GetComponentInChildren<Button>().onClick.AddListener(
