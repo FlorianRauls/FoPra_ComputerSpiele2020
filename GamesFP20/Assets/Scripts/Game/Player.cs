@@ -83,6 +83,11 @@ public class Player : MonoBehaviour
     		hit.transform.SendMessage("collide", this.gameObject);
  	}
 
+	void OnTriggerEnter(Collider collider)
+    {
+		collide(collider.gameObject);
+	}
+
 	public void collide(GameObject other)
 	{
 		if(other.tag == "Enemy")
