@@ -68,4 +68,9 @@ public class Projectile : Enemy
     {
         targetDirection = newLocation;
     }
+
+    private void OnCollisionEnter(Collision other) {
+        collide(other.gameObject);
+    }
+
 }

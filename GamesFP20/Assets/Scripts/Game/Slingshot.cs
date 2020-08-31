@@ -19,11 +19,12 @@ public class Slingshot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        timer += Time.deltaTime;
     }
 
     public GameObject shootProjectile(GameObject target)
     {
+        
         if(timer < cooldown)
         {
             return null;
@@ -52,6 +53,7 @@ public class Slingshot : MonoBehaviour
    
         projectile.GetComponent<FriendlyProjectile>().setTarget(target);
         projectile.GetComponent<FriendlyProjectile>().setTargetDirection(normalized_direction);
+
         return projectile;
     }
     public float getCooldown()

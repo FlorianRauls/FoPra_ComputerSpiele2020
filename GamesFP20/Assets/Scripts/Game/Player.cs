@@ -38,7 +38,8 @@ public class Player : MonoBehaviour
 
 		if(Input.GetButtonDown("Fire1"))
 		{
-			slingshot.shootProjectile(mousePositionObject);
+		
+			GameObject shot = slingshot.shootProjectile(mousePositionObject);
 		}
 	}
 
@@ -80,7 +81,11 @@ public class Player : MonoBehaviour
 	void OnControllerColliderHit(ControllerColliderHit hit)
 	{
 		if(hit.gameObject.tag == "Enemy")
+		{
     		hit.transform.SendMessage("collide", this.gameObject);
+			collide(hit.gameObject);
+		}
+
  	}
 
 	void OnTriggerEnter(Collider collider)

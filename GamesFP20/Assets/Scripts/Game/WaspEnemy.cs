@@ -176,5 +176,17 @@ public class WaspEnemy : Enemy
         target = newTarget;
     }
 
+private void OnCollisionEnter(Collision other) {
+    collide(other.gameObject);
+}
+
+public void collide(GameObject other)
+{
+    Debug.Log(other.tag);
+    if(other.tag == "Friendly")
+    {
+        Die();
+    }
+}
 
 }
