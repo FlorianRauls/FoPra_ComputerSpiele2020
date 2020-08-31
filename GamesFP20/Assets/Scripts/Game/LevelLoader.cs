@@ -32,6 +32,13 @@ public class LevelLoader : MonoBehaviour
     public void LoadNextLevel()
     {
         IncreaseLevel();
+
+        if(levelIndex > ProfileManager.GetInstance().GetProfile().GetMaxLevel())
+        {
+            ProfileManager.GetInstance().GetProfile().SetMaxLevel(levelIndex);
+        }
+        ProfileManager.GetInstance().GetProfile().SetCurrentLevel(levelIndex);
+
         LoadLevel();
         LoadLevelDivider();
     }

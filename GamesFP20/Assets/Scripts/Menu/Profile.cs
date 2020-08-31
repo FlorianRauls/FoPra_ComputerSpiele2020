@@ -30,6 +30,7 @@ public class Profile
     public void SetName(string name)
     {
         this.name = name;
+        ProfileManager.GetInstance().SaveProfiles();
     }
 
     public int GetVolume()
@@ -40,6 +41,7 @@ public class Profile
     public void SetVolume(int volume)
     {
         this.volume = volume;
+        ProfileManager.GetInstance().SaveProfiles();
     }
 
     public int GetCurrentLevel()
@@ -50,6 +52,7 @@ public class Profile
     public void SetCurrentLevel(int level)
     {
         this.currentLevel = level;
+        ProfileManager.GetInstance().SaveProfiles();
     }
 
     public int GetMaxLevel()
@@ -60,6 +63,7 @@ public class Profile
     public void SetMaxLevel(int level)
     {
         this.maxLevel = level;
+        ProfileManager.GetInstance().SaveProfiles();
     }
 
     public bool GetAutoRespawn()
@@ -70,6 +74,7 @@ public class Profile
     public void SetAutoRespawn(bool respawn)
     {
         this.autoRespawn = respawn;
+        ProfileManager.GetInstance().SaveProfiles();
     }
 
     public string ToString()

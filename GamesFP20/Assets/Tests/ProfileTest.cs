@@ -33,7 +33,6 @@ namespace Tests
             profileManager.ClearProfiles();
             Profile profile = profileManager.GetProfile();
             Assert.IsTrue(profile != null);
-            profileManager.SaveProfiles();
             profileManager.LoadProfiles();
             Profile profile2 = profileManager.GetProfile();
             Assert.IsTrue(profile2 != null);
@@ -82,7 +81,6 @@ namespace Tests
             profileManager.GetProfile().SetMaxLevel(2);
             profileManager.GetProfile().SetAutoRespawn(true);
 
-            profileManager.SaveProfiles();
             profileManager.LoadProfiles();
 
             Assert.IsTrue(profileManager.GetProfileID() == 1);
@@ -101,6 +99,20 @@ namespace Tests
             Assert.IsTrue(profileManager.GetProfile().GetMaxLevel() == 1);
             Assert.IsTrue(profileManager.GetProfile().GetAutoRespawn() == false);
 
+            Assert.IsTrue(profileManager.GetProfileCount() == 2);
+        }
+
+        [Test]
+        public void DeleteProfile()
+        {
+            MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/ProfileManager")).GetComponent<ProfileManager>().Start();
+            ProfileManager profileManager = ProfileManager.GetInstance();
+            profileManager.ClearProfiles();
+            profileManager.AddProfile();
+            profileManager.AddProfile();
+            profileManager.DeleteProfile(1);
+            Assert.IsTrue(profileManager.GetMaxID() == 2);
+            Assert.IsTrue(profileManager.GetProfileID() == 1);
             Assert.IsTrue(profileManager.GetProfileCount() == 2);
         }
     }

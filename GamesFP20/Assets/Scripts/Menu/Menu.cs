@@ -10,6 +10,7 @@ public class Menu : MonoBehaviour
 
 	public void NewGame()
 	{
+		ProfileManager.GetInstance().GetProfile().SetCurrentLevel(1);
 		SceneManager.LoadScene("Game");
 	}
 

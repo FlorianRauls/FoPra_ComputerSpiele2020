@@ -1,0 +1,1 @@
+{profileID:0,maxID:3,profiles:[{id:0,name:Robin,volume:100,currentLevel:1,maxLevel:100,autoRespawn:True},{id:1,name:Florian,volume:100,currentLevel:1,maxLevel:1,autoRespawn:False},{id:2,name:Merlin,volume:100,currentLevel:1,maxLevel:1,autoRespawn:False}]}

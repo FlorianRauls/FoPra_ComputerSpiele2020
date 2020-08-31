@@ -8,6 +8,7 @@ public class ProfileManager : MonoBehaviour
 {
     private static ProfileManager singleton;
     private int profileID = 0;
+    private int maxID = 0;
     private Profile[] profiles = new Profile[0];
     private const string path = "Assets/Resources/profiles.txt";
 
@@ -19,6 +20,7 @@ public class ProfileManager : MonoBehaviour
 
     public void ClearProfiles()
     {
+        maxID = -1;
         profiles = new Profile[0];
         AddProfile();
         SaveProfiles();
@@ -35,7 +37,11 @@ public class ProfileManager : MonoBehaviour
             Regex rx = new Regex(@"profileID:(?<id>\d+)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
             profileID = int.Parse(rx.Matches(input)[0].Groups["id"].Value);
 
-            rx = new Regex(@"\[(?<profiles>[^\]]+)\]", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+            rx = new Regex(@"maxID:(?<id>\d+)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            maxID = int.Parse(rx.Matches(input)[0].Groups["id"].Value);
+
+            rx = new Regex(@"profiles:\[(?<profiles>[^\]]+)\]", RegexOptions.Compiled | RegexOptions.IgnoreCase);
             input = rx.Matches(input)[0].Groups["profiles"].Value;
 
             rx = new Regex(@"({(?<profile>[^}]*)})+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
@@ -56,7 +62,7 @@ public class ProfileManager : MonoBehaviour
 
     public void SaveProfiles()
     {
-        string output = "{profileID:" + profileID + ",profiles:[";
+        string output = "{profileID:" + profileID + ",maxID:" + maxID + ",profiles:[";
         for(int i = 0; i < profiles.Length; i++)
         {
             output += profiles[i].ToString();
@@ -78,7 +84,8 @@ public class ProfileManager : MonoBehaviour
         {
             profiles[i] = profileCopy[i];
         }
-        profiles[profileCopy.Length] = new Profile(profileCopy.Length);
+        profiles[profileCopy.Length] = new Profile(++maxID);
+        ProfileManager.GetInstance().SaveProfiles();
     }
 
     public Profile GetProfile()
@@ -103,6 +110,7 @@ public class ProfileManager : MonoBehaviour
     public void SetProfileID(int id)
     {
         profileID = id;
+        ProfileManager.GetInstance().SaveProfiles();
     }
 
     public int GetProfileCount()
@@ -113,5 +121,40 @@ public class ProfileManager : MonoBehaviour
     public Profile GetProfile(int id)
     {
         return profiles[id];
+    }
+
+    public void DeleteProfile(int id)
+    {
+        if (id == profileID)
+        {
+            profileID = 0;
+        }else
+        {
+            if(id < profileID)
+            {
+                profileID--;
+            }
+        }
+        Profile[] profileCopy = profiles;
+        profiles = new Profile[profileCopy.Length - 1];
+        int profileDeleted = 0;
+        for (int i = 0; i < profileCopy.Length; i++)
+        {
+            if(i == id)
+            {
+                profileDeleted = 1;
+            }
+            else
+            {
+                profiles[i - profileDeleted] = profileCopy[i];
+            }
+        }
+
+        ProfileManager.GetInstance().SaveProfiles();
+    }
+
+    public int GetMaxID()
+    {
+        return maxID;
     }
 }
