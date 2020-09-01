@@ -74,4 +74,12 @@ public class FriendlyProjectile : MonoBehaviour
     {
         targetDirection = newLocation;
     }
+
+    private void OnTriggerEnter(Collider other) {
+        Debug.Log(other.gameObject.tag);
+        if(other.gameObject.tag == "Enemy")
+        {
+            other.gameObject.transform.SendMessage("collide", this.gameObject);
+        }
+    }
 }
