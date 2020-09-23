@@ -20,6 +20,7 @@ namespace Tests
         [Test]
         public void NextLevelTest()
         {
+            MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/ProfileManager")).GetComponent<ProfileManager>().Start();
             LevelLoader levelLoader = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/LevelLoader")).GetComponent<LevelLoader>();
             levelLoader.Start();
             Level lastLevel = levelLoader.GetCurrentLevel();
