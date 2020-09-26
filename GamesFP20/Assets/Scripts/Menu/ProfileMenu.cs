@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ProfileMenu : MenuView
 {
+	MenuEnum menuType = MenuEnum.ProfileSelect;
 	public GameObject content;
 	public GameObject profileSelectListItemPrefab;
 
@@ -51,7 +52,7 @@ public class ProfileMenu : MenuView
 				() =>
 				{
 					ProfileManager.GetInstance().SetProfileID(profile);
-					MenuManager.GetInstance().TransitionTo(3);
+					MenuManager.GetInstance().TransitionTo(MenuEnum.ProfileDetail);
 				});
 
 

@@ -45,6 +45,17 @@ public class MenuManager : MonoBehaviour
         TransitionTo(views[id]);
     }
 
+    public void TransitionTo(MenuEnum menu)
+    {
+        foreach (MenuView view in views)
+        {
+            if (view.menuType == menu)
+            {
+                TransitionTo(view);
+            }
+        }
+    }
+
     public void Back()
     {
         viewStack[viewStack.Count-1].Hide();

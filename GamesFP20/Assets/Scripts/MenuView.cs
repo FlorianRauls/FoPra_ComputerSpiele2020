@@ -3,9 +3,10 @@ using UnityEngine;
 
 public class MenuView : MonoBehaviour
 {
-    public virtual void TransitionTo(int id)
+    public MenuEnum menuType = MenuEnum.Dummy;
+    public virtual void TransitionTo(MenuEnum menu)
     {
-        MenuManager.GetInstance().TransitionTo(id);
+        MenuManager.GetInstance().TransitionTo(menu);
     }
 
     public virtual void Show()

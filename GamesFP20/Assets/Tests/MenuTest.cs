@@ -27,9 +27,9 @@ namespace Tests
             manager.views[1] = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Menu/DummyMenuView")).GetComponent<MenuView>();
             manager.views[2] = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Menu/DummyMenuView")).GetComponent<MenuView>();
             manager.Start();
-            manager.GetViewStack()[manager.GetViewStack().Count-1].TransitionTo(1);
+            manager.GetViewStack()[manager.GetViewStack().Count-1].TransitionTo(MenuEnum.Dummy);
             Assert.IsTrue(manager.GetViewStack()[1].gameObject.activeSelf == true);
-            manager.GetViewStack()[manager.GetViewStack().Count - 1].TransitionTo(2);
+            MenuManager.GetInstance().TransitionTo(2);
             Assert.IsTrue(manager.GetViewStack()[2].gameObject.activeSelf == true);
             Assert.IsTrue(manager.GetViewStack().Count == 3);
             manager.GetViewStack()[manager.GetViewStack().Count - 1].Back();
@@ -72,8 +72,8 @@ namespace Tests
             manager.views[1] = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Menu/DeathMenu")).GetComponent<MenuView>();
             manager.views[2] = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Menu/LevelFinishMenu")).GetComponent<MenuView>();
             manager.Start();
-            manager.GetViewStack()[manager.GetViewStack().Count - 1].TransitionTo(1);
-            manager.GetViewStack()[manager.GetViewStack().Count - 1].TransitionTo(2);
+            manager.GetViewStack()[manager.GetViewStack().Count - 1].TransitionTo(MenuEnum.GameDeath);
+            manager.GetViewStack()[manager.GetViewStack().Count - 1].TransitionTo(MenuEnum.GameFinish);
             Assert.IsTrue(manager.GetViewStack()[0].GetType() == typeof(GameMenu));
             Assert.IsTrue(manager.GetViewStack()[0].GetType() == typeof(GameMenu));
             Assert.IsTrue(manager.GetViewStack()[0].GetType() == typeof(GameMenu));
