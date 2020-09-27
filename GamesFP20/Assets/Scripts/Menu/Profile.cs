@@ -11,6 +11,7 @@ public class Profile
     private int currentLevel = 1;
     private int maxLevel = 1;
     private bool autoRespawn = false;
+    private bool autoContinue = false;
 
     public Profile(int id)
     {
@@ -71,6 +72,17 @@ public class Profile
         return autoRespawn;
     }
 
+    public void SetAutoContinue(bool autoContinue)
+    {
+        this.autoContinue = autoContinue;
+        ProfileManager.GetInstance().SaveProfiles();
+    }
+
+    public bool GetAutoContinue()
+    {
+        return autoContinue;
+    }
+
     public void SetAutoRespawn(bool respawn)
     {
         this.autoRespawn = respawn;
@@ -79,7 +91,7 @@ public class Profile
 
     public string ToString()
     {
-        string output = "{id:" + id + ",name:" + name + ",volume:" + volume + ",currentLevel:" + currentLevel + ",maxLevel:" + maxLevel + ",autoRespawn:" + autoRespawn + "}";
+        string output = "{id:" + id + ",name:" + name + ",volume:" + volume + ",currentLevel:" + currentLevel + ",maxLevel:" + maxLevel + ",autoRespawn:" + autoRespawn + ",autoContinue:" + autoContinue + "}";
         return output;
     }
 
@@ -104,6 +116,9 @@ public class Profile
 
         rx = new Regex(@"autoRespawn:(?<autoRespawn>\w+)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         profile.autoRespawn = bool.Parse(rx.Matches(input)[0].Groups["autoRespawn"].Value);
+
+        rx = new Regex(@"autoRespawn:(?<autoContinue>\w+)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        profile.autoContinue = bool.Parse(rx.Matches(input)[0].Groups["autoContinue"].Value);
 
         return profile;
     }

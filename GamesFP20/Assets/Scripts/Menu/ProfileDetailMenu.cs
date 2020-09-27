@@ -29,7 +29,13 @@ public class ProfileDetailMenu : MenuView
     public void ChangeAutoRespawn(bool respawn)
     {
         int currentProfile = ProfileManager.GetInstance().GetProfileID();
-        ProfileManager.GetInstance().GetProfile(currentProfile).SetAutoRespawn(transform.GetComponentInChildren<Toggle>().isOn);
+        ProfileManager.GetInstance().GetProfile(currentProfile).SetAutoRespawn(transform.Find("AutoRespawn").GetComponentInChildren<Toggle>().isOn);
+    }
+
+    public void ChangeAutoContinue(bool respawn)
+    {
+        int currentProfile = ProfileManager.GetInstance().GetProfileID();
+        ProfileManager.GetInstance().GetProfile(currentProfile).SetAutoContinue(transform.Find("AutoContinue").GetComponentInChildren<Toggle>().isOn);
     }
 
     public override void Show()
