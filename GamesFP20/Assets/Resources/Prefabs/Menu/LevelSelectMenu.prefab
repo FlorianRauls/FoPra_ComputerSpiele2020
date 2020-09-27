@@ -1035,6 +1035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbcd1ebc23f8eb446ad0da1def88ca3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuType: 2
   content: {fileID: 7098672120792965848}
   levelSelectListItemPrefab: {fileID: 2180737142470480092, guid: 259e769262f8fd1438f371d6f63ce18b,
     type: 3}

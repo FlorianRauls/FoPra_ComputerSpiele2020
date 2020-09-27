@@ -163,7 +163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7581658743073877537}
-  - component: {fileID: 1847957827568475998}
+  - component: {fileID: 8051069270128104735}
   m_Layer: 5
   m_Name: LevelFinishMenu
   m_TagString: Untagged
@@ -194,7 +194,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1847957827568475998
+--- !u!114 &8051069270128104735
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,9 +203,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7581658743073877538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcf87ebd1f0ac5f41a45b8f225b75164, type: 3}
+  m_Script: {fileID: 11500000, guid: 10bb33c03d2df294f87152b4d7e26fee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuType: 7
 --- !u!1 &7581658743370376181
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,7 +479,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8051069270128104735}
         m_MethodName: GoToMenu
         m_Mode: 1
         m_Arguments:
@@ -607,7 +608,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8051069270128104735}
         m_MethodName: RestartLevel
         m_Mode: 1
         m_Arguments:
@@ -736,8 +737,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Continue
+      - m_Target: {fileID: 8051069270128104735}
+        m_MethodName: Back
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

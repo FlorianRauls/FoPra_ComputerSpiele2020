@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04774bb745564fa4185b09f03c95b0ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuType: 3
   content: {fileID: 4484683709614616303}
   profileSelectListItemPrefab: {fileID: 2180737142470480092, guid: a748d63fb94c3af47a4e3812072e9972,
     type: 3}
