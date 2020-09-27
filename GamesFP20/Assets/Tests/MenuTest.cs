@@ -23,10 +23,11 @@ namespace Tests
         {
             MenuManager manager = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Menu/Menu")).GetComponent<MenuManager>();
             manager.views = new MenuView[3];
-            manager.views[0] = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Menu/DummyMenuView")).GetComponent<MenuView>();
+            manager.views[0] = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Menu/DeathMenu")).GetComponent<MenuView>();
             manager.views[1] = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Menu/DummyMenuView")).GetComponent<MenuView>();
-            manager.views[2] = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Menu/DummyMenuView")).GetComponent<MenuView>();
+            manager.views[2] = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Menu/PauseMenu")).GetComponent<MenuView>();
             manager.Start();
+            Debug.Log(manager.GetViewStack()[0].gameObject.activeSelf);
             manager.GetViewStack()[manager.GetViewStack().Count-1].TransitionTo(MenuEnum.Dummy);
             Assert.IsTrue(manager.GetViewStack()[1].gameObject.activeSelf == true);
             MenuManager.GetInstance().TransitionTo(2);
