@@ -6,31 +6,35 @@ using UnityEngine.UI;
 public class ProfileDetailMenu : MenuView
 {
     MenuEnum menuType = MenuEnum.ProfileDetail;
-    private int currentProfile = ProfileManager.GetInstance().GetProfileID();
 
     public void DeleteProfile()
     {
+        int currentProfile = ProfileManager.GetInstance().GetProfileID();
         ProfileManager.GetInstance().DeleteProfile(currentProfile);
         Back();
     }
 
     public void ChangeVolume(int volume)
     {
+        int currentProfile = ProfileManager.GetInstance().GetProfileID();
         ProfileManager.GetInstance().GetProfile(currentProfile).SetVolume((int)(transform.GetComponentInChildren<Slider>().value));
     }
 
     public void ChangeName(string name)
     {
+        int currentProfile = ProfileManager.GetInstance().GetProfileID();
         ProfileManager.GetInstance().GetProfile(currentProfile).SetName(transform.GetComponentInChildren<InputField>().text);
     }
 
     public void ChangeAutoRespawn(bool respawn)
     {
+        int currentProfile = ProfileManager.GetInstance().GetProfileID();
         ProfileManager.GetInstance().GetProfile(currentProfile).SetAutoRespawn(transform.GetComponentInChildren<Toggle>().isOn);
     }
 
     public override void Show()
     {
+        int currentProfile = ProfileManager.GetInstance().GetProfileID();
         transform.Find("ProfileName").GetChild(0).GetComponent<InputField>().text = "" + ProfileManager.GetInstance().GetProfile(currentProfile).GetName();
         transform.Find("MaxLevel").GetChild(0).GetComponent<Text>().text = "" + ProfileManager.GetInstance().GetProfile(currentProfile).GetMaxLevel();
         transform.Find("CurrentLevel").GetChild(0).GetComponent<Text>().text = "" + ProfileManager.GetInstance().GetProfile(currentProfile).GetCurrentLevel();
