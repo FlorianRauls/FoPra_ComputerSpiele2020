@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
 		
 			GameObject shot = slingshot.shootProjectile(mousePositionObject);
 		}
+		transform.Find("Camera").localPosition = new Vector3(0, 3.7f - transform.position.y, -7);
 	}
 
 	public void Move(float horizontalInput, bool jumpPressed)
