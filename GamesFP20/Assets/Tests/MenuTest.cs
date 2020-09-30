@@ -67,6 +67,26 @@ namespace Tests
             Assert.IsTrue(manager.GetViewStack()[0].GetType() == typeof(ProfileDetailMenu));
         }
         [Test]
+        public void SinglePlayerMenuTest()
+        {
+            MenuManager.ClearInstance();
+            MenuManager manager = MenuManager.GetInstance();
+            manager.views = new MenuView[1];
+            manager.views[0] = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Menu/SinglePlayer")).GetComponent<MenuView>();
+            manager.Start();
+            Assert.IsTrue(manager.GetViewStack()[0].GetType() == typeof(SinglePlayerMenu));
+        }
+        [Test]
+        public void MultiPlayerMenuTest()
+        {
+            MenuManager.ClearInstance();
+            MenuManager manager = MenuManager.GetInstance();
+            manager.views = new MenuView[1];
+            manager.views[0] = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Menu/MultiPlayer")).GetComponent<MenuView>();
+            manager.Start();
+            Assert.IsTrue(manager.GetViewStack()[0].GetType() == typeof(MultiPlayerMenu));
+        }
+        [Test]
         public void GameMenuTest()
         {
             MenuManager.ClearInstance();
