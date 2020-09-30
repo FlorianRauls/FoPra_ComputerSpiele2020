@@ -10,6 +10,9 @@ public class MushroomJumpTest : MonoBehaviour
     public void TestGetCollision()
     {
 
+        GameObject shroomObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/JumpShroom"));
+        MushroomJump shroom = shroomObject.GetComponent<MushroomJump>();
+
     }
 
     [Test]
@@ -21,6 +24,6 @@ public class MushroomJumpTest : MonoBehaviour
     [Test]
     public void TestMakingPlayerJump()
     {
-        
+
     }
 }

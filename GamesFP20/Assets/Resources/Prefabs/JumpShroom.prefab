@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5577347095152768763}
   - component: {fileID: 5577347095152768762}
-  - component: {fileID: 5577347095152768765}
   - component: {fileID: 5577347095152768764}
+  - component: {fileID: -5839152699188716357}
   m_Layer: 0
   m_Name: JumpShroom
   m_TagString: Untagged
@@ -83,18 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5577347095152768765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5577347095152768761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fb939c9e1c0c4f4181db24595f6a20a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &5577347095152768764
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -108,3 +96,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.8142133, y: 7.156631, z: 2.4656181}
   m_Center: {x: 0.030721823, y: 2.2666843, z: 0.00006508827}
+--- !u!114 &-5839152699188716357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5577347095152768761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b00c622952c97f4cbc1fb8cec8d2d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
