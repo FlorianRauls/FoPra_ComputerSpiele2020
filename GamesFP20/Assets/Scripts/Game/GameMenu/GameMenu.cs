@@ -21,15 +21,16 @@ public class GameMenu : MenuView
 
 	public override void Show()
     {
+		Debug.Log(ProfileManager.GetInstance().GetProfile(ProfileManager.GetInstance().GetProfileID()).ToString());
 		Transform autoContinue = transform.Find("AutoContinue");
 		if(autoContinue != null)
         {
-			autoContinue.GetComponent<Toggle>().isOn = ProfileManager.GetInstance().GetProfile(ProfileManager.GetInstance().GetProfileID()).GetAutoContinue();
+			autoContinue.GetComponentInChildren<Toggle>().isOn = ProfileManager.GetInstance().GetProfile(ProfileManager.GetInstance().GetProfileID()).GetAutoContinue();
 		}
 		Transform autoRespawn = transform.Find("AutoRespawn");
 		if (autoRespawn != null)
 		{
-			autoRespawn.GetComponent<Toggle>().isOn = ProfileManager.GetInstance().GetProfile(ProfileManager.GetInstance().GetProfileID()).GetAutoRespawn();
+			autoRespawn.GetComponentInChildren<Toggle>().isOn = ProfileManager.GetInstance().GetProfile(ProfileManager.GetInstance().GetProfileID()).GetAutoRespawn();
 		}
 		gameObject.SetActive(true);
 	}

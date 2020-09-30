@@ -99,7 +99,18 @@ public class ProfileManager : MonoBehaviour
 
     public static ProfileManager GetInstance()
     {
+        if(singleton == null)
+        {
+            singleton = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/ProfileManager")).GetComponent<ProfileManager>();
+            singleton.Start();
+        }
         return singleton;
+        
+    }
+
+    public static void ClearInstance()
+    {
+        singleton = null;
     }
 
     public int GetProfileID()

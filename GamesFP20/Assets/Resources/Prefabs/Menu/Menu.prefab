@@ -111,8 +111,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e07760a418add914f81babcbcade6bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  views:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  views: []

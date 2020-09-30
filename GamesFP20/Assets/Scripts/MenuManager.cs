@@ -5,7 +5,7 @@ using UnityEngine;
 public class MenuManager : MonoBehaviour
 {
     public static MenuManager singleton;
-    public MenuView[] views;
+    public MenuView[] views = new MenuView[0];
     List<MenuView> viewStack = new List<MenuView>();
 
     public void Start()
@@ -16,7 +16,17 @@ public class MenuManager : MonoBehaviour
 
     public static MenuManager GetInstance()
     {
+        if (singleton == null)
+        {
+            singleton = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Menu/Menu")).GetComponent<MenuManager>();
+            singleton.Start();
+        }
         return singleton;
+    }
+
+    public static void ClearInstance()
+    {
+        singleton = null;
     }
 
     public void Initial()
@@ -25,7 +35,10 @@ public class MenuManager : MonoBehaviour
         {
             view.Hide();
         }
-        Show(views[0]);
+        if(views.Length > 0)
+        {
+            Show(views[0]);
+        }
     }
 
     public void Show(MenuView view)
@@ -52,6 +65,10 @@ public class MenuManager : MonoBehaviour
             if (view.menuType == menu)
             {
                 TransitionTo(view);
+            }
+            else
+            {
+                Debug.Log("Could not find Menu Enum");
             }
         }
     }
