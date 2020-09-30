@@ -2,6 +2,8 @@
 {
     Dummy,
     Main,
+    SinglePlayer,
+    MultiPlayer,
     LevelSelect,
     ProfileSelect,
     ProfileDetail,

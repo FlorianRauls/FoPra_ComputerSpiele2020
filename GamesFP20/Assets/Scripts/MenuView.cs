@@ -58,4 +58,12 @@ public class MenuView : MonoBehaviour
     {
         TransitionTo(MenuEnum.GameFinish);
     }
+    public void TransitionToSinglePlayer()
+    {
+        TransitionTo(MenuEnum.SinglePlayer);
+    }
+    public void TransitionToMultiPlayer()
+    {
+        TransitionTo(MenuEnum.MultiPlayer);
+    }
 }
