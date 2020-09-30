@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MushroomJump : MonoBehaviour
 {
+
+    public GameObject target = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +17,20 @@ public class MushroomJump : MonoBehaviour
     {
         
     }
+
+    public GameObject GetTarget()
+    {
+        return target;
+    }
+
+    public void SetTarget(GameObject newTarget)
+    {
+        target = newTarget;
+    }
+
+    public void Collide(GameObject other)
+    {
+        SetTarget(other);
+    }
 }
+

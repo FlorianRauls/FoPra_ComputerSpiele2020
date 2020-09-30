@@ -13,6 +13,13 @@ public class MushroomJumpTest : MonoBehaviour
         GameObject shroomObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/JumpShroom"));
         MushroomJump shroom = shroomObject.GetComponent<MushroomJump>();
 
+        GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
+        Player boy = boyObject.GetComponent<Player>();
+
+        shroom.Collide(boyObject);
+
+        Assert.AreEqual(boyObject, shroom.GetTarget());
+
     }
 
     [Test]
