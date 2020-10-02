@@ -86,7 +86,7 @@ public class MushroomJumpTest : MonoBehaviour
 
         float force = 5f;
         shroom.SetForce(force);
-        shroom.SetCooldown(5f);
+        shroom.SetTimer(5f);
         shroom.Collide(boyObject);
 
         Assert.AreEqual(boyObject.transform.position, beforePosition + new Vector3(0f, 0f, 0f));
@@ -94,7 +94,7 @@ public class MushroomJumpTest : MonoBehaviour
     }
 
 
-    public void TestNotWorkWithCooldownUp()
+    public void TestWorkWithCooldownDown()
     {
         GameObject shroomObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/JumpShroom"));
         MushroomJump shroom = shroomObject.GetComponent<MushroomJump>();
@@ -107,7 +107,7 @@ public class MushroomJumpTest : MonoBehaviour
 
         float force = 5f;
         shroom.SetForce(force);
-        shroom.SetCooldown(-5f);
+        shroom.SetTimer(-5f);
         shroom.Collide(boyObject);
 
         Assert.AreEqual(boyObject.transform.position, beforePosition + new Vector3(0f, force, 0f));

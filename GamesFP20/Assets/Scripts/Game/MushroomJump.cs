@@ -8,6 +8,9 @@ public class MushroomJump : MonoBehaviour
     public GameObject target = null;
 
     float force = 10f;
+    float cooldown = 1f;
+
+    float timer = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +20,7 @@ public class MushroomJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        timer = timer + Time.deltaTime;      
     }
 
     public GameObject GetTarget()
@@ -34,13 +37,38 @@ public class MushroomJump : MonoBehaviour
     {
         if(other.GetComponent<Player>() != null)
         {
-            SetTarget(other);
-            Player player = other.GetComponent<Player>();
-            Vector3 vel = player.velocity;
-            vel.y = 0f;
-            player.GetController().Move(vel + new Vector3(0f, force, 0f) * Time.deltaTime);
+            if(timer > cooldown)
+            {
+                timer = 0f;
+                SetTarget(other);
+                Player player = other.GetComponent<Player>();
+                Vector3 vel = player.velocity;
+                vel.y = 0f;
+                player.GetController().Move(vel + new Vector3(0f, force, 0f) * Time.deltaTime);
+            }
+
         }
 
+    }
+
+    public void SetCooldown(float newCd)
+    {
+        cooldown = newCd;
+    }
+
+    public float GetCooldown()
+    {
+        return cooldown;
+    }
+
+    public void SetTimer(float newCd)
+    {
+        timer = newCd;
+    }
+
+    public float GetTimer()
+    {
+        return timer;
     }
 
     public float GetObjectJumpHeight()
