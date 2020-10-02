@@ -96,7 +96,8 @@ public class Player : MonoBehaviour
 		}
 		if(hit.gameObject.GetComponent<MushroomJump>() != null)
 		{
-			hit.transform.gameObject.GetComponent<MushroomJump>().SendMessage("Collide", this.gameObject);
+			if(hit.gameObject.transform.position.y < transform.position.y-2f)
+				hit.transform.gameObject.GetComponent<MushroomJump>().SendMessage("Collide", this.gameObject);
 		}
 
  	}
