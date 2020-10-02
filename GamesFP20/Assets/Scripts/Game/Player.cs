@@ -3,8 +3,9 @@
 public class Player : MonoBehaviour
 {
 	public float speed = 6;
-	public float jumpForce = 10;
+	public float jumpForce = 11;
 	public float gravity = 20;
+	float distance;
 
 	public Vector3 velocity;
 	// contains information to whether or not the character touched
@@ -21,12 +22,17 @@ public class Player : MonoBehaviour
 
 	public GameObject mousePositionObject;
 
+	Plane plane;
+
+	Vector3 worldPosition ;
+
 
 	public void Start()
     {
         controller = GetComponent<CharacterController>();
 		slingshot = GetComponent<Slingshot>();
 		mousePositionObject = new GameObject();
+		plane = new Plane(Vector3.up, 0);
     }
 
     void Update()
@@ -39,11 +45,19 @@ public class Player : MonoBehaviour
 		// the ground last frame
 		grounded = controller.isGrounded;
 		Move(Input.GetAxis("Horizontal"), Input.GetButtonDown("Jump"));
-		mousePositionObject.transform.position = Input.mousePosition;
+
+		
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		if (plane.Raycast(ray, out distance))
+		{
+			worldPosition= ray.GetPoint(distance);
+		}
+
+		mousePositionObject.transform.position = worldPosition;
+    
 
 		if(Input.GetButtonDown("Fire1"))
 		{
-		
 			GameObject shot = slingshot.shootProjectile(mousePositionObject);
 		}
 		transform.Find("Camera").localPosition = new Vector3(0, 3.7f - transform.position.y, -7);
