@@ -44,6 +44,12 @@ public class Player : MonoBehaviour
 			GameObject shot = slingshot.shootProjectile(mousePositionObject);
 		}
 		transform.Find("Camera").localPosition = new Vector3(0, 3.7f - transform.position.y, -7);
+		Debug.Log(transform.position);
+	}
+
+	public CharacterController GetController()
+	{
+		return controller;
 	}
 
 	public void Move(float horizontalInput, bool jumpPressed)
@@ -87,6 +93,10 @@ public class Player : MonoBehaviour
 		{
     		hit.transform.SendMessage("collide", this.gameObject);
 			collide(hit.gameObject);
+		}
+		if(hit.gameObject.GetComponent<MushroomJump>() != null)
+		{
+			hit.transform.gameObject.GetComponent<MushroomJump>().SendMessage("Collide", this.gameObject);
 		}
 
  	}
