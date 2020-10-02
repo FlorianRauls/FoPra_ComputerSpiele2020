@@ -32,5 +32,10 @@ public class MushroomJump : MonoBehaviour
     {
         SetTarget(other);
     }
+
+    public float GetObjectJumpHeight()
+    {
+        
+    }
 }
 

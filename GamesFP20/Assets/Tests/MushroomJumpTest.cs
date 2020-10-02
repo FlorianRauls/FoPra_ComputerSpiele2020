@@ -25,12 +25,28 @@ public class MushroomJumpTest : MonoBehaviour
     [Test]
     public void TestGettingPlayerJumpHeight()
     {
+        GameObject shroomObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/JumpShroom"));
+        MushroomJump shroom = shroomObject.GetComponent<MushroomJump>();
+
+        GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
+        Player boy = boyObject.GetComponent<Player>();
+
+        shroom.Collide(boyObject);
+
+        float playerHeight = shroom.GetObjectJumpHeight();
+        Assert.AreEqual(boy.jumpForce, playerHeight);
 
     }
 
     [Test]
     public void TestMakingPlayerJump()
     {
+        GameObject shroomObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/JumpShroom"));
+        MushroomJump shroom = shroomObject.GetComponent<MushroomJump>();
 
+        GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
+        Player boy = boyObject.GetComponent<Player>();
+
+        shroom.Collide(boyObject);
     }
 }
