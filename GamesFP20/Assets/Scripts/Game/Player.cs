@@ -31,6 +31,9 @@ public class Player : MonoBehaviour
 
     void Update()
 	{
+		Vector3 adjuestedPos = transform.position;
+		adjuestedPos.z = 0f;
+		transform.position = adjuestedPos;
 		// https://docs.unity3d.com/ScriptReference/CharacterController-isGrounded.html
 		// isGrounded returns a Boolan of whether or not the character touched
 		// the ground last frame
@@ -44,7 +47,7 @@ public class Player : MonoBehaviour
 			GameObject shot = slingshot.shootProjectile(mousePositionObject);
 		}
 		transform.Find("Camera").localPosition = new Vector3(0, 3.7f - transform.position.y, -7);
-		Debug.Log(transform.position);
+
 	}
 
 	public CharacterController GetController()
