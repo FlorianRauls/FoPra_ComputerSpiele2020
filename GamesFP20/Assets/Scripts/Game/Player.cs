@@ -5,6 +5,8 @@ public class Player : MonoBehaviour
 	public float speed = 6;
 	public float jumpForce = 10;
 	public float gravity = 20;
+
+	public Vector3 velocity;
 	// contains information to whether or not the character touched
 	// ground at the last frame
 	private bool grounded = true;
@@ -46,7 +48,7 @@ public class Player : MonoBehaviour
 
 	public void Move(float horizontalInput, bool jumpPressed)
     {
-		Vector3 velocity = controller.velocity;
+		velocity = controller.velocity;
 		velocity = CalculateMovement(velocity, horizontalInput, jumpPressed, Time.deltaTime);
 		controller.Move(velocity * Time.deltaTime);
 	}

@@ -39,7 +39,7 @@ public class MushroomJumpTest : MonoBehaviour
     }
 
     [Test]
-    public void TestMakingPlayerJump()
+    public void TestGettingPlayerVelocity()
     {
         GameObject shroomObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/JumpShroom"));
         MushroomJump shroom = shroomObject.GetComponent<MushroomJump>();
@@ -47,6 +47,29 @@ public class MushroomJumpTest : MonoBehaviour
         GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
         Player boy = boyObject.GetComponent<Player>();
 
+        boy.velocity = new Vector3(1f, 1f, 1f);
+
+        shroom.Collide(boyObject);  
+
+        Assert.AreEqual(new Vector3(1f, 1f, 1f), shroom.GetTargetVelocity());   
+    }
+
+    [Test]
+    public void TestMakingPlayerJump()
+    {
+        GameObject shroomObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/JumpShroom"));
+        MushroomJump shroom = shroomObject.GetComponent<MushroomJump>();
+
+        GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
+        Player boy = boyObject.GetComponent<Player>();
+        Vector3 beforePosition = new Vector3(0f, 0f, 0f);
+        boyObject.transform.position = beforePosition;
+
+        float force = 5f;
+        shroom.SetForce(force);
+
         shroom.Collide(boyObject);
+
+        Assert.AreEqual(boyObject.transform.position, beforePosition + new Vector3(0f, force, 0f));
     }
 }
