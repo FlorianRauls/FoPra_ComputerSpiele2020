@@ -15,9 +15,8 @@ public class MushroomJumpTest : MonoBehaviour
 
         GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
         Player boy = boyObject.GetComponent<Player>();
-
+        shroom.SetTimer(-5f);
         shroom.Collide(boyObject);
-
         Assert.AreEqual(boyObject, shroom.GetTarget());
 
     }

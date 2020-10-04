@@ -30,6 +30,7 @@ public class MushroomJump : MonoBehaviour
 
     public void SetTarget(GameObject newTarget)
     {
+        Debug.Log("hi");
         target = newTarget;
     }
 
