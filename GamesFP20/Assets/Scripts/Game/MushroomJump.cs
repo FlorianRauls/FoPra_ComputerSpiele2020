@@ -12,7 +12,7 @@ public class MushroomJump : MonoBehaviour
 
     float timer = 0f;
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         
     }
@@ -36,15 +36,19 @@ public class MushroomJump : MonoBehaviour
 
     public void Collide(GameObject other)
     {
+        
         if(other.GetComponent<Player>() != null)
         {
+            
             if(timer > cooldown)
             {
+                
                 timer = 0f;
                 SetTarget(other);
                 Player player = other.GetComponent<Player>();
                 Vector3 vel = player.velocity;
                 vel.y = 0f;
+                Debug.Log(player.GetController());
                 player.GetController().Move((  vel + new Vector3(0f, force, 0f) )* Time.deltaTime);
             }
 

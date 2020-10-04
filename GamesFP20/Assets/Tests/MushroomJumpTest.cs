@@ -12,10 +12,14 @@ public class MushroomJumpTest : MonoBehaviour
 
         GameObject shroomObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/JumpShroom"));
         MushroomJump shroom = shroomObject.GetComponent<MushroomJump>();
+        shroom.Start();
 
         GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
         Player boy = boyObject.GetComponent<Player>();
-        shroom.SetTimer(-5f);
+        boy.Start();
+
+
+        shroom.SetTimer(5f);
         shroom.Collide(boyObject);
         Assert.AreEqual(boyObject, shroom.GetTarget());
 
@@ -26,9 +30,12 @@ public class MushroomJumpTest : MonoBehaviour
     {
         GameObject shroomObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/JumpShroom"));
         MushroomJump shroom = shroomObject.GetComponent<MushroomJump>();
+        shroom.Start();
 
         GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
         Player boy = boyObject.GetComponent<Player>();
+        boy.Start();
+
 
         shroom.Collide(boyObject);
 
@@ -42,9 +49,12 @@ public class MushroomJumpTest : MonoBehaviour
     {
         GameObject shroomObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/JumpShroom"));
         MushroomJump shroom = shroomObject.GetComponent<MushroomJump>();
+        shroom.Start();
 
         GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
         Player boy = boyObject.GetComponent<Player>();
+        boy.Start();
+
 
         boy.velocity = new Vector3(1f, 1f, 1f);
 
@@ -58,9 +68,13 @@ public class MushroomJumpTest : MonoBehaviour
     {
         GameObject shroomObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/JumpShroom"));
         MushroomJump shroom = shroomObject.GetComponent<MushroomJump>();
+        shroom.Start();
 
         GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
         Player boy = boyObject.GetComponent<Player>();
+        boy.Start();
+
+
         Vector3 beforePosition = new Vector3(0f, 0f, 0f);
         boyObject.transform.position = beforePosition;
 
@@ -76,16 +90,20 @@ public class MushroomJumpTest : MonoBehaviour
     {
         GameObject shroomObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/JumpShroom"));
         MushroomJump shroom = shroomObject.GetComponent<MushroomJump>();
+        shroom.Start();
 
         GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
-        Player boy = boyObject.GetComponent<Player>();      
+        Player boy = boyObject.GetComponent<Player>();
+        boy.Start();
+
+
 
         Vector3 beforePosition = new Vector3(0f, 0f, 0f);
         boyObject.transform.position = beforePosition;
 
         float force = 5f;
         shroom.SetForce(force);
-        shroom.SetTimer(5f);
+        shroom.SetTimer(-5f);
         shroom.Collide(boyObject);
 
         Assert.AreEqual(boyObject.transform.position, beforePosition + new Vector3(0f, 0f, 0f));
@@ -97,16 +115,20 @@ public class MushroomJumpTest : MonoBehaviour
     {
         GameObject shroomObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/JumpShroom"));
         MushroomJump shroom = shroomObject.GetComponent<MushroomJump>();
+        shroom.Start();
 
         GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
-        Player boy = boyObject.GetComponent<Player>();      
+        Player boy = boyObject.GetComponent<Player>();
+        boy.Start();
+        
+            
 
         Vector3 beforePosition = new Vector3(0f, 0f, 0f);
         boyObject.transform.position = beforePosition;
 
         float force = 5f;
         shroom.SetForce(force);
-        shroom.SetTimer(-5f);
+        shroom.SetTimer(5f);
         shroom.Collide(boyObject);
 
         Assert.AreEqual(boyObject.transform.position, beforePosition + new Vector3(0f, force, 0f));

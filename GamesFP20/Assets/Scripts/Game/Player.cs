@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
 		grounded = controller.isGrounded;
 		Move(Input.GetAxis("Horizontal"), Input.GetButtonDown("Jump"));
 
-		
+		Debug.Log(Input.mousePosition);
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		if (plane.Raycast(ray, out distance))
 		{
