@@ -10,11 +10,11 @@ public class MushroomJump : MonoBehaviour
     float force = 10f;
     float cooldown = 1f;
 
-    float timer = 0f;
+    float timer = 5f;
     // Start is called before the first frame update
     public void Start()
     {
-        
+        target = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
@@ -77,9 +77,7 @@ public class MushroomJump : MonoBehaviour
 
     public float GetObjectJumpHeight()
     {
-
         return target.GetComponent<Player>().jumpForce;
-
     }
 
     public Vector3 GetTargetVelocity()
