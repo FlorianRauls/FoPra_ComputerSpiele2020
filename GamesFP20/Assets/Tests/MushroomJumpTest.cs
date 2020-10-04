@@ -86,6 +86,7 @@ public class MushroomJumpTest : MonoBehaviour
         Assert.AreEqual(boyObject.transform.position, beforePosition + new Vector3(0f, force, 0f));
     }
 
+    [Test]
     public void TestNotWorkWithCooldownUp()
     {
         GameObject shroomObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/JumpShroom"));
@@ -120,8 +121,8 @@ public class MushroomJumpTest : MonoBehaviour
         GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
         Player boy = boyObject.GetComponent<Player>();
         boy.Start();
-        
-            
+
+
 
         Vector3 beforePosition = new Vector3(0f, 0f, 0f);
         boyObject.transform.position = beforePosition;

@@ -30,7 +30,6 @@ public class MushroomJump : MonoBehaviour
 
     public void SetTarget(GameObject newTarget)
     {
-        Debug.Log("hi");
         target = newTarget;
     }
 
@@ -78,13 +77,9 @@ public class MushroomJump : MonoBehaviour
 
     public float GetObjectJumpHeight()
     {
-        if(target != null)
-        {
-            return target.GetComponent<Player>().jumpForce;
-        }
-        else{
-            return 0f;
-        }
+
+        return target.GetComponent<Player>().jumpForce;
+
     }
 
     public Vector3 GetTargetVelocity()
