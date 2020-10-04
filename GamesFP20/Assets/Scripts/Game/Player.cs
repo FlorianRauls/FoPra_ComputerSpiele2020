@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
 
     void Update()
 	{
+		// This makes sure that the player does not move onto the Z axis
 		Vector3 adjuestedPos = transform.position;
 		adjuestedPos.z = 0f;
 		transform.position = adjuestedPos;
@@ -46,14 +47,19 @@ public class Player : MonoBehaviour
 		grounded = controller.isGrounded;
 		Move(Input.GetAxis("Horizontal"), Input.GetButtonDown("Jump"));
 
-		Debug.Log(Input.mousePosition);
-		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		if (plane.Raycast(ray, out distance))
-		{
-			worldPosition= ray.GetPoint(distance);
-		}
+		// These calculations are done to pass a object onto the slingshot.shootProjectile() function
+		// such that a solid direction can be calculated for the projectile
+		Vector3 mousePos = Input.mousePosition;
+		mousePos.z = Camera.main.nearClipPlane;
+		Vector3 finalPosition = Camera.main.ScreenToWorldPoint(mousePos);
+		finalPosition.z = 0f;
 
-		mousePositionObject.transform.position = worldPosition;
+		Debug.Log("     ");
+		Debug.Log(finalPosition);
+		Debug.Log(transform.position);
+		Debug.Log("     ");
+
+		mousePositionObject.transform.position = finalPosition;
     
 
 		if(Input.GetButtonDown("Fire1"))
