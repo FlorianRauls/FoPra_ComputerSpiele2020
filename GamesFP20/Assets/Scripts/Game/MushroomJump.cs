@@ -47,7 +47,6 @@ public class MushroomJump : MonoBehaviour
                 Player player = other.GetComponent<Player>();
                 Vector3 vel = player.velocity;
                 vel.y = 0f;
-                Debug.Log(player.GetController());
                 player.GetController().Move((  vel + new Vector3(0f, force, 0f) )* Time.deltaTime);
             }
 

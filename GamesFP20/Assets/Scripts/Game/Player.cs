@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 	public float gravity = 20;
 	float distance;
 
+	float localCamOffsetZ = 7f;
+
 	public Vector3 velocity;
 	// contains information to whether or not the character touched
 	// ground at the last frame
@@ -49,24 +51,24 @@ public class Player : MonoBehaviour
 
 		// These calculations are done to pass a object onto the slingshot.shootProjectile() function
 		// such that a solid direction can be calculated for the projectile
+
+		Vector3 betterPos = transform.position;
 		Vector3 mousePos = Input.mousePosition;
-		mousePos.z = Camera.main.nearClipPlane;
-		Vector3 finalPosition = Camera.main.ScreenToWorldPoint(mousePos);
-		finalPosition.z = 0f;
+		// this number depends both on our transformation of the camera and
+		// its static global z-position (-10)
+		mousePos.z = 10f + localCamOffsetZ;
+		Vector3 mousePos2 = Camera.main.ScreenToWorldPoint(mousePos);
 
-		Debug.Log("     ");
-		Debug.Log(finalPosition);
-		Debug.Log(transform.position);
-		Debug.Log("     ");
-
-		mousePositionObject.transform.position = finalPosition;
-    
+		Vector3 finalPos = mousePos2 - betterPos;
+		finalPos.z = 0f;
+		finalPos.y +=5f;
+		mousePositionObject.transform.position = ( transform.position + finalPos  )*5f;
 
 		if(Input.GetButtonDown("Fire1"))
 		{
 			GameObject shot = slingshot.shootProjectile(mousePositionObject);
 		}
-		transform.Find("Camera").localPosition = new Vector3(0, 3.7f - transform.position.y, -7);
+		transform.Find("Camera").localPosition = new Vector3(0, 3.7f - transform.position.y, -localCamOffsetZ);
 
 	}
 
