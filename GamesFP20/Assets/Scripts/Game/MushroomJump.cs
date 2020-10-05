@@ -7,7 +7,7 @@ public class MushroomJump : MonoBehaviour
 
     public GameObject target = null;
 
-    float force = 10f;
+    float force = 8f;
     float cooldown = 1f;
 
     float timer = 5f;
