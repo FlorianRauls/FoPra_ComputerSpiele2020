@@ -112,7 +112,7 @@ public class Player : MonoBehaviour
 		return gravity;
 	}
 
-	void OnControllerColliderHit(ControllerColliderHit hit)
+	public void OnControllerColliderHit(ControllerColliderHit hit)
 	{
 		if(hit.gameObject.tag == "Enemy")
 		{
@@ -127,7 +127,7 @@ public class Player : MonoBehaviour
 
  	}
 
-	void OnTriggerEnter(Collider collider)
+	public void OnTriggerEnter(Collider collider)
     {
 		collide(collider.gameObject);
 	}
