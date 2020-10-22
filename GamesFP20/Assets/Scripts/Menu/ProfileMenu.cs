@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ProfileMenu : MenuView
 {
 	MenuEnum menuType = MenuEnum.ProfileSelect;
-	public GameObject content;
+	public Transform content;
 	public GameObject profileSelectListItemPrefab;
 
 	public void AddProfile()
@@ -34,7 +34,7 @@ public class ProfileMenu : MenuView
     {
 		for (int i = 0; i < ProfileManager.GetInstance().GetProfileCount(); i++)
 		{
-			var selector = Instantiate(profileSelectListItemPrefab, content.transform);
+			var selector = Instantiate(profileSelectListItemPrefab, content);
 			selector.transform.localPosition = new Vector3(0, -40 - i * 50, 0);
 			selector.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "" + ProfileManager.GetInstance().GetProfile(i).GetName();
 

@@ -16,17 +16,13 @@ public class MenuManager : MonoBehaviour
 
     public static MenuManager GetInstance()
     {
-        if (singleton == null)
-        {
-            singleton = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Menu/Menu")).GetComponent<MenuManager>();
-            singleton.Start();
-        }
         return singleton;
     }
 
     public static void ClearInstance()
     {
-        singleton = null;
+        singleton = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Menu/Menu")).GetComponent<MenuManager>();
+        singleton.Start();
     }
 
     public void Initial()
@@ -49,6 +45,7 @@ public class MenuManager : MonoBehaviour
 
     public void TransitionTo(MenuView view)
     {
+        Debug.Log("Transition: " + view + " from: " + viewStack[viewStack.Count - 1]);
         viewStack[viewStack.Count-1].Hide();
         Show(view);
     }
@@ -60,17 +57,23 @@ public class MenuManager : MonoBehaviour
 
     public void TransitionTo(MenuEnum menu)
     {
+        MenuView viewToCall = null;
         foreach (MenuView view in views)
         {
             if (view.menuType == menu)
             {
-                TransitionTo(view);
-            }
-            else
-            {
-                Debug.Log("Could not find Menu Enum");
+                viewToCall = view;
             }
         }
+        if(viewToCall == null)
+        {
+            Debug.Log("Could not find Menu Enum");
+        }
+        else
+        {
+            TransitionTo(viewToCall);
+        }
+        
     }
 
     public void Back()
