@@ -684,6 +684,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1935298929, guid: d53882c8914fbf246af3841011f5b337, type: 3}
+      propertyPath: m_StepOffset
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935298929, guid: d53882c8914fbf246af3841011f5b337, type: 3}
+      propertyPath: m_MinMoveDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935298929, guid: d53882c8914fbf246af3841011f5b337, type: 3}
+      propertyPath: m_Radius
+      value: 6.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935298929, guid: d53882c8914fbf246af3841011f5b337, type: 3}
+      propertyPath: m_Height
+      value: 13.57
+      objectReference: {fileID: 0}
     - target: {fileID: 2053491536001741390, guid: d53882c8914fbf246af3841011f5b337,
         type: 3}
       propertyPath: m_Name
@@ -742,6 +758,11 @@ PrefabInstance:
     - target: {fileID: 3266347633881637532, guid: d53882c8914fbf246af3841011f5b337,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195716126648061775, guid: d53882c8914fbf246af3841011f5b337,
+        type: 3}
+      propertyPath: velocity.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

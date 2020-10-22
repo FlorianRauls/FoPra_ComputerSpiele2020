@@ -7,7 +7,7 @@ public class MushroomJump : MonoBehaviour
 
     public GameObject target = null;
 
-    public float force = 18f;
+    public float force = 8f;
     float cooldown = 1f;
 
     float timer = 5f;
@@ -38,12 +38,8 @@ public class MushroomJump : MonoBehaviour
         target = other;
         if(other.GetComponent<Player>() != null)
         {
-            Debug.Log("Collided");
-            Debug.Log(other);
             if(timer > cooldown)
             {
-                Debug.Log(other);
-                
                 timer = 0f;
                 SetTarget(other);
                 Player player = other.GetComponent<Player>();
