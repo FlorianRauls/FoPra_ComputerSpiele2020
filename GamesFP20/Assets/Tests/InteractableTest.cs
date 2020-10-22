@@ -9,11 +9,46 @@ namespace Tests
 {
     public class InterActableTest
     {
-        // A Test behaves as an ordinary method
         [Test]
-        public void NewTestScriptSimplePasses()
+        public void TestGetChildCollider()
         {
-            // Use the Assert class to test conditions
+            
+        }
+
+        [Test]
+        public void TestGetChild()
+        {
+            
+        }
+
+        [Test]
+        public void TestDetectChildCollisionRandomObject()
+        {
+            
+        }
+
+        [Test]
+        public void TestDetectChildCollisionInteractionObject()
+        {
+            
+        }
+
+        [Test]
+        public void TestRotateCorrectly()
+        {
+            
+        }
+
+        [Test]
+        public void TestRotateOnChildCollisionInteractiveObject()
+        {
+            
+        }
+
+        [Test]
+        public void TestNotRotateOnChildCollisionRandomObject()
+        {
+            
         }
     }
 }
