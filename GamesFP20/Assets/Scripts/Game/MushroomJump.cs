@@ -36,7 +36,7 @@ public class MushroomJump : MonoBehaviour
     public void Collide(GameObject other)
     {
         
-        if(other.GetComponent<Player>() != null)
+        if(other.GetComponent<Player>() != null && other.GetComponent<PlayerTwo>() != null)
         {
             
             if(timer > cooldown)
@@ -45,9 +45,11 @@ public class MushroomJump : MonoBehaviour
                 timer = 0f;
                 SetTarget(other);
                 Player player = other.GetComponent<Player>();
-                Vector3 vel = player.velocity;
+                PlayerTwo playert = other.GetComponent<PlayerTwo>();
+                Vector3 vel = playert.velocity;
                 vel.y = 0f;
                 player.GetController().Move((  vel + new Vector3(0f, force, 0f) )* Time.deltaTime);
+
             }
 
         }

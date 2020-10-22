@@ -332,6 +332,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boy
       objectReference: {fileID: 0}
+    - target: {fileID: 5892982613704949989, guid: 96f86c78cd90a3c44a175dc276ad85d1,
+        type: 3}
+      propertyPath: cooldown
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96f86c78cd90a3c44a175dc276ad85d1, type: 3}
 --- !u!1 &705507993
@@ -687,12 +692,12 @@ PrefabInstance:
     - target: {fileID: 3266347633881637532, guid: d53882c8914fbf246af3841011f5b337,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.711
+      value: 5.34
       objectReference: {fileID: 0}
     - target: {fileID: 3266347633881637532, guid: d53882c8914fbf246af3841011f5b337,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.985
+      value: 1.308
       objectReference: {fileID: 0}
     - target: {fileID: 3266347633881637532, guid: d53882c8914fbf246af3841011f5b337,
         type: 3}

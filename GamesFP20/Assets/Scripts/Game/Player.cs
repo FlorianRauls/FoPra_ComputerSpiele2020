@@ -12,14 +12,14 @@ public class Player : MonoBehaviour
 	public Vector3 velocity;
 	// contains information to whether or not the character touched
 	// ground at the last frame
-	private bool grounded = true;
+	protected bool grounded = true;
 
-	private bool defeated = false;
-	private bool inLevelMenu;
-	private bool inAccomplishedMenu;
-	private bool inDefeatedMenu;
+	protected bool defeated = false;
+	protected bool inLevelMenu;
+	protected bool inAccomplishedMenu;
+	protected bool inDefeatedMenu;
 	
-	private CharacterController controller;
+	protected CharacterController controller;
 	private Slingshot slingshot;
 
 	public GameObject mousePositionObject;

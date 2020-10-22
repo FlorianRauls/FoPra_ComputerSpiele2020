@@ -5,16 +5,6 @@ using UnityEngine;
 public class PlayerTwo : Player
 {
 
-	// contains information to whether or not the character touched
-	// ground at the last frame
-	private bool grounded = true;
-	private bool defeated = false;
-	private bool inLevelMenu;
-	private bool inAccomplishedMenu;
-	private bool inDefeatedMenu;
-	private CharacterController controller;
-
-
     // Start is called before the first frame update
     public new void Start()
     {
@@ -31,5 +21,6 @@ public class PlayerTwo : Player
         // Movement logic
 		grounded = controller.isGrounded;
         Move(Input.GetAxis("HorizontalTwo"), Input.GetButtonDown("JumpTwo"));
+
     }
 }
