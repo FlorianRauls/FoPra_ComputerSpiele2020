@@ -117,7 +117,7 @@ public class Profile
         rx = new Regex(@"autoRespawn:(?<autoRespawn>\w+)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         profile.autoRespawn = bool.Parse(rx.Matches(input)[0].Groups["autoRespawn"].Value);
 
-        rx = new Regex(@"autoRespawn:(?<autoContinue>\w+)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        rx = new Regex(@"autoContinue:(?<autoContinue>\w+)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         profile.autoContinue = bool.Parse(rx.Matches(input)[0].Groups["autoContinue"].Value);
 
         return profile;
