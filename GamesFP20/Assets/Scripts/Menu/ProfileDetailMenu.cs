@@ -42,8 +42,10 @@ public class ProfileDetailMenu : MenuView
     {
         int currentProfile = ProfileManager.GetInstance().GetProfileID();
         transform.Find("ProfileName").GetChild(0).GetComponent<InputField>().text = "" + ProfileManager.GetInstance().GetProfile(currentProfile).GetName();
-        //transform.Find("MaxLevel").GetChild(0).GetComponent<Text>().text = "" + ProfileManager.GetInstance().GetProfile(currentProfile).GetMaxLevel();
-        //transform.Find("CurrentLevel").GetChild(0).GetComponent<Text>().text = "" + ProfileManager.GetInstance().GetProfile(currentProfile).GetCurrentLevel();
+        transform.Find("MaxLevel").GetChild(0).GetComponent<Text>().text = "" + ProfileManager.GetInstance().GetProfile(currentProfile).GetMaxLevelS();
+        transform.Find("CurrentLevel").GetChild(0).GetComponent<Text>().text = "" + ProfileManager.GetInstance().GetProfile(currentProfile).GetCurrentLevelS();
+        transform.Find("MaxLevel").GetChild(1).GetComponent<Text>().text = "" + ProfileManager.GetInstance().GetProfile(currentProfile).GetMaxLevelM();
+        transform.Find("CurrentLevel").GetChild(1).GetComponent<Text>().text = "" + ProfileManager.GetInstance().GetProfile(currentProfile).GetCurrentLevelM();
         transform.Find("Volume").GetChild(1).GetComponent<Slider>().value = ProfileManager.GetInstance().GetProfile(currentProfile).GetVolume();
         transform.Find("AutoRespawn").GetChild(0).GetComponent<Toggle>().isOn = ProfileManager.GetInstance().GetProfile(currentProfile).GetAutoRespawn();
         transform.Find("DeleteProfile").gameObject.SetActive(ProfileManager.GetInstance().GetProfileCount() != 1);

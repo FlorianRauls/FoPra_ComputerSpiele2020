@@ -71,11 +71,11 @@ public class LevelLoader : MonoBehaviour
     {
         if (singleplayer)//TODO divide into singleplayer and multiplayer level
         {
-            level = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Level/Level" + levelIndex));
+            level = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Level/LevelS" + levelIndex));
         }
         else
         {
-            level = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Level/Level" + levelIndex));
+            level = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Level/LevelM" + levelIndex));
         }
         
         level.transform.position = new Vector3(level.transform.position.x + levelStart, level.transform.position.y, level.transform.position.z);
