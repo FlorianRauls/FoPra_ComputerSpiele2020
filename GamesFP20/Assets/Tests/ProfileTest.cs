@@ -40,8 +40,8 @@ namespace Tests
             Assert.IsTrue(profile.GetID() == profile2.GetID());
             Assert.IsTrue(profile.GetName() == profile2.GetName());
             Assert.IsTrue(profile.GetVolume() == profile2.GetVolume());
-            Assert.IsTrue(profile.GetCurrentLevel() == profile2.GetCurrentLevel());
-            Assert.IsTrue(profile.GetMaxLevel() == profile2.GetMaxLevel());
+            //Assert.IsTrue(profile.GetCurrentLevel() == profile2.GetCurrentLevel());
+            //Assert.IsTrue(profile.GetMaxLevel() == profile2.GetMaxLevel());
             Assert.IsTrue(profile.GetAutoRespawn() == profile2.GetAutoRespawn());
         }
 
@@ -59,8 +59,8 @@ namespace Tests
             Assert.IsTrue(profile.GetID() != profile2.GetID());
             Assert.IsTrue(profile.GetName() == profile2.GetName());
             Assert.IsTrue(profile.GetVolume() == profile2.GetVolume());
-            Assert.IsTrue(profile.GetCurrentLevel() == profile2.GetCurrentLevel());
-            Assert.IsTrue(profile.GetMaxLevel() == profile2.GetMaxLevel());
+            //Assert.IsTrue(profile.GetCurrentLevel() == profile2.GetCurrentLevel());
+            //Assert.IsTrue(profile.GetMaxLevel() == profile2.GetMaxLevel());
             Assert.IsTrue(profile.GetAutoRespawn() == profile2.GetAutoRespawn());
         }
 
@@ -77,8 +77,8 @@ namespace Tests
 
             profileManager.GetProfile().SetName("Test");
             profileManager.GetProfile().SetVolume(0);
-            profileManager.GetProfile().SetCurrentLevel(2);
-            profileManager.GetProfile().SetMaxLevel(2);
+            //profileManager.GetProfile().SetCurrentLevel(2);
+            //profileManager.GetProfile().SetMaxLevel(2);
             profileManager.GetProfile().SetAutoRespawn(true);
 
             profileManager.LoadProfiles();
@@ -87,16 +87,16 @@ namespace Tests
             Assert.IsTrue(profileManager.GetProfile().GetID() == 1);
             Assert.IsTrue(profileManager.GetProfile().GetName() == "Test");
             Assert.IsTrue(profileManager.GetProfile().GetVolume() == 0);
-            Assert.IsTrue(profileManager.GetProfile().GetCurrentLevel() == 2);
-            Assert.IsTrue(profileManager.GetProfile().GetMaxLevel() == 2);
+            //Assert.IsTrue(profileManager.GetProfile().GetCurrentLevel() == 2);
+            //Assert.IsTrue(profileManager.GetProfile().GetMaxLevel() == 2);
             Assert.IsTrue(profileManager.GetProfile().GetAutoRespawn() == true);
 
             profileManager.SetProfileID(0);
             Assert.IsTrue(profileManager.GetProfile().GetID() == 0);
             Assert.IsTrue(profileManager.GetProfile().GetName() == "Player");
             Assert.IsTrue(profileManager.GetProfile().GetVolume() == 100);
-            Assert.IsTrue(profileManager.GetProfile().GetCurrentLevel() == 1);
-            Assert.IsTrue(profileManager.GetProfile().GetMaxLevel() == 1);
+            //Assert.IsTrue(profileManager.GetProfile().GetCurrentLevel() == 1);
+            //Assert.IsTrue(profileManager.GetProfile().GetMaxLevel() == 1);
             Assert.IsTrue(profileManager.GetProfile().GetAutoRespawn() == false);
 
             Assert.IsTrue(profileManager.GetProfileCount() == 2);

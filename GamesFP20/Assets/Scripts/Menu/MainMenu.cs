@@ -11,13 +11,13 @@ public class MainMenu : MenuView
 
 	public void NewGame()
 	{
-		ProfileManager.GetInstance().GetProfile().SetCurrentLevel(1);
-		SceneManager.LoadScene("Game");
+		//ProfileManager.GetInstance().GetProfile().SetCurrentLevel(1);
+		//SceneManager.LoadScene("Game");
 	}
 
 	public void Continue()
 	{
-		LevelLoader.levelIndex = ProfileManager.GetInstance().GetProfile().GetCurrentLevel();
-		SceneManager.LoadScene("Game");
+		//LevelLoader.levelIndex = ProfileManager.GetInstance().GetProfile().GetCurrentLevel();
+		//SceneManager.LoadScene("Game");
 	}
 }

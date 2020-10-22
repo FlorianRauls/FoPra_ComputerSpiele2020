@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelLoader : MonoBehaviour
 {
     public static int levelIndex = 1;
+    public static bool singleplayer = true;
     private GameObject boy;
     private int levelStart = 0;
     private GameObject level;
@@ -32,12 +33,22 @@ public class LevelLoader : MonoBehaviour
     public void LoadNextLevel()
     {
         IncreaseLevel();
-
-        if(levelIndex > ProfileManager.GetInstance().GetProfile().GetMaxLevel())
+        if (singleplayer)
         {
-            ProfileManager.GetInstance().GetProfile().SetMaxLevel(levelIndex);
+            if (levelIndex > ProfileManager.GetInstance().GetProfile().GetMaxLevelS())
+            {
+                ProfileManager.GetInstance().GetProfile().SetMaxLevelS(levelIndex);
+            }
+            ProfileManager.GetInstance().GetProfile().SetCurrentLevelS(levelIndex);
         }
-        ProfileManager.GetInstance().GetProfile().SetCurrentLevel(levelIndex);
+        else{
+            if (levelIndex > ProfileManager.GetInstance().GetProfile().GetMaxLevelM())
+            {
+                ProfileManager.GetInstance().GetProfile().SetMaxLevelM(levelIndex);
+            }
+            ProfileManager.GetInstance().GetProfile().SetCurrentLevelM(levelIndex);
+        }
+        
 
         LoadLevel();
         LoadLevelDivider();
@@ -58,7 +69,15 @@ public class LevelLoader : MonoBehaviour
 
     void LoadLevel()
     {
-        level = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Level/Level" + levelIndex));
+        if (singleplayer)//TODO divide into singleplayer and multiplayer level
+        {
+            level = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Level/Level" + levelIndex));
+        }
+        else
+        {
+            level = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Level/Level" + levelIndex));
+        }
+        
         level.transform.position = new Vector3(level.transform.position.x + levelStart, level.transform.position.y, level.transform.position.z);
     }
 

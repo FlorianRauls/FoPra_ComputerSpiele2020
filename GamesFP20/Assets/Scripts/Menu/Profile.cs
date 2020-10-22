@@ -8,8 +8,10 @@ public class Profile
     private int id = 0;
     private string name = "Player";
     private int volume = 100;
-    private int currentLevel = 1;
-    private int maxLevel = 1;
+    private int currentLevelS = 1;//S for Singleplayer
+    private int maxLevelS = 1;
+    private int currentLevelM = 1;//M for Multiplayer
+    private int maxLevelM = 1;
     private bool autoRespawn = false;
     private bool autoContinue = false;
 
@@ -45,25 +47,47 @@ public class Profile
         ProfileManager.GetInstance().SaveProfiles();
     }
 
-    public int GetCurrentLevel()
+    public int GetCurrentLevelS()
     {
-        return currentLevel;
+        return currentLevelS;
     }
 
-    public void SetCurrentLevel(int level)
+    public void SetCurrentLevelS(int level)
     {
-        this.currentLevel = level;
+        this.currentLevelS = level;
         ProfileManager.GetInstance().SaveProfiles();
     }
 
-    public int GetMaxLevel()
+    public int GetMaxLevelS()
     {
-        return maxLevel;
+        return maxLevelS;
     }
 
-    public void SetMaxLevel(int level)
+    public void SetMaxLevelS(int level)
     {
-        this.maxLevel = level;
+        this.maxLevelS = level;
+        ProfileManager.GetInstance().SaveProfiles();
+    }
+
+    public int GetCurrentLevelM()
+    {
+        return currentLevelM;
+    }
+
+    public void SetCurrentLevelM(int level)
+    {
+        this.currentLevelM = level;
+        ProfileManager.GetInstance().SaveProfiles();
+    }
+
+    public int GetMaxLevelM()
+    {
+        return maxLevelM;
+    }
+
+    public void SetMaxLevelM(int level)
+    {
+        this.maxLevelM = level;
         ProfileManager.GetInstance().SaveProfiles();
     }
 
@@ -91,7 +115,7 @@ public class Profile
 
     public string ToString()
     {
-        string output = "{id:" + id + ",name:" + name + ",volume:" + volume + ",currentLevel:" + currentLevel + ",maxLevel:" + maxLevel + ",autoRespawn:" + autoRespawn + ",autoContinue:" + autoContinue + "}";
+        string output = "{id:" + id + ",name:" + name + ",volume:" + volume + ",currentLevelS:" + currentLevelS + ",maxLevelS:" + maxLevelS + ",currentLevelM:" + currentLevelM + ",maxLevelM:" + maxLevelM + ",autoRespawn:" + autoRespawn + ",autoContinue:" + autoContinue + "}";
         return output;
     }
 
@@ -108,11 +132,17 @@ public class Profile
         rx = new Regex(@"volume:(?<volume>\d+)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         profile.volume = int.Parse(rx.Matches(input)[0].Groups["volume"].Value);
 
-        rx = new Regex(@"currentLevel:(?<currentLevel>\d+)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
-        profile.currentLevel = int.Parse(rx.Matches(input)[0].Groups["currentLevel"].Value);
+        rx = new Regex(@"currentLevelS:(?<currentLevelS>\d+)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        profile.currentLevelS = int.Parse(rx.Matches(input)[0].Groups["currentLevelS"].Value);
 
-        rx = new Regex(@"maxLevel:(?<maxLevel>\d+)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
-        profile.maxLevel = int.Parse(rx.Matches(input)[0].Groups["maxLevel"].Value);
+        rx = new Regex(@"maxLevelS:(?<maxLevelS>\d+)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        profile.maxLevelS = int.Parse(rx.Matches(input)[0].Groups["maxLevelS"].Value);
+
+        rx = new Regex(@"currentLevelM:(?<currentLevelM>\d+)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        profile.currentLevelM = int.Parse(rx.Matches(input)[0].Groups["currentLevelM"].Value);
+
+        rx = new Regex(@"maxLevelM:(?<maxLevelM>\d+)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        profile.maxLevelM = int.Parse(rx.Matches(input)[0].Groups["maxLevelM"].Value);
 
         rx = new Regex(@"autoRespawn:(?<autoRespawn>\w+)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         profile.autoRespawn = bool.Parse(rx.Matches(input)[0].Groups["autoRespawn"].Value);
