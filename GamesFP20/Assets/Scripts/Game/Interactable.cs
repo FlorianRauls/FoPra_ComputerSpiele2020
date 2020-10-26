@@ -35,11 +35,15 @@ public class Interactable : MonoBehaviour
 
     public void Rotate()
     {
-        transform.Rotate(amount);
+        transform.Rotate(amount.x, amount.y, amount.z, Space.World);
     }
 
     public void Collide(GameObject other)
     {
+        if(other.tag =="Friendly")
+        {
+            Rotate();
+        }
 
     }
 }

@@ -56,10 +56,11 @@ namespace Tests
         public void TestRotateOnChildCollisionInteractiveObject()
         {
             GameObject treeObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/TreeObject"));
-            Interactable tree = treeObject.GetComponent<Interactable>();   
+            Interactable tree = treeObject.GetComponent<Interactable>();  
+            tree.amount = new Vector3(100f, 500f, 500f); 
             tree.Start();
 
-            GameObject interactObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/projectile"));
+            GameObject interactObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/FriendlyProjectile"));
 
             GameObject compare = new GameObject();
             compare.transform.rotation = treeObject.transform.rotation;  
@@ -75,7 +76,7 @@ namespace Tests
             GameObject treeObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/TreeObject"));
             Interactable tree = treeObject.GetComponent<Interactable>();          
             tree.Start();
-            
+
             GameObject randomObject = new GameObject();
 
             GameObject compare = new GameObject();
