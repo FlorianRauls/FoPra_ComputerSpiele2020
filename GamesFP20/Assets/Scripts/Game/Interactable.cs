@@ -4,15 +4,42 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+
+    public Vector3 amount;
+
+    Transform child;
+    Collider childCollider;
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        
+        child = transform.GetChild(0);
+        childCollider = child.gameObject.GetComponent<Collider>();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+
+    public Collider GetChildCollider()
+    {
+        return childCollider;
+    }
+
+    public Transform GetChild()
+    {
+        return child;
+    }
+
+    public void Rotate()
+    {
+        transform.Rotate(amount);
+    }
+
+    public void Collide(GameObject other)
+    {
+
     }
 }

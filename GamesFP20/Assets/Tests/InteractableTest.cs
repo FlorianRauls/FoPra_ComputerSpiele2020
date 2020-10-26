@@ -14,6 +14,7 @@ namespace Tests
         {
             GameObject treeObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/TreeObject"));
             Interactable tree = treeObject.GetComponent<Interactable>();   
+            tree.Start();
 
             Transform child = treeObject.transform.GetChild(0);
             Collider childCollider = child.GetComponent<Collider>();
@@ -26,6 +27,7 @@ namespace Tests
         {
             GameObject treeObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/TreeObject"));
             Interactable tree = treeObject.GetComponent<Interactable>();   
+            tree.Start();
 
             Transform child = treeObject.transform.GetChild(0);   
 
@@ -37,6 +39,7 @@ namespace Tests
         {
             GameObject treeObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/TreeObject"));
             Interactable tree = treeObject.GetComponent<Interactable>();     
+            tree.Start();
 
             Vector3 amount = tree.amount;    
             
@@ -44,7 +47,7 @@ namespace Tests
             compare.transform.rotation = treeObject.transform.rotation;
 
             tree.Rotate();
-            compare.transform.Rotate(amount)
+            compare.transform.Rotate(amount);
 
             Assert.AreEqual(compare.transform.rotation, tree.transform.rotation);     
         }
@@ -54,6 +57,7 @@ namespace Tests
         {
             GameObject treeObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/TreeObject"));
             Interactable tree = treeObject.GetComponent<Interactable>();   
+            tree.Start();
 
             GameObject interactObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/projectile"));
 
@@ -70,7 +74,8 @@ namespace Tests
         {
             GameObject treeObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/TreeObject"));
             Interactable tree = treeObject.GetComponent<Interactable>();          
-
+            tree.Start();
+            
             GameObject randomObject = new GameObject();
 
             GameObject compare = new GameObject();
