@@ -12,43 +12,73 @@ namespace Tests
         [Test]
         public void TestGetChildCollider()
         {
-            
+            GameObject treeObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/TreeObject"));
+            Interactable tree = treeObject.GetComponent<Interactable>();   
+
+            Transform child = treeObject.transform.GetChild(0);
+            Collider childCollider = child.GetComponent<Collider>();
+
+            Assert.AreEqual(childCollider, tree.GetChildCollider());   
         }
 
         [Test]
         public void TestGetChild()
         {
-            
-        }
+            GameObject treeObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/TreeObject"));
+            Interactable tree = treeObject.GetComponent<Interactable>();   
 
-        [Test]
-        public void TestDetectChildCollisionRandomObject()
-        {
-            
-        }
+            Transform child = treeObject.transform.GetChild(0);   
 
-        [Test]
-        public void TestDetectChildCollisionInteractionObject()
-        {
-            
+            Assert.AreEqual(child, tree.GetChild());           
         }
 
         [Test]
         public void TestRotateCorrectly()
         {
+            GameObject treeObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/TreeObject"));
+            Interactable tree = treeObject.GetComponent<Interactable>();     
+
+            Vector3 amount = tree.amount;    
             
+            GameObject compare = new GameObject();
+            compare.transform.rotation = treeObject.transform.rotation;
+
+            tree.Rotate();
+            compare.transform.Rotate(amount)
+
+            Assert.AreEqual(compare.transform.rotation, tree.transform.rotation);     
         }
 
         [Test]
         public void TestRotateOnChildCollisionInteractiveObject()
         {
-            
+            GameObject treeObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/TreeObject"));
+            Interactable tree = treeObject.GetComponent<Interactable>();   
+
+            GameObject interactObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/projectile"));
+
+            GameObject compare = new GameObject();
+            compare.transform.rotation = treeObject.transform.rotation;  
+
+            tree.Collide(interactObject);
+
+            Assert.AreNotEqual(compare.transform.rotation, treeObject.transform.rotation);             
         }
 
         [Test]
         public void TestNotRotateOnChildCollisionRandomObject()
         {
-            
+            GameObject treeObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/TreeObject"));
+            Interactable tree = treeObject.GetComponent<Interactable>();          
+
+            GameObject randomObject = new GameObject();
+
+            GameObject compare = new GameObject();
+            compare.transform.rotation = treeObject.transform.rotation;  
+
+            tree.Collide(randomObject);
+
+            Assert.AreEqual(compare.transform.rotation, treeObject.transform.rotation);              
         }
     }
 }
