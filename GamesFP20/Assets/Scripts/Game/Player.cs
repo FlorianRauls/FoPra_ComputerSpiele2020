@@ -2,13 +2,19 @@
 
 public class Player : MonoBehaviour
 {
+	// Movementspeed
 	public float speed = 6;
+	// How high we can jump
 	public float jumpForce = 11;
+	// We save gravity internally
 	public float gravity = 20;
+	// Distance to "mouseobject" whihc is used for the slingshot as reference
 	float distance;
 
+	// How far away the camera should be
 	float localCamOffsetZ = 7f;
 
+	// Our Velocity which is needed by other objects
 	public Vector3 velocity;
 	// contains information to whether or not the character touched
 	// ground at the last frame
@@ -18,12 +24,14 @@ public class Player : MonoBehaviour
 	protected bool inLevelMenu;
 	protected bool inAccomplishedMenu;
 	protected bool inDefeatedMenu;
-	
+	// Movement is done by Unitys ChracterController
 	protected CharacterController controller;
 	private Slingshot slingshot;
 
+	// This empty object is used for the slinghshot as reference on the Plane
 	public GameObject mousePositionObject;
 
+	// Plane is needed as a 2D reference for the slingshot
 	Plane plane;
 
 	Vector3 worldPosition ;
@@ -31,6 +39,7 @@ public class Player : MonoBehaviour
 
 	public void Start()
     {
+		// init all needed variables
         controller = GetComponent<CharacterController>();
 		slingshot = GetComponent<Slingshot>();
 		mousePositionObject = new GameObject();
@@ -47,6 +56,7 @@ public class Player : MonoBehaviour
 		// isGrounded returns a Boolan of whether or not the character touched
 		// the ground last frame
 		grounded = controller.isGrounded;
+		// Handle Movement
 		Move(Input.GetAxis("Horizontal"), Input.GetButtonDown("Jump"));
 
 		// These calculations are done to pass a object onto the slingshot.shootProjectile() function
@@ -68,22 +78,24 @@ public class Player : MonoBehaviour
 		{
 			GameObject shot = slingshot.shootProjectile(mousePositionObject);
 		}
+		// Make sure the camera stays behind us
 		transform.Find("Camera").localPosition = new Vector3(0, 3.7f - transform.position.y, -localCamOffsetZ);
 
 	}
-
+	// Getter
 	public CharacterController GetController()
 	{
 		return controller;
 	}
-
+	// Handle Movement as calculated by CalculateMovement()
 	public void Move(float horizontalInput, bool jumpPressed)
     {
 		velocity = controller.velocity;
 		velocity = CalculateMovement(velocity, horizontalInput, jumpPressed, Time.deltaTime);
 		controller.Move(velocity * Time.deltaTime);
 	}
-
+	// Calculate movement based on whether we pressed the jump button, the direction the player wants to walk
+	// and the time passed
 	public Vector3 CalculateMovement(Vector3 currentMovement, float horizontalInput, bool jumpPressed, float deltaTime)
     {
 		currentMovement.x = horizontalInput * speed;
@@ -96,22 +108,24 @@ public class Player : MonoBehaviour
 		currentMovement.y -= gravity * deltaTime;
 		return currentMovement;
 	}
-
+	//GEtter
 	public bool getGrounded()
 	{
 		return grounded;
 	}
-
+	//Setter
 	public void setGrounded(bool newGrounding)
 	{
 		grounded = newGrounding;
 	}
-
+	// Getter
 	public float getGravity()
 	{
 		return gravity;
 	}
-
+	// This triggers our Collision Interface
+	// When colliding with an enemy we die
+	// When collidion with an Mushroom we jump
 	public void OnControllerColliderHit(ControllerColliderHit hit)
 	{
 		if(hit.gameObject.tag == "Enemy")
@@ -132,6 +146,7 @@ public class Player : MonoBehaviour
 		collide(collider.gameObject);
 	}
 
+	// Common Collision Interface
 	public void collide(GameObject other)
 	{
 		if(other.tag == "Enemy")
@@ -140,6 +155,8 @@ public class Player : MonoBehaviour
 		}
 	}
 
+	// When we are not in any menu and we die
+	// We are defeated
 	public void defeat()
 	{
 		if(!getInAccomplishedMenu() & !getInLevelMenu())

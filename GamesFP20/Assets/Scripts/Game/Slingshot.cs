@@ -4,31 +4,28 @@ using UnityEngine;
 
 public class Slingshot : MonoBehaviour
 {
-
+    // The projectile we will shoot
     public GameObject projectilePrefab;
-
+    // Cooldown after which we are allowed to shoot again
     public float cooldown = 4f;
+    // Timer to keep track of cooldowns
     private float timer = 0f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
+        // Update the timer
         timer += Time.deltaTime;
     }
 
     public GameObject shootProjectile(GameObject target)
     {
-        
+        // If our cooldown is up we won't shoot
         if(timer < cooldown)
         {
             return null;
         }
+        // Else reset the cooldown
         else
         {
             timer = 0f;
@@ -38,19 +35,20 @@ public class Slingshot : MonoBehaviour
         Vector2 direction = directionToTarget(target);
         float distance = distanceToTarget(direction);
 
+        // Prevents division by zero
         if(distance == 0f)
         {
             distance = 0.0000001f;
         }
-
+         // Normalize the direction
         Vector2 normalized_direction = direction / distance;
 
-
+        // Instantiate a new projectile...
         GameObject projectile = Instantiate(projectilePrefab,
          transform.position - new Vector3(normalized_direction.x,
             normalized_direction.y, 0f), transform.rotation);
 
-   
+        // ... and give it our target and the direction towards it
         projectile.GetComponent<FriendlyProjectile>().setTarget(target);
         projectile.GetComponent<FriendlyProjectile>().setTargetDirection(normalized_direction);
 
@@ -74,11 +72,13 @@ public class Slingshot : MonoBehaviour
         timer = newTimer;
     }
 
+    // Calculate the direction towards an object
     public Vector3 directionToTarget(GameObject target)
     {
         return transform.position - target.transform.position;
     }
 
+    // Calculates the distance to an object, given the direction
     public float distanceToTarget(Vector3 direction)
     {
         return direction.magnitude;

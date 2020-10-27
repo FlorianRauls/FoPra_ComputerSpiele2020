@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class LevelLoader : MonoBehaviour
 {
+    // Current Level
     public static int levelIndex = 1;
+
+    // Check whether or not we are playing singleplayer
     public static bool singleplayer = true;
     private GameObject boy;
     private int levelStart = 0;
@@ -14,9 +17,10 @@ public class LevelLoader : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        // On Level start we load the Player
         boy = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
         GameObject levelBegin = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Level/Level-"));
-
+        // And start our subroutines
         LoadLevel();
         LoadLevelDivider();
     }
@@ -24,12 +28,16 @@ public class LevelLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // This is our wincondidtion
         if(boy.transform.position.x > levelStart + level.GetComponent<Level>().width)
         {
             LoadNextLevel();
         }
     }
 
+    // Check whether or not this is singleplayer
+    // Write into the Profile that we finished the level
+    // And Load the next one
     public void LoadNextLevel()
     {
         IncreaseLevel();
