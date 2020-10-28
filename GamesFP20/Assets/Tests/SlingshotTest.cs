@@ -61,4 +61,64 @@ public class SlingshotTest : MonoBehaviour
             Assert.AreNotEqual(null, success);
             Assert.AreEqual(null, fail);            
         }
+
+        [Test]
+        public void TestDistanceCalc()
+        {
+            GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
+            Slingshot sling = boyObject.GetComponent<Slingshot>();
+            boyObject.transform.position = new Vector3(1, 1, 1);
+            sling.setCooldown(0f);
+            sling.setTimer(1f);
+
+            GameObject targetObject = new GameObject();
+            targetObject.transform.position = new Vector3(0, 0, 0);
+
+
+            Vector3 direction = boyObject.transform.position - targetObject.transform.position;
+            float distance = direction.magnitude;
+
+            GameObject projectile = sling.shootProjectile(targetObject);
+            Vector3 shouldBe = boyObject.transform.position - direction;
+
+            Assert.AreEqual(distance, sling.distanceToTarget(direction));
+        }
+
+        [Test]
+        public void TestDirectionCalc()
+        {
+            GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
+            Slingshot sling = boyObject.GetComponent<Slingshot>();
+            boyObject.transform.position = new Vector3(1, 1, 1);
+            sling.setCooldown(0f);
+            sling.setTimer(1f);
+
+            GameObject targetObject = new GameObject();
+            targetObject.transform.position = new Vector3(0, 0, 0);
+
+
+            Vector3 direction = boyObject.transform.position - targetObject.transform.position;
+            float distance = direction.magnitude;
+
+            GameObject projectile = sling.shootProjectile(targetObject);
+            Vector3 shouldBe = boyObject.transform.position - direction;
+
+            Assert.AreEqual(direction, sling.directionToTarget(targetObject));
+        }
+
+        [Test]
+        public void TestCooldownManagement()
+        {
+            GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
+            Slingshot sling = boyObject.GetComponent<Slingshot>();
+            boyObject.transform.position = new Vector3(1, 1, 1);
+
+            float testCd = 5f;
+            float testTimer = 5f;
+            sling.setCooldown(testCd);
+            sling.setTimer(testTimer);
+
+            Assert.AreEqual(testCd, sling.getCooldown());
+            Assert.AreEqual(testTimer, sling.getTimer());
+        }
 }
