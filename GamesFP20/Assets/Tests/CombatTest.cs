@@ -9,21 +9,25 @@ public class CombatTest : MonoBehaviour
 {
 
     [Test]
-    public void TestOpenDefeatMenuOnDefeat()
+    public void TestOpenMenuOnDefeat()
     {
+        GameManager.ClearInstance();
+        MenuManager.ClearInstance();
         GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
         Player boy = boyObject.GetComponent<Player>();
         boy.Start();
 
         boy.defeat();
 
-        Assert.AreEqual(boy.getInDefeatMenu(), true);
+        Assert.AreEqual(boy.getInMenu(), true);
 
     }
 
     [Test]
     public void TestDefeatOnCollisionWithEnemy()
     {
+        GameManager.ClearInstance();
+        MenuManager.ClearInstance();
         GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
         Player boy = boyObject.GetComponent<Player>();
         boy.Start();
@@ -38,6 +42,8 @@ public class CombatTest : MonoBehaviour
     [Test]
     public void TestDisableMovementOnDefeat()
     {
+        GameManager.ClearInstance();
+        MenuManager.ClearInstance();
         GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
         Player boy = boyObject.GetComponent<Player>();
         boy.Start();
@@ -49,27 +55,13 @@ public class CombatTest : MonoBehaviour
     }
 
     [Test]
-    public void TestUndefeatableInLevelMenu()
+    public void TestUndefeatableInMenu()
     {
         GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
         Player boy = boyObject.GetComponent<Player>();
         boy.Start();
 
-        boy.setInLevelMenu(true);
-
-        boy.defeat();
-
-        Assert.AreEqual(boy.getDefeated(), false);
-    }
-
-    [Test]
-    public void TestUndefeatableInLevelAccomplisedMenu()
-    {
-        GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
-        Player boy = boyObject.GetComponent<Player>();
-        boy.Start();
-
-        boy.setInAccomplishedMenu(true);
+        boy.setInMenu(true);
 
         boy.defeat();
 

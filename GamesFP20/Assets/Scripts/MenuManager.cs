@@ -27,13 +27,33 @@ public class MenuManager : MonoBehaviour
 
     public void Initial()
     {
-        foreach(MenuView view in views)
-        {
-            view.Hide();
-        }
+        //foreach(MenuView view in views)
+        //{
+        //    view.Hide();
+        //}
         if(views.Length > 0)
         {
             Show(views[0]);
+        }
+    }
+    public void Show(MenuEnum menu)
+    {
+        MenuView viewToCall = null;
+        Debug.Log(views.Length);
+        foreach (MenuView view in views)
+        {
+            if (view.menuType == menu)
+            {
+                viewToCall = view;
+            }
+        }
+        if (viewToCall == null)
+        {
+            Debug.Log("Could not find Menu Enum");
+        }
+        else
+        {
+            Show(viewToCall);
         }
     }
 
@@ -73,7 +93,6 @@ public class MenuManager : MonoBehaviour
         {
             TransitionTo(viewToCall);
         }
-        
     }
 
     public void Back()

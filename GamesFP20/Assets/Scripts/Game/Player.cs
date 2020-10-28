@@ -19,11 +19,9 @@ public class Player : MonoBehaviour
 	// contains information to whether or not the character touched
 	// ground at the last frame
 	protected bool grounded = true;
-
 	protected bool defeated = false;
-	protected bool inLevelMenu;
-	protected bool inAccomplishedMenu;
-	protected bool inDefeatedMenu;
+
+	protected bool inMenu;
 	// Movement is done by Unitys ChracterController
 	protected CharacterController controller;
 	private Slingshot slingshot;
@@ -117,7 +115,7 @@ public class Player : MonoBehaviour
 		currentMovement.y -= gravity * deltaTime;
 		return currentMovement;
 	}
-	//GEtter
+	//Getter
 	public bool getGrounded()
 	{
 		return grounded;
@@ -168,52 +166,27 @@ public class Player : MonoBehaviour
 	// We are defeated
 	public void defeat()
 	{
-		if(!getInAccomplishedMenu() & !getInLevelMenu())
+		if(!inMenu)
 		{
-			setDefeated(true);
-			setInDefeatMenu(true);
+			GameManager.GetInstance().PlayerDefeated();
+			defeated = true;
+			setInMenu(true);
 			controller.enabled = false;
 		}
 	}
 
-	public void setDefeated(bool newDefeated)
+	public void setInMenu(bool newInMenu)
 	{
-		defeated = newDefeated;
+		inMenu = newInMenu;
+	}
+
+	public bool getInMenu()
+	{
+		return inMenu;
 	}
 
 	public bool getDefeated()
-	{
+    {
 		return defeated;
-	}
-
-	public void setInDefeatMenu(bool newInDefeatMenu)
-	{
-		inDefeatedMenu = newInDefeatMenu;
-	}
-
-	public bool getInDefeatMenu()
-	{
-		return inDefeatedMenu;
-	}
-
-	public void setInAccomplishedMenu(bool newInAccomplishedMenu)
-	{
-		inAccomplishedMenu = newInAccomplishedMenu;
-	}
-
-	public bool getInAccomplishedMenu()
-	{
-		return inAccomplishedMenu;
-	}
-
-	public void setInLevelMenu(bool newLevelMenuBool)
-	{
-		inLevelMenu = newLevelMenuBool;
-	}
-
-	public bool getInLevelMenu()
-	{
-		return inLevelMenu;
-	}
-
+    }
 }

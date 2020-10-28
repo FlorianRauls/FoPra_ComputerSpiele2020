@@ -8,20 +8,20 @@ public class MultiPlayerMenu : MenuView
 	public void NewGame()
 	{
 		ProfileManager.GetInstance().GetProfile().SetCurrentLevelM(1);
-		LevelLoader.singleplayer = false;
+		GameManager.singleplayer = false;
 		SceneManager.LoadScene("Game");
 	}
 
 	public void Continue()
 	{
-		LevelLoader.levelIndex = ProfileManager.GetInstance().GetProfile().GetCurrentLevelM();
-		LevelLoader.singleplayer = false;
+		GameManager.levelIndex = ProfileManager.GetInstance().GetProfile().GetCurrentLevelM();
+		GameManager.singleplayer = false;
 		SceneManager.LoadScene("Game");
 	}
 
 	public void LevelSelect()
 	{
-		LevelLoader.singleplayer = false;
+		GameManager.singleplayer = false;
 		TransitionToLevelSelect();
 	}
 }
