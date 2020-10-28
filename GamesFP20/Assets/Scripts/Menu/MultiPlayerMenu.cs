@@ -8,6 +8,7 @@ public class MultiPlayerMenu : MenuView
 	public void NewGame()
 	{
 		ProfileManager.GetInstance().GetProfile().SetCurrentLevelM(1);
+		GameManager.levelIndex = 1;
 		GameManager.singleplayer = false;
 		SceneManager.LoadScene("Game");
 	}

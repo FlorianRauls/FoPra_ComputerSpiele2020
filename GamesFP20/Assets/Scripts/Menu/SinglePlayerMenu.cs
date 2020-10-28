@@ -8,6 +8,7 @@ public class SinglePlayerMenu : MenuView
 	public void NewGame()
 	{
 		ProfileManager.GetInstance().GetProfile().SetCurrentLevelS(1);
+		GameManager.levelIndex = 1;
 		GameManager.singleplayer = true;
 		SceneManager.LoadScene("Game");
 	}

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -135,12 +136,22 @@ public class GameManager : MonoBehaviour
 
     private void ShowDeathMenu()
     {
-        MenuManager.GetInstance().Show(MenuEnum.GameDeath);
+        if (!ProfileManager.GetInstance().GetProfile().GetAutoRespawn())
+        {
+            MenuManager.GetInstance().Show(MenuEnum.GameDeath);
+        }
+        else
+        {
+            SceneManager.LoadScene("Game");
+        }
     }
 
     private void ShowLevelFinishMenu()
     {
-        MenuManager.GetInstance().Show(MenuEnum.GameFinish);
+        if (!ProfileManager.GetInstance().GetProfile().GetAutoContinue())
+        {
+            MenuManager.GetInstance().Show(MenuEnum.GameFinish);
+        }
     }
 
     private void ShowPauseMenu()
