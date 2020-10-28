@@ -23,6 +23,19 @@ namespace Tests
         }
 
         [Test]
+        public void TestSetAmount()
+        {
+            GameObject treeObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/TreeObject"));
+            Interactable tree = treeObject.GetComponent<Interactable>();   
+            tree.Start();
+
+            Vector3 testAmount = new Vector3(1f, 2f, 3f);
+            tree.SetAmount(testAmount);
+
+            Assert.AreEqual(testAmount, tree.amount);   
+        }
+
+        [Test]
         public void TestGetChild()
         {
             GameObject treeObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/TreeObject"));

@@ -18,8 +18,6 @@ public class Interactable : MonoBehaviour
         child = transform.GetChild(0);
         childCollider = child.gameObject.GetComponent<Collider>();
     }
-
-
     // getter
     public Collider GetChildCollider()
     {
@@ -30,13 +28,16 @@ public class Interactable : MonoBehaviour
     {
         return child;
     }
+    public void SetAmount(Vector3 newAmount)
+    {
+        amount = newAmount;
+    }
     // if we interact properly we rotate by amount, as referenced by our own space
     public void Rotate()
     {
         interacted = true;
         transform.Rotate(amount.x, amount.y, amount.z, Space.Self);
     }
-
     // This is the common interface for collision handling
     // If we collide with a Friendly object we rotate/interact with it
     public void Collide(GameObject other)
@@ -46,6 +47,5 @@ public class Interactable : MonoBehaviour
             if(!interacted)
                 Rotate();
         }
-
     }
 }
