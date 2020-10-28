@@ -10,6 +10,7 @@ public class Interactable : MonoBehaviour
     Transform child;
     // as well as its collider
     Collider childCollider;
+    bool interacted = false;
     // Start is called before the first frame update
     public void Start()
     {
@@ -32,6 +33,7 @@ public class Interactable : MonoBehaviour
     // if we interact properly we rotate by amount, as referenced by our own space
     public void Rotate()
     {
+        interacted = true;
         transform.Rotate(amount.x, amount.y, amount.z, Space.Self);
     }
 
@@ -41,7 +43,8 @@ public class Interactable : MonoBehaviour
     {
         if(other.tag =="Friendly")
         {
-            Rotate();
+            if(!interacted)
+                Rotate();
         }
 
     }
