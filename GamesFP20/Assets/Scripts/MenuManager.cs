@@ -11,6 +11,7 @@ public class MenuManager : MonoBehaviour
     public void Start()
     {
         MenuManager.singleton = this;
+        MenuManager.GetInstance().Show(MenuEnum.Main);
         Initial();
     }
 
