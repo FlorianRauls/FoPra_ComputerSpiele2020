@@ -58,11 +58,8 @@ public class MushroomJump : MonoBehaviour
                 Vector3 vel = player.velocity;
                 vel.y = 0f;
                 player.GetController().Move((  vel + new Vector3(0f, force, 0f) )* Time.deltaTime);
-
             }
-
         }
-
     }
     // Setter
     public void SetCooldown(float newCd)
@@ -114,8 +111,7 @@ public class MushroomJump : MonoBehaviour
     // The collision interface
     private void OnCollisionEnter(Collision other) {
         
-        Collide(other.gameObject);
-        
+        Collide(other.gameObject);    
     }
 }
 

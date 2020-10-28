@@ -18,7 +18,6 @@ public class MushroomJumpTest : MonoBehaviour
         Player boy = boyObject.GetComponent<Player>();
         boy.Start();
 
-
         
         shroom.Collide(boyObject);
         Assert.AreEqual(boyObject, shroom.GetTarget());
@@ -116,7 +115,6 @@ public class MushroomJumpTest : MonoBehaviour
 
     }
 
-
     public void TestWorkWithCooldownDown()
     {
         GameObject shroomObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/JumpShroom"));
@@ -127,8 +125,6 @@ public class MushroomJumpTest : MonoBehaviour
         Player boy = boyObject.GetComponent<Player>();
         boy.Start();
 
-
-
         Vector3 beforePosition = new Vector3(0f, 0f, 0f);
         boyObject.transform.position = beforePosition;
 
@@ -138,6 +134,53 @@ public class MushroomJumpTest : MonoBehaviour
         shroom.Collide(boyObject);
 
         Assert.AreEqual(boyObject.transform.position, beforePosition + new Vector3(0f, force, 0f));
+    }
 
+    [Test]
+    public void TestMakingPlayerTwoJump()
+    {
+        GameObject shroomObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/JumpShroom"));
+        MushroomJump shroom = shroomObject.GetComponent<MushroomJump>();
+        shroom.Start();
+
+        GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Dog"));
+        PlayerTwo dog = boyObject.GetComponent<PlayerTwo>();
+        dog.Start();
+
+
+        Vector3 beforePosition = new Vector3(0f, 0f, 0f);
+        boyObject.transform.position = beforePosition;
+
+        float force = 5f;
+        shroom.SetForce(force);
+
+        shroom.Collide(boyObject);
+
+        Assert.AreNotEqual(boyObject.transform.position, beforePosition);
+    }
+
+    [Test]
+    public void TestSwtichTarget()
+    {
+        GameObject shroomObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/JumpShroom"));
+        MushroomJump shroom = shroomObject.GetComponent<MushroomJump>();
+        shroom.Start();
+
+        GameObject dogObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Dog"));
+        PlayerTwo dog = dogObject.GetComponent<PlayerTwo>();
+        dog.Start();
+
+        GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
+        Player boy = boyObject.GetComponent<Player>();
+        boy.Start();
+
+        shroom.Collide(boyObject);
+
+        Assert.AreEqual(shroom.GetTarget(), boyObject);
+
+        shroom.SetCooldown(-5f);
+        shroom.Collide(dogObject);
+
+        Assert.AreEqual(shroom.GetTarget(), dogObject);
     }
 }
