@@ -31,10 +31,10 @@ public class MenuManager : MonoBehaviour
         //{
         //    view.Hide();
         //}
-        if(views.Length > 0)
-        {
-            Show(views[0]);
-        }
+        //if(views.Length > 0)
+        //{
+        //    Show(views[0]);
+        //}
     }
     public void Show(MenuEnum menu)
     {
