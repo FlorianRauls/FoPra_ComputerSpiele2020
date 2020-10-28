@@ -57,7 +57,16 @@ public class Player : MonoBehaviour
 		// the ground last frame
 		grounded = controller.isGrounded;
 		// Handle Movement
-		Move(Input.GetAxis("Horizontal"), Input.GetButtonDown("Jump"));
+		float horizontalMovement = Input.GetAxis("Horizontal");
+		Move(horizontalMovement, Input.GetButtonDown("Jump"));
+		if (horizontalMovement < 0)
+		{
+			transform.GetChild(0).GetChild(0).localScale = new Vector3(-1, 1, 1);
+		}
+		else
+		{
+			transform.GetChild(0).GetChild(0).localScale = new Vector3(1, 1, 1);
+		}
 
 		// These calculations are done to pass a object onto the slingshot.shootProjectile() function
 		// such that a solid direction can be calculated for the projectile

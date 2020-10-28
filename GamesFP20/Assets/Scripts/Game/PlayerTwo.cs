@@ -20,7 +20,15 @@ public class PlayerTwo : Player
 		transform.position = adjuestedPos;
         // Movement logic
 		grounded = controller.isGrounded;
-        Move(Input.GetAxis("HorizontalTwo"), Input.GetButtonDown("JumpTwo"));
-
+        float horizontalMovement = Input.GetAxis("HorizontalTwo");
+        Move(horizontalMovement, Input.GetButtonDown("JumpTwo"));
+        if(horizontalMovement < 0)
+        {
+            transform.GetChild(0).GetChild(0).localScale = new Vector3(-1, 1, 1);
+        }
+        else
+        {
+            transform.GetChild(0).GetChild(0).localScale = new Vector3(1, 1, 1);
+        }
     }
 }
