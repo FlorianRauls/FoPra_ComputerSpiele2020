@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -45,6 +46,18 @@ public class GameManager : MonoBehaviour
         if (boy.transform.position.x > levelStart + level.GetComponent<Level>().width)
         {
             LoadNextLevel();
+        }
+
+        // This is an alternative win condition in multiplayer
+        if (dog != null && dog.transform.position.x > levelStart + level.GetComponent<Level>().width)
+        {
+            LoadNextLevel();
+        }
+
+        // This is a loos condition in multiplayer
+        if (dog != null && Math.Abs(dog.transform.position.x- boy.transform.position.x) > 10)
+        {
+            dog.GetComponent<Player>().defeat();
         }
     }
 
