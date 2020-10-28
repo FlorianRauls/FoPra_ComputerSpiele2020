@@ -99,7 +99,10 @@ public class MenuManager : MonoBehaviour
     {
         viewStack[viewStack.Count-1].Hide();
         viewStack.RemoveAt(viewStack.Count-1);
-        viewStack[viewStack.Count-1].Show();
+        if (viewStack.Count > 0)
+        {
+            viewStack[viewStack.Count - 1].Show();
+        }
     }
 
     public List<MenuView> GetViewStack()
