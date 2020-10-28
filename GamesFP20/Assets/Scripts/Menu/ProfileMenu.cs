@@ -12,11 +12,12 @@ public class ProfileMenu : MenuView
 	public void AddProfile()
 	{
 		ProfileManager.GetInstance().AddProfile();
-		ResetUI();
+		Show();
 	}
 
 	public override void Show()
     {
+		ResetUI();
 		LoadProfileSelectItems();
 		gameObject.SetActive(true);
     }
@@ -27,7 +28,6 @@ public class ProfileMenu : MenuView
 		{
 			Destroy(content.transform.GetChild(i).gameObject);
 		}
-		Show();
 	}
 
 	void LoadProfileSelectItems()

@@ -11,8 +11,17 @@ public class LevelSelectMenu : MenuView
 
     public override void Show()
     {
+        ResetUI();
         LoadLevelSelectItems();
         gameObject.SetActive(true);
+    }
+
+    public void ResetUI()
+    {
+        for (int i = 0; i < content.transform.childCount; i++)
+        {
+            Destroy(content.transform.GetChild(i).gameObject);
+        }
     }
 
     void LoadLevelSelectItems()
