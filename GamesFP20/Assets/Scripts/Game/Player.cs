@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 	public float jumpForce = 11;
 	// We save gravity internally
 	public float gravity = 20;
+	public float slingshotOffset = 15.5f;
 	// Distance to "mouseobject" whihc is used for the slingshot as reference
 	float distance;
 
@@ -73,7 +74,7 @@ public class Player : MonoBehaviour
 		Vector3 mousePos = Input.mousePosition;
 		// this number depends both on our transformation of the camera and
 		// its static global z-position (-10)
-		mousePos.z = 10f + localCamOffsetZ;
+		mousePos.z = slingshotOffset + localCamOffsetZ;
 		Vector3 mousePos2 = Camera.main.ScreenToWorldPoint(mousePos);
 
 		Vector3 finalPos = mousePos2 - betterPos;
