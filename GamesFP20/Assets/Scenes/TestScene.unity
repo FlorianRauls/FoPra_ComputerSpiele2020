@@ -337,6 +337,11 @@ PrefabInstance:
       propertyPath: cooldown
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6415730830174170710, guid: 96f86c78cd90a3c44a175dc276ad85d1,
+        type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
     - target: {fileID: 7720617080390054542, guid: 96f86c78cd90a3c44a175dc276ad85d1,
         type: 3}
       propertyPath: m_LocalScale.x
