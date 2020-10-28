@@ -18,6 +18,7 @@ public class ProfileDetailMenu : MenuView
     {
         int currentProfile = ProfileManager.GetInstance().GetProfileID();
         ProfileManager.GetInstance().GetProfile(currentProfile).SetVolume((int)(transform.GetComponentInChildren<Slider>().value));
+        AudioManager.GetInstance().ChangeVolume();
     }
 
     public void ChangeName(string name)
