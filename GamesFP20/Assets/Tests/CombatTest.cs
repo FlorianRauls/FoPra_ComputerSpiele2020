@@ -22,7 +22,21 @@ public class CombatTest : MonoBehaviour
         Assert.AreEqual(boy.getInMenu(), true);
 
     }
+    [Test]
+    public void TestNotDefeatOnCollisionWithRandomObject()
+    {
+        GameManager.ClearInstance();
+        MenuManager.ClearInstance();
+        GameObject boyObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Boy"));
+        Player boy = boyObject.GetComponent<Player>();
+        boy.Start();
 
+        GameObject randomObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/TreeObject"));
+        
+        boy.collide(randomObject);
+
+        Assert.AreEqual(boy.getDefeated(), false);
+    }
     [Test]
     public void TestDefeatOnCollisionWithEnemy()
     {

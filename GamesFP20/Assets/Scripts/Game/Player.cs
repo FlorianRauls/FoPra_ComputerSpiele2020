@@ -148,7 +148,6 @@ public class Player : MonoBehaviour
 		}
 
  	}
-
 	public void OnTriggerEnter(Collider collider)
     {
 		collide(collider.gameObject);
@@ -162,7 +161,6 @@ public class Player : MonoBehaviour
 			defeat();
 		}
 	}
-
 	// When we are not in any menu and we die
 	// We are defeated
 	public void defeat()
@@ -175,17 +173,14 @@ public class Player : MonoBehaviour
 			controller.enabled = false;
 		}
 	}
-
 	public void setInMenu(bool newInMenu)
 	{
 		inMenu = newInMenu;
 	}
-
 	public bool getInMenu()
 	{
 		return inMenu;
 	}
-
 	public bool getDefeated()
     {
 		return defeated;
