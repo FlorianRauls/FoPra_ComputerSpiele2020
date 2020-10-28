@@ -50,7 +50,7 @@ MonoBehaviour:
   speed: 6
   jumpForce: 10
   gravity: 20
-  slingshotOffset: 15.5
+  slingshotOffset: 16.2
   velocity: {x: 0, y: 0, z: 0}
   mousePositionObject: {fileID: 0}
 --- !u!143 &7403622898665929637
