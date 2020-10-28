@@ -152,6 +152,7 @@ public class GameManager : MonoBehaviour
         if (!ProfileManager.GetInstance().GetProfile().GetAutoRespawn())
         {
             MenuManager.GetInstance().Show(MenuEnum.GameDeath);
+            SetPlayerInMenu(true);
         }
         else
         {
@@ -164,11 +165,22 @@ public class GameManager : MonoBehaviour
         if (!ProfileManager.GetInstance().GetProfile().GetAutoContinue())
         {
             MenuManager.GetInstance().Show(MenuEnum.GameFinish);
+            SetPlayerInMenu(true);
         }
     }
 
     private void ShowPauseMenu()
     {
         MenuManager.GetInstance().Show(MenuEnum.GamePause);
+        SetPlayerInMenu(true);
+    }
+
+    public void SetPlayerInMenu(bool newValue)
+    {
+        boy.GetComponent<Player>().setInMenu(newValue);
+        if(dog != null)
+        {
+            dog.GetComponent<Player>().setInMenu(newValue);
+        }
     }
 }

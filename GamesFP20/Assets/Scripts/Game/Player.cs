@@ -47,6 +47,21 @@ public class Player : MonoBehaviour
 
     void Update()
 	{
+		if (!inMenu)
+		{
+			Move(Input.GetAxis("Horizontal"), Input.GetButtonDown("Jump"));
+			Shoot();
+			MoveCamera();
+		}
+	}
+	// Getter
+	public CharacterController GetController()
+	{
+		return controller;
+	}
+	// Handle Movement as calculated by CalculateMovement()
+	public void Move(float horizontalInput, bool jumpPressed)
+    {
 		// This makes sure that the player does not move onto the Z axis
 		Vector3 adjuestedPos = transform.position;
 		adjuestedPos.z = 0f;
@@ -56,17 +71,26 @@ public class Player : MonoBehaviour
 		// the ground last frame
 		grounded = controller.isGrounded;
 		// Handle Movement
-		float horizontalMovement = Input.GetAxis("Horizontal");
-		Move(horizontalMovement, Input.GetButtonDown("Jump"));
-		if (horizontalMovement < 0)
+		Turnaround(horizontalInput);
+		velocity = controller.velocity;
+		velocity = CalculateMovement(velocity, horizontalInput, jumpPressed, Time.deltaTime);
+		controller.Move(velocity * Time.deltaTime);
+	}
+
+	private void Turnaround(float horizontalInput)
+    {
+		if (horizontalInput < 0)
 		{
 			transform.GetChild(0).GetChild(0).localScale = new Vector3(-1, 1, 1);
 		}
-		else
+		else if(horizontalInput > 0)
 		{
 			transform.GetChild(0).GetChild(0).localScale = new Vector3(1, 1, 1);
 		}
+	}
 
+	private void Shoot()
+    {
 		// These calculations are done to pass a object onto the slingshot.shootProjectile() function
 		// such that a solid direction can be calculated for the projectile
 
@@ -79,28 +103,19 @@ public class Player : MonoBehaviour
 
 		Vector3 finalPos = mousePos2 - betterPos;
 		finalPos.z = 0f;
-		finalPos.y +=5f;
-		mousePositionObject.transform.position = ( transform.position + finalPos  )*5f;
+		finalPos.y += 5f;
+		mousePositionObject.transform.position = (transform.position + finalPos) * 5f;
 
-		if(Input.GetButtonDown("Fire1"))
+		if (Input.GetButtonDown("Fire1"))
 		{
 			GameObject shot = slingshot.shootProjectile(mousePositionObject);
 		}
+	}
+
+	public void MoveCamera()
+    {
 		// Make sure the camera stays behind us
 		transform.Find("Camera").localPosition = new Vector3(0, 3.7f - transform.position.y, -localCamOffsetZ);
-
-	}
-	// Getter
-	public CharacterController GetController()
-	{
-		return controller;
-	}
-	// Handle Movement as calculated by CalculateMovement()
-	public void Move(float horizontalInput, bool jumpPressed)
-    {
-		velocity = controller.velocity;
-		velocity = CalculateMovement(velocity, horizontalInput, jumpPressed, Time.deltaTime);
-		controller.Move(velocity * Time.deltaTime);
 	}
 	// Calculate movement based on whether we pressed the jump button, the direction the player wants to walk
 	// and the time passed

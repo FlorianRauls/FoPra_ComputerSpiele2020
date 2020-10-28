@@ -14,9 +14,10 @@ public class GameMenu : MenuView
 		SceneManager.LoadScene("Game");
 	}
 
-	public void Continue()
+	public void Back()
 	{
-		Hide();
+		GameManager.GetInstance().SetPlayerInMenu(false);
+		MenuManager.GetInstance().Back();
 	}
 
 	public override void Show()
