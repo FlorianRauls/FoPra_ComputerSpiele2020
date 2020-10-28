@@ -86,5 +86,24 @@ namespace Tests
 
             Assert.AreEqual(compare.transform.rotation, treeObject.transform.rotation);              
         }
+
+        [Test]
+        public void TestNotInteractTwice()
+        {
+            GameObject treeObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/TreeObject"));
+            Interactable tree = treeObject.GetComponent<Interactable>();  
+            tree.amount = new Vector3(100f, 500f, 500f); 
+            tree.Start();
+
+            GameObject interactObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/FriendlyProjectile"));
+            tree.Collide(interactObject);
+
+            GameObject compare = new GameObject();
+            compare.transform.rotation = treeObject.transform.rotation;  
+
+            tree.Collide(interactObject);
+
+            Assert.AreEqual(compare.transform.rotation, treeObject.transform.rotation);    
+        }
     }
 }
