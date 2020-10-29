@@ -14,9 +14,6 @@ public class PlayerTwo : Player
     // Update is called once per frame
     void Update()
     {
-        if (!inMenu)
-        {
-            Move(Input.GetAxis("HorizontalTwo"), Input.GetButtonDown("JumpTwo"));
-        }
+        Move(Input.GetAxis("HorizontalTwo"), Input.GetButtonDown("JumpTwo"));
     }
 }

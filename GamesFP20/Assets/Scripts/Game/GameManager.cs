@@ -183,6 +183,15 @@ public class GameManager : MonoBehaviour
 
     public void SetPlayerInMenu(bool newValue)
     {
+        if (newValue)
+        {
+            Time.timeScale = 0;
+        } 
+        else
+        {
+            Time.timeScale = 1;
+        }
+        
         boy.GetComponent<Player>().setInMenu(newValue);
         if(dog != null)
         {

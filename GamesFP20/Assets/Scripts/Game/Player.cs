@@ -47,12 +47,9 @@ public class Player : MonoBehaviour
 
     void Update()
 	{
-		if (!inMenu)
-		{
-			Move(Input.GetAxis("Horizontal"), Input.GetButtonDown("Jump"));
-			Shoot();
-			MoveCamera();
-		}
+		Move(Input.GetAxis("Horizontal"), Input.GetButtonDown("Jump"));
+		Shoot();
+		MoveCamera();
 	}
 	// Getter
 	public CharacterController GetController()
