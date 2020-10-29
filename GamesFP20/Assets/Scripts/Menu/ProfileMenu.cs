@@ -64,7 +64,7 @@ public class ProfileMenu : MenuView
 				() =>
 				{
 					ProfileManager.GetInstance().SetProfileID(profile);
-					ResetUI();
+					Show();
 				});
 		}
 	}
