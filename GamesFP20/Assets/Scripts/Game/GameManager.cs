@@ -109,20 +109,22 @@ public class GameManager : MonoBehaviour
 
     void LoadLevel()
     {
+        GameObject ressource;
         if (singleplayer)
         {
-            level = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Level/LevelS" + levelIndex));
+            ressource = Resources.Load<GameObject>("Prefabs/Level/LevelS" + levelIndex);
         }
         else
         {
-            level = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Level/LevelM" + levelIndex));
+            ressource = Resources.Load<GameObject>("Prefabs/Level/LevelM" + levelIndex);
         }
-        if(level == null)
+        if (ressource == null)
         {
             SceneManager.LoadScene("MainMenu");
         }
         else
         {
+            level = MonoBehaviour.Instantiate(ressource);
             level.transform.position = new Vector3(level.transform.position.x + levelStart, level.transform.position.y, level.transform.position.z);
         }
     }

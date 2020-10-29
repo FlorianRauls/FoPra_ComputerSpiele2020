@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MultiPlayerMenu : MenuView
 {
+	//Starts a new Multiplayer Game at level 1
 	public void NewGame()
 	{
 		ProfileManager.GetInstance().GetProfile().SetCurrentLevelM(1);
@@ -13,6 +14,7 @@ public class MultiPlayerMenu : MenuView
 		SceneManager.LoadScene("Game");
 	}
 
+	//Continues at current Multiplayer level
 	public void Continue()
 	{
 		GameManager.levelIndex = ProfileManager.GetInstance().GetProfile().GetCurrentLevelM();
@@ -20,6 +22,7 @@ public class MultiPlayerMenu : MenuView
 		SceneManager.LoadScene("Game");
 	}
 
+	//Shows View to select which level to play
 	public void LevelSelect()
 	{
 		GameManager.singleplayer = false;

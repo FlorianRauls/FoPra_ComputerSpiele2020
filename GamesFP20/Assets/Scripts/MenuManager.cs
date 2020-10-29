@@ -34,6 +34,7 @@ public class MenuManager : MonoBehaviour
     }
 
     //Shows a new View Object
+    //Only public for Tests
     public void Show(MenuView view)
     {
         if (view != null)
