@@ -2,6 +2,7 @@
 
 public class Player : MonoBehaviour
 {
+	public float yOffset = 6f;
 	// Movementspeed
 	public float speed = 6;
 	// How high we can jump
@@ -41,7 +42,7 @@ public class Player : MonoBehaviour
 		// init all needed variables
         controller = GetComponent<CharacterController>();
 		slingshot = GetComponent<Slingshot>();
-		mousePositionObject = new GameObject();
+		mousePositionObject =  GameObject.CreatePrimitive(PrimitiveType.Cube);
 		plane = new Plane(Vector3.up, 0);
     }
 
@@ -100,8 +101,8 @@ public class Player : MonoBehaviour
 
 		Vector3 finalPos = mousePos2 - betterPos;
 		finalPos.z = 0f;
-		finalPos.y += 5f;
-		mousePositionObject.transform.position = (transform.position + finalPos) * 5f;
+	//	finalPos.y += yOffset;
+		mousePositionObject.transform.position = (transform.position + finalPos) * 1f;
 
 		if (Input.GetButtonDown("Fire1"))
 		{
