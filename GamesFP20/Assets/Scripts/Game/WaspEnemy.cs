@@ -10,7 +10,7 @@ public class WaspEnemy : Enemy
     GameObject target;
     
     // Cooldown after which we can fire
-    float cooldown = 3f;
+    public float cooldown = 3f;
     // timer to track time / Check for cooldown
     float timer = 0f;
     // Our Range we can fire at

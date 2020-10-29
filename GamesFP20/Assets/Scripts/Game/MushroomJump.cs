@@ -10,7 +10,7 @@ public class MushroomJump : MonoBehaviour
     public float force = 8f;
     // Small cooldown and timer to
     // prevent bugs like infinite force applied
-    float cooldown = 1f;
+    public float cooldown = 1f;
 
     float timer = 5f;
     // Start is called before the first frame update

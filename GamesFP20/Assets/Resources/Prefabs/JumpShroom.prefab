@@ -108,3 +108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b00c622952c97f4cbc1fb8cec8d2d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  force: 7.76
+  cooldown: 0.34

@@ -98,7 +98,8 @@ MonoBehaviour:
   speed: 4
   projectilePrefab: {fileID: 152940583346416372, guid: 12412649f4c7d7f419b0a8ce63a59a6b,
     type: 3}
-  range: 15
+  cooldown: 3.52
+  range: 11.37
   amplitude: 0.3
   frequency: 0.3
 --- !u!65 &7938074068141262444
