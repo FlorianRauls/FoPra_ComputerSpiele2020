@@ -76,6 +76,7 @@ public class Player : MonoBehaviour
 		Turnaround(horizontalInput);
 		velocity = controller.velocity;
 		velocity = CalculateMovement(velocity, horizontalInput, jumpPressed, Time.deltaTime);
+		velocity.z = 0f;
 		controller.Move(velocity * Time.deltaTime);
 	}
 
