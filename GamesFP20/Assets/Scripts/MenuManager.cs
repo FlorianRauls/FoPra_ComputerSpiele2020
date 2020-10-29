@@ -12,7 +12,6 @@ public class MenuManager : MonoBehaviour
     {
         MenuManager.singleton = this;
         MenuManager.GetInstance().Show(MenuEnum.Main);
-        Initial();
     }
 
     public static MenuManager GetInstance()
@@ -24,18 +23,6 @@ public class MenuManager : MonoBehaviour
     {
         singleton = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Menu/Menu")).GetComponent<MenuManager>();
         singleton.Start();
-    }
-
-    public void Initial()
-    {
-        //foreach(MenuView view in views)
-        //{
-        //    view.Hide();
-        //}
-        //if(views.Length > 0)
-        //{
-        //    Show(views[0]);
-        //}
     }
     public void Show(MenuEnum menu)
     {
