@@ -52,6 +52,6 @@ public class GameMenu : MenuView
 	public void ChangeAutoContinue(bool respawn)
 	{
 		int currentProfile = ProfileManager.GetInstance().GetProfileID();
-		ProfileManager.GetInstance().GetProfile(currentProfile).SetAutoRespawn(transform.GetComponentInChildren<Toggle>().isOn);
+		ProfileManager.GetInstance().GetProfile(currentProfile).SetAutoContinue(transform.GetComponentInChildren<Toggle>().isOn);
 	}
 }
