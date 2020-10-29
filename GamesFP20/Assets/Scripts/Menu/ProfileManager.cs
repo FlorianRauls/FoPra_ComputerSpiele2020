@@ -10,7 +10,7 @@ public class ProfileManager : MonoBehaviour
     private int profileID = 0;
     private int maxID = 0;
     private Profile[] profiles = new Profile[0];
-    private const string path = "GamesFP20_Data/Resources/profiles.txt";
+    private const string path = "profiles.txt";
 
     //Creates instance and loads profiles
     public void Start()
