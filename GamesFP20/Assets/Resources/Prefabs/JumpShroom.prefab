@@ -110,4 +110,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   force: 7.76
-  cooldown: 0.34
+  cooldown: 0.2
