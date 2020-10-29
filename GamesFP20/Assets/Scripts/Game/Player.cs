@@ -42,8 +42,12 @@ public class Player : MonoBehaviour
 		// init all needed variables
         controller = GetComponent<CharacterController>();
 		slingshot = GetComponent<Slingshot>();
-		mousePositionObject =  GameObject.CreatePrimitive(PrimitiveType.Cube);
-		plane = new Plane(Vector3.up, 0);
+		mousePositionObject =  MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Ziel"));
+		plane = new Plane(Vector3.up, transform.position);
+		if(mousePositionObject.GetComponent<Collider>() != null)
+		{
+			mousePositionObject.GetComponent<Collider>().enabled = false;
+		}
     }
 
     void Update()
@@ -89,7 +93,7 @@ public class Player : MonoBehaviour
 
 	private void Shoot()
     {
-		var plane = new Plane(Vector3.up,transform.position);
+	//	var plane = new Plane(Vector3.up,transform.position);
 		// These calculations are done to pass a object onto the slingshot.shootProjectile() function
 		// such that a solid direction can be calculated for the projectile
 
@@ -104,7 +108,8 @@ public class Player : MonoBehaviour
 
 		if(plane.Raycast(ray, out distance)){
 			var hitPoint = ray.GetPoint(distance);
-			mousePositionObject.transform.position = new Vector3(hitPoint.x, hitPoint.z/2f, 0f);
+			hitPoint.Normalize();
+			mousePositionObject.transform.position = transform.position + new Vector3(hitPoint.x, hitPoint.z, 0f) * 2;
 		}
 
 
