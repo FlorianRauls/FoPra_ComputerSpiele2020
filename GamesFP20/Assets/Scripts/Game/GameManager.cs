@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
     void LoadLevelDivider()
     {
         levelDivider = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Level/Level0"));
-        levelDivider.transform.position = new Vector3(levelDivider.transform.position.x + level.GetComponent<Level>().width, levelDivider.transform.position.y, levelDivider.transform.position.z);
+        levelDivider.transform.position = new Vector3(levelDivider.transform.position.x + level.GetComponent<Level>().width + levelStart, levelDivider.transform.position.y, levelDivider.transform.position.z);
     }
 
     void LoadLevel()
