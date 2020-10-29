@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 831331fb6c9fbde458972398ac1b7fd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yOffset: 6
   speed: 6
   jumpForce: 10
   gravity: 20
