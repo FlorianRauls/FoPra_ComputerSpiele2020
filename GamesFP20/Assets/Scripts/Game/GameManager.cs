@@ -162,6 +162,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            Time.timeScale = 1f;
             SceneManager.LoadScene("Game");
         }
     }

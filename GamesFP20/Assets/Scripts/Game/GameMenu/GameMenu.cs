@@ -13,6 +13,7 @@ public class GameMenu : MenuView
 	//Restarts Game Scene
 	public void RestartLevel()
 	{
+		Time.timeScale = 1f;
 		SceneManager.LoadScene("Game");
 	}
 

@@ -1,1 +1,1 @@
-{profileID:0,maxID:0,profiles:[{id:0,name:Player,volume:2,currentLevelS:5,maxLevelS:9,currentLevelM:1,maxLevelM:1,autoRespawn:False,autoContinue:False}]}
+{profileID:0,maxID:0,profiles:[{id:0,name:Player,volume:2,currentLevelS:5,maxLevelS:9,currentLevelM:1,maxLevelM:1,autoRespawn:True,autoContinue:False}]}
