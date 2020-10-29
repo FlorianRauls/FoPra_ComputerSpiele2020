@@ -43,7 +43,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationDirection: {x: 0, y: 0, z: 1}
   smoothTime: 5
-  speed: 4
+  speed: 10
 --- !u!1001 &8516500501330572523
 PrefabInstance:
   m_ObjectHideFlags: 0
