@@ -117,8 +117,14 @@ public class GameManager : MonoBehaviour
         {
             level = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Level/LevelM" + levelIndex));
         }
-        
-        level.transform.position = new Vector3(level.transform.position.x + levelStart, level.transform.position.y, level.transform.position.z);
+        if(level == null)
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+        else
+        {
+            level.transform.position = new Vector3(level.transform.position.x + levelStart, level.transform.position.y, level.transform.position.z);
+        }
     }
 
     public Level GetCurrentLevel()
