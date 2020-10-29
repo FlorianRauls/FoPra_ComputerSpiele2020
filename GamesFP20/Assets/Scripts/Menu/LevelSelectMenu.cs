@@ -9,6 +9,8 @@ public class LevelSelectMenu : MenuView
     public Transform content;
     public GameObject levelSelectListItemPrefab;
 
+    //Override of the Standard Show method
+    //First cleares the view, then loads LevelSelectItems for the level
     public override void Show()
     {
         ResetUI();
@@ -16,7 +18,8 @@ public class LevelSelectMenu : MenuView
         gameObject.SetActive(true);
     }
 
-    public void ResetUI()
+    //Cleares the view, if there is already some content from earlier call
+    private void ResetUI()
     {
         for (int i = 0; i < content.transform.childCount; i++)
         {
@@ -24,7 +27,8 @@ public class LevelSelectMenu : MenuView
         }
     }
 
-    void LoadLevelSelectItems()
+    // For every playable level, show one LevelSelectItem with a button to start this level
+    private void LoadLevelSelectItems()
     {
         for (int i = 1; Resources.Load<GameObject>("Prefabs/Level/Level"+(GameManager.singleplayer?"S":"M")+i) != null && ((GameManager.singleplayer && i <= ProfileManager.GetInstance().GetProfile().GetMaxLevelS()) || (!GameManager.singleplayer && i <= ProfileManager.GetInstance().GetProfile().GetMaxLevelM())); i++)
         {

@@ -4,21 +4,26 @@ using UnityEngine;
 public class MenuView : MonoBehaviour
 {
     public MenuEnum menuType = MenuEnum.Dummy;
+
+    //Tells MenuManager to transit to next View
     public virtual void TransitionTo(MenuEnum menu)
     {
         MenuManager.GetInstance().TransitionTo(menu);
     }
 
+    //Shows all relevant content for this View -> Will be overridden by some sub classes
     public virtual void Show()
     {
         gameObject.SetActive(true);
     }
 
+    //Hides complete View
     public void Hide()
     {
         gameObject.SetActive(false);
     }
 
+    //Tells MenuManager to go back to last View
     public void Back()
     {
         MenuManager.GetInstance().Back();

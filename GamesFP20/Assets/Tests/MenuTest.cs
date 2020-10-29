@@ -33,7 +33,7 @@ namespace Tests
             manager.Show(manager.views[0]);
             manager.GetViewStack()[manager.GetViewStack().Count-1].TransitionTo(MenuEnum.Dummy);
             Assert.IsTrue(manager.GetViewStack()[manager.GetViewStack().Count - 1].gameObject.activeSelf == true);
-            MenuManager.GetInstance().TransitionTo(2);
+            MenuManager.GetInstance().TransitionTo(MenuEnum.Dummy);
             Assert.IsTrue(manager.GetViewStack()[manager.GetViewStack().Count - 1].gameObject.activeSelf == true);
             manager.GetViewStack()[manager.GetViewStack().Count - 1].Back();
             Assert.IsTrue(manager.GetViewStack()[manager.GetViewStack().Count - 1].gameObject.activeSelf == true);

@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class ProfileDetailMenu : MenuView
 {
-    MenuEnum menuType = MenuEnum.ProfileDetail;
-
     public void DeleteProfile()
     {
         int currentProfile = ProfileManager.GetInstance().GetProfileID();

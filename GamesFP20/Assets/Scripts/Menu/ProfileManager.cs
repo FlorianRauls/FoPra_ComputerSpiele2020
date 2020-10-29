@@ -12,12 +12,32 @@ public class ProfileManager : MonoBehaviour
     private Profile[] profiles = new Profile[0];
     private const string path = "Assets/Resources/profiles.txt";
 
+    //Creates instance and loads profiles
     public void Start()
     {
         ProfileManager.singleton = this;
         LoadProfiles();
     }
 
+    //Returns instance if there is one, otherwise create one
+    public static ProfileManager GetInstance()
+    {
+        if (singleton == null)
+        {
+            singleton = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/ProfileManager")).GetComponent<ProfileManager>();
+            singleton.Start();
+        }
+        return singleton;
+
+    }
+
+    //Cleares the instance -> only used for testing
+    public static void ClearInstance()
+    {
+        singleton = null;
+    }
+
+    //Clears all current profiles -> needed to have clear profiles for testing
     public void ClearProfiles()
     {
         maxID = -1;
@@ -26,6 +46,7 @@ public class ProfileManager : MonoBehaviour
         SaveProfiles();
     }
 
+    //Loads profiles from a file
     public void LoadProfiles()
     {
         if (System.IO.File.Exists(path))
@@ -60,6 +81,7 @@ public class ProfileManager : MonoBehaviour
         }
     }
 
+    //Saves profiles to a file
     public void SaveProfiles()
     {
         string output = "{profileID:" + profileID + ",maxID:" + maxID + ",profiles:[";
@@ -75,6 +97,7 @@ public class ProfileManager : MonoBehaviour
         File.WriteAllText(path, output);
     }
 
+    //Adds a profile
     public void AddProfile()
     {
         profileID = profiles.Length;
@@ -88,6 +111,7 @@ public class ProfileManager : MonoBehaviour
         ProfileManager.GetInstance().SaveProfiles();
     }
 
+    //Gets the current profile -> If there is none, create a new one
     public Profile GetProfile()
     {
         if(profiles.Length == 0)
@@ -97,22 +121,39 @@ public class ProfileManager : MonoBehaviour
         return profiles[profileID];
     }
 
-    public static ProfileManager GetInstance()
+    //Deletes the current profile and moves the profiles in the profile list if necessary
+    public void DeleteProfile(int id)
     {
-        if(singleton == null)
+        if (id == profileID)
         {
-            singleton = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/ProfileManager")).GetComponent<ProfileManager>();
-            singleton.Start();
+            profileID = 0;
         }
-        return singleton;
-        
+        else
+        {
+            if (id < profileID)
+            {
+                profileID--;
+            }
+        }
+        Profile[] profileCopy = profiles;
+        profiles = new Profile[profileCopy.Length - 1];
+        int profileDeleted = 0;
+        for (int i = 0; i < profileCopy.Length; i++)
+        {
+            if (i == id)
+            {
+                profileDeleted = 1;
+            }
+            else
+            {
+                profiles[i - profileDeleted] = profileCopy[i];
+            }
+        }
+
+        ProfileManager.GetInstance().SaveProfiles();
     }
 
-    public static void ClearInstance()
-    {
-        singleton = null;
-    }
-
+    //Getter and Setter
     public int GetProfileID()
     {
         return profileID;
@@ -132,36 +173,6 @@ public class ProfileManager : MonoBehaviour
     public Profile GetProfile(int id)
     {
         return profiles[id];
-    }
-
-    public void DeleteProfile(int id)
-    {
-        if (id == profileID)
-        {
-            profileID = 0;
-        }else
-        {
-            if(id < profileID)
-            {
-                profileID--;
-            }
-        }
-        Profile[] profileCopy = profiles;
-        profiles = new Profile[profileCopy.Length - 1];
-        int profileDeleted = 0;
-        for (int i = 0; i < profileCopy.Length; i++)
-        {
-            if(i == id)
-            {
-                profileDeleted = 1;
-            }
-            else
-            {
-                profiles[i - profileDeleted] = profileCopy[i];
-            }
-        }
-
-        ProfileManager.GetInstance().SaveProfiles();
     }
 
     public int GetMaxID()

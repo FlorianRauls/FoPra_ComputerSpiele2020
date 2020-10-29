@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
 public class MainMenu : MenuView
-{
-	MenuEnum menuType = MenuEnum.Main;
+{	
+	//Closes the Game
 	public void ExitGame()
 	{
 		Application.Quit();

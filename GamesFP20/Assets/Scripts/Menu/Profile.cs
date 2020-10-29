@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 
 public class Profile
 {
+    //All the stats saved in the player profile
     private int id = 0;
     private string name = "Player";
     private int volume = 100;
@@ -20,6 +21,7 @@ public class Profile
         this.id = id;
     }
 
+    //Many getter and setter -> one per stat
     public int GetID()
     {
         return id;
@@ -113,12 +115,14 @@ public class Profile
         ProfileManager.GetInstance().SaveProfiles();
     }
 
+    //Saves the profile in a JSON like format to store in a file
     public string ToString()
     {
         string output = "{id:" + id + ",name:" + name + ",volume:" + volume + ",currentLevelS:" + currentLevelS + ",maxLevelS:" + maxLevelS + ",currentLevelM:" + currentLevelM + ",maxLevelM:" + maxLevelM + ",autoRespawn:" + autoRespawn + ",autoContinue:" + autoContinue + "}";
         return output;
     }
 
+    //Reads the profile from a JSON like format
     public static Profile FromString(string input)
     {
         Debug.Log(input);
