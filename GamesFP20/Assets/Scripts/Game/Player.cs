@@ -93,7 +93,7 @@ public class Player : MonoBehaviour
 
 	private void Shoot()
     {
-	//	var plane = new Plane(Vector3.up,transform.position);
+		var plane = new Plane(Vector3.down,0);
 		// These calculations are done to pass a object onto the slingshot.shootProjectile() function
 		// such that a solid direction can be calculated for the projectile
 
@@ -103,23 +103,17 @@ public class Player : MonoBehaviour
 		// its static global z-position (-10)
 		mousePos.z = Camera.main.nearClipPlane;
 		Vector3 mousePos2 = Camera.main.ScreenToWorldPoint(mousePos);
-		var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		var ray  = Camera.main.ScreenPointToRay(Input.mousePosition);
 
 
 		if(plane.Raycast(ray, out distance)){
 			var hitPoint = ray.GetPoint(distance);
+			// Debug.Log(distance);
+			
 			hitPoint.Normalize();
-			mousePositionObject.transform.position = transform.position + new Vector3(hitPoint.x, hitPoint.z, 0f) * 2;
+			mousePositionObject.transform.position = transform.position + new Vector3(hitPoint.x, hitPoint.z, 0f) * 2.5f;
 		}
 
-
-	//	Vector3 finalPos = mousePos2 + betterPos;
-	//	finalPos.z = 0f;
-	//	finalPos.y =  Camera.main.pixelHeight -  mousePos.y;
-	//	finalPos.x = mousePos2.x;
-	//	mousePositionObject.transform.position = (transform.position + finalPos) * 1f;
-	//	mousePos2.z = 0f;
-//1		mousePositionObject.transform.position = transform.position + mousePos2;
 
 		if (Input.GetButtonDown("Fire1"))
 		{
