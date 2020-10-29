@@ -18,6 +18,11 @@ public class SinglePlayerMenu : MenuView
 	public void Continue()
 	{
 		GameManager.levelIndex = ProfileManager.GetInstance().GetProfile().GetCurrentLevelS();
+		GameObject ressource = Resources.Load<GameObject>("Prefabs/Level/LevelS" + GameManager.levelIndex);
+		if (ressource == null)
+		{
+			GameManager.levelIndex = 1;
+		}
 		GameManager.singleplayer = true;
 		SceneManager.LoadScene("Game");
 	}

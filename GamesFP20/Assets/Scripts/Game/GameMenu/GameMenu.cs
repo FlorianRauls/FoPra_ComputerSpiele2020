@@ -7,6 +7,7 @@ public class GameMenu : MenuView
 	//Goes back to Menu Scene
 	public void GoToMenu()
 	{
+		Time.timeScale = 1f;
 		SceneManager.LoadScene("MainMenu");
 	}
 

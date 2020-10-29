@@ -18,6 +18,11 @@ public class MultiPlayerMenu : MenuView
 	public void Continue()
 	{
 		GameManager.levelIndex = ProfileManager.GetInstance().GetProfile().GetCurrentLevelM();
+		GameObject ressource = Resources.Load<GameObject>("Prefabs/Level/LevelM" + GameManager.levelIndex);
+		if(ressource == null)
+        {
+			GameManager.levelIndex = 1;
+		}
 		GameManager.singleplayer = false;
 		SceneManager.LoadScene("Game");
 	}
