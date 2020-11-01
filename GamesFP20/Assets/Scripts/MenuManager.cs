@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+///  This class handles all interactions, changes, closing and opening of MenuView.
+/// </summary>
 public class MenuManager : MonoBehaviour
 {
     private static MenuManager singleton;

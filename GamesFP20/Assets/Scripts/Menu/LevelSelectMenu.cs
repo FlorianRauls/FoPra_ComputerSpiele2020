@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+///  This class is a child of MenuView and represents the Menu which is used for selecting Menus.
+/// </summary>
 public class LevelSelectMenu : MenuView
 {
     public Transform content;

@@ -90,25 +90,32 @@ $(document).ready(function(){initNavTree('class_wasp_enemy.html',''); initResiza
 <div class="title">WaspEnemy Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class handles all behaviours associated with Wasp, the most commonly used <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> asset in the gameworld.  
+ <a href="class_wasp_enemy.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for WaspEnemy:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_wasp_enemy.png" usemap="#WaspEnemy_map" alt=""/>
   <map id="WaspEnemy_map" name="WaspEnemy_map">
-<area href="class_enemy.html" alt="Enemy" shape="rect" coords="0,56,102,80"/>
+<area href="class_enemy.html" title="This is the base class used by any Enemy Type in the game." alt="Enemy" shape="rect" coords="0,56,102,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5422c8f98b1712b211f81c05b43563d2"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wasp_enemy.html#a5422c8f98b1712b211f81c05b43563d2">SearchTarget</a> (GameObject[] candidates)</td></tr>
+<tr class="memdesc:a5422c8f98b1712b211f81c05b43563d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches Through all possible candidates and returns the one that is closest to this object in the game world.  <a href="class_wasp_enemy.html#a5422c8f98b1712b211f81c05b43563d2">More...</a><br /></td></tr>
 <tr class="separator:a5422c8f98b1712b211f81c05b43563d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14613eb8de9fde740255daf4ffa36a5e"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wasp_enemy.html#a14613eb8de9fde740255daf4ffa36a5e">shootProjectile</a> (GameObject target)</td></tr>
+<tr class="memdesc:a14613eb8de9fde740255daf4ffa36a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method handles all necessary steps for shooting a <a class="el" href="class_projectile.html" title="This class handles all behaviours associated with Projectiles shot by Enemy characters and their inte...">Projectile</a> onto the given target GameObject.  <a href="class_wasp_enemy.html#a14613eb8de9fde740255daf4ffa36a5e">More...</a><br /></td></tr>
 <tr class="separator:a14613eb8de9fde740255daf4ffa36a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1449e6fabfe3d88cfd55bb4c1b2d3082"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wasp_enemy.html#a1449e6fabfe3d88cfd55bb4c1b2d3082">directionToTarget</a> (GameObject target)</td></tr>
+<tr class="memdesc:a1449e6fabfe3d88cfd55bb4c1b2d3082"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the direction towards another object.  <a href="class_wasp_enemy.html#a1449e6fabfe3d88cfd55bb4c1b2d3082">More...</a><br /></td></tr>
 <tr class="separator:a1449e6fabfe3d88cfd55bb4c1b2d3082"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8922ddd34071f288ca4867c148a67fa1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wasp_enemy.html#a8922ddd34071f288ca4867c148a67fa1">distanceToTarget</a> (Vector3 direction)</td></tr>
+<tr class="memdesc:a8922ddd34071f288ca4867c148a67fa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the distance to another object.  <a href="class_wasp_enemy.html#a8922ddd34071f288ca4867c148a67fa1">More...</a><br /></td></tr>
 <tr class="separator:a8922ddd34071f288ca4867c148a67fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2b5f7d0b01580ba839bd59541df8617"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wasp_enemy.html#ae2b5f7d0b01580ba839bd59541df8617">setCooldown</a> (float newCooldown)</td></tr>
 <tr class="separator:ae2b5f7d0b01580ba839bd59541df8617"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,31 +137,49 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa08cef8c0ae302490acd5259b0aaa4c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_enemy"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_enemy')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_enemy.html">Enemy</a></td></tr>
 <tr class="memitem:ac8eb629ba2895e86aa7f940334c94c02 inherit pub_methods_class_enemy"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#ac8eb629ba2895e86aa7f940334c94c02">Die</a> ()</td></tr>
+<tr class="memdesc:ac8eb629ba2895e86aa7f940334c94c02 inherit pub_methods_class_enemy"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method should be triggered on death by any <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> in the game.  <a href="class_enemy.html#ac8eb629ba2895e86aa7f940334c94c02">More...</a><br /></td></tr>
 <tr class="separator:ac8eb629ba2895e86aa7f940334c94c02 inherit pub_methods_class_enemy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dec3f6aa661fb668b51a622f34daed2 inherit pub_methods_class_enemy"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a6dec3f6aa661fb668b51a622f34daed2">Move</a> (float horizontalInput, float verticalInput)</td></tr>
+<tr class="memdesc:a6dec3f6aa661fb668b51a622f34daed2 inherit pub_methods_class_enemy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default method used by any <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> to move through the game world.  <a href="class_enemy.html#a6dec3f6aa661fb668b51a622f34daed2">More...</a><br /></td></tr>
 <tr class="separator:a6dec3f6aa661fb668b51a622f34daed2 inherit pub_methods_class_enemy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa6336331d9156c66acb77bd99838369 inherit pub_methods_class_enemy"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#aaa6336331d9156c66acb77bd99838369">CalculateMovement</a> (Vector3 currentMovement, float horizontalInput, float verticalInput, float deltaTime)</td></tr>
+<tr class="memdesc:aaa6336331d9156c66acb77bd99838369 inherit pub_methods_class_enemy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default method used by any <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> to calculate how much it can move based on inputs passed down by Move  <a href="class_enemy.html#aaa6336331d9156c66acb77bd99838369">More...</a><br /></td></tr>
 <tr class="separator:aaa6336331d9156c66acb77bd99838369 inherit pub_methods_class_enemy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec4e36ba8abb73f95b824cf2ca4f95e2 inherit pub_methods_class_enemy"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#aec4e36ba8abb73f95b824cf2ca4f95e2">collide</a> (GameObject other)</td></tr>
+<tr class="memdesc:aec4e36ba8abb73f95b824cf2ca4f95e2 inherit pub_methods_class_enemy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Interface to handle collision events between Colliders, Triggers and CharacterControllers passed down by Move  <a href="class_enemy.html#aec4e36ba8abb73f95b824cf2ca4f95e2">More...</a><br /></td></tr>
 <tr class="separator:aec4e36ba8abb73f95b824cf2ca4f95e2 inherit pub_methods_class_enemy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a1e68e9bb7b4f1f95b6e392797096c99e"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wasp_enemy.html#a1e68e9bb7b4f1f95b6e392797096c99e">projectilePrefab</a></td></tr>
+<tr class="memdesc:a1e68e9bb7b4f1f95b6e392797096c99e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Object we fire.  <a href="class_wasp_enemy.html#a1e68e9bb7b4f1f95b6e392797096c99e">More...</a><br /></td></tr>
 <tr class="separator:a1e68e9bb7b4f1f95b6e392797096c99e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40b7e9c18237c3be4b886ad623a283c4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wasp_enemy.html#a40b7e9c18237c3be4b886ad623a283c4">cooldown</a> = 3f</td></tr>
+<tr class="memdesc:a40b7e9c18237c3be4b886ad623a283c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cooldown after which we can fire.  <a href="class_wasp_enemy.html#a40b7e9c18237c3be4b886ad623a283c4">More...</a><br /></td></tr>
 <tr class="separator:a40b7e9c18237c3be4b886ad623a283c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b59d9b74d66a78b9a09bd1bcc05ec74"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wasp_enemy.html#a2b59d9b74d66a78b9a09bd1bcc05ec74">range</a> = 15f</td></tr>
+<tr class="memdesc:a2b59d9b74d66a78b9a09bd1bcc05ec74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Our Range we can fire at.  <a href="class_wasp_enemy.html#a2b59d9b74d66a78b9a09bd1bcc05ec74">More...</a><br /></td></tr>
 <tr class="separator:a2b59d9b74d66a78b9a09bd1bcc05ec74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3794620acd55f1dde103e1e48fa55c3b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wasp_enemy.html#a3794620acd55f1dde103e1e48fa55c3b">amplitude</a> = 0.3f</td></tr>
+<tr class="memdesc:a3794620acd55f1dde103e1e48fa55c3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">We fly up and down by a small amount.  <a href="class_wasp_enemy.html#a3794620acd55f1dde103e1e48fa55c3b">More...</a><br /></td></tr>
 <tr class="separator:a3794620acd55f1dde103e1e48fa55c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a911815a4ff1c40264a28d040564befe5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wasp_enemy.html#a911815a4ff1c40264a28d040564befe5">frequency</a> = 0.3f</td></tr>
 <tr class="separator:a911815a4ff1c40264a28d040564befe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_enemy"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_enemy')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_enemy.html">Enemy</a></td></tr>
 <tr class="memitem:ad58edec05f9a44da44ef1021a4005d06 inherit pub_attribs_class_enemy"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#ad58edec05f9a44da44ef1021a4005d06">speed</a> = 4</td></tr>
+<tr class="memdesc:ad58edec05f9a44da44ef1021a4005d06 inherit pub_attribs_class_enemy"><td class="mdescLeft">&#160;</td><td class="mdescRight">This determines the speed with which the enemy can move in any direction.  <a href="class_enemy.html#ad58edec05f9a44da44ef1021a4005d06">More...</a><br /></td></tr>
 <tr class="separator:ad58edec05f9a44da44ef1021a4005d06 inherit pub_attribs_class_enemy"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_enemy"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_enemy')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_enemy.html">Enemy</a></td></tr>
+<tr class="memitem:af81e5f01288388cae590293eb615ed8b inherit pro_attribs_class_enemy"><td class="memItemLeft" align="right" valign="top">CharacterController&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#af81e5f01288388cae590293eb615ed8b">controller</a></td></tr>
+<tr class="memdesc:af81e5f01288388cae590293eb615ed8b inherit pro_attribs_class_enemy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Any <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> nees a CharacterController to move through the world.  <a href="class_enemy.html#af81e5f01288388cae590293eb615ed8b">More...</a><br /></td></tr>
+<tr class="separator:af81e5f01288388cae590293eb615ed8b inherit pro_attribs_class_enemy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class handles all behaviours associated with Wasp, the most commonly used <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> asset in the gameworld. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa08cef8c0ae302490acd5259b0aaa4c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa08cef8c0ae302490acd5259b0aaa4c7">&#9670;&nbsp;</a></span>collide()</h2>
 
@@ -189,6 +214,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Calculates the direction towards another object. </p>
+
 </div>
 </div>
 <a id="a8922ddd34071f288ca4867c148a67fa1"></a>
@@ -206,6 +233,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Calculates the distance to another object. </p>
 
 </div>
 </div>
@@ -292,6 +321,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Searches Through all possible candidates and returns the one that is closest to this object in the game world. </p>
 
 </div>
 </div>
@@ -383,6 +414,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method handles all necessary steps for shooting a <a class="el" href="class_projectile.html" title="This class handles all behaviours associated with Projectiles shot by Enemy characters and their inte...">Projectile</a> onto the given target GameObject. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -398,6 +431,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>We fly up and down by a small amount. </p>
+
 </div>
 </div>
 <a id="a40b7e9c18237c3be4b886ad623a283c4"></a>
@@ -411,6 +446,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Cooldown after which we can fire. </p>
 
 </div>
 </div>
@@ -440,6 +477,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The Object we fire. </p>
+
 </div>
 </div>
 <a id="a2b59d9b74d66a78b9a09bd1bcc05ec74"></a>
@@ -454,6 +493,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Our Range we can fire at. </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -465,7 +506,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_wasp_enemy.html">WaspEnemy</a></li>
-    <li class="footer">Generated on Sun Nov 1 2020 13:23:59 for GamesFP20 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Sun Nov 1 2020 14:56:24 for GamesFP20 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

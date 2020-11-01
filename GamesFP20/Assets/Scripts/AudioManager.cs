@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+///  This class handles the Audio Volume.
+/// </summary>
 public class AudioManager : MonoBehaviour
 {
     private static AudioManager singleton;

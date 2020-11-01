@@ -90,13 +90,16 @@ $(document).ready(function(){initNavTree('class_projectile.html',''); initResiza
 <div class="title">Projectile Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class handles all behaviours associated with Projectiles shot by <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> characters and their interaction with the <a class="el" href="class_player.html" title="This class handles all behaviours associated with the Player character and his interactions with the ...">Player</a>.  
+ <a href="class_projectile.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for Projectile:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_projectile.png" usemap="#Projectile_map" alt=""/>
   <map id="Projectile_map" name="Projectile_map">
-<area href="class_enemy.html" alt="Enemy" shape="rect" coords="0,56,102,80"/>
+<area href="class_enemy.html" title="This is the base class used by any Enemy Type in the game." alt="Enemy" shape="rect" coords="0,56,102,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -118,12 +121,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af3eb229bcdd595758c1e27453ac988da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_enemy"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_enemy')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_enemy.html">Enemy</a></td></tr>
 <tr class="memitem:ac8eb629ba2895e86aa7f940334c94c02 inherit pub_methods_class_enemy"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#ac8eb629ba2895e86aa7f940334c94c02">Die</a> ()</td></tr>
+<tr class="memdesc:ac8eb629ba2895e86aa7f940334c94c02 inherit pub_methods_class_enemy"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method should be triggered on death by any <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> in the game.  <a href="class_enemy.html#ac8eb629ba2895e86aa7f940334c94c02">More...</a><br /></td></tr>
 <tr class="separator:ac8eb629ba2895e86aa7f940334c94c02 inherit pub_methods_class_enemy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dec3f6aa661fb668b51a622f34daed2 inherit pub_methods_class_enemy"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a6dec3f6aa661fb668b51a622f34daed2">Move</a> (float horizontalInput, float verticalInput)</td></tr>
+<tr class="memdesc:a6dec3f6aa661fb668b51a622f34daed2 inherit pub_methods_class_enemy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default method used by any <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> to move through the game world.  <a href="class_enemy.html#a6dec3f6aa661fb668b51a622f34daed2">More...</a><br /></td></tr>
 <tr class="separator:a6dec3f6aa661fb668b51a622f34daed2 inherit pub_methods_class_enemy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa6336331d9156c66acb77bd99838369 inherit pub_methods_class_enemy"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#aaa6336331d9156c66acb77bd99838369">CalculateMovement</a> (Vector3 currentMovement, float horizontalInput, float verticalInput, float deltaTime)</td></tr>
+<tr class="memdesc:aaa6336331d9156c66acb77bd99838369 inherit pub_methods_class_enemy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default method used by any <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> to calculate how much it can move based on inputs passed down by Move  <a href="class_enemy.html#aaa6336331d9156c66acb77bd99838369">More...</a><br /></td></tr>
 <tr class="separator:aaa6336331d9156c66acb77bd99838369 inherit pub_methods_class_enemy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec4e36ba8abb73f95b824cf2ca4f95e2 inherit pub_methods_class_enemy"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#aec4e36ba8abb73f95b824cf2ca4f95e2">collide</a> (GameObject other)</td></tr>
+<tr class="memdesc:aec4e36ba8abb73f95b824cf2ca4f95e2 inherit pub_methods_class_enemy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Interface to handle collision events between Colliders, Triggers and CharacterControllers passed down by Move  <a href="class_enemy.html#aec4e36ba8abb73f95b824cf2ca4f95e2">More...</a><br /></td></tr>
 <tr class="separator:aec4e36ba8abb73f95b824cf2ca4f95e2 inherit pub_methods_class_enemy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -134,9 +141,19 @@ Public Attributes</h2></td></tr>
 <tr class="separator:af056e89e90d6ee39236ee94e6cb370a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_enemy"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_enemy')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_enemy.html">Enemy</a></td></tr>
 <tr class="memitem:ad58edec05f9a44da44ef1021a4005d06 inherit pub_attribs_class_enemy"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#ad58edec05f9a44da44ef1021a4005d06">speed</a> = 4</td></tr>
+<tr class="memdesc:ad58edec05f9a44da44ef1021a4005d06 inherit pub_attribs_class_enemy"><td class="mdescLeft">&#160;</td><td class="mdescRight">This determines the speed with which the enemy can move in any direction.  <a href="class_enemy.html#ad58edec05f9a44da44ef1021a4005d06">More...</a><br /></td></tr>
 <tr class="separator:ad58edec05f9a44da44ef1021a4005d06 inherit pub_attribs_class_enemy"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_enemy"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_enemy')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_enemy.html">Enemy</a></td></tr>
+<tr class="memitem:af81e5f01288388cae590293eb615ed8b inherit pro_attribs_class_enemy"><td class="memItemLeft" align="right" valign="top">CharacterController&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#af81e5f01288388cae590293eb615ed8b">controller</a></td></tr>
+<tr class="memdesc:af81e5f01288388cae590293eb615ed8b inherit pro_attribs_class_enemy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Any <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> nees a CharacterController to move through the world.  <a href="class_enemy.html#af81e5f01288388cae590293eb615ed8b">More...</a><br /></td></tr>
+<tr class="separator:af81e5f01288388cae590293eb615ed8b inherit pro_attribs_class_enemy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class handles all behaviours associated with Projectiles shot by <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> characters and their interaction with the <a class="el" href="class_player.html" title="This class handles all behaviours associated with the Player character and his interactions with the ...">Player</a>. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac01e35d5f4c60b09bf98750cd3fa1d0d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac01e35d5f4c60b09bf98750cd3fa1d0d">&#9670;&nbsp;</a></span>collide()</h2>
 
@@ -298,7 +315,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_projectile.html">Projectile</a></li>
-    <li class="footer">Generated on Sun Nov 1 2020 13:23:59 for GamesFP20 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Sun Nov 1 2020 14:56:24 for GamesFP20 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

@@ -90,12 +90,17 @@ $(document).ready(function(){initNavTree('class_profile.html',''); initResizable
 <div class="title">Profile Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class stores all information which has to be stored between game sessions like <a class="el" href="class_player.html" title="This class handles all behaviours associated with the Player character and his interactions with the ...">Player</a> Name, Audio Volume and finished levels.  
+ <a href="class_profile.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a390b2643abb820e749741eb38206666d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#a390b2643abb820e749741eb38206666d">Profile</a> (int id)</td></tr>
+<tr class="memdesc:a390b2643abb820e749741eb38206666d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor which sets its own ID.  <a href="class_profile.html#a390b2643abb820e749741eb38206666d">More...</a><br /></td></tr>
 <tr class="separator:a390b2643abb820e749741eb38206666d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a9e7fd29a9dfb81af886953b0b884a9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#a2a9e7fd29a9dfb81af886953b0b884a9">GetID</a> ()</td></tr>
+<tr class="memdesc:a2a9e7fd29a9dfb81af886953b0b884a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Many getter and setter -&gt; one per stat.  <a href="class_profile.html#a2a9e7fd29a9dfb81af886953b0b884a9">More...</a><br /></td></tr>
 <tr class="separator:a2a9e7fd29a9dfb81af886953b0b884a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10bff604ff8eb896a13980d9ce37f836"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#a10bff604ff8eb896a13980d9ce37f836">GetName</a> ()</td></tr>
 <tr class="separator:a10bff604ff8eb896a13980d9ce37f836"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,14 +135,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0ca0f7c1613aeeb36a8ee01245c69e5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#a0ca0f7c1613aeeb36a8ee01245c69e5a">SetAutoRespawn</a> (bool respawn)</td></tr>
 <tr class="separator:a0ca0f7c1613aeeb36a8ee01245c69e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8668501a93eaad775b61bc5ce7972d1a"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#a8668501a93eaad775b61bc5ce7972d1a">ToString</a> ()</td></tr>
+<tr class="memdesc:a8668501a93eaad775b61bc5ce7972d1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the profile in a JSON like format to store in a file.  <a href="class_profile.html#a8668501a93eaad775b61bc5ce7972d1a">More...</a><br /></td></tr>
 <tr class="separator:a8668501a93eaad775b61bc5ce7972d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a9b04bfa6bff42269522c279b4aedc72d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_profile.html">Profile</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#a9b04bfa6bff42269522c279b4aedc72d">FromString</a> (string input)</td></tr>
+<tr class="memdesc:a9b04bfa6bff42269522c279b4aedc72d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the profile from a JSON like format.  <a href="class_profile.html#a9b04bfa6bff42269522c279b4aedc72d">More...</a><br /></td></tr>
 <tr class="separator:a9b04bfa6bff42269522c279b4aedc72d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class stores all information which has to be stored between game sessions like <a class="el" href="class_player.html" title="This class handles all behaviours associated with the Player character and his interactions with the ...">Player</a> Name, Audio Volume and finished levels. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a390b2643abb820e749741eb38206666d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a390b2643abb820e749741eb38206666d">&#9670;&nbsp;</a></span>Profile()</h2>
 
@@ -153,6 +162,8 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor which sets its own ID. </p>
 
 </div>
 </div>
@@ -180,6 +191,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reads the profile from a JSON like format. </p>
 
 </div>
 </div>
@@ -265,6 +278,8 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Many getter and setter -&gt; one per stat. </p>
 
 </div>
 </div>
@@ -495,6 +510,8 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Saves the profile in a JSON like format to store in a file. </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -506,7 +523,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_profile.html">Profile</a></li>
-    <li class="footer">Generated on Sun Nov 1 2020 13:23:59 for GamesFP20 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Sun Nov 1 2020 14:56:24 for GamesFP20 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

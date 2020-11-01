@@ -85,39 +85,56 @@ $(document).ready(function(){initNavTree('class_enemy.html',''); initResizable()
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_enemy-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Enemy Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This is the base class used by any <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> Type in the game.  
+ <a href="class_enemy.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for Enemy:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_enemy.png" usemap="#Enemy_map" alt=""/>
   <map id="Enemy_map" name="Enemy_map">
-<area href="class_projectile.html" alt="Projectile" shape="rect" coords="0,112,102,136"/>
-<area href="class_wasp_enemy.html" alt="WaspEnemy" shape="rect" coords="112,112,214,136"/>
+<area href="class_projectile.html" title="This class handles all behaviours associated with Projectiles shot by Enemy characters and their inte..." alt="Projectile" shape="rect" coords="0,112,102,136"/>
+<area href="class_wasp_enemy.html" title="This class handles all behaviours associated with Wasp, the most commonly used Enemy asset in the gam..." alt="WaspEnemy" shape="rect" coords="112,112,214,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac8eb629ba2895e86aa7f940334c94c02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#ac8eb629ba2895e86aa7f940334c94c02">Die</a> ()</td></tr>
+<tr class="memdesc:ac8eb629ba2895e86aa7f940334c94c02"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method should be triggered on death by any <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> in the game.  <a href="class_enemy.html#ac8eb629ba2895e86aa7f940334c94c02">More...</a><br /></td></tr>
 <tr class="separator:ac8eb629ba2895e86aa7f940334c94c02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dec3f6aa661fb668b51a622f34daed2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a6dec3f6aa661fb668b51a622f34daed2">Move</a> (float horizontalInput, float verticalInput)</td></tr>
+<tr class="memdesc:a6dec3f6aa661fb668b51a622f34daed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default method used by any <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> to move through the game world.  <a href="class_enemy.html#a6dec3f6aa661fb668b51a622f34daed2">More...</a><br /></td></tr>
 <tr class="separator:a6dec3f6aa661fb668b51a622f34daed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa6336331d9156c66acb77bd99838369"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#aaa6336331d9156c66acb77bd99838369">CalculateMovement</a> (Vector3 currentMovement, float horizontalInput, float verticalInput, float deltaTime)</td></tr>
+<tr class="memdesc:aaa6336331d9156c66acb77bd99838369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default method used by any <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> to calculate how much it can move based on inputs passed down by Move  <a href="class_enemy.html#aaa6336331d9156c66acb77bd99838369">More...</a><br /></td></tr>
 <tr class="separator:aaa6336331d9156c66acb77bd99838369"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec4e36ba8abb73f95b824cf2ca4f95e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#aec4e36ba8abb73f95b824cf2ca4f95e2">collide</a> (GameObject other)</td></tr>
+<tr class="memdesc:aec4e36ba8abb73f95b824cf2ca4f95e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Interface to handle collision events between Colliders, Triggers and CharacterControllers passed down by Move  <a href="class_enemy.html#aec4e36ba8abb73f95b824cf2ca4f95e2">More...</a><br /></td></tr>
 <tr class="separator:aec4e36ba8abb73f95b824cf2ca4f95e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ad58edec05f9a44da44ef1021a4005d06"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#ad58edec05f9a44da44ef1021a4005d06">speed</a> = 4</td></tr>
+<tr class="memdesc:ad58edec05f9a44da44ef1021a4005d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">This determines the speed with which the enemy can move in any direction.  <a href="class_enemy.html#ad58edec05f9a44da44ef1021a4005d06">More...</a><br /></td></tr>
 <tr class="separator:ad58edec05f9a44da44ef1021a4005d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:af81e5f01288388cae590293eb615ed8b"><td class="memItemLeft" align="right" valign="top">CharacterController&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#af81e5f01288388cae590293eb615ed8b">controller</a></td></tr>
+<tr class="memdesc:af81e5f01288388cae590293eb615ed8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Any <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> nees a CharacterController to move through the world.  <a href="class_enemy.html#af81e5f01288388cae590293eb615ed8b">More...</a><br /></td></tr>
+<tr class="separator:af81e5f01288388cae590293eb615ed8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This is the base class used by any <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> Type in the game. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aaa6336331d9156c66acb77bd99838369"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaa6336331d9156c66acb77bd99838369">&#9670;&nbsp;</a></span>CalculateMovement()</h2>
 
@@ -156,6 +173,17 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Default method used by any <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> to calculate how much it can move based on inputs passed down by Move </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">horizontalInput</td><td></td></tr>
+    <tr><td class="paramname">verticalInput</td><td></td></tr>
+    <tr><td class="paramname">currentMovement</td><td></td></tr>
+    <tr><td class="paramname">deltaTime</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aec4e36ba8abb73f95b824cf2ca4f95e2"></a>
@@ -174,6 +202,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Default Interface to handle collision events between Colliders, Triggers and CharacterControllers passed down by Move </p>
+
 </div>
 </div>
 <a id="ac8eb629ba2895e86aa7f940334c94c02"></a>
@@ -190,6 +220,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This method should be triggered on death by any <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> in the game. </p>
+<p>On default it destroys the object.</p>
 
 </div>
 </div>
@@ -219,9 +252,43 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Default method used by any <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> to move through the game world. </p>
+<p>It copys the <a class="el" href="class_player.html" title="This class handles all behaviours associated with the Player character and his interactions with the ...">Player</a> class by requiring a horizontalInput and vertialInput determined by game circumstances.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">horizontalInput</td><td></td></tr>
+    <tr><td class="paramname">verticalInput</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="af81e5f01288388cae590293eb615ed8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af81e5f01288388cae590293eb615ed8b">&#9670;&nbsp;</a></span>controller</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CharacterController Enemy.controller</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Any <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> nees a CharacterController to move through the world. </p>
+
+</div>
+</div>
 <a id="ad58edec05f9a44da44ef1021a4005d06"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad58edec05f9a44da44ef1021a4005d06">&#9670;&nbsp;</a></span>speed</h2>
 
@@ -234,6 +301,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This determines the speed with which the enemy can move in any direction. </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -245,7 +314,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_enemy.html">Enemy</a></li>
-    <li class="footer">Generated on Sun Nov 1 2020 13:23:59 for GamesFP20 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Sun Nov 1 2020 14:56:24 for GamesFP20 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

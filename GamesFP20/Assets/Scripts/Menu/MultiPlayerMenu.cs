@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+/// <summary>
+///  This class is a child of MenuView and represents the Menu which is used for starting a Multiplayer Game
+/// </summary>
 public class MultiPlayerMenu : MenuView
 {
-	//Starts a new Multiplayer Game at level 1
+	///Starts a new Multiplayer Game at level 1
 	public void NewGame()
 	{
 		ProfileManager.GetInstance().GetProfile().SetCurrentLevelM(1);
@@ -14,7 +16,7 @@ public class MultiPlayerMenu : MenuView
 		SceneManager.LoadScene("Game");
 	}
 
-	//Continues at current Multiplayer level
+	///Continues at current Multiplayer level
 	public void Continue()
 	{
 		GameManager.levelIndex = ProfileManager.GetInstance().GetProfile().GetCurrentLevelM();
@@ -27,7 +29,7 @@ public class MultiPlayerMenu : MenuView
 		SceneManager.LoadScene("Game");
 	}
 
-	//Shows View to select which level to play
+	///Shows View to select which level to play
 	public void LevelSelect()
 	{
 		GameManager.singleplayer = false;

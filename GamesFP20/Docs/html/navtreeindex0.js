@@ -44,14 +44,16 @@ var NAVTREEINDEX0 =
 "class_enemy.html#a6dec3f6aa661fb668b51a622f34daed2":[0,0,1,3],
 "class_enemy.html#aaa6336331d9156c66acb77bd99838369":[0,0,1,0],
 "class_enemy.html#ac8eb629ba2895e86aa7f940334c94c02":[0,0,1,2],
-"class_enemy.html#ad58edec05f9a44da44ef1021a4005d06":[0,0,1,4],
+"class_enemy.html#ad58edec05f9a44da44ef1021a4005d06":[0,0,1,5],
 "class_enemy.html#aec4e36ba8abb73f95b824cf2ca4f95e2":[0,0,1,1],
+"class_enemy.html#af81e5f01288388cae590293eb615ed8b":[0,0,1,4],
 "class_friendly_projectile.html":[0,0,2],
 "class_friendly_projectile.html#a1e70f5c1bb2a8d0c693b3c3c29e5ae28":[0,0,2,1],
 "class_friendly_projectile.html#a207e9401b0b29f150178680d3d0c288c":[0,0,2,6],
 "class_friendly_projectile.html#a241110b3fbcac567c65f514861db2c21":[0,0,2,5],
 "class_friendly_projectile.html#a3141e41887cf01726c8407cfdd0a3752":[0,0,2,0],
 "class_friendly_projectile.html#a513e286a3c5d8bb6bfd3e343cdfa193f":[0,0,2,4],
+"class_friendly_projectile.html#a5a7038b2294a50f19de0397c5f8a62c9":[0,0,2,11],
 "class_friendly_projectile.html#a7b04bb2c031d174df95ac3d105f9dfa3":[0,0,2,2],
 "class_friendly_projectile.html#ab06c7cb1009c5a7ddaeae2b3fcea16ca":[0,0,2,3],
 "class_friendly_projectile.html#abe0dc1d9a2e743b1a2511b1fd6ae8d34":[0,0,2,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "class_wasp_enemy.html#a1d0b2507c0321a34420e6e89674b780f":[0,0,23,11],
 "class_wasp_enemy.html#a1e68e9bb7b4f1f95b6e392797096c99e":[0,0,23,16],
 "class_wasp_enemy.html#a2b59d9b74d66a78b9a09bd1bcc05ec74":[0,0,23,17],
-"class_wasp_enemy.html#a3794620acd55f1dde103e1e48fa55c3b":[0,0,23,13],
-"class_wasp_enemy.html#a40b7e9c18237c3be4b886ad623a283c4":[0,0,23,14],
-"class_wasp_enemy.html#a5422c8f98b1712b211f81c05b43563d2":[0,0,23,7]
+"class_wasp_enemy.html#a3794620acd55f1dde103e1e48fa55c3b":[0,0,23,13]
 };

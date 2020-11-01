@@ -85,11 +85,15 @@ $(document).ready(function(){initNavTree('class_friendly_projectile.html',''); i
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_friendly_projectile-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">FriendlyProjectile Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class handles all the behaviours associated with the projectiles shot by <a class="el" href="class_player.html" title="This class handles all behaviours associated with the Player character and his interactions with the ...">Player</a> and <a class="el" href="class_slingshot.html" title="This class handles all behaviours associated with the Slingshot Asset which can be used by Player to ...">Slingshot</a>.  
+ <a href="class_friendly_projectile.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for FriendlyProjectile:</div>
 <div class="dyncontent">
@@ -100,32 +104,50 @@ Inheritance diagram for FriendlyProjectile:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1e70f5c1bb2a8d0c693b3c3c29e5ae28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_friendly_projectile.html#a1e70f5c1bb2a8d0c693b3c3c29e5ae28">Die</a> ()</td></tr>
+<tr class="memdesc:a1e70f5c1bb2a8d0c693b3c3c29e5ae28"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method gets triggered if the <a class="el" href="class_friendly_projectile.html" title="This class handles all the behaviours associated with the projectiles shot by Player and Slingshot.">FriendlyProjectile</a> should be removed from the game world.  <a href="class_friendly_projectile.html#a1e70f5c1bb2a8d0c693b3c3c29e5ae28">More...</a><br /></td></tr>
 <tr class="separator:a1e70f5c1bb2a8d0c693b3c3c29e5ae28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3141e41887cf01726c8407cfdd0a3752"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_friendly_projectile.html#a3141e41887cf01726c8407cfdd0a3752">collide</a> (GameObject other)</td></tr>
+<tr class="memdesc:a3141e41887cf01726c8407cfdd0a3752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common collision interface used by any <a class="el" href="class_player.html" title="This class handles all behaviours associated with the Player character and his interactions with the ...">Player</a>, <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> and <a class="el" href="class_projectile.html" title="This class handles all behaviours associated with Projectiles shot by Enemy characters and their inte...">Projectile</a>.  <a href="class_friendly_projectile.html#a3141e41887cf01726c8407cfdd0a3752">More...</a><br /></td></tr>
 <tr class="separator:a3141e41887cf01726c8407cfdd0a3752"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b04bb2c031d174df95ac3d105f9dfa3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_friendly_projectile.html#a7b04bb2c031d174df95ac3d105f9dfa3">getDestroyed</a> ()</td></tr>
+<tr class="memdesc:a7b04bb2c031d174df95ac3d105f9dfa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="class_friendly_projectile.html#a7b04bb2c031d174df95ac3d105f9dfa3">More...</a><br /></td></tr>
 <tr class="separator:a7b04bb2c031d174df95ac3d105f9dfa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a241110b3fbcac567c65f514861db2c21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_friendly_projectile.html#a241110b3fbcac567c65f514861db2c21">setDetroyed</a> (bool newDestroyed)</td></tr>
+<tr class="memdesc:a241110b3fbcac567c65f514861db2c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter.  <a href="class_friendly_projectile.html#a241110b3fbcac567c65f514861db2c21">More...</a><br /></td></tr>
 <tr class="separator:a241110b3fbcac567c65f514861db2c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab06c7cb1009c5a7ddaeae2b3fcea16ca"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_friendly_projectile.html#ab06c7cb1009c5a7ddaeae2b3fcea16ca">getTarget</a> ()</td></tr>
+<tr class="memdesc:ab06c7cb1009c5a7ddaeae2b3fcea16ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="class_friendly_projectile.html#ab06c7cb1009c5a7ddaeae2b3fcea16ca">More...</a><br /></td></tr>
 <tr class="separator:ab06c7cb1009c5a7ddaeae2b3fcea16ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a207e9401b0b29f150178680d3d0c288c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_friendly_projectile.html#a207e9401b0b29f150178680d3d0c288c">setTarget</a> (GameObject newTarget)</td></tr>
+<tr class="memdesc:a207e9401b0b29f150178680d3d0c288c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter.  <a href="class_friendly_projectile.html#a207e9401b0b29f150178680d3d0c288c">More...</a><br /></td></tr>
 <tr class="separator:a207e9401b0b29f150178680d3d0c288c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a513e286a3c5d8bb6bfd3e343cdfa193f"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_friendly_projectile.html#a513e286a3c5d8bb6bfd3e343cdfa193f">getTargetDirection</a> ()</td></tr>
+<tr class="memdesc:a513e286a3c5d8bb6bfd3e343cdfa193f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="class_friendly_projectile.html#a513e286a3c5d8bb6bfd3e343cdfa193f">More...</a><br /></td></tr>
 <tr class="separator:a513e286a3c5d8bb6bfd3e343cdfa193f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe0dc1d9a2e743b1a2511b1fd6ae8d34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_friendly_projectile.html#abe0dc1d9a2e743b1a2511b1fd6ae8d34">setTargetDirection</a> (Vector3 newLocation)</td></tr>
+<tr class="memdesc:abe0dc1d9a2e743b1a2511b1fd6ae8d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter.  <a href="class_friendly_projectile.html#abe0dc1d9a2e743b1a2511b1fd6ae8d34">More...</a><br /></td></tr>
 <tr class="separator:abe0dc1d9a2e743b1a2511b1fd6ae8d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ad712be70d78cfe049d5b6a8161a97d8c"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_friendly_projectile.html#ad712be70d78cfe049d5b6a8161a97d8c">rotationDirection</a> = new Vector3(0,0,1)</td></tr>
+<tr class="memdesc:ad712be70d78cfe049d5b6a8161a97d8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is fluff to make the projectile rotate when flying.  <a href="class_friendly_projectile.html#ad712be70d78cfe049d5b6a8161a97d8c">More...</a><br /></td></tr>
 <tr class="separator:ad712be70d78cfe049d5b6a8161a97d8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1e06fec20f9440b15b20de5bc6744e3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_friendly_projectile.html#ad1e06fec20f9440b15b20de5bc6744e3">smoothTime</a> = 5f</td></tr>
 <tr class="separator:ad1e06fec20f9440b15b20de5bc6744e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac275c15c2bbcf0c5d1230d8ccafdb253"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_friendly_projectile.html#ac275c15c2bbcf0c5d1230d8ccafdb253">speed</a> = 4f</td></tr>
+<tr class="memdesc:ac275c15c2bbcf0c5d1230d8ccafdb253"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is used to determine how fast the <a class="el" href="class_friendly_projectile.html" title="This class handles all the behaviours associated with the projectiles shot by Player and Slingshot.">FriendlyProjectile</a> can move through the game world in any direction.  <a href="class_friendly_projectile.html#ac275c15c2bbcf0c5d1230d8ccafdb253">More...</a><br /></td></tr>
 <tr class="separator:ac275c15c2bbcf0c5d1230d8ccafdb253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a5a7038b2294a50f19de0397c5f8a62c9"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_friendly_projectile.html#a5a7038b2294a50f19de0397c5f8a62c9">target</a></td></tr>
+<tr class="memdesc:a5a7038b2294a50f19de0397c5f8a62c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the target every <a class="el" href="class_friendly_projectile.html" title="This class handles all the behaviours associated with the projectiles shot by Player and Slingshot.">FriendlyProjectile</a> needs to calculate it's Direction.  <a href="class_friendly_projectile.html#a5a7038b2294a50f19de0397c5f8a62c9">More...</a><br /></td></tr>
+<tr class="separator:a5a7038b2294a50f19de0397c5f8a62c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class handles all the behaviours associated with the projectiles shot by <a class="el" href="class_player.html" title="This class handles all behaviours associated with the Player character and his interactions with the ...">Player</a> and <a class="el" href="class_slingshot.html" title="This class handles all behaviours associated with the Slingshot Asset which can be used by Player to ...">Slingshot</a>. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3141e41887cf01726c8407cfdd0a3752"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3141e41887cf01726c8407cfdd0a3752">&#9670;&nbsp;</a></span>collide()</h2>
 
@@ -141,6 +163,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Common collision interface used by any <a class="el" href="class_player.html" title="This class handles all behaviours associated with the Player character and his interactions with the ...">Player</a>, <a class="el" href="class_enemy.html" title="This is the base class used by any Enemy Type in the game.">Enemy</a> and <a class="el" href="class_projectile.html" title="This class handles all behaviours associated with Projectiles shot by Enemy characters and their inte...">Projectile</a>. </p>
 
 </div>
 </div>
@@ -159,6 +183,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method gets triggered if the <a class="el" href="class_friendly_projectile.html" title="This class handles all the behaviours associated with the projectiles shot by Player and Slingshot.">FriendlyProjectile</a> should be removed from the game world. </p>
+
 </div>
 </div>
 <a id="a7b04bb2c031d174df95ac3d105f9dfa3"></a>
@@ -175,6 +201,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Getter. </p>
 
 </div>
 </div>
@@ -193,6 +221,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Getter. </p>
+
 </div>
 </div>
 <a id="a513e286a3c5d8bb6bfd3e343cdfa193f"></a>
@@ -209,6 +239,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Getter. </p>
 
 </div>
 </div>
@@ -228,6 +260,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Setter. </p>
+
 </div>
 </div>
 <a id="a207e9401b0b29f150178680d3d0c288c"></a>
@@ -245,6 +279,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Setter. </p>
 
 </div>
 </div>
@@ -264,6 +300,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Setter. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -278,6 +316,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This is fluff to make the projectile rotate when flying. </p>
 
 </div>
 </div>
@@ -307,6 +347,32 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This is used to determine how fast the <a class="el" href="class_friendly_projectile.html" title="This class handles all the behaviours associated with the projectiles shot by Player and Slingshot.">FriendlyProjectile</a> can move through the game world in any direction. </p>
+
+</div>
+</div>
+<a id="a5a7038b2294a50f19de0397c5f8a62c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a7038b2294a50f19de0397c5f8a62c9">&#9670;&nbsp;</a></span>target</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject FriendlyProjectile.target</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is the target every <a class="el" href="class_friendly_projectile.html" title="This class handles all the behaviours associated with the projectiles shot by Player and Slingshot.">FriendlyProjectile</a> needs to calculate it's Direction. </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -318,7 +384,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_friendly_projectile.html">FriendlyProjectile</a></li>
-    <li class="footer">Generated on Sun Nov 1 2020 13:23:59 for GamesFP20 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Sun Nov 1 2020 14:56:24 for GamesFP20 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

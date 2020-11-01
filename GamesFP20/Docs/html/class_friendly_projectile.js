@@ -10,5 +10,6 @@ var class_friendly_projectile =
     [ "setTargetDirection", "class_friendly_projectile.html#abe0dc1d9a2e743b1a2511b1fd6ae8d34", null ],
     [ "rotationDirection", "class_friendly_projectile.html#ad712be70d78cfe049d5b6a8161a97d8c", null ],
     [ "smoothTime", "class_friendly_projectile.html#ad1e06fec20f9440b15b20de5bc6744e3", null ],
-    [ "speed", "class_friendly_projectile.html#ac275c15c2bbcf0c5d1230d8ccafdb253", null ]
+    [ "speed", "class_friendly_projectile.html#ac275c15c2bbcf0c5d1230d8ccafdb253", null ],
+    [ "target", "class_friendly_projectile.html#a5a7038b2294a50f19de0397c5f8a62c9", null ]
 ];

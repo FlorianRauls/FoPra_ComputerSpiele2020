@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Text.RegularExpressions;
-
+/// <summary>
+///  This class stores all information which has to be stored between game sessions like 
+/// Player Name, Audio Volume and finished levels.
+/// </summary>
 public class Profile
 {
     //All the stats saved in the player profile
@@ -16,12 +19,13 @@ public class Profile
     private bool autoRespawn = false;
     private bool autoContinue = false;
 
+    /// Constructor which sets its own ID.
     public Profile(int id)
     {
         this.id = id;
     }
 
-    //Many getter and setter -> one per stat
+    /// Many getter and setter -> one per stat
     public int GetID()
     {
         return id;
@@ -115,14 +119,14 @@ public class Profile
         ProfileManager.GetInstance().SaveProfiles();
     }
 
-    //Saves the profile in a JSON like format to store in a file
+    ///Saves the profile in a JSON like format to store in a file
     public string ToString()
     {
         string output = "{id:" + id + ",name:" + name + ",volume:" + volume + ",currentLevelS:" + currentLevelS + ",maxLevelS:" + maxLevelS + ",currentLevelM:" + currentLevelM + ",maxLevelM:" + maxLevelM + ",autoRespawn:" + autoRespawn + ",autoContinue:" + autoContinue + "}";
         return output;
     }
 
-    //Reads the profile from a JSON like format
+    ///Reads the profile from a JSON like format
     public static Profile FromString(string input)
     {
         Debug.Log(input);

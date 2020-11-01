@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Text.RegularExpressions;
-
+/// <summary>
+///  This class is used for Loading and Saving Profiles.
+/// </summary>
 public class ProfileManager : MonoBehaviour
 {
     private static ProfileManager singleton;
@@ -12,14 +14,14 @@ public class ProfileManager : MonoBehaviour
     private Profile[] profiles = new Profile[0];
     private const string path = "profiles.txt";
 
-    //Creates instance and loads profiles
+    ///Creates instance and loads profiles
     public void Start()
     {
         ProfileManager.singleton = this;
         LoadProfiles();
     }
 
-    //Returns instance if there is one, otherwise create one
+    ///Returns instance if there is one, otherwise create one
     public static ProfileManager GetInstance()
     {
         if (singleton == null)
@@ -31,13 +33,13 @@ public class ProfileManager : MonoBehaviour
 
     }
 
-    //Cleares the instance -> only used for testing
+    ///Cleares the instance -> only used for testing
     public static void ClearInstance()
     {
         singleton = null;
     }
 
-    //Clears all current profiles -> needed to have clear profiles for testing
+    ///Clears all current profiles -> needed to have clear profiles for testing
     public void ClearProfiles()
     {
         maxID = -1;
@@ -46,7 +48,7 @@ public class ProfileManager : MonoBehaviour
         SaveProfiles();
     }
 
-    //Loads profiles from a file
+    ///Loads profiles from a file
     public void LoadProfiles()
     {
         if (System.IO.File.Exists(path))
@@ -81,7 +83,7 @@ public class ProfileManager : MonoBehaviour
         }
     }
 
-    //Saves profiles to a file
+    ///Saves profiles to a file
     public void SaveProfiles()
     {
         string output = "{profileID:" + profileID + ",maxID:" + maxID + ",profiles:[";
@@ -97,7 +99,7 @@ public class ProfileManager : MonoBehaviour
         File.WriteAllText(path, output);
     }
 
-    //Adds a profile
+    ///Adds a profile
     public void AddProfile()
     {
         profileID = profiles.Length;
@@ -111,7 +113,7 @@ public class ProfileManager : MonoBehaviour
         ProfileManager.GetInstance().SaveProfiles();
     }
 
-    //Gets the current profile -> If there is none, create a new one
+    ///Gets the current profile -> If there is none, create a new one
     public Profile GetProfile()
     {
         if(profiles.Length == 0)
@@ -121,7 +123,7 @@ public class ProfileManager : MonoBehaviour
         return profiles[profileID];
     }
 
-    //Deletes the current profile and moves the profiles in the profile list if necessary
+    ///Deletes the current profile and moves the profiles in the profile list if necessary
     public void DeleteProfile(int id)
     {
         if (id == profileID)
@@ -153,7 +155,7 @@ public class ProfileManager : MonoBehaviour
         ProfileManager.GetInstance().SaveProfiles();
     }
 
-    //Getter and Setter
+    ///Getter and Setter
     public int GetProfileID()
     {
         return profileID;

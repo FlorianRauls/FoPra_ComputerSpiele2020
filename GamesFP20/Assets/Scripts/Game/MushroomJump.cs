@@ -1,15 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+///  This class handles all behaviours associated with the Mushroom Object
+/// which is used as an Asset in different levels.
+/// </summary>
 public class MushroomJump : MonoBehaviour
 {
-    // This is the target we interacted with last
+    /// This is the target we interacted with last
     public GameObject target = null;
-     // the amount of force used to catapult target
+     /// the amount of force used to catapult target
     public float force = 8f;
-    // Small cooldown and timer to
-    // prevent bugs like infinite force applied
+    /// Small cooldown and timer to
+    /// prevent bugs like infinite force applied
     public float cooldown = 1f;
 
     float timer = 5f;
@@ -29,22 +32,22 @@ public class MushroomJump : MonoBehaviour
         timer = timer + Time.deltaTime;      
     }
 
-    // Getter
+    /// Getter
     public GameObject GetTarget()
     {
         return target;
     }
-    // Setter
+    /// Setter
     public void SetTarget(GameObject newTarget)
     {
         target = newTarget;
     }
-    // Collision Interface
-    // If we did collide with a player
-    // And cooldown is down
-    // We set him as our new target and apply
-    // Force to his movement
-    // Afterwards cooldown is up
+    /// Collision Interface
+    /// If we did collide with a player
+    /// And cooldown is down
+    /// We set him as our new target and apply
+    /// Force to his movement
+    /// Afterwards cooldown is up
     public void Collide(GameObject other)
     {
         target = other;
@@ -61,32 +64,32 @@ public class MushroomJump : MonoBehaviour
             }
         }
     }
-    // Setter
+    /// Setter
     public void SetCooldown(float newCd)
     {
         cooldown = newCd;
     }
-    // Getter
+    /// Getter
     public float GetCooldown()
     {
         return cooldown;
     }
-    // Setter
+    /// Setter
     public void SetTimer(float newCd)
     {
         timer = newCd;
     }
-    // Getter
+    /// Getter
     public float GetTimer()
     {
         return timer;
     }
-    // Getter
+    /// Getter
     public float GetObjectJumpHeight()
     {
         return target.GetComponent<Player>().jumpForce;
     }
-    //Getter
+    ///Getter
     public Vector3 GetTargetVelocity()
     {
         if(target != null)
@@ -97,18 +100,18 @@ public class MushroomJump : MonoBehaviour
             return new Vector3(0f, 0f, 0f);
         }
     }
-    //Setter
+    ///Setter
     public void SetForce(float newForce)
     {
         force = newForce;
     }
-    // Getter
+    /// Getter
     public float GetForce()
     {
         return force;
     }
-    // on collision activate
-    // The collision interface
+    /// on collision activate
+    /// The collision interface
     private void OnCollisionEnter(Collision other) {
         
         Collide(other.gameObject);    

@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"class_wasp_enemy.html#a40b7e9c18237c3be4b886ad623a283c4":[0,0,23,14],
+"class_wasp_enemy.html#a5422c8f98b1712b211f81c05b43563d2":[0,0,23,7],
 "class_wasp_enemy.html#a5b377f110d76c339469af42f5e94d575":[0,0,23,6],
 "class_wasp_enemy.html#a8922ddd34071f288ca4867c148a67fa1":[0,0,23,2],
 "class_wasp_enemy.html#a8ce6ce7a483c3951d8b556e5bd580967":[0,0,23,5],

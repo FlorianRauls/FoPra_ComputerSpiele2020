@@ -90,6 +90,9 @@ $(document).ready(function(){initNavTree('class_slingshot.html',''); initResizab
 <div class="title">Slingshot Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class handles all behaviours associated with the <a class="el" href="class_slingshot.html" title="This class handles all behaviours associated with the Slingshot Asset which can be used by Player to ...">Slingshot</a> Asset which can be used by <a class="el" href="class_player.html" title="This class handles all behaviours associated with the Player character and his interactions with the ...">Player</a> to shoot <a class="el" href="class_friendly_projectile.html" title="This class handles all the behaviours associated with the projectiles shot by Player and Slingshot.">FriendlyProjectile</a>  
+ <a href="class_slingshot.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for Slingshot:</div>
 <div class="dyncontent">
@@ -100,6 +103,7 @@ Inheritance diagram for Slingshot:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abbba58036c86ae91efd03f4291e78834"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slingshot.html#abbba58036c86ae91efd03f4291e78834">shootProjectile</a> (GameObject target)</td></tr>
+<tr class="memdesc:abbba58036c86ae91efd03f4291e78834"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method handles all necessary steps for shooting a <a class="el" href="class_friendly_projectile.html" title="This class handles all the behaviours associated with the projectiles shot by Player and Slingshot.">FriendlyProjectile</a> onto the given target GameObject.  <a href="class_slingshot.html#abbba58036c86ae91efd03f4291e78834">More...</a><br /></td></tr>
 <tr class="separator:abbba58036c86ae91efd03f4291e78834"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3ed8850e11a22253d674ff875582376"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slingshot.html#af3ed8850e11a22253d674ff875582376">getCooldown</a> ()</td></tr>
 <tr class="separator:af3ed8850e11a22253d674ff875582376"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,18 +114,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af97a4154fdc713015fa94f49908d17cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slingshot.html#af97a4154fdc713015fa94f49908d17cd">setTimer</a> (float newTimer)</td></tr>
 <tr class="separator:af97a4154fdc713015fa94f49908d17cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d3593c6ec0e592ee2e3b7b300f79261"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slingshot.html#a5d3593c6ec0e592ee2e3b7b300f79261">directionToTarget</a> (GameObject target)</td></tr>
+<tr class="memdesc:a5d3593c6ec0e592ee2e3b7b300f79261"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the direction towards an object.  <a href="class_slingshot.html#a5d3593c6ec0e592ee2e3b7b300f79261">More...</a><br /></td></tr>
 <tr class="separator:a5d3593c6ec0e592ee2e3b7b300f79261"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a349727ddbf72d1aabc815f76ab882c65"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slingshot.html#a349727ddbf72d1aabc815f76ab882c65">distanceToTarget</a> (Vector3 direction)</td></tr>
+<tr class="memdesc:a349727ddbf72d1aabc815f76ab882c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the distance to an object, given the direction.  <a href="class_slingshot.html#a349727ddbf72d1aabc815f76ab882c65">More...</a><br /></td></tr>
 <tr class="separator:a349727ddbf72d1aabc815f76ab882c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a4c84db71437e8fba09732f8bc73a4c80"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slingshot.html#a4c84db71437e8fba09732f8bc73a4c80">projectilePrefab</a></td></tr>
+<tr class="memdesc:a4c84db71437e8fba09732f8bc73a4c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">The projectile we will shoot.  <a href="class_slingshot.html#a4c84db71437e8fba09732f8bc73a4c80">More...</a><br /></td></tr>
 <tr class="separator:a4c84db71437e8fba09732f8bc73a4c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbbd79da1acac46e7e5c5659663bc556"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slingshot.html#acbbd79da1acac46e7e5c5659663bc556">cooldown</a> = 4f</td></tr>
+<tr class="memdesc:acbbd79da1acac46e7e5c5659663bc556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cooldown after which we are allowed to shoot again.  <a href="class_slingshot.html#acbbd79da1acac46e7e5c5659663bc556">More...</a><br /></td></tr>
 <tr class="separator:acbbd79da1acac46e7e5c5659663bc556"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class handles all behaviours associated with the <a class="el" href="class_slingshot.html" title="This class handles all behaviours associated with the Slingshot Asset which can be used by Player to ...">Slingshot</a> Asset which can be used by <a class="el" href="class_player.html" title="This class handles all behaviours associated with the Player character and his interactions with the ...">Player</a> to shoot <a class="el" href="class_friendly_projectile.html" title="This class handles all the behaviours associated with the projectiles shot by Player and Slingshot.">FriendlyProjectile</a> </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5d3593c6ec0e592ee2e3b7b300f79261"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d3593c6ec0e592ee2e3b7b300f79261">&#9670;&nbsp;</a></span>directionToTarget()</h2>
 
@@ -137,6 +147,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Calculate the direction towards an object. </p>
 
 </div>
 </div>
@@ -155,6 +167,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Calculates the distance to an object, given the direction. </p>
 
 </div>
 </div>
@@ -244,6 +258,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method handles all necessary steps for shooting a <a class="el" href="class_friendly_projectile.html" title="This class handles all the behaviours associated with the projectiles shot by Player and Slingshot.">FriendlyProjectile</a> onto the given target GameObject. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -259,6 +275,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Cooldown after which we are allowed to shoot again. </p>
+
 </div>
 </div>
 <a id="a4c84db71437e8fba09732f8bc73a4c80"></a>
@@ -273,6 +291,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The projectile we will shoot. </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -284,7 +304,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_slingshot.html">Slingshot</a></li>
-    <li class="footer">Generated on Sun Nov 1 2020 13:23:59 for GamesFP20 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Sun Nov 1 2020 14:56:24 for GamesFP20 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

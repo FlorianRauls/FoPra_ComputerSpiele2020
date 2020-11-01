@@ -1,21 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+///  This class handles all behaviours associated with Wasp, the most commonly used
+/// Enemy asset in the gameworld.
+/// </summary>
 public class WaspEnemy : Enemy
 {
-    // The Object we fire
+    /// The Object we fire
     public GameObject projectilePrefab;
-    // Our target as reference
+    /// Our target as reference
     GameObject target;
     
-    // Cooldown after which we can fire
+    /// Cooldown after which we can fire
     public float cooldown = 3f;
-    // timer to track time / Check for cooldown
+    /// timer to track time / Check for cooldown
     float timer = 0f;
-    // Our Range we can fire at
+    /// Our Range we can fire at
     public float range = 15f;
-    // We fly up and down by a small amount
+    /// We fly up and down by a small amount
     public float amplitude = 0.3f;
     public float frequency = 0.3f;
     GameObject projectile;
@@ -50,7 +53,8 @@ public class WaspEnemy : Enemy
     }
 
 
-    // Check all possible candidates for the one thats the closest to us
+    /// Searches Through all possible candidates and returns the one that
+    /// is closest to this object in the game world.
     public GameObject SearchTarget(GameObject[] candidates)
     {
         // If we don't have any candidates we don't need to bother
@@ -98,7 +102,9 @@ public class WaspEnemy : Enemy
             return closestEnemy;
         }
     }
-
+    /// This method handles all 
+    /// necessary steps for shooting a Projectile 
+    /// onto the given target GameObject.
     public GameObject shootProjectile(GameObject target)
     {
         // For safety we check the cooldown again
@@ -143,13 +149,13 @@ public class WaspEnemy : Enemy
         return projectile;
     }
 
-    // Calculates the direction towards another object
+    /// Calculates the direction towards another object
     public Vector3 directionToTarget(GameObject target)
     {
         return transform.position - target.transform.position;
     }
 
-    // Calculates the distance to another object
+    /// Calculates the distance to another object
     public float distanceToTarget(Vector3 direction)
     {
         return direction.magnitude;

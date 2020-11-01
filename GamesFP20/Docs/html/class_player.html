@@ -91,13 +91,16 @@ $(document).ready(function(){initNavTree('class_player.html',''); initResizable(
 <div class="title">Player Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class handles all behaviours associated with the <a class="el" href="class_player.html" title="This class handles all behaviours associated with the Player character and his interactions with the ...">Player</a> character and his interactions with the game world.  
+ <a href="class_player.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for Player:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_player.png" usemap="#Player_map" alt=""/>
   <map id="Player_map" name="Player_map">
-<area href="class_player_two.html" alt="PlayerTwo" shape="rect" coords="0,112,102,136"/>
+<area href="class_player_two.html" title="This class handles all behaviours associated with the second Player character and his interactions wi..." alt="PlayerTwo" shape="rect" coords="0,112,102,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -106,26 +109,36 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1a09a3ded16ac1646f6bdd4f25fe0ddd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a1a09a3ded16ac1646f6bdd4f25fe0ddd">Start</a> ()</td></tr>
 <tr class="separator:a1a09a3ded16ac1646f6bdd4f25fe0ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07736fb95d43d48bd325d917c32f2aed"><td class="memItemLeft" align="right" valign="top">CharacterController&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a07736fb95d43d48bd325d917c32f2aed">GetController</a> ()</td></tr>
+<tr class="memdesc:a07736fb95d43d48bd325d917c32f2aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="class_player.html#a07736fb95d43d48bd325d917c32f2aed">More...</a><br /></td></tr>
 <tr class="separator:a07736fb95d43d48bd325d917c32f2aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24e8f000d1bd18f943a4aa75cee977a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a24e8f000d1bd18f943a4aa75cee977a3">Move</a> (float horizontalInput, bool jumpPressed)</td></tr>
+<tr class="memdesc:a24e8f000d1bd18f943a4aa75cee977a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle Movement as calculated by <a class="el" href="class_player.html#a984d20adf72bbad2cebdb967bfe57ec4" title="Calculate movement based on whether we pressed the jump button, the direction the player wants to wal...">CalculateMovement()</a>  <a href="class_player.html#a24e8f000d1bd18f943a4aa75cee977a3">More...</a><br /></td></tr>
 <tr class="separator:a24e8f000d1bd18f943a4aa75cee977a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d3ad8c780ca4ae0ad0408836cf44ba8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a5d3ad8c780ca4ae0ad0408836cf44ba8">MoveCamera</a> ()</td></tr>
+<tr class="memdesc:a5d3ad8c780ca4ae0ad0408836cf44ba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method finds the Main Camera in a scene and makes it stay focued on <a class="el" href="class_player.html" title="This class handles all behaviours associated with the Player character and his interactions with the ...">Player</a>.  <a href="class_player.html#a5d3ad8c780ca4ae0ad0408836cf44ba8">More...</a><br /></td></tr>
 <tr class="separator:a5d3ad8c780ca4ae0ad0408836cf44ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a984d20adf72bbad2cebdb967bfe57ec4"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a984d20adf72bbad2cebdb967bfe57ec4">CalculateMovement</a> (Vector3 currentMovement, float horizontalInput, bool jumpPressed, float deltaTime)</td></tr>
+<tr class="memdesc:a984d20adf72bbad2cebdb967bfe57ec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate movement based on whether we pressed the jump button, the direction the player wants to walk and the time passed.  <a href="class_player.html#a984d20adf72bbad2cebdb967bfe57ec4">More...</a><br /></td></tr>
 <tr class="separator:a984d20adf72bbad2cebdb967bfe57ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad53471c9b9a9ddff8cd796828a919960"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ad53471c9b9a9ddff8cd796828a919960">getGrounded</a> ()</td></tr>
+<tr class="memdesc:ad53471c9b9a9ddff8cd796828a919960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="class_player.html#ad53471c9b9a9ddff8cd796828a919960">More...</a><br /></td></tr>
 <tr class="separator:ad53471c9b9a9ddff8cd796828a919960"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ce68298d46523b0e883379c9c71de9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a1ce68298d46523b0e883379c9c71de9d">setGrounded</a> (bool newGrounding)</td></tr>
+<tr class="memdesc:a1ce68298d46523b0e883379c9c71de9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter.  <a href="class_player.html#a1ce68298d46523b0e883379c9c71de9d">More...</a><br /></td></tr>
 <tr class="separator:a1ce68298d46523b0e883379c9c71de9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e46919177f403431a02890f6036ca4f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a3e46919177f403431a02890f6036ca4f">getGravity</a> ()</td></tr>
+<tr class="memdesc:a3e46919177f403431a02890f6036ca4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="class_player.html#a3e46919177f403431a02890f6036ca4f">More...</a><br /></td></tr>
 <tr class="separator:a3e46919177f403431a02890f6036ca4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fc7a8fb9bf600ab2ba124edd0f69df4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a0fc7a8fb9bf600ab2ba124edd0f69df4">OnControllerColliderHit</a> (ControllerColliderHit hit)</td></tr>
+<tr class="memdesc:a0fc7a8fb9bf600ab2ba124edd0f69df4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This triggers our Collision Interface When colliding with an enemy we die When collidion with an Mushroom we jump.  <a href="class_player.html#a0fc7a8fb9bf600ab2ba124edd0f69df4">More...</a><br /></td></tr>
 <tr class="separator:a0fc7a8fb9bf600ab2ba124edd0f69df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcd26117fbc1acedfa1f18cb1572c6c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#adcd26117fbc1acedfa1f18cb1572c6c8">OnTriggerEnter</a> (Collider collider)</td></tr>
 <tr class="separator:adcd26117fbc1acedfa1f18cb1572c6c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b72847c4b46f40fbe9358c078e9eb89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a5b72847c4b46f40fbe9358c078e9eb89">collide</a> (GameObject other)</td></tr>
+<tr class="memdesc:a5b72847c4b46f40fbe9358c078e9eb89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common Collision Interface.  <a href="class_player.html#a5b72847c4b46f40fbe9358c078e9eb89">More...</a><br /></td></tr>
 <tr class="separator:a5b72847c4b46f40fbe9358c078e9eb89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a582f6de6edf169b6976271f11f2495d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a582f6de6edf169b6976271f11f2495d1">defeat</a> ()</td></tr>
+<tr class="memdesc:a582f6de6edf169b6976271f11f2495d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">When we are not in any menu and we die We are defeated.  <a href="class_player.html#a582f6de6edf169b6976271f11f2495d1">More...</a><br /></td></tr>
 <tr class="separator:a582f6de6edf169b6976271f11f2495d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3047f1f0629f9577eef09de77b14320"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ac3047f1f0629f9577eef09de77b14320">setInMenu</a> (bool newInMenu)</td></tr>
 <tr class="separator:ac3047f1f0629f9577eef09de77b14320"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,14 +152,18 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:add5bb0d34232dbfe46a48ecb05115571"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#add5bb0d34232dbfe46a48ecb05115571">yOffset</a> = 6f</td></tr>
 <tr class="separator:add5bb0d34232dbfe46a48ecb05115571"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd2291a934964b32e9bc06a7738042d3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#abd2291a934964b32e9bc06a7738042d3">speed</a> = 6</td></tr>
+<tr class="memdesc:abd2291a934964b32e9bc06a7738042d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Movementspeed.  <a href="class_player.html#abd2291a934964b32e9bc06a7738042d3">More...</a><br /></td></tr>
 <tr class="separator:abd2291a934964b32e9bc06a7738042d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade3dd7187b97e6d44a2ff0adc946b81e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ade3dd7187b97e6d44a2ff0adc946b81e">jumpForce</a> = 11</td></tr>
+<tr class="memdesc:ade3dd7187b97e6d44a2ff0adc946b81e"><td class="mdescLeft">&#160;</td><td class="mdescRight">How high we can jump.  <a href="class_player.html#ade3dd7187b97e6d44a2ff0adc946b81e">More...</a><br /></td></tr>
 <tr class="separator:ade3dd7187b97e6d44a2ff0adc946b81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade14f7db2c11604e57d2010ae2586834"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ade14f7db2c11604e57d2010ae2586834">gravity</a> = 20</td></tr>
+<tr class="memdesc:ade14f7db2c11604e57d2010ae2586834"><td class="mdescLeft">&#160;</td><td class="mdescRight">We save gravity internally.  <a href="class_player.html#ade14f7db2c11604e57d2010ae2586834">More...</a><br /></td></tr>
 <tr class="separator:ade14f7db2c11604e57d2010ae2586834"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af98d6af3da6be069ecd997b5b95e7671"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#af98d6af3da6be069ecd997b5b95e7671">slingshotOffset</a> = 15.5f</td></tr>
 <tr class="separator:af98d6af3da6be069ecd997b5b95e7671"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41fc42c8798f5d56434eb0181916d2b5"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a41fc42c8798f5d56434eb0181916d2b5">velocity</a></td></tr>
+<tr class="memdesc:a41fc42c8798f5d56434eb0181916d2b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Our Velocity which is needed by other objects.  <a href="class_player.html#a41fc42c8798f5d56434eb0181916d2b5">More...</a><br /></td></tr>
 <tr class="separator:a41fc42c8798f5d56434eb0181916d2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a75f930bb1939f1f41d992ebca9526e"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a3a75f930bb1939f1f41d992ebca9526e">mousePositionObject</a></td></tr>
 <tr class="separator:a3a75f930bb1939f1f41d992ebca9526e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,15 +171,19 @@ Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a43bbe5ed386851944c5b2506ada915b2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a43bbe5ed386851944c5b2506ada915b2">grounded</a> = true</td></tr>
+<tr class="memdesc:a43bbe5ed386851944c5b2506ada915b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">contains information to whether or not the character touched ground at the last frame  <a href="class_player.html#a43bbe5ed386851944c5b2506ada915b2">More...</a><br /></td></tr>
 <tr class="separator:a43bbe5ed386851944c5b2506ada915b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec56c3a1a9de1579f9f956465928a833"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#aec56c3a1a9de1579f9f956465928a833">defeated</a> = false</td></tr>
 <tr class="separator:aec56c3a1a9de1579f9f956465928a833"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec56a1e42e4cdf6c8567242bb60be805"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#aec56a1e42e4cdf6c8567242bb60be805">inMenu</a></td></tr>
 <tr class="separator:aec56a1e42e4cdf6c8567242bb60be805"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbe362b2e77df95e8459506e83b291dc"><td class="memItemLeft" align="right" valign="top">CharacterController&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#acbe362b2e77df95e8459506e83b291dc">controller</a></td></tr>
+<tr class="memdesc:acbe362b2e77df95e8459506e83b291dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Movement is done by Unitys ChracterController.  <a href="class_player.html#acbe362b2e77df95e8459506e83b291dc">More...</a><br /></td></tr>
 <tr class="separator:acbe362b2e77df95e8459506e83b291dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class handles all behaviours associated with the <a class="el" href="class_player.html" title="This class handles all behaviours associated with the Player character and his interactions with the ...">Player</a> character and his interactions with the game world. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a984d20adf72bbad2cebdb967bfe57ec4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a984d20adf72bbad2cebdb967bfe57ec4">&#9670;&nbsp;</a></span>CalculateMovement()</h2>
 
@@ -201,6 +222,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Calculate movement based on whether we pressed the jump button, the direction the player wants to walk and the time passed. </p>
+
 </div>
 </div>
 <a id="a5b72847c4b46f40fbe9358c078e9eb89"></a>
@@ -219,6 +242,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Common Collision Interface. </p>
+
 </div>
 </div>
 <a id="a582f6de6edf169b6976271f11f2495d1"></a>
@@ -236,6 +261,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>When we are not in any menu and we die We are defeated. </p>
+
 </div>
 </div>
 <a id="a07736fb95d43d48bd325d917c32f2aed"></a>
@@ -252,6 +279,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Getter. </p>
 
 </div>
 </div>
@@ -287,6 +316,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Getter. </p>
+
 </div>
 </div>
 <a id="ad53471c9b9a9ddff8cd796828a919960"></a>
@@ -303,6 +334,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Getter. </p>
 
 </div>
 </div>
@@ -349,6 +382,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Handle Movement as calculated by <a class="el" href="class_player.html#a984d20adf72bbad2cebdb967bfe57ec4" title="Calculate movement based on whether we pressed the jump button, the direction the player wants to wal...">CalculateMovement()</a> </p>
+
 </div>
 </div>
 <a id="a5d3ad8c780ca4ae0ad0408836cf44ba8"></a>
@@ -365,6 +400,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This method finds the Main Camera in a scene and makes it stay focued on <a class="el" href="class_player.html" title="This class handles all behaviours associated with the Player character and his interactions with the ...">Player</a>. </p>
 
 </div>
 </div>
@@ -383,6 +420,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This triggers our Collision Interface When colliding with an enemy we die When collidion with an Mushroom we jump. </p>
 
 </div>
 </div>
@@ -419,6 +458,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Setter. </p>
 
 </div>
 </div>
@@ -478,6 +519,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Movement is done by Unitys ChracterController. </p>
+
 </div>
 </div>
 <a id="aec56c3a1a9de1579f9f956465928a833"></a>
@@ -514,6 +557,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>We save gravity internally. </p>
+
 </div>
 </div>
 <a id="a43bbe5ed386851944c5b2506ada915b2"></a>
@@ -535,6 +580,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>contains information to whether or not the character touched ground at the last frame </p>
 
 </div>
 </div>
@@ -571,6 +618,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>How high we can jump. </p>
 
 </div>
 </div>
@@ -614,6 +663,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Movementspeed. </p>
+
 </div>
 </div>
 <a id="a41fc42c8798f5d56434eb0181916d2b5"></a>
@@ -627,6 +678,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Our Velocity which is needed by other objects. </p>
 
 </div>
 </div>
@@ -653,7 +706,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_player.html">Player</a></li>
-    <li class="footer">Generated on Sun Nov 1 2020 13:23:59 for GamesFP20 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Sun Nov 1 2020 14:56:24 for GamesFP20 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>
