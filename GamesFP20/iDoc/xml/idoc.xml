@@ -1,0 +1,4218 @@
+<members>
+  <TestNamespace>
+    <signature>TestNamespace</signature>
+    <childcount>2</childcount>
+    <type>Namespace</type>
+    <name>TestNamespace</name>
+    <token>namespace TestNamespace</token>
+    <scope></scope>
+    <comments>
+      <summary>The summary of the namespace 'TestNamespace'</summary>
+    </comments>
+  </TestNamespace>
+  <TestNamespace.TestClass>
+    <signature>TestNamespace.TestClass</signature>
+    <childcount>3</childcount>
+    <type>Class</type>
+    <name>TestClass</name>
+    <token>public class TestClass </token>
+    <scope>TestNamespace</scope>
+    <comments>
+      <summary>The summary of the class 'MyCSClass'</summary>
+    </comments>
+  </TestNamespace.TestClass>
+  <TestNamespace.TestClass.field>
+    <signature>TestNamespace.TestClass.field</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>field</name>
+    <token>[SerializeField]
+public string field </token>
+    <scope>TestNamespace.TestClass</scope>
+    <comments>
+      <summary>This is a field comment</summary>
+    </comments>
+  </TestNamespace.TestClass.field>
+  <TestNamespace.TestClass.Property>
+    <signature>TestNamespace.TestClass.Property</signature>
+    <childcount>0</childcount>
+    <type>Property</type>
+    <name>Property</name>
+    <token>public int Property { get; set; }</token>
+    <scope>TestNamespace.TestClass</scope>
+    <comments>
+      <summary>This is a property comment</summary>
+    </comments>
+  </TestNamespace.TestClass.Property>
+  <TestNamespace.TestClass.Function_x0028_string_x0029_>
+    <signature>TestNamespace.TestClass.Function(string)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Function</name>
+    <token>public string Function(string arg)</token>
+    <scope>TestNamespace.TestClass</scope>
+    <comments>
+      <summary>This is a Test function which changes the value of &lt;see cref="field"/&gt; to
+		 The value of the param &lt;paramref name="arg"/&gt;.</summary>
+      <example>The following code is an example :
+		 &lt;code&gt;
+		 using TestNamespace;
+		
+			public class TestClass {
+		
+				void Test()
+				{
+					var test = new MyCSClass();
+					test.MyFunction("TEST STRING");
+					Console.WriteLine(test.field);
+				}	
+		 }
+		&lt;/code&gt;</example>
+      <remarks>This is a remarks</remarks>
+      <param-arg>Function parameter comment</param-arg>
+    </comments>
+    <params>
+      <arg>string</arg>
+    </params>
+  </TestNamespace.TestClass.Function_x0028_string_x0029_>
+  <TestNamespace.TestEnum>
+    <signature>TestNamespace.TestEnum</signature>
+    <childcount>3</childcount>
+    <type>Enum</type>
+    <name>TestEnum</name>
+    <token>public enum TestEnum </token>
+    <scope>TestNamespace</scope>
+  </TestNamespace.TestEnum>
+  <TestNamespace.TestEnum.A>
+    <signature>TestNamespace.TestEnum.A</signature>
+    <childcount>0</childcount>
+    <type>EnumValue</type>
+    <name>A</name>
+    <token>A</token>
+    <scope>TestNamespace.TestEnum</scope>
+    <comments>
+      <summary>A Comment</summary>
+    </comments>
+  </TestNamespace.TestEnum.A>
+  <TestNamespace.TestEnum.B>
+    <signature>TestNamespace.TestEnum.B</signature>
+    <childcount>0</childcount>
+    <type>EnumValue</type>
+    <name>B</name>
+    <token>B</token>
+    <scope>TestNamespace.TestEnum</scope>
+    <comments>
+      <summary>B Comment</summary>
+    </comments>
+  </TestNamespace.TestEnum.B>
+  <TestNamespace.TestEnum.C>
+    <signature>TestNamespace.TestEnum.C</signature>
+    <childcount>0</childcount>
+    <type>EnumValue</type>
+    <name>C</name>
+    <token>C</token>
+    <scope>TestNamespace.TestEnum</scope>
+    <comments>
+      <summary>C Comment</summary>
+    </comments>
+  </TestNamespace.TestEnum.C>
+  <IDocUnity>
+    <signature>IDocUnity</signature>
+    <childcount>3</childcount>
+    <type>Namespace</type>
+    <name>IDocUnity</name>
+    <token>namespace IDocUnity</token>
+    <scope></scope>
+  </IDocUnity>
+  <IDocUnity.IDocEditor>
+    <signature>IDocUnity.IDocEditor</signature>
+    <childcount>24</childcount>
+    <type>Class</type>
+    <name>IDocEditor</name>
+    <token>[InitializeOnLoad]
+internal class IDocEditor : EditorWindow </token>
+    <scope>IDocUnity</scope>
+    <comments>
+      <summary>Editor class of &lt;see cref="IDoc"/&gt; class for Unity Editor</summary>
+    </comments>
+  </IDocUnity.IDocEditor>
+  <IDocUnity.IDocEditor.Instance>
+    <signature>IDocUnity.IDocEditor.Instance</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>Instance</name>
+    <token>private static IDocEditor Instance </token>
+    <scope>IDocUnity.IDocEditor</scope>
+  </IDocUnity.IDocEditor.Instance>
+  <IDocUnity.IDocEditor.Logo>
+    <signature>IDocUnity.IDocEditor.Logo</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>Logo</name>
+    <token>private static Texture2D Logo </token>
+    <scope>IDocUnity.IDocEditor</scope>
+  </IDocUnity.IDocEditor.Logo>
+  <IDocUnity.IDocEditor.Version>
+    <signature>IDocUnity.IDocEditor.Version</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>Version</name>
+    <token>private const string Version = "3.0.0";</token>
+    <scope>IDocUnity.IDocEditor</scope>
+  </IDocUnity.IDocEditor.Version>
+  <IDocUnity.IDocEditor.tabs>
+    <signature>IDocUnity.IDocEditor.tabs</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>tabs</name>
+    <token>private static string[] tabs </token>
+    <scope>IDocUnity.IDocEditor</scope>
+  </IDocUnity.IDocEditor.tabs>
+  <IDocUnity.IDocEditor.selectedTabIndex>
+    <signature>IDocUnity.IDocEditor.selectedTabIndex</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>selectedTabIndex</name>
+    <token>private int selectedTabIndex </token>
+    <scope>IDocUnity.IDocEditor</scope>
+  </IDocUnity.IDocEditor.selectedTabIndex>
+  <IDocUnity.IDocEditor.isInitialized>
+    <signature>IDocUnity.IDocEditor.isInitialized</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>isInitialized</name>
+    <token>private bool isInitialized </token>
+    <scope>IDocUnity.IDocEditor</scope>
+  </IDocUnity.IDocEditor.isInitialized>
+  <IDocUnity.IDocEditor.separatorStyle>
+    <signature>IDocUnity.IDocEditor.separatorStyle</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>separatorStyle</name>
+    <token>private GUIStyle separatorStyle </token>
+    <scope>IDocUnity.IDocEditor</scope>
+  </IDocUnity.IDocEditor.separatorStyle>
+  <IDocUnity.IDocEditor.ToolbarHeight>
+    <signature>IDocUnity.IDocEditor.ToolbarHeight</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>ToolbarHeight</name>
+    <token>public const int ToolbarHeight = 20;</token>
+    <scope>IDocUnity.IDocEditor</scope>
+  </IDocUnity.IDocEditor.ToolbarHeight>
+  <IDocUnity.IDocEditor.ToolbarWidth>
+    <signature>IDocUnity.IDocEditor.ToolbarWidth</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>ToolbarWidth</name>
+    <token>public const int ToolbarWidth = 250;</token>
+    <scope>IDocUnity.IDocEditor</scope>
+  </IDocUnity.IDocEditor.ToolbarWidth>
+  <IDocUnity.IDocEditor.thread>
+    <signature>IDocUnity.IDocEditor.thread</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>thread</name>
+    <token>private Thread thread </token>
+    <scope>IDocUnity.IDocEditor</scope>
+  </IDocUnity.IDocEditor.thread>
+  <IDocUnity.IDocEditor.Width>
+    <signature>IDocUnity.IDocEditor.Width</signature>
+    <childcount>0</childcount>
+    <type>Property</type>
+    <name>Width</name>
+    <token>public static float Width { get; }</token>
+    <scope>IDocUnity.IDocEditor</scope>
+    <comments>
+      <summary>The current width of the editor window</summary>
+    </comments>
+  </IDocUnity.IDocEditor.Width>
+  <IDocUnity.IDocEditor.Height>
+    <signature>IDocUnity.IDocEditor.Height</signature>
+    <childcount>0</childcount>
+    <type>Property</type>
+    <name>Height</name>
+    <token>public static float Height { get; }</token>
+    <scope>IDocUnity.IDocEditor</scope>
+    <comments>
+      <summary>The current height of the editor window</summary>
+    </comments>
+  </IDocUnity.IDocEditor.Height>
+  <IDocUnity.IDocEditor.OnEnable_x0028__x0029_>
+    <signature>IDocUnity.IDocEditor.OnEnable()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>OnEnable</name>
+    <token>private void OnEnable()</token>
+    <scope>IDocUnity.IDocEditor</scope>
+  </IDocUnity.IDocEditor.OnEnable_x0028__x0029_>
+  <IDocUnity.IDocEditor.OnGUI_x0028__x0029_>
+    <signature>IDocUnity.IDocEditor.OnGUI()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>OnGUI</name>
+    <token>private void OnGUI()</token>
+    <scope>IDocUnity.IDocEditor</scope>
+  </IDocUnity.IDocEditor.OnGUI_x0028__x0029_>
+  <IDocUnity.IDocEditor.OnDestroy_x0028__x0029_>
+    <signature>IDocUnity.IDocEditor.OnDestroy()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>OnDestroy</name>
+    <token>private void OnDestroy()</token>
+    <scope>IDocUnity.IDocEditor</scope>
+  </IDocUnity.IDocEditor.OnDestroy_x0028__x0029_>
+  <IDocUnity.IDocEditor.OpenEditor_x0028__x0029_>
+    <signature>IDocUnity.IDocEditor.OpenEditor()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>OpenEditor</name>
+    <token>[MenuItem("Tools/IDoc Editor")]
+private static void OpenEditor()</token>
+    <scope>IDocUnity.IDocEditor</scope>
+  </IDocUnity.IDocEditor.OpenEditor_x0028__x0029_>
+  <IDocUnity.IDocEditor.BuildGUI_x0028__x0029_>
+    <signature>IDocUnity.IDocEditor.BuildGUI()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>BuildGUI</name>
+    <token>private void BuildGUI()</token>
+    <scope>IDocUnity.IDocEditor</scope>
+  </IDocUnity.IDocEditor.BuildGUI_x0028__x0029_>
+  <IDocUnity.IDocEditor.SettingGUI_x0028__x0029_>
+    <signature>IDocUnity.IDocEditor.SettingGUI()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>SettingGUI</name>
+    <token>private void SettingGUI()</token>
+    <scope>IDocUnity.IDocEditor</scope>
+  </IDocUnity.IDocEditor.SettingGUI_x0028__x0029_>
+  <IDocUnity.IDocEditor.AboutGUI_x0028__x0029_>
+    <signature>IDocUnity.IDocEditor.AboutGUI()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>AboutGUI</name>
+    <token>private void AboutGUI()</token>
+    <scope>IDocUnity.IDocEditor</scope>
+  </IDocUnity.IDocEditor.AboutGUI_x0028__x0029_>
+  <IDocUnity.IDocEditor.Refresh_x0028__x0029_>
+    <signature>IDocUnity.IDocEditor.Refresh()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Refresh</name>
+    <token>public static void Refresh()</token>
+    <scope>IDocUnity.IDocEditor</scope>
+  </IDocUnity.IDocEditor.Refresh_x0028__x0029_>
+  <IDocUnity.IDocEditor.Build_x0028__x0029_>
+    <signature>IDocUnity.IDocEditor.Build()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Build</name>
+    <token>private void Build()</token>
+    <scope>IDocUnity.IDocEditor</scope>
+  </IDocUnity.IDocEditor.Build_x0028__x0029_>
+  <IDocUnity.IDocEditor.Drop_x0028_float_x002C__x0020_float_x002C__x0020_string_x002C__x0020_Color_x0029_>
+    <signature>IDocUnity.IDocEditor.Drop(float, float, string, Color)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Drop</name>
+    <token>public static bool Drop(float width, float height, string message, Color onDragColor)</token>
+    <scope>IDocUnity.IDocEditor</scope>
+    <comments>
+      <summary>Draws a drag and drop area and return &lt;c&gt;true&lt;/c&gt; if there is an dragged object.</summary>
+      <returns>&lt;c&gt;true&lt;/c&gt; if there is an dragged object &lt;c&gt;false&lt;/c&gt; otherwise.</returns>
+      <param-width>The max witdh of the drag and drop area</param-width>
+      <param-height>The height of the drag and drop area</param-height>
+      <param-message>The message to display in the drag and drop area</param-message>
+      <param-onDragColor>Color of the drag and drop area when there is a dragged object</param-onDragColor>
+    </comments>
+    <params>
+      <width>float</width>
+      <height>float</height>
+      <message>string</message>
+      <onDragColor>Color</onDragColor>
+    </params>
+  </IDocUnity.IDocEditor.Drop_x0028_float_x002C__x0020_float_x002C__x0020_string_x002C__x0020_Color_x0029_>
+  <IDocUnity.IDocEditor.Toast_x0028_string_x0029_>
+    <signature>IDocUnity.IDocEditor.Toast(string)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Toast</name>
+    <token>public static void Toast(string content)</token>
+    <scope>IDocUnity.IDocEditor</scope>
+    <comments>
+      <summary>Show a message</summary>
+      <param-content>The message</param-content>
+    </comments>
+    <params>
+      <content>string</content>
+    </params>
+  </IDocUnity.IDocEditor.Toast_x0028_string_x0029_>
+  <IDocUnity.IDocEditor.IsDirectory_x0028_string_x0029_>
+    <signature>IDocUnity.IDocEditor.IsDirectory(string)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>IsDirectory</name>
+    <token>public static bool IsDirectory(string path)</token>
+    <scope>IDocUnity.IDocEditor</scope>
+    <comments>
+      <summary>Checks if there is a folder at the given path</summary>
+      <returns>&lt;c&gt;true&lt;/c&gt; if there is a folder at the path &lt;c&gt;false&lt;/c&gt; otherwise</returns>
+      <param-path>The path</param-path>
+    </comments>
+    <params>
+      <path>string</path>
+    </params>
+  </IDocUnity.IDocEditor.IsDirectory_x0028_string_x0029_>
+  <IDocUnity.LoggerEditor>
+    <signature>IDocUnity.LoggerEditor</signature>
+    <childcount>46</childcount>
+    <type>Class</type>
+    <name>LoggerEditor</name>
+    <token>internal static class LoggerEditor </token>
+    <scope>IDocUnity</scope>
+    <comments>
+      <summary>Editor claas for &lt;see cref="Logger"/&gt; class for Unity Editor</summary>
+    </comments>
+  </IDocUnity.LoggerEditor>
+  <IDocUnity.LoggerEditor.ShowInfoPref>
+    <signature>IDocUnity.LoggerEditor.ShowInfoPref</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>ShowInfoPref</name>
+    <token>private const string ShowInfoPref = "LOGGER_EDITOR_SHOW_INFO";</token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.ShowInfoPref>
+  <IDocUnity.LoggerEditor.ShowWarningPref>
+    <signature>IDocUnity.LoggerEditor.ShowWarningPref</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>ShowWarningPref</name>
+    <token>private const string ShowWarningPref = "LOGGER_EDITOR_SHOW_WARNING";</token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.ShowWarningPref>
+  <IDocUnity.LoggerEditor.ShowErrorPref>
+    <signature>IDocUnity.LoggerEditor.ShowErrorPref</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>ShowErrorPref</name>
+    <token>private const string ShowErrorPref = "LOGGER_EDITOR_SHOW_ERROR";</token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.ShowErrorPref>
+  <IDocUnity.LoggerEditor.resizerHeight>
+    <signature>IDocUnity.LoggerEditor.resizerHeight</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>resizerHeight</name>
+    <token>private const float resizerHeight = 5f;</token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.resizerHeight>
+  <IDocUnity.LoggerEditor.menuBarHeight>
+    <signature>IDocUnity.LoggerEditor.menuBarHeight</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>menuBarHeight</name>
+    <token>private const float menuBarHeight = 20f;</token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.menuBarHeight>
+  <IDocUnity.LoggerEditor.maxVisibleItems>
+    <signature>IDocUnity.LoggerEditor.maxVisibleItems</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>maxVisibleItems</name>
+    <token>private const int maxVisibleItems = 25;</token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.maxVisibleItems>
+  <IDocUnity.LoggerEditor.rowHeight>
+    <signature>IDocUnity.LoggerEditor.rowHeight</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>rowHeight</name>
+    <token>private const int rowHeight = 20;</token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.rowHeight>
+  <IDocUnity.LoggerEditor.upperPanel>
+    <signature>IDocUnity.LoggerEditor.upperPanel</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>upperPanel</name>
+    <token>private static Rect upperPanel </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.upperPanel>
+  <IDocUnity.LoggerEditor.lowerPanel>
+    <signature>IDocUnity.LoggerEditor.lowerPanel</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>lowerPanel</name>
+    <token>private static Rect lowerPanel </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.lowerPanel>
+  <IDocUnity.LoggerEditor.resizer>
+    <signature>IDocUnity.LoggerEditor.resizer</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>resizer</name>
+    <token>private static Rect resizer </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.resizer>
+  <IDocUnity.LoggerEditor.menuBar>
+    <signature>IDocUnity.LoggerEditor.menuBar</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>menuBar</name>
+    <token>private static Rect menuBar </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.menuBar>
+  <IDocUnity.LoggerEditor.sizeRatio>
+    <signature>IDocUnity.LoggerEditor.sizeRatio</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>sizeRatio</name>
+    <token>private static float sizeRatio </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.sizeRatio>
+  <IDocUnity.LoggerEditor.isResizing>
+    <signature>IDocUnity.LoggerEditor.isResizing</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>isResizing</name>
+    <token>private static bool isResizing </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.isResizing>
+  <IDocUnity.LoggerEditor.height>
+    <signature>IDocUnity.LoggerEditor.height</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>height</name>
+    <token>private static float height </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.height>
+  <IDocUnity.LoggerEditor.width>
+    <signature>IDocUnity.LoggerEditor.width</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>width</name>
+    <token>private static float width </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.width>
+  <IDocUnity.LoggerEditor.errorIcon>
+    <signature>IDocUnity.LoggerEditor.errorIcon</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>errorIcon</name>
+    <token>private static Texture2D errorIcon </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.errorIcon>
+  <IDocUnity.LoggerEditor.errorIconSmall>
+    <signature>IDocUnity.LoggerEditor.errorIconSmall</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>errorIconSmall</name>
+    <token>private static Texture2D errorIconSmall </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.errorIconSmall>
+  <IDocUnity.LoggerEditor.warningIcon>
+    <signature>IDocUnity.LoggerEditor.warningIcon</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>warningIcon</name>
+    <token>private static Texture2D warningIcon </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.warningIcon>
+  <IDocUnity.LoggerEditor.warningIconSmall>
+    <signature>IDocUnity.LoggerEditor.warningIconSmall</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>warningIconSmall</name>
+    <token>private static Texture2D warningIconSmall </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.warningIconSmall>
+  <IDocUnity.LoggerEditor.infoIcon>
+    <signature>IDocUnity.LoggerEditor.infoIcon</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>infoIcon</name>
+    <token>private static Texture2D infoIcon </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.infoIcon>
+  <IDocUnity.LoggerEditor.infoIconSmall>
+    <signature>IDocUnity.LoggerEditor.infoIconSmall</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>infoIconSmall</name>
+    <token>private static Texture2D infoIconSmall </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.infoIconSmall>
+  <IDocUnity.LoggerEditor.boxStyle>
+    <signature>IDocUnity.LoggerEditor.boxStyle</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>boxStyle</name>
+    <token>private static GUIStyle boxStyle </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.boxStyle>
+  <IDocUnity.LoggerEditor.resizerStyle>
+    <signature>IDocUnity.LoggerEditor.resizerStyle</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>resizerStyle</name>
+    <token>private static GUIStyle resizerStyle </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.resizerStyle>
+  <IDocUnity.LoggerEditor.textAreaStyle>
+    <signature>IDocUnity.LoggerEditor.textAreaStyle</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>textAreaStyle</name>
+    <token>private static GUIStyle textAreaStyle </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.textAreaStyle>
+  <IDocUnity.LoggerEditor.boxBgOdd>
+    <signature>IDocUnity.LoggerEditor.boxBgOdd</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>boxBgOdd</name>
+    <token>private static Texture2D boxBgOdd </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.boxBgOdd>
+  <IDocUnity.LoggerEditor.boxBgEven>
+    <signature>IDocUnity.LoggerEditor.boxBgEven</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>boxBgEven</name>
+    <token>private static Texture2D boxBgEven </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.boxBgEven>
+  <IDocUnity.LoggerEditor.boxBgSelected>
+    <signature>IDocUnity.LoggerEditor.boxBgSelected</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>boxBgSelected</name>
+    <token>private static Texture2D boxBgSelected </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.boxBgSelected>
+  <IDocUnity.LoggerEditor.icon>
+    <signature>IDocUnity.LoggerEditor.icon</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>icon</name>
+    <token>private static Texture2D icon </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.icon>
+  <IDocUnity.LoggerEditor.upperScroll>
+    <signature>IDocUnity.LoggerEditor.upperScroll</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>upperScroll</name>
+    <token>private static Vector2 upperScroll </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.upperScroll>
+  <IDocUnity.LoggerEditor.lowerScroll>
+    <signature>IDocUnity.LoggerEditor.lowerScroll</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>lowerScroll</name>
+    <token>private static Vector2 lowerScroll </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.lowerScroll>
+  <IDocUnity.LoggerEditor.selectedLog>
+    <signature>IDocUnity.LoggerEditor.selectedLog</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>selectedLog</name>
+    <token>private static Log selectedLog </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.selectedLog>
+  <IDocUnity.LoggerEditor.logs>
+    <signature>IDocUnity.LoggerEditor.logs</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>logs</name>
+    <token>private static List&lt;Log&gt; logs </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.logs>
+  <IDocUnity.LoggerEditor.isInitialized>
+    <signature>IDocUnity.LoggerEditor.isInitialized</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>isInitialized</name>
+    <token>private static bool isInitialized </token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.isInitialized>
+  <IDocUnity.LoggerEditor.ShowInfo>
+    <signature>IDocUnity.LoggerEditor.ShowInfo</signature>
+    <childcount>0</childcount>
+    <type>Property</type>
+    <name>ShowInfo</name>
+    <token>private static bool ShowInfo { get; set; }</token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.ShowInfo>
+  <IDocUnity.LoggerEditor.ShowWarning>
+    <signature>IDocUnity.LoggerEditor.ShowWarning</signature>
+    <childcount>0</childcount>
+    <type>Property</type>
+    <name>ShowWarning</name>
+    <token>private static bool ShowWarning { get; set; }</token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.ShowWarning>
+  <IDocUnity.LoggerEditor.ShowError>
+    <signature>IDocUnity.LoggerEditor.ShowError</signature>
+    <childcount>0</childcount>
+    <type>Property</type>
+    <name>ShowError</name>
+    <token>private static bool ShowError { get; set; }</token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.ShowError>
+  <IDocUnity.LoggerEditor.OnEnable_x0028__x0029_>
+    <signature>IDocUnity.LoggerEditor.OnEnable()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>OnEnable</name>
+    <token>private static void OnEnable()</token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.OnEnable_x0028__x0029_>
+  <IDocUnity.LoggerEditor.OnGUI_x0028__x0029_>
+    <signature>IDocUnity.LoggerEditor.OnGUI()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>OnGUI</name>
+    <token>public static void OnGUI()</token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.OnGUI_x0028__x0029_>
+  <IDocUnity.LoggerEditor.DrawResizer_x0028__x0029_>
+    <signature>IDocUnity.LoggerEditor.DrawResizer()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>DrawResizer</name>
+    <token>private static void DrawResizer()</token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.DrawResizer_x0028__x0029_>
+  <IDocUnity.LoggerEditor.DrawToolbar_x0028__x0029_>
+    <signature>IDocUnity.LoggerEditor.DrawToolbar()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>DrawToolbar</name>
+    <token>private static void DrawToolbar()</token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.DrawToolbar_x0028__x0029_>
+  <IDocUnity.LoggerEditor.DrawUpperPanel_x0028__x0029_>
+    <signature>IDocUnity.LoggerEditor.DrawUpperPanel()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>DrawUpperPanel</name>
+    <token>private static void DrawUpperPanel()</token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.DrawUpperPanel_x0028__x0029_>
+  <IDocUnity.LoggerEditor.DrawLowerPanel_x0028__x0029_>
+    <signature>IDocUnity.LoggerEditor.DrawLowerPanel()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>DrawLowerPanel</name>
+    <token>private static void DrawLowerPanel()</token>
+    <scope>IDocUnity.LoggerEditor</scope>
+  </IDocUnity.LoggerEditor.DrawLowerPanel_x0028__x0029_>
+  <IDocUnity.LoggerEditor.ProcessEvents_x0028_Event_x0029_>
+    <signature>IDocUnity.LoggerEditor.ProcessEvents(Event)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ProcessEvents</name>
+    <token>private static void ProcessEvents(Event e)</token>
+    <scope>IDocUnity.LoggerEditor</scope>
+    <params>
+      <e>Event</e>
+    </params>
+  </IDocUnity.LoggerEditor.ProcessEvents_x0028_Event_x0029_>
+  <IDocUnity.LoggerEditor.Resize_x0028_Event_x0029_>
+    <signature>IDocUnity.LoggerEditor.Resize(Event)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Resize</name>
+    <token>private static void Resize(Event e)</token>
+    <scope>IDocUnity.LoggerEditor</scope>
+    <params>
+      <e>Event</e>
+    </params>
+  </IDocUnity.LoggerEditor.Resize_x0028_Event_x0029_>
+  <IDocUnity.LoggerEditor.Box_x0028_string_x002C__x0020_LogType_x002C__x0020_bool_x002C__x0020_bool_x0029_>
+    <signature>IDocUnity.LoggerEditor.Box(string, LogType, bool, bool)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Box</name>
+    <token>private static bool Box(string content, LogType logType, bool isOdd, bool isSelected)</token>
+    <scope>IDocUnity.LoggerEditor</scope>
+    <params>
+      <content>string</content>
+      <logType>LogType</logType>
+      <isOdd>bool</isOdd>
+      <isSelected>bool</isSelected>
+    </params>
+  </IDocUnity.LoggerEditor.Box_x0028_string_x002C__x0020_LogType_x002C__x0020_bool_x002C__x0020_bool_x0029_>
+  <IDocUnity.LoggerEditor.ShouldDisplay_x0028_LogType_x0029_>
+    <signature>IDocUnity.LoggerEditor.ShouldDisplay(LogType)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ShouldDisplay</name>
+    <token>private static bool ShouldDisplay(LogType type)</token>
+    <scope>IDocUnity.LoggerEditor</scope>
+    <params>
+      <type>LogType</type>
+    </params>
+  </IDocUnity.LoggerEditor.ShouldDisplay_x0028_LogType_x0029_>
+  <IDocUnity.SettingEditor>
+    <signature>IDocUnity.SettingEditor</signature>
+    <childcount>5</childcount>
+    <type>Class</type>
+    <name>SettingEditor</name>
+    <token>public class SettingEditor </token>
+    <scope>IDocUnity</scope>
+    <comments>
+      <summary>Setting class editor</summary>
+    </comments>
+  </IDocUnity.SettingEditor>
+  <IDocUnity.SettingEditor.instance>
+    <signature>IDocUnity.SettingEditor.instance</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>instance</name>
+    <token>private static SettingEditor instance </token>
+    <scope>IDocUnity.SettingEditor</scope>
+  </IDocUnity.SettingEditor.instance>
+  <IDocUnity.SettingEditor.settings>
+    <signature>IDocUnity.SettingEditor.settings</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>settings</name>
+    <token>private Setting settings </token>
+    <scope>IDocUnity.SettingEditor</scope>
+  </IDocUnity.SettingEditor.settings>
+  <IDocUnity.SettingEditor.scroll>
+    <signature>IDocUnity.SettingEditor.scroll</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>scroll</name>
+    <token>private Vector2 scroll </token>
+    <scope>IDocUnity.SettingEditor</scope>
+  </IDocUnity.SettingEditor.scroll>
+  <IDocUnity.SettingEditor.Instance>
+    <signature>IDocUnity.SettingEditor.Instance</signature>
+    <childcount>0</childcount>
+    <type>Property</type>
+    <name>Instance</name>
+    <token>private static SettingEditor Instance { get; }</token>
+    <scope>IDocUnity.SettingEditor</scope>
+  </IDocUnity.SettingEditor.Instance>
+  <IDocUnity.SettingEditor.OnGUI_x0028__x0029_>
+    <signature>IDocUnity.SettingEditor.OnGUI()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>OnGUI</name>
+    <token>public static void OnGUI()</token>
+    <scope>IDocUnity.SettingEditor</scope>
+    <comments>
+      <summary>Draws thr editor</summary>
+    </comments>
+  </IDocUnity.SettingEditor.OnGUI_x0028__x0029_>
+  <AudioManager>
+    <signature>AudioManager</signature>
+    <childcount>4</childcount>
+    <type>Class</type>
+    <name>AudioManager</name>
+    <token>public class AudioManager : MonoBehaviour </token>
+    <scope></scope>
+  </AudioManager>
+  <AudioManager.singleton>
+    <signature>AudioManager.singleton</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>singleton</name>
+    <token>private static AudioManager singleton </token>
+    <scope>AudioManager</scope>
+  </AudioManager.singleton>
+  <AudioManager.Start_x0028__x0029_>
+    <signature>AudioManager.Start()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Start</name>
+    <token>void Start()</token>
+    <scope>AudioManager</scope>
+  </AudioManager.Start_x0028__x0029_>
+  <AudioManager.GetInstance_x0028__x0029_>
+    <signature>AudioManager.GetInstance()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetInstance</name>
+    <token>public static AudioManager GetInstance()</token>
+    <scope>AudioManager</scope>
+  </AudioManager.GetInstance_x0028__x0029_>
+  <AudioManager.ChangeVolume_x0028__x0029_>
+    <signature>AudioManager.ChangeVolume()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ChangeVolume</name>
+    <token>public void ChangeVolume()</token>
+    <scope>AudioManager</scope>
+  </AudioManager.ChangeVolume_x0028__x0029_>
+  <MenuEnum>
+    <signature>MenuEnum</signature>
+    <childcount>10</childcount>
+    <type>Enum</type>
+    <name>MenuEnum</name>
+    <token>public enum MenuEnum </token>
+    <scope></scope>
+  </MenuEnum>
+  <MenuEnum.Dummy>
+    <signature>MenuEnum.Dummy</signature>
+    <childcount>0</childcount>
+    <type>EnumValue</type>
+    <name>Dummy</name>
+    <token>Dummy</token>
+    <scope>MenuEnum</scope>
+  </MenuEnum.Dummy>
+  <MenuEnum.Main>
+    <signature>MenuEnum.Main</signature>
+    <childcount>0</childcount>
+    <type>EnumValue</type>
+    <name>Main</name>
+    <token>Main</token>
+    <scope>MenuEnum</scope>
+  </MenuEnum.Main>
+  <MenuEnum.SinglePlayer>
+    <signature>MenuEnum.SinglePlayer</signature>
+    <childcount>0</childcount>
+    <type>EnumValue</type>
+    <name>SinglePlayer</name>
+    <token>SinglePlayer</token>
+    <scope>MenuEnum</scope>
+  </MenuEnum.SinglePlayer>
+  <MenuEnum.MultiPlayer>
+    <signature>MenuEnum.MultiPlayer</signature>
+    <childcount>0</childcount>
+    <type>EnumValue</type>
+    <name>MultiPlayer</name>
+    <token>MultiPlayer</token>
+    <scope>MenuEnum</scope>
+  </MenuEnum.MultiPlayer>
+  <MenuEnum.LevelSelect>
+    <signature>MenuEnum.LevelSelect</signature>
+    <childcount>0</childcount>
+    <type>EnumValue</type>
+    <name>LevelSelect</name>
+    <token>LevelSelect</token>
+    <scope>MenuEnum</scope>
+  </MenuEnum.LevelSelect>
+  <MenuEnum.ProfileSelect>
+    <signature>MenuEnum.ProfileSelect</signature>
+    <childcount>0</childcount>
+    <type>EnumValue</type>
+    <name>ProfileSelect</name>
+    <token>ProfileSelect</token>
+    <scope>MenuEnum</scope>
+  </MenuEnum.ProfileSelect>
+  <MenuEnum.ProfileDetail>
+    <signature>MenuEnum.ProfileDetail</signature>
+    <childcount>0</childcount>
+    <type>EnumValue</type>
+    <name>ProfileDetail</name>
+    <token>ProfileDetail</token>
+    <scope>MenuEnum</scope>
+  </MenuEnum.ProfileDetail>
+  <MenuEnum.GamePause>
+    <signature>MenuEnum.GamePause</signature>
+    <childcount>0</childcount>
+    <type>EnumValue</type>
+    <name>GamePause</name>
+    <token>GamePause</token>
+    <scope>MenuEnum</scope>
+  </MenuEnum.GamePause>
+  <MenuEnum.GameDeath>
+    <signature>MenuEnum.GameDeath</signature>
+    <childcount>0</childcount>
+    <type>EnumValue</type>
+    <name>GameDeath</name>
+    <token>GameDeath</token>
+    <scope>MenuEnum</scope>
+  </MenuEnum.GameDeath>
+  <MenuEnum.GameFinish>
+    <signature>MenuEnum.GameFinish</signature>
+    <childcount>0</childcount>
+    <type>EnumValue</type>
+    <name>GameFinish</name>
+    <token>GameFinish</token>
+    <scope>MenuEnum</scope>
+  </MenuEnum.GameFinish>
+  <MenuManager>
+    <signature>MenuManager</signature>
+    <childcount>13</childcount>
+    <type>Class</type>
+    <name>MenuManager</name>
+    <token>public class MenuManager : MonoBehaviour </token>
+    <scope></scope>
+  </MenuManager>
+  <MenuManager.singleton>
+    <signature>MenuManager.singleton</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>singleton</name>
+    <token>private static MenuManager singleton </token>
+    <scope>MenuManager</scope>
+  </MenuManager.singleton>
+  <MenuManager.views>
+    <signature>MenuManager.views</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>views</name>
+    <token>public MenuView[] views </token>
+    <scope>MenuManager</scope>
+  </MenuManager.views>
+  <MenuManager.viewStack>
+    <signature>MenuManager.viewStack</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>viewStack</name>
+    <token>private List&lt;MenuView&gt; viewStack </token>
+    <scope>MenuManager</scope>
+  </MenuManager.viewStack>
+  <MenuManager.Start_x0028__x0029_>
+    <signature>MenuManager.Start()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Start</name>
+    <token>public void Start()</token>
+    <scope>MenuManager</scope>
+  </MenuManager.Start_x0028__x0029_>
+  <MenuManager.GetInstance_x0028__x0029_>
+    <signature>MenuManager.GetInstance()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetInstance</name>
+    <token>public static MenuManager GetInstance()</token>
+    <scope>MenuManager</scope>
+  </MenuManager.GetInstance_x0028__x0029_>
+  <MenuManager.ClearInstance_x0028__x0029_>
+    <signature>MenuManager.ClearInstance()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ClearInstance</name>
+    <token>public static void ClearInstance()</token>
+    <scope>MenuManager</scope>
+  </MenuManager.ClearInstance_x0028__x0029_>
+  <MenuManager.Show_x0028_MenuEnum_x0029_>
+    <signature>MenuManager.Show(MenuEnum)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Show</name>
+    <token>public void Show(MenuEnum menu)</token>
+    <scope>MenuManager</scope>
+    <params>
+      <menu>MenuEnum</menu>
+    </params>
+  </MenuManager.Show_x0028_MenuEnum_x0029_>
+  <MenuManager.Show_x0028_MenuView_x0029_>
+    <signature>MenuManager.Show(MenuView)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Show</name>
+    <token>public void Show(MenuView view)</token>
+    <scope>MenuManager</scope>
+    <params>
+      <view>MenuView</view>
+    </params>
+  </MenuManager.Show_x0028_MenuView_x0029_>
+  <MenuManager.TransitionTo_x0028_MenuView_x0029_>
+    <signature>MenuManager.TransitionTo(MenuView)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TransitionTo</name>
+    <token>private void TransitionTo(MenuView view)</token>
+    <scope>MenuManager</scope>
+    <params>
+      <view>MenuView</view>
+    </params>
+  </MenuManager.TransitionTo_x0028_MenuView_x0029_>
+  <MenuManager.TransitionTo_x0028_MenuEnum_x0029_>
+    <signature>MenuManager.TransitionTo(MenuEnum)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TransitionTo</name>
+    <token>public void TransitionTo(MenuEnum menu)</token>
+    <scope>MenuManager</scope>
+    <params>
+      <menu>MenuEnum</menu>
+    </params>
+  </MenuManager.TransitionTo_x0028_MenuEnum_x0029_>
+  <MenuManager.ViewByEnum_x0028_MenuEnum_x0029_>
+    <signature>MenuManager.ViewByEnum(MenuEnum)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ViewByEnum</name>
+    <token>private MenuView ViewByEnum(MenuEnum menu)</token>
+    <scope>MenuManager</scope>
+    <params>
+      <menu>MenuEnum</menu>
+    </params>
+  </MenuManager.ViewByEnum_x0028_MenuEnum_x0029_>
+  <MenuManager.Back_x0028__x0029_>
+    <signature>MenuManager.Back()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Back</name>
+    <token>public void Back()</token>
+    <scope>MenuManager</scope>
+  </MenuManager.Back_x0028__x0029_>
+  <MenuManager.GetViewStack_x0028__x0029_>
+    <signature>MenuManager.GetViewStack()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetViewStack</name>
+    <token>public List&lt;MenuView&gt; GetViewStack()</token>
+    <scope>MenuManager</scope>
+  </MenuManager.GetViewStack_x0028__x0029_>
+  <MenuView>
+    <signature>MenuView</signature>
+    <childcount>15</childcount>
+    <type>Class</type>
+    <name>MenuView</name>
+    <token>public class MenuView : MonoBehaviour </token>
+    <scope></scope>
+  </MenuView>
+  <MenuView.menuType>
+    <signature>MenuView.menuType</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>menuType</name>
+    <token>public MenuEnum menuType </token>
+    <scope>MenuView</scope>
+  </MenuView.menuType>
+  <MenuView.TransitionTo_x0028_MenuEnum_x0029_>
+    <signature>MenuView.TransitionTo(MenuEnum)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TransitionTo</name>
+    <token>public virtual void TransitionTo(MenuEnum menu)</token>
+    <scope>MenuView</scope>
+    <params>
+      <menu>MenuEnum</menu>
+    </params>
+  </MenuView.TransitionTo_x0028_MenuEnum_x0029_>
+  <MenuView.Show_x0028__x0029_>
+    <signature>MenuView.Show()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Show</name>
+    <token>public virtual void Show()</token>
+    <scope>MenuView</scope>
+  </MenuView.Show_x0028__x0029_>
+  <MenuView.Hide_x0028__x0029_>
+    <signature>MenuView.Hide()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Hide</name>
+    <token>public void Hide()</token>
+    <scope>MenuView</scope>
+  </MenuView.Hide_x0028__x0029_>
+  <MenuView.Back_x0028__x0029_>
+    <signature>MenuView.Back()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Back</name>
+    <token>public void Back()</token>
+    <scope>MenuView</scope>
+  </MenuView.Back_x0028__x0029_>
+  <MenuView.TransitionToDummy_x0028__x0029_>
+    <signature>MenuView.TransitionToDummy()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TransitionToDummy</name>
+    <token>public void TransitionToDummy()</token>
+    <scope>MenuView</scope>
+  </MenuView.TransitionToDummy_x0028__x0029_>
+  <MenuView.TransitionToMain_x0028__x0029_>
+    <signature>MenuView.TransitionToMain()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TransitionToMain</name>
+    <token>public void TransitionToMain()</token>
+    <scope>MenuView</scope>
+  </MenuView.TransitionToMain_x0028__x0029_>
+  <MenuView.TransitionToLevelSelect_x0028__x0029_>
+    <signature>MenuView.TransitionToLevelSelect()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TransitionToLevelSelect</name>
+    <token>public void TransitionToLevelSelect()</token>
+    <scope>MenuView</scope>
+  </MenuView.TransitionToLevelSelect_x0028__x0029_>
+  <MenuView.TransitionToProfileSelect_x0028__x0029_>
+    <signature>MenuView.TransitionToProfileSelect()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TransitionToProfileSelect</name>
+    <token>public void TransitionToProfileSelect()</token>
+    <scope>MenuView</scope>
+  </MenuView.TransitionToProfileSelect_x0028__x0029_>
+  <MenuView.TransitionToProfileDetail_x0028__x0029_>
+    <signature>MenuView.TransitionToProfileDetail()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TransitionToProfileDetail</name>
+    <token>public void TransitionToProfileDetail()</token>
+    <scope>MenuView</scope>
+  </MenuView.TransitionToProfileDetail_x0028__x0029_>
+  <MenuView.TransitionToGamePause_x0028__x0029_>
+    <signature>MenuView.TransitionToGamePause()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TransitionToGamePause</name>
+    <token>public void TransitionToGamePause()</token>
+    <scope>MenuView</scope>
+  </MenuView.TransitionToGamePause_x0028__x0029_>
+  <MenuView.TransitionToGameDeath_x0028__x0029_>
+    <signature>MenuView.TransitionToGameDeath()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TransitionToGameDeath</name>
+    <token>public void TransitionToGameDeath()</token>
+    <scope>MenuView</scope>
+  </MenuView.TransitionToGameDeath_x0028__x0029_>
+  <MenuView.TransitionToGameFinish_x0028__x0029_>
+    <signature>MenuView.TransitionToGameFinish()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TransitionToGameFinish</name>
+    <token>public void TransitionToGameFinish()</token>
+    <scope>MenuView</scope>
+  </MenuView.TransitionToGameFinish_x0028__x0029_>
+  <MenuView.TransitionToSinglePlayer_x0028__x0029_>
+    <signature>MenuView.TransitionToSinglePlayer()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TransitionToSinglePlayer</name>
+    <token>public void TransitionToSinglePlayer()</token>
+    <scope>MenuView</scope>
+  </MenuView.TransitionToSinglePlayer_x0028__x0029_>
+  <MenuView.TransitionToMultiPlayer_x0028__x0029_>
+    <signature>MenuView.TransitionToMultiPlayer()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TransitionToMultiPlayer</name>
+    <token>public void TransitionToMultiPlayer()</token>
+    <scope>MenuView</scope>
+  </MenuView.TransitionToMultiPlayer_x0028__x0029_>
+  <Enemy>
+    <signature>Enemy</signature>
+    <childcount>6</childcount>
+    <type>Class</type>
+    <name>Enemy</name>
+    <token>public class Enemy : MonoBehaviour </token>
+    <scope></scope>
+  </Enemy>
+  <Enemy.controller>
+    <signature>Enemy.controller</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>controller</name>
+    <token>private CharacterController controller </token>
+    <scope>Enemy</scope>
+  </Enemy.controller>
+  <Enemy.speed>
+    <signature>Enemy.speed</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>speed</name>
+    <token>public float speed </token>
+    <scope>Enemy</scope>
+  </Enemy.speed>
+  <Enemy.Die_x0028__x0029_>
+    <signature>Enemy.Die()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Die</name>
+    <token>public void Die()</token>
+    <scope>Enemy</scope>
+  </Enemy.Die_x0028__x0029_>
+  <Enemy.Move_x0028_float_x002C__x0020_float_x0029_>
+    <signature>Enemy.Move(float, float)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Move</name>
+    <token>public void Move(float horizontalInput, float verticalInput)</token>
+    <scope>Enemy</scope>
+    <params>
+      <horizontalInput>float</horizontalInput>
+      <verticalInput>float</verticalInput>
+    </params>
+  </Enemy.Move_x0028_float_x002C__x0020_float_x0029_>
+  <Enemy.CalculateMovement_x0028_Vector3_x002C__x0020_float_x002C__x0020_float_x002C__x0020_float_x0029_>
+    <signature>Enemy.CalculateMovement(Vector3, float, float, float)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>CalculateMovement</name>
+    <token>public Vector3 CalculateMovement(Vector3 currentMovement, float horizontalInput, float verticalInput, float deltaTime)</token>
+    <scope>Enemy</scope>
+    <params>
+      <currentMovement>Vector3</currentMovement>
+      <horizontalInput>float</horizontalInput>
+      <verticalInput>float</verticalInput>
+      <deltaTime>float</deltaTime>
+    </params>
+  </Enemy.CalculateMovement_x0028_Vector3_x002C__x0020_float_x002C__x0020_float_x002C__x0020_float_x0029_>
+  <Enemy.collide_x0028_GameObject_x0029_>
+    <signature>Enemy.collide(GameObject)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>collide</name>
+    <token>public void collide(GameObject other)</token>
+    <scope>Enemy</scope>
+    <params>
+      <other>GameObject</other>
+    </params>
+  </Enemy.collide_x0028_GameObject_x0029_>
+  <FriendlyProjectile>
+    <signature>FriendlyProjectile</signature>
+    <childcount>18</childcount>
+    <type>Class</type>
+    <name>FriendlyProjectile</name>
+    <token>public class FriendlyProjectile : MonoBehaviour </token>
+    <scope></scope>
+  </FriendlyProjectile>
+  <FriendlyProjectile.target>
+    <signature>FriendlyProjectile.target</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>target</name>
+    <token>GameObject target </token>
+    <scope>FriendlyProjectile</scope>
+  </FriendlyProjectile.target>
+  <FriendlyProjectile.targetDirection>
+    <signature>FriendlyProjectile.targetDirection</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>targetDirection</name>
+    <token>Vector3 targetDirection </token>
+    <scope>FriendlyProjectile</scope>
+  </FriendlyProjectile.targetDirection>
+  <FriendlyProjectile.destroyed>
+    <signature>FriendlyProjectile.destroyed</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>destroyed</name>
+    <token>bool destroyed </token>
+    <scope>FriendlyProjectile</scope>
+  </FriendlyProjectile.destroyed>
+  <FriendlyProjectile.rotationDirection>
+    <signature>FriendlyProjectile.rotationDirection</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>rotationDirection</name>
+    <token>public Vector3 rotationDirection </token>
+    <scope>FriendlyProjectile</scope>
+  </FriendlyProjectile.rotationDirection>
+  <FriendlyProjectile.smoothTime>
+    <signature>FriendlyProjectile.smoothTime</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>smoothTime</name>
+    <token>public float smoothTime </token>
+    <scope>FriendlyProjectile</scope>
+  </FriendlyProjectile.smoothTime>
+  <FriendlyProjectile.convertedTime>
+    <signature>FriendlyProjectile.convertedTime</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>convertedTime</name>
+    <token>private float convertedTime </token>
+    <scope>FriendlyProjectile</scope>
+  </FriendlyProjectile.convertedTime>
+  <FriendlyProjectile.smooth>
+    <signature>FriendlyProjectile.smooth</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>smooth</name>
+    <token>private float smooth </token>
+    <scope>FriendlyProjectile</scope>
+  </FriendlyProjectile.smooth>
+  <FriendlyProjectile.speed>
+    <signature>FriendlyProjectile.speed</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>speed</name>
+    <token>public float speed </token>
+    <scope>FriendlyProjectile</scope>
+  </FriendlyProjectile.speed>
+  <FriendlyProjectile.Update_x0028__x0029_>
+    <signature>FriendlyProjectile.Update()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Update</name>
+    <token>void Update()</token>
+    <scope>FriendlyProjectile</scope>
+  </FriendlyProjectile.Update_x0028__x0029_>
+  <FriendlyProjectile.Die_x0028__x0029_>
+    <signature>FriendlyProjectile.Die()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Die</name>
+    <token>public void Die()</token>
+    <scope>FriendlyProjectile</scope>
+  </FriendlyProjectile.Die_x0028__x0029_>
+  <FriendlyProjectile.collide_x0028_GameObject_x0029_>
+    <signature>FriendlyProjectile.collide(GameObject)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>collide</name>
+    <token>public void collide(GameObject other)</token>
+    <scope>FriendlyProjectile</scope>
+    <params>
+      <other>GameObject</other>
+    </params>
+  </FriendlyProjectile.collide_x0028_GameObject_x0029_>
+  <FriendlyProjectile.getDestroyed_x0028__x0029_>
+    <signature>FriendlyProjectile.getDestroyed()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>getDestroyed</name>
+    <token>public bool getDestroyed()</token>
+    <scope>FriendlyProjectile</scope>
+  </FriendlyProjectile.getDestroyed_x0028__x0029_>
+  <FriendlyProjectile.setDetroyed_x0028_bool_x0029_>
+    <signature>FriendlyProjectile.setDetroyed(bool)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>setDetroyed</name>
+    <token>public void setDetroyed(bool newDestroyed)</token>
+    <scope>FriendlyProjectile</scope>
+    <params>
+      <newDestroyed>bool</newDestroyed>
+    </params>
+  </FriendlyProjectile.setDetroyed_x0028_bool_x0029_>
+  <FriendlyProjectile.getTarget_x0028__x0029_>
+    <signature>FriendlyProjectile.getTarget()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>getTarget</name>
+    <token>public GameObject getTarget()</token>
+    <scope>FriendlyProjectile</scope>
+  </FriendlyProjectile.getTarget_x0028__x0029_>
+  <FriendlyProjectile.setTarget_x0028_GameObject_x0029_>
+    <signature>FriendlyProjectile.setTarget(GameObject)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>setTarget</name>
+    <token>public void setTarget(GameObject newTarget)</token>
+    <scope>FriendlyProjectile</scope>
+    <params>
+      <newTarget>GameObject</newTarget>
+    </params>
+  </FriendlyProjectile.setTarget_x0028_GameObject_x0029_>
+  <FriendlyProjectile.getTargetDirection_x0028__x0029_>
+    <signature>FriendlyProjectile.getTargetDirection()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>getTargetDirection</name>
+    <token>public Vector3 getTargetDirection()</token>
+    <scope>FriendlyProjectile</scope>
+  </FriendlyProjectile.getTargetDirection_x0028__x0029_>
+  <FriendlyProjectile.setTargetDirection_x0028_Vector3_x0029_>
+    <signature>FriendlyProjectile.setTargetDirection(Vector3)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>setTargetDirection</name>
+    <token>public void setTargetDirection(Vector3 newLocation)</token>
+    <scope>FriendlyProjectile</scope>
+    <params>
+      <newLocation>Vector3</newLocation>
+    </params>
+  </FriendlyProjectile.setTargetDirection_x0028_Vector3_x0029_>
+  <FriendlyProjectile.OnTriggerEnter_x0028_Collider_x0029_>
+    <signature>FriendlyProjectile.OnTriggerEnter(Collider)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>OnTriggerEnter</name>
+    <token>private void OnTriggerEnter(Collider other)</token>
+    <scope>FriendlyProjectile</scope>
+    <params>
+      <other>Collider</other>
+    </params>
+  </FriendlyProjectile.OnTriggerEnter_x0028_Collider_x0029_>
+  <GameManager>
+    <signature>GameManager</signature>
+    <childcount>24</childcount>
+    <type>Class</type>
+    <name>GameManager</name>
+    <token>public class GameManager : MonoBehaviour </token>
+    <scope></scope>
+  </GameManager>
+  <GameManager.levelIndex>
+    <signature>GameManager.levelIndex</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>levelIndex</name>
+    <token>public static int levelIndex </token>
+    <scope>GameManager</scope>
+  </GameManager.levelIndex>
+  <GameManager.singleplayer>
+    <signature>GameManager.singleplayer</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>singleplayer</name>
+    <token>public static bool singleplayer </token>
+    <scope>GameManager</scope>
+  </GameManager.singleplayer>
+  <GameManager.boy>
+    <signature>GameManager.boy</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>boy</name>
+    <token>private GameObject boy </token>
+    <scope>GameManager</scope>
+  </GameManager.boy>
+  <GameManager.dog>
+    <signature>GameManager.dog</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>dog</name>
+    <token>private GameObject dog </token>
+    <scope>GameManager</scope>
+  </GameManager.dog>
+  <GameManager.levelStart>
+    <signature>GameManager.levelStart</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>levelStart</name>
+    <token>private int levelStart </token>
+    <scope>GameManager</scope>
+  </GameManager.levelStart>
+  <GameManager.level>
+    <signature>GameManager.level</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>level</name>
+    <token>private GameObject level </token>
+    <scope>GameManager</scope>
+  </GameManager.level>
+  <GameManager.levelDivider>
+    <signature>GameManager.levelDivider</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>levelDivider</name>
+    <token>private GameObject levelDivider </token>
+    <scope>GameManager</scope>
+  </GameManager.levelDivider>
+  <GameManager.singleton>
+    <signature>GameManager.singleton</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>singleton</name>
+    <token>private static GameManager singleton </token>
+    <scope>GameManager</scope>
+  </GameManager.singleton>
+  <GameManager.Start_x0028__x0029_>
+    <signature>GameManager.Start()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Start</name>
+    <token>public void Start()</token>
+    <scope>GameManager</scope>
+  </GameManager.Start_x0028__x0029_>
+  <GameManager.Update_x0028__x0029_>
+    <signature>GameManager.Update()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Update</name>
+    <token>void Update()</token>
+    <scope>GameManager</scope>
+  </GameManager.Update_x0028__x0029_>
+  <GameManager.LoadNextLevel_x0028__x0029_>
+    <signature>GameManager.LoadNextLevel()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>LoadNextLevel</name>
+    <token>public void LoadNextLevel()</token>
+    <scope>GameManager</scope>
+  </GameManager.LoadNextLevel_x0028__x0029_>
+  <GameManager.UpdateProfile_x0028__x0029_>
+    <signature>GameManager.UpdateProfile()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>UpdateProfile</name>
+    <token>private void UpdateProfile()</token>
+    <scope>GameManager</scope>
+  </GameManager.UpdateProfile_x0028__x0029_>
+  <GameManager.IncreaseLevel_x0028__x0029_>
+    <signature>GameManager.IncreaseLevel()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>IncreaseLevel</name>
+    <token>void IncreaseLevel()</token>
+    <scope>GameManager</scope>
+  </GameManager.IncreaseLevel_x0028__x0029_>
+  <GameManager.LoadLevelDivider_x0028__x0029_>
+    <signature>GameManager.LoadLevelDivider()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>LoadLevelDivider</name>
+    <token>void LoadLevelDivider()</token>
+    <scope>GameManager</scope>
+  </GameManager.LoadLevelDivider_x0028__x0029_>
+  <GameManager.LoadLevel_x0028__x0029_>
+    <signature>GameManager.LoadLevel()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>LoadLevel</name>
+    <token>void LoadLevel()</token>
+    <scope>GameManager</scope>
+  </GameManager.LoadLevel_x0028__x0029_>
+  <GameManager.GetCurrentLevel_x0028__x0029_>
+    <signature>GameManager.GetCurrentLevel()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetCurrentLevel</name>
+    <token>public Level GetCurrentLevel()</token>
+    <scope>GameManager</scope>
+  </GameManager.GetCurrentLevel_x0028__x0029_>
+  <GameManager.GetCurrentDividerLevel_x0028__x0029_>
+    <signature>GameManager.GetCurrentDividerLevel()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetCurrentDividerLevel</name>
+    <token>public Level GetCurrentDividerLevel()</token>
+    <scope>GameManager</scope>
+  </GameManager.GetCurrentDividerLevel_x0028__x0029_>
+  <GameManager.GetInstance_x0028__x0029_>
+    <signature>GameManager.GetInstance()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetInstance</name>
+    <token>public static GameManager GetInstance()</token>
+    <scope>GameManager</scope>
+  </GameManager.GetInstance_x0028__x0029_>
+  <GameManager.ClearInstance_x0028__x0029_>
+    <signature>GameManager.ClearInstance()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ClearInstance</name>
+    <token>public static void ClearInstance()</token>
+    <scope>GameManager</scope>
+  </GameManager.ClearInstance_x0028__x0029_>
+  <GameManager.PlayerDefeated_x0028__x0029_>
+    <signature>GameManager.PlayerDefeated()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>PlayerDefeated</name>
+    <token>public void PlayerDefeated()</token>
+    <scope>GameManager</scope>
+  </GameManager.PlayerDefeated_x0028__x0029_>
+  <GameManager.ShowDeathMenu_x0028__x0029_>
+    <signature>GameManager.ShowDeathMenu()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ShowDeathMenu</name>
+    <token>private void ShowDeathMenu()</token>
+    <scope>GameManager</scope>
+  </GameManager.ShowDeathMenu_x0028__x0029_>
+  <GameManager.ShowLevelFinishMenu_x0028__x0029_>
+    <signature>GameManager.ShowLevelFinishMenu()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ShowLevelFinishMenu</name>
+    <token>private void ShowLevelFinishMenu()</token>
+    <scope>GameManager</scope>
+  </GameManager.ShowLevelFinishMenu_x0028__x0029_>
+  <GameManager.ShowPauseMenu_x0028__x0029_>
+    <signature>GameManager.ShowPauseMenu()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ShowPauseMenu</name>
+    <token>private void ShowPauseMenu()</token>
+    <scope>GameManager</scope>
+  </GameManager.ShowPauseMenu_x0028__x0029_>
+  <GameManager.SetPlayerInMenu_x0028_bool_x0029_>
+    <signature>GameManager.SetPlayerInMenu(bool)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>SetPlayerInMenu</name>
+    <token>public void SetPlayerInMenu(bool newValue)</token>
+    <scope>GameManager</scope>
+    <params>
+      <newValue>bool</newValue>
+    </params>
+  </GameManager.SetPlayerInMenu_x0028_bool_x0029_>
+  <Interactable>
+    <signature>Interactable</signature>
+    <childcount>10</childcount>
+    <type>Class</type>
+    <name>Interactable</name>
+    <token>public class Interactable : MonoBehaviour </token>
+    <scope></scope>
+  </Interactable>
+  <Interactable.amount>
+    <signature>Interactable.amount</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>amount</name>
+    <token>public Vector3 amount </token>
+    <scope>Interactable</scope>
+  </Interactable.amount>
+  <Interactable.child>
+    <signature>Interactable.child</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>child</name>
+    <token>Transform child </token>
+    <scope>Interactable</scope>
+  </Interactable.child>
+  <Interactable.childCollider>
+    <signature>Interactable.childCollider</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>childCollider</name>
+    <token>Collider childCollider </token>
+    <scope>Interactable</scope>
+  </Interactable.childCollider>
+  <Interactable.interacted>
+    <signature>Interactable.interacted</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>interacted</name>
+    <token>bool interacted </token>
+    <scope>Interactable</scope>
+  </Interactable.interacted>
+  <Interactable.Start_x0028__x0029_>
+    <signature>Interactable.Start()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Start</name>
+    <token>public void Start()</token>
+    <scope>Interactable</scope>
+  </Interactable.Start_x0028__x0029_>
+  <Interactable.GetChildCollider_x0028__x0029_>
+    <signature>Interactable.GetChildCollider()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetChildCollider</name>
+    <token>public Collider GetChildCollider()</token>
+    <scope>Interactable</scope>
+  </Interactable.GetChildCollider_x0028__x0029_>
+  <Interactable.GetChild_x0028__x0029_>
+    <signature>Interactable.GetChild()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetChild</name>
+    <token>public Transform GetChild()</token>
+    <scope>Interactable</scope>
+  </Interactable.GetChild_x0028__x0029_>
+  <Interactable.SetAmount_x0028_Vector3_x0029_>
+    <signature>Interactable.SetAmount(Vector3)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>SetAmount</name>
+    <token>public void SetAmount(Vector3 newAmount)</token>
+    <scope>Interactable</scope>
+    <params>
+      <newAmount>Vector3</newAmount>
+    </params>
+  </Interactable.SetAmount_x0028_Vector3_x0029_>
+  <Interactable.Rotate_x0028__x0029_>
+    <signature>Interactable.Rotate()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Rotate</name>
+    <token>public void Rotate()</token>
+    <scope>Interactable</scope>
+  </Interactable.Rotate_x0028__x0029_>
+  <Interactable.Collide_x0028_GameObject_x0029_>
+    <signature>Interactable.Collide(GameObject)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Collide</name>
+    <token>public void Collide(GameObject other)</token>
+    <scope>Interactable</scope>
+    <params>
+      <other>GameObject</other>
+    </params>
+  </Interactable.Collide_x0028_GameObject_x0029_>
+  <Level>
+    <signature>Level</signature>
+    <childcount>1</childcount>
+    <type>Class</type>
+    <name>Level</name>
+    <token>public class Level : MonoBehaviour </token>
+    <scope></scope>
+  </Level>
+  <Level.width>
+    <signature>Level.width</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>width</name>
+    <token>public int width </token>
+    <scope>Level</scope>
+  </Level.width>
+  <MushroomJump>
+    <signature>MushroomJump</signature>
+    <childcount>18</childcount>
+    <type>Class</type>
+    <name>MushroomJump</name>
+    <token>public class MushroomJump : MonoBehaviour </token>
+    <scope></scope>
+  </MushroomJump>
+  <MushroomJump.target>
+    <signature>MushroomJump.target</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>target</name>
+    <token>public GameObject target </token>
+    <scope>MushroomJump</scope>
+  </MushroomJump.target>
+  <MushroomJump.force>
+    <signature>MushroomJump.force</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>force</name>
+    <token>public float force </token>
+    <scope>MushroomJump</scope>
+  </MushroomJump.force>
+  <MushroomJump.cooldown>
+    <signature>MushroomJump.cooldown</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>cooldown</name>
+    <token>public float cooldown </token>
+    <scope>MushroomJump</scope>
+  </MushroomJump.cooldown>
+  <MushroomJump.timer>
+    <signature>MushroomJump.timer</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>timer</name>
+    <token>float timer </token>
+    <scope>MushroomJump</scope>
+  </MushroomJump.timer>
+  <MushroomJump.Start_x0028__x0029_>
+    <signature>MushroomJump.Start()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Start</name>
+    <token>public void Start()</token>
+    <scope>MushroomJump</scope>
+  </MushroomJump.Start_x0028__x0029_>
+  <MushroomJump.Update_x0028__x0029_>
+    <signature>MushroomJump.Update()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Update</name>
+    <token>void Update()</token>
+    <scope>MushroomJump</scope>
+  </MushroomJump.Update_x0028__x0029_>
+  <MushroomJump.GetTarget_x0028__x0029_>
+    <signature>MushroomJump.GetTarget()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetTarget</name>
+    <token>public GameObject GetTarget()</token>
+    <scope>MushroomJump</scope>
+  </MushroomJump.GetTarget_x0028__x0029_>
+  <MushroomJump.SetTarget_x0028_GameObject_x0029_>
+    <signature>MushroomJump.SetTarget(GameObject)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>SetTarget</name>
+    <token>public void SetTarget(GameObject newTarget)</token>
+    <scope>MushroomJump</scope>
+    <params>
+      <newTarget>GameObject</newTarget>
+    </params>
+  </MushroomJump.SetTarget_x0028_GameObject_x0029_>
+  <MushroomJump.Collide_x0028_GameObject_x0029_>
+    <signature>MushroomJump.Collide(GameObject)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Collide</name>
+    <token>public void Collide(GameObject other)</token>
+    <scope>MushroomJump</scope>
+    <params>
+      <other>GameObject</other>
+    </params>
+  </MushroomJump.Collide_x0028_GameObject_x0029_>
+  <MushroomJump.SetCooldown_x0028_float_x0029_>
+    <signature>MushroomJump.SetCooldown(float)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>SetCooldown</name>
+    <token>public void SetCooldown(float newCd)</token>
+    <scope>MushroomJump</scope>
+    <params>
+      <newCd>float</newCd>
+    </params>
+  </MushroomJump.SetCooldown_x0028_float_x0029_>
+  <MushroomJump.GetCooldown_x0028__x0029_>
+    <signature>MushroomJump.GetCooldown()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetCooldown</name>
+    <token>public float GetCooldown()</token>
+    <scope>MushroomJump</scope>
+  </MushroomJump.GetCooldown_x0028__x0029_>
+  <MushroomJump.SetTimer_x0028_float_x0029_>
+    <signature>MushroomJump.SetTimer(float)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>SetTimer</name>
+    <token>public void SetTimer(float newCd)</token>
+    <scope>MushroomJump</scope>
+    <params>
+      <newCd>float</newCd>
+    </params>
+  </MushroomJump.SetTimer_x0028_float_x0029_>
+  <MushroomJump.GetTimer_x0028__x0029_>
+    <signature>MushroomJump.GetTimer()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetTimer</name>
+    <token>public float GetTimer()</token>
+    <scope>MushroomJump</scope>
+  </MushroomJump.GetTimer_x0028__x0029_>
+  <MushroomJump.GetObjectJumpHeight_x0028__x0029_>
+    <signature>MushroomJump.GetObjectJumpHeight()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetObjectJumpHeight</name>
+    <token>public float GetObjectJumpHeight()</token>
+    <scope>MushroomJump</scope>
+  </MushroomJump.GetObjectJumpHeight_x0028__x0029_>
+  <MushroomJump.GetTargetVelocity_x0028__x0029_>
+    <signature>MushroomJump.GetTargetVelocity()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetTargetVelocity</name>
+    <token>public Vector3 GetTargetVelocity()</token>
+    <scope>MushroomJump</scope>
+  </MushroomJump.GetTargetVelocity_x0028__x0029_>
+  <MushroomJump.SetForce_x0028_float_x0029_>
+    <signature>MushroomJump.SetForce(float)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>SetForce</name>
+    <token>public void SetForce(float newForce)</token>
+    <scope>MushroomJump</scope>
+    <params>
+      <newForce>float</newForce>
+    </params>
+  </MushroomJump.SetForce_x0028_float_x0029_>
+  <MushroomJump.GetForce_x0028__x0029_>
+    <signature>MushroomJump.GetForce()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetForce</name>
+    <token>public float GetForce()</token>
+    <scope>MushroomJump</scope>
+  </MushroomJump.GetForce_x0028__x0029_>
+  <MushroomJump.OnCollisionEnter_x0028_Collision_x0029_>
+    <signature>MushroomJump.OnCollisionEnter(Collision)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>OnCollisionEnter</name>
+    <token>private void OnCollisionEnter(Collision other)</token>
+    <scope>MushroomJump</scope>
+    <params>
+      <other>Collision</other>
+    </params>
+  </MushroomJump.OnCollisionEnter_x0028_Collision_x0029_>
+  <Player>
+    <signature>Player</signature>
+    <childcount>34</childcount>
+    <type>Class</type>
+    <name>Player</name>
+    <token>public class Player : MonoBehaviour </token>
+    <scope></scope>
+  </Player>
+  <Player.yOffset>
+    <signature>Player.yOffset</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>yOffset</name>
+    <token>public float yOffset </token>
+    <scope>Player</scope>
+  </Player.yOffset>
+  <Player.speed>
+    <signature>Player.speed</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>speed</name>
+    <token>public float speed </token>
+    <scope>Player</scope>
+  </Player.speed>
+  <Player.jumpForce>
+    <signature>Player.jumpForce</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>jumpForce</name>
+    <token>public float jumpForce </token>
+    <scope>Player</scope>
+  </Player.jumpForce>
+  <Player.gravity>
+    <signature>Player.gravity</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>gravity</name>
+    <token>public float gravity </token>
+    <scope>Player</scope>
+  </Player.gravity>
+  <Player.slingshotOffset>
+    <signature>Player.slingshotOffset</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>slingshotOffset</name>
+    <token>public float slingshotOffset </token>
+    <scope>Player</scope>
+  </Player.slingshotOffset>
+  <Player.distance>
+    <signature>Player.distance</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>distance</name>
+    <token>float distance </token>
+    <scope>Player</scope>
+  </Player.distance>
+  <Player.localCamOffsetZ>
+    <signature>Player.localCamOffsetZ</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>localCamOffsetZ</name>
+    <token>float localCamOffsetZ </token>
+    <scope>Player</scope>
+  </Player.localCamOffsetZ>
+  <Player.velocity>
+    <signature>Player.velocity</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>velocity</name>
+    <token>public Vector3 velocity </token>
+    <scope>Player</scope>
+  </Player.velocity>
+  <Player.grounded>
+    <signature>Player.grounded</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>grounded</name>
+    <token>protected bool grounded </token>
+    <scope>Player</scope>
+  </Player.grounded>
+  <Player.defeated>
+    <signature>Player.defeated</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>defeated</name>
+    <token>protected bool defeated </token>
+    <scope>Player</scope>
+  </Player.defeated>
+  <Player.inMenu>
+    <signature>Player.inMenu</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>inMenu</name>
+    <token>protected bool inMenu </token>
+    <scope>Player</scope>
+  </Player.inMenu>
+  <Player.controller>
+    <signature>Player.controller</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>controller</name>
+    <token>protected CharacterController controller </token>
+    <scope>Player</scope>
+  </Player.controller>
+  <Player.slingshot>
+    <signature>Player.slingshot</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>slingshot</name>
+    <token>private Slingshot slingshot </token>
+    <scope>Player</scope>
+  </Player.slingshot>
+  <Player.mousePositionObject>
+    <signature>Player.mousePositionObject</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>mousePositionObject</name>
+    <token>public GameObject mousePositionObject </token>
+    <scope>Player</scope>
+  </Player.mousePositionObject>
+  <Player.plane>
+    <signature>Player.plane</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>plane</name>
+    <token>Plane plane </token>
+    <scope>Player</scope>
+  </Player.plane>
+  <Player.worldPosition>
+    <signature>Player.worldPosition</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>worldPosition</name>
+    <token>Vector3 worldPosition </token>
+    <scope>Player</scope>
+  </Player.worldPosition>
+  <Player.Start_x0028__x0029_>
+    <signature>Player.Start()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Start</name>
+    <token>public void Start()</token>
+    <scope>Player</scope>
+  </Player.Start_x0028__x0029_>
+  <Player.Update_x0028__x0029_>
+    <signature>Player.Update()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Update</name>
+    <token>void Update()</token>
+    <scope>Player</scope>
+  </Player.Update_x0028__x0029_>
+  <Player.GetController_x0028__x0029_>
+    <signature>Player.GetController()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetController</name>
+    <token>public CharacterController GetController()</token>
+    <scope>Player</scope>
+  </Player.GetController_x0028__x0029_>
+  <Player.Move_x0028_float_x002C__x0020_bool_x0029_>
+    <signature>Player.Move(float, bool)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Move</name>
+    <token>public void Move(float horizontalInput, bool jumpPressed)</token>
+    <scope>Player</scope>
+    <params>
+      <horizontalInput>float</horizontalInput>
+      <jumpPressed>bool</jumpPressed>
+    </params>
+  </Player.Move_x0028_float_x002C__x0020_bool_x0029_>
+  <Player.Turnaround_x0028_float_x0029_>
+    <signature>Player.Turnaround(float)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Turnaround</name>
+    <token>private void Turnaround(float horizontalInput)</token>
+    <scope>Player</scope>
+    <params>
+      <horizontalInput>float</horizontalInput>
+    </params>
+  </Player.Turnaround_x0028_float_x0029_>
+  <Player.Shoot_x0028__x0029_>
+    <signature>Player.Shoot()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Shoot</name>
+    <token>private void Shoot()</token>
+    <scope>Player</scope>
+  </Player.Shoot_x0028__x0029_>
+  <Player.MoveCamera_x0028__x0029_>
+    <signature>Player.MoveCamera()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>MoveCamera</name>
+    <token>public void MoveCamera()</token>
+    <scope>Player</scope>
+  </Player.MoveCamera_x0028__x0029_>
+  <Player.CalculateMovement_x0028_Vector3_x002C__x0020_float_x002C__x0020_bool_x002C__x0020_float_x0029_>
+    <signature>Player.CalculateMovement(Vector3, float, bool, float)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>CalculateMovement</name>
+    <token>public Vector3 CalculateMovement(Vector3 currentMovement, float horizontalInput, bool jumpPressed, float deltaTime)</token>
+    <scope>Player</scope>
+    <params>
+      <currentMovement>Vector3</currentMovement>
+      <horizontalInput>float</horizontalInput>
+      <jumpPressed>bool</jumpPressed>
+      <deltaTime>float</deltaTime>
+    </params>
+  </Player.CalculateMovement_x0028_Vector3_x002C__x0020_float_x002C__x0020_bool_x002C__x0020_float_x0029_>
+  <Player.getGrounded_x0028__x0029_>
+    <signature>Player.getGrounded()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>getGrounded</name>
+    <token>public bool getGrounded()</token>
+    <scope>Player</scope>
+  </Player.getGrounded_x0028__x0029_>
+  <Player.setGrounded_x0028_bool_x0029_>
+    <signature>Player.setGrounded(bool)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>setGrounded</name>
+    <token>public void setGrounded(bool newGrounding)</token>
+    <scope>Player</scope>
+    <params>
+      <newGrounding>bool</newGrounding>
+    </params>
+  </Player.setGrounded_x0028_bool_x0029_>
+  <Player.getGravity_x0028__x0029_>
+    <signature>Player.getGravity()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>getGravity</name>
+    <token>public float getGravity()</token>
+    <scope>Player</scope>
+  </Player.getGravity_x0028__x0029_>
+  <Player.OnControllerColliderHit_x0028_ControllerColliderHit_x0029_>
+    <signature>Player.OnControllerColliderHit(ControllerColliderHit)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>OnControllerColliderHit</name>
+    <token>public void OnControllerColliderHit(ControllerColliderHit hit)</token>
+    <scope>Player</scope>
+    <params>
+      <hit>ControllerColliderHit</hit>
+    </params>
+  </Player.OnControllerColliderHit_x0028_ControllerColliderHit_x0029_>
+  <Player.OnTriggerEnter_x0028_Collider_x0029_>
+    <signature>Player.OnTriggerEnter(Collider)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>OnTriggerEnter</name>
+    <token>public void OnTriggerEnter(Collider collider)</token>
+    <scope>Player</scope>
+    <params>
+      <collider>Collider</collider>
+    </params>
+  </Player.OnTriggerEnter_x0028_Collider_x0029_>
+  <Player.collide_x0028_GameObject_x0029_>
+    <signature>Player.collide(GameObject)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>collide</name>
+    <token>public void collide(GameObject other)</token>
+    <scope>Player</scope>
+    <params>
+      <other>GameObject</other>
+    </params>
+  </Player.collide_x0028_GameObject_x0029_>
+  <Player.defeat_x0028__x0029_>
+    <signature>Player.defeat()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>defeat</name>
+    <token>public void defeat()</token>
+    <scope>Player</scope>
+  </Player.defeat_x0028__x0029_>
+  <Player.setInMenu_x0028_bool_x0029_>
+    <signature>Player.setInMenu(bool)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>setInMenu</name>
+    <token>public void setInMenu(bool newInMenu)</token>
+    <scope>Player</scope>
+    <params>
+      <newInMenu>bool</newInMenu>
+    </params>
+  </Player.setInMenu_x0028_bool_x0029_>
+  <Player.getInMenu_x0028__x0029_>
+    <signature>Player.getInMenu()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>getInMenu</name>
+    <token>public bool getInMenu()</token>
+    <scope>Player</scope>
+  </Player.getInMenu_x0028__x0029_>
+  <Player.getDefeated_x0028__x0029_>
+    <signature>Player.getDefeated()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>getDefeated</name>
+    <token>public bool getDefeated()</token>
+    <scope>Player</scope>
+  </Player.getDefeated_x0028__x0029_>
+  <PlayerTwo>
+    <signature>PlayerTwo</signature>
+    <childcount>2</childcount>
+    <type>Class</type>
+    <name>PlayerTwo</name>
+    <token>public class PlayerTwo : Player </token>
+    <scope></scope>
+  </PlayerTwo>
+  <PlayerTwo.Start_x0028__x0029_>
+    <signature>PlayerTwo.Start()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Start</name>
+    <token>public new void Start()</token>
+    <scope>PlayerTwo</scope>
+  </PlayerTwo.Start_x0028__x0029_>
+  <PlayerTwo.Update_x0028__x0029_>
+    <signature>PlayerTwo.Update()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Update</name>
+    <token>void Update()</token>
+    <scope>PlayerTwo</scope>
+  </PlayerTwo.Update_x0028__x0029_>
+  <Projectile>
+    <signature>Projectile</signature>
+    <childcount>16</childcount>
+    <type>Class</type>
+    <name>Projectile</name>
+    <token>public class Projectile : Enemy </token>
+    <scope></scope>
+  </Projectile>
+  <Projectile.target>
+    <signature>Projectile.target</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>target</name>
+    <token>GameObject target </token>
+    <scope>Projectile</scope>
+  </Projectile.target>
+  <Projectile.targetDirection>
+    <signature>Projectile.targetDirection</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>targetDirection</name>
+    <token>Vector3 targetDirection </token>
+    <scope>Projectile</scope>
+  </Projectile.targetDirection>
+  <Projectile.destroyed>
+    <signature>Projectile.destroyed</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>destroyed</name>
+    <token>bool destroyed </token>
+    <scope>Projectile</scope>
+  </Projectile.destroyed>
+  <Projectile.rotationDirection>
+    <signature>Projectile.rotationDirection</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>rotationDirection</name>
+    <token>public Vector3 rotationDirection </token>
+    <scope>Projectile</scope>
+  </Projectile.rotationDirection>
+  <Projectile.smoothTime>
+    <signature>Projectile.smoothTime</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>smoothTime</name>
+    <token>public float smoothTime </token>
+    <scope>Projectile</scope>
+  </Projectile.smoothTime>
+  <Projectile.convertedTime>
+    <signature>Projectile.convertedTime</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>convertedTime</name>
+    <token>private float convertedTime </token>
+    <scope>Projectile</scope>
+  </Projectile.convertedTime>
+  <Projectile.smooth>
+    <signature>Projectile.smooth</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>smooth</name>
+    <token>private float smooth </token>
+    <scope>Projectile</scope>
+  </Projectile.smooth>
+  <Projectile.Update_x0028__x0029_>
+    <signature>Projectile.Update()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Update</name>
+    <token>void Update()</token>
+    <scope>Projectile</scope>
+  </Projectile.Update_x0028__x0029_>
+  <Projectile.collide_x0028_GameObject_x0029_>
+    <signature>Projectile.collide(GameObject)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>collide</name>
+    <token>public void collide(GameObject other)</token>
+    <scope>Projectile</scope>
+    <params>
+      <other>GameObject</other>
+    </params>
+  </Projectile.collide_x0028_GameObject_x0029_>
+  <Projectile.getDestroyed_x0028__x0029_>
+    <signature>Projectile.getDestroyed()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>getDestroyed</name>
+    <token>public bool getDestroyed()</token>
+    <scope>Projectile</scope>
+  </Projectile.getDestroyed_x0028__x0029_>
+  <Projectile.setDetroyed_x0028_bool_x0029_>
+    <signature>Projectile.setDetroyed(bool)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>setDetroyed</name>
+    <token>public void setDetroyed(bool newDestroyed)</token>
+    <scope>Projectile</scope>
+    <params>
+      <newDestroyed>bool</newDestroyed>
+    </params>
+  </Projectile.setDetroyed_x0028_bool_x0029_>
+  <Projectile.getTarget_x0028__x0029_>
+    <signature>Projectile.getTarget()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>getTarget</name>
+    <token>public GameObject getTarget()</token>
+    <scope>Projectile</scope>
+  </Projectile.getTarget_x0028__x0029_>
+  <Projectile.setTarget_x0028_GameObject_x0029_>
+    <signature>Projectile.setTarget(GameObject)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>setTarget</name>
+    <token>public void setTarget(GameObject newTarget)</token>
+    <scope>Projectile</scope>
+    <params>
+      <newTarget>GameObject</newTarget>
+    </params>
+  </Projectile.setTarget_x0028_GameObject_x0029_>
+  <Projectile.getTargetDirection_x0028__x0029_>
+    <signature>Projectile.getTargetDirection()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>getTargetDirection</name>
+    <token>public Vector3 getTargetDirection()</token>
+    <scope>Projectile</scope>
+  </Projectile.getTargetDirection_x0028__x0029_>
+  <Projectile.setTargetDirection_x0028_Vector3_x0029_>
+    <signature>Projectile.setTargetDirection(Vector3)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>setTargetDirection</name>
+    <token>public void setTargetDirection(Vector3 newLocation)</token>
+    <scope>Projectile</scope>
+    <params>
+      <newLocation>Vector3</newLocation>
+    </params>
+  </Projectile.setTargetDirection_x0028_Vector3_x0029_>
+  <Projectile.OnCollisionEnter_x0028_Collision_x0029_>
+    <signature>Projectile.OnCollisionEnter(Collision)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>OnCollisionEnter</name>
+    <token>private void OnCollisionEnter(Collision other)</token>
+    <scope>Projectile</scope>
+    <params>
+      <other>Collision</other>
+    </params>
+  </Projectile.OnCollisionEnter_x0028_Collision_x0029_>
+  <Slingshot>
+    <signature>Slingshot</signature>
+    <childcount>11</childcount>
+    <type>Class</type>
+    <name>Slingshot</name>
+    <token>public class Slingshot : MonoBehaviour </token>
+    <scope></scope>
+  </Slingshot>
+  <Slingshot.projectilePrefab>
+    <signature>Slingshot.projectilePrefab</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>projectilePrefab</name>
+    <token>public GameObject projectilePrefab </token>
+    <scope>Slingshot</scope>
+  </Slingshot.projectilePrefab>
+  <Slingshot.cooldown>
+    <signature>Slingshot.cooldown</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>cooldown</name>
+    <token>public float cooldown </token>
+    <scope>Slingshot</scope>
+  </Slingshot.cooldown>
+  <Slingshot.timer>
+    <signature>Slingshot.timer</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>timer</name>
+    <token>private float timer </token>
+    <scope>Slingshot</scope>
+  </Slingshot.timer>
+  <Slingshot.Update_x0028__x0029_>
+    <signature>Slingshot.Update()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Update</name>
+    <token>void Update()</token>
+    <scope>Slingshot</scope>
+  </Slingshot.Update_x0028__x0029_>
+  <Slingshot.shootProjectile_x0028_GameObject_x0029_>
+    <signature>Slingshot.shootProjectile(GameObject)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>shootProjectile</name>
+    <token>public GameObject shootProjectile(GameObject target)</token>
+    <scope>Slingshot</scope>
+    <params>
+      <target>GameObject</target>
+    </params>
+  </Slingshot.shootProjectile_x0028_GameObject_x0029_>
+  <Slingshot.getCooldown_x0028__x0029_>
+    <signature>Slingshot.getCooldown()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>getCooldown</name>
+    <token>public float getCooldown()</token>
+    <scope>Slingshot</scope>
+  </Slingshot.getCooldown_x0028__x0029_>
+  <Slingshot.setCooldown_x0028_float_x0029_>
+    <signature>Slingshot.setCooldown(float)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>setCooldown</name>
+    <token>public void setCooldown(float newCooldown)</token>
+    <scope>Slingshot</scope>
+    <params>
+      <newCooldown>float</newCooldown>
+    </params>
+  </Slingshot.setCooldown_x0028_float_x0029_>
+  <Slingshot.getTimer_x0028__x0029_>
+    <signature>Slingshot.getTimer()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>getTimer</name>
+    <token>public float getTimer()</token>
+    <scope>Slingshot</scope>
+  </Slingshot.getTimer_x0028__x0029_>
+  <Slingshot.setTimer_x0028_float_x0029_>
+    <signature>Slingshot.setTimer(float)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>setTimer</name>
+    <token>public void setTimer(float newTimer)</token>
+    <scope>Slingshot</scope>
+    <params>
+      <newTimer>float</newTimer>
+    </params>
+  </Slingshot.setTimer_x0028_float_x0029_>
+  <Slingshot.directionToTarget_x0028_GameObject_x0029_>
+    <signature>Slingshot.directionToTarget(GameObject)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>directionToTarget</name>
+    <token>public Vector3 directionToTarget(GameObject target)</token>
+    <scope>Slingshot</scope>
+    <params>
+      <target>GameObject</target>
+    </params>
+  </Slingshot.directionToTarget_x0028_GameObject_x0029_>
+  <Slingshot.distanceToTarget_x0028_Vector3_x0029_>
+    <signature>Slingshot.distanceToTarget(Vector3)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>distanceToTarget</name>
+    <token>public float distanceToTarget(Vector3 direction)</token>
+    <scope>Slingshot</scope>
+    <params>
+      <direction>Vector3</direction>
+    </params>
+  </Slingshot.distanceToTarget_x0028_Vector3_x0029_>
+  <Tree>
+    <signature>Tree</signature>
+    <childcount>1</childcount>
+    <type>Class</type>
+    <name>Tree</name>
+    <token>public class Tree : MonoBehaviour </token>
+    <scope></scope>
+  </Tree>
+  <Tree.OnTriggerEnter_x0028_Collider_x0029_>
+    <signature>Tree.OnTriggerEnter(Collider)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>OnTriggerEnter</name>
+    <token>private void OnTriggerEnter(Collider other)</token>
+    <scope>Tree</scope>
+    <params>
+      <other>Collider</other>
+    </params>
+  </Tree.OnTriggerEnter_x0028_Collider_x0029_>
+  <WaspEnemy>
+    <signature>WaspEnemy</signature>
+    <childcount>25</childcount>
+    <type>Class</type>
+    <name>WaspEnemy</name>
+    <token>public class WaspEnemy : Enemy </token>
+    <scope></scope>
+  </WaspEnemy>
+  <WaspEnemy.projectilePrefab>
+    <signature>WaspEnemy.projectilePrefab</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>projectilePrefab</name>
+    <token>public GameObject projectilePrefab </token>
+    <scope>WaspEnemy</scope>
+  </WaspEnemy.projectilePrefab>
+  <WaspEnemy.target>
+    <signature>WaspEnemy.target</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>target</name>
+    <token>GameObject target </token>
+    <scope>WaspEnemy</scope>
+  </WaspEnemy.target>
+  <WaspEnemy.cooldown>
+    <signature>WaspEnemy.cooldown</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>cooldown</name>
+    <token>public float cooldown </token>
+    <scope>WaspEnemy</scope>
+  </WaspEnemy.cooldown>
+  <WaspEnemy.timer>
+    <signature>WaspEnemy.timer</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>timer</name>
+    <token>float timer </token>
+    <scope>WaspEnemy</scope>
+  </WaspEnemy.timer>
+  <WaspEnemy.range>
+    <signature>WaspEnemy.range</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>range</name>
+    <token>public float range </token>
+    <scope>WaspEnemy</scope>
+  </WaspEnemy.range>
+  <WaspEnemy.amplitude>
+    <signature>WaspEnemy.amplitude</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>amplitude</name>
+    <token>public float amplitude </token>
+    <scope>WaspEnemy</scope>
+  </WaspEnemy.amplitude>
+  <WaspEnemy.frequency>
+    <signature>WaspEnemy.frequency</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>frequency</name>
+    <token>public float frequency </token>
+    <scope>WaspEnemy</scope>
+  </WaspEnemy.frequency>
+  <WaspEnemy.projectile>
+    <signature>WaspEnemy.projectile</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>projectile</name>
+    <token>GameObject projectile </token>
+    <scope>WaspEnemy</scope>
+  </WaspEnemy.projectile>
+  <WaspEnemy.possibleTargets>
+    <signature>WaspEnemy.possibleTargets</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>possibleTargets</name>
+    <token>GameObject[] possibleTargets </token>
+    <scope>WaspEnemy</scope>
+  </WaspEnemy.possibleTargets>
+  <WaspEnemy.Start_x0028__x0029_>
+    <signature>WaspEnemy.Start()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Start</name>
+    <token>void Start()</token>
+    <scope>WaspEnemy</scope>
+  </WaspEnemy.Start_x0028__x0029_>
+  <WaspEnemy.Update_x0028__x0029_>
+    <signature>WaspEnemy.Update()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Update</name>
+    <token>void Update()</token>
+    <scope>WaspEnemy</scope>
+  </WaspEnemy.Update_x0028__x0029_>
+  <WaspEnemy.SearchTarget_x0028_GameObject_x005B__x005D__x0029_>
+    <signature>WaspEnemy.SearchTarget(GameObject[])</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>SearchTarget</name>
+    <token>public GameObject SearchTarget(GameObject[] candidates)</token>
+    <scope>WaspEnemy</scope>
+    <params>
+      <candidates>GameObject[]</candidates>
+    </params>
+  </WaspEnemy.SearchTarget_x0028_GameObject_x005B__x005D__x0029_>
+  <WaspEnemy.shootProjectile_x0028_GameObject_x0029_>
+    <signature>WaspEnemy.shootProjectile(GameObject)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>shootProjectile</name>
+    <token>public GameObject shootProjectile(GameObject target)</token>
+    <scope>WaspEnemy</scope>
+    <params>
+      <target>GameObject</target>
+    </params>
+  </WaspEnemy.shootProjectile_x0028_GameObject_x0029_>
+  <WaspEnemy.directionToTarget_x0028_GameObject_x0029_>
+    <signature>WaspEnemy.directionToTarget(GameObject)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>directionToTarget</name>
+    <token>public Vector3 directionToTarget(GameObject target)</token>
+    <scope>WaspEnemy</scope>
+    <params>
+      <target>GameObject</target>
+    </params>
+  </WaspEnemy.directionToTarget_x0028_GameObject_x0029_>
+  <WaspEnemy.distanceToTarget_x0028_Vector3_x0029_>
+    <signature>WaspEnemy.distanceToTarget(Vector3)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>distanceToTarget</name>
+    <token>public float distanceToTarget(Vector3 direction)</token>
+    <scope>WaspEnemy</scope>
+    <params>
+      <direction>Vector3</direction>
+    </params>
+  </WaspEnemy.distanceToTarget_x0028_Vector3_x0029_>
+  <WaspEnemy.setCooldown_x0028_float_x0029_>
+    <signature>WaspEnemy.setCooldown(float)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>setCooldown</name>
+    <token>public void setCooldown(float newCooldown)</token>
+    <scope>WaspEnemy</scope>
+    <params>
+      <newCooldown>float</newCooldown>
+    </params>
+  </WaspEnemy.setCooldown_x0028_float_x0029_>
+  <WaspEnemy.getCooldown_x0028__x0029_>
+    <signature>WaspEnemy.getCooldown()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>getCooldown</name>
+    <token>public float getCooldown()</token>
+    <scope>WaspEnemy</scope>
+  </WaspEnemy.getCooldown_x0028__x0029_>
+  <WaspEnemy.setRange_x0028_float_x0029_>
+    <signature>WaspEnemy.setRange(float)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>setRange</name>
+    <token>public void setRange(float newRange)</token>
+    <scope>WaspEnemy</scope>
+    <params>
+      <newRange>float</newRange>
+    </params>
+  </WaspEnemy.setRange_x0028_float_x0029_>
+  <WaspEnemy.getRange_x0028__x0029_>
+    <signature>WaspEnemy.getRange()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>getRange</name>
+    <token>public float getRange()</token>
+    <scope>WaspEnemy</scope>
+  </WaspEnemy.getRange_x0028__x0029_>
+  <WaspEnemy.setTimer_x0028_float_x0029_>
+    <signature>WaspEnemy.setTimer(float)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>setTimer</name>
+    <token>public void setTimer(float newTimer)</token>
+    <scope>WaspEnemy</scope>
+    <params>
+      <newTimer>float</newTimer>
+    </params>
+  </WaspEnemy.setTimer_x0028_float_x0029_>
+  <WaspEnemy.getTimer_x0028__x0029_>
+    <signature>WaspEnemy.getTimer()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>getTimer</name>
+    <token>public float getTimer()</token>
+    <scope>WaspEnemy</scope>
+  </WaspEnemy.getTimer_x0028__x0029_>
+  <WaspEnemy.getTarget_x0028__x0029_>
+    <signature>WaspEnemy.getTarget()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>getTarget</name>
+    <token>public GameObject getTarget()</token>
+    <scope>WaspEnemy</scope>
+  </WaspEnemy.getTarget_x0028__x0029_>
+  <WaspEnemy.setTarget_x0028_GameObject_x0029_>
+    <signature>WaspEnemy.setTarget(GameObject)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>setTarget</name>
+    <token>public void setTarget(GameObject newTarget)</token>
+    <scope>WaspEnemy</scope>
+    <params>
+      <newTarget>GameObject</newTarget>
+    </params>
+  </WaspEnemy.setTarget_x0028_GameObject_x0029_>
+  <WaspEnemy.OnCollisionEnter_x0028_Collision_x0029_>
+    <signature>WaspEnemy.OnCollisionEnter(Collision)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>OnCollisionEnter</name>
+    <token>private void OnCollisionEnter(Collision other)</token>
+    <scope>WaspEnemy</scope>
+    <params>
+      <other>Collision</other>
+    </params>
+  </WaspEnemy.OnCollisionEnter_x0028_Collision_x0029_>
+  <WaspEnemy.collide_x0028_GameObject_x0029_>
+    <signature>WaspEnemy.collide(GameObject)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>collide</name>
+    <token>public void collide(GameObject other)</token>
+    <scope>WaspEnemy</scope>
+    <params>
+      <other>GameObject</other>
+    </params>
+  </WaspEnemy.collide_x0028_GameObject_x0029_>
+  <GameMenu>
+    <signature>GameMenu</signature>
+    <childcount>6</childcount>
+    <type>Class</type>
+    <name>GameMenu</name>
+    <token>public class GameMenu : MenuView </token>
+    <scope></scope>
+  </GameMenu>
+  <GameMenu.GoToMenu_x0028__x0029_>
+    <signature>GameMenu.GoToMenu()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GoToMenu</name>
+    <token>public void GoToMenu()</token>
+    <scope>GameMenu</scope>
+  </GameMenu.GoToMenu_x0028__x0029_>
+  <GameMenu.RestartLevel_x0028__x0029_>
+    <signature>GameMenu.RestartLevel()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>RestartLevel</name>
+    <token>public void RestartLevel()</token>
+    <scope>GameMenu</scope>
+  </GameMenu.RestartLevel_x0028__x0029_>
+  <GameMenu.Back_x0028__x0029_>
+    <signature>GameMenu.Back()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Back</name>
+    <token>public void Back()</token>
+    <scope>GameMenu</scope>
+  </GameMenu.Back_x0028__x0029_>
+  <GameMenu.Show_x0028__x0029_>
+    <signature>GameMenu.Show()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Show</name>
+    <token>public override void Show()</token>
+    <scope>GameMenu</scope>
+  </GameMenu.Show_x0028__x0029_>
+  <GameMenu.ChangeAutoRespawn_x0028_bool_x0029_>
+    <signature>GameMenu.ChangeAutoRespawn(bool)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ChangeAutoRespawn</name>
+    <token>public void ChangeAutoRespawn(bool respawn)</token>
+    <scope>GameMenu</scope>
+    <params>
+      <respawn>bool</respawn>
+    </params>
+  </GameMenu.ChangeAutoRespawn_x0028_bool_x0029_>
+  <GameMenu.ChangeAutoContinue_x0028_bool_x0029_>
+    <signature>GameMenu.ChangeAutoContinue(bool)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ChangeAutoContinue</name>
+    <token>public void ChangeAutoContinue(bool respawn)</token>
+    <scope>GameMenu</scope>
+    <params>
+      <respawn>bool</respawn>
+    </params>
+  </GameMenu.ChangeAutoContinue_x0028_bool_x0029_>
+  <LevelSelectMenu>
+    <signature>LevelSelectMenu</signature>
+    <childcount>5</childcount>
+    <type>Class</type>
+    <name>LevelSelectMenu</name>
+    <token>public class LevelSelectMenu : MenuView </token>
+    <scope></scope>
+  </LevelSelectMenu>
+  <LevelSelectMenu.content>
+    <signature>LevelSelectMenu.content</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>content</name>
+    <token>public Transform content </token>
+    <scope>LevelSelectMenu</scope>
+  </LevelSelectMenu.content>
+  <LevelSelectMenu.levelSelectListItemPrefab>
+    <signature>LevelSelectMenu.levelSelectListItemPrefab</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>levelSelectListItemPrefab</name>
+    <token>public GameObject levelSelectListItemPrefab </token>
+    <scope>LevelSelectMenu</scope>
+  </LevelSelectMenu.levelSelectListItemPrefab>
+  <LevelSelectMenu.Show_x0028__x0029_>
+    <signature>LevelSelectMenu.Show()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Show</name>
+    <token>public override void Show()</token>
+    <scope>LevelSelectMenu</scope>
+  </LevelSelectMenu.Show_x0028__x0029_>
+  <LevelSelectMenu.ResetUI_x0028__x0029_>
+    <signature>LevelSelectMenu.ResetUI()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ResetUI</name>
+    <token>private void ResetUI()</token>
+    <scope>LevelSelectMenu</scope>
+  </LevelSelectMenu.ResetUI_x0028__x0029_>
+  <LevelSelectMenu.LoadLevelSelectItems_x0028__x0029_>
+    <signature>LevelSelectMenu.LoadLevelSelectItems()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>LoadLevelSelectItems</name>
+    <token>private void LoadLevelSelectItems()</token>
+    <scope>LevelSelectMenu</scope>
+  </LevelSelectMenu.LoadLevelSelectItems_x0028__x0029_>
+  <MainMenu>
+    <signature>MainMenu</signature>
+    <childcount>1</childcount>
+    <type>Class</type>
+    <name>MainMenu</name>
+    <token>public class MainMenu : MenuView </token>
+    <scope></scope>
+  </MainMenu>
+  <MainMenu.ExitGame_x0028__x0029_>
+    <signature>MainMenu.ExitGame()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ExitGame</name>
+    <token>public void ExitGame()</token>
+    <scope>MainMenu</scope>
+  </MainMenu.ExitGame_x0028__x0029_>
+  <MultiPlayerMenu>
+    <signature>MultiPlayerMenu</signature>
+    <childcount>3</childcount>
+    <type>Class</type>
+    <name>MultiPlayerMenu</name>
+    <token>public class MultiPlayerMenu : MenuView </token>
+    <scope></scope>
+  </MultiPlayerMenu>
+  <MultiPlayerMenu.NewGame_x0028__x0029_>
+    <signature>MultiPlayerMenu.NewGame()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>NewGame</name>
+    <token>public void NewGame()</token>
+    <scope>MultiPlayerMenu</scope>
+  </MultiPlayerMenu.NewGame_x0028__x0029_>
+  <MultiPlayerMenu.Continue_x0028__x0029_>
+    <signature>MultiPlayerMenu.Continue()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Continue</name>
+    <token>public void Continue()</token>
+    <scope>MultiPlayerMenu</scope>
+  </MultiPlayerMenu.Continue_x0028__x0029_>
+  <MultiPlayerMenu.LevelSelect_x0028__x0029_>
+    <signature>MultiPlayerMenu.LevelSelect()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>LevelSelect</name>
+    <token>public void LevelSelect()</token>
+    <scope>MultiPlayerMenu</scope>
+  </MultiPlayerMenu.LevelSelect_x0028__x0029_>
+  <Profile>
+    <signature>Profile</signature>
+    <childcount>29</childcount>
+    <type>Class</type>
+    <name>Profile</name>
+    <token>public class Profile </token>
+    <scope></scope>
+  </Profile>
+  <Profile.id>
+    <signature>Profile.id</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>id</name>
+    <token>private int id </token>
+    <scope>Profile</scope>
+  </Profile.id>
+  <Profile.name>
+    <signature>Profile.name</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>name</name>
+    <token>private string name </token>
+    <scope>Profile</scope>
+  </Profile.name>
+  <Profile.volume>
+    <signature>Profile.volume</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>volume</name>
+    <token>private int volume </token>
+    <scope>Profile</scope>
+  </Profile.volume>
+  <Profile.currentLevelS>
+    <signature>Profile.currentLevelS</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>currentLevelS</name>
+    <token>private int currentLevelS </token>
+    <scope>Profile</scope>
+  </Profile.currentLevelS>
+  <Profile.maxLevelS>
+    <signature>Profile.maxLevelS</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>maxLevelS</name>
+    <token>private int maxLevelS </token>
+    <scope>Profile</scope>
+  </Profile.maxLevelS>
+  <Profile.currentLevelM>
+    <signature>Profile.currentLevelM</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>currentLevelM</name>
+    <token>private int currentLevelM </token>
+    <scope>Profile</scope>
+  </Profile.currentLevelM>
+  <Profile.maxLevelM>
+    <signature>Profile.maxLevelM</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>maxLevelM</name>
+    <token>private int maxLevelM </token>
+    <scope>Profile</scope>
+  </Profile.maxLevelM>
+  <Profile.autoRespawn>
+    <signature>Profile.autoRespawn</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>autoRespawn</name>
+    <token>private bool autoRespawn </token>
+    <scope>Profile</scope>
+  </Profile.autoRespawn>
+  <Profile.autoContinue>
+    <signature>Profile.autoContinue</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>autoContinue</name>
+    <token>private bool autoContinue </token>
+    <scope>Profile</scope>
+  </Profile.autoContinue>
+  <Profile.Profile_x0028_int_x0029_>
+    <signature>Profile.Profile(int)</signature>
+    <childcount>0</childcount>
+    <type>Constructor</type>
+    <name>Profile</name>
+    <token>public  Profile(int id)</token>
+    <scope>Profile</scope>
+    <params>
+      <id>int</id>
+    </params>
+  </Profile.Profile_x0028_int_x0029_>
+  <Profile.GetID_x0028__x0029_>
+    <signature>Profile.GetID()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetID</name>
+    <token>public int GetID()</token>
+    <scope>Profile</scope>
+  </Profile.GetID_x0028__x0029_>
+  <Profile.GetName_x0028__x0029_>
+    <signature>Profile.GetName()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetName</name>
+    <token>public string GetName()</token>
+    <scope>Profile</scope>
+  </Profile.GetName_x0028__x0029_>
+  <Profile.SetName_x0028_string_x0029_>
+    <signature>Profile.SetName(string)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>SetName</name>
+    <token>public void SetName(string name)</token>
+    <scope>Profile</scope>
+    <params>
+      <name>string</name>
+    </params>
+  </Profile.SetName_x0028_string_x0029_>
+  <Profile.GetVolume_x0028__x0029_>
+    <signature>Profile.GetVolume()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetVolume</name>
+    <token>public int GetVolume()</token>
+    <scope>Profile</scope>
+  </Profile.GetVolume_x0028__x0029_>
+  <Profile.SetVolume_x0028_int_x0029_>
+    <signature>Profile.SetVolume(int)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>SetVolume</name>
+    <token>public void SetVolume(int volume)</token>
+    <scope>Profile</scope>
+    <params>
+      <volume>int</volume>
+    </params>
+  </Profile.SetVolume_x0028_int_x0029_>
+  <Profile.GetCurrentLevelS_x0028__x0029_>
+    <signature>Profile.GetCurrentLevelS()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetCurrentLevelS</name>
+    <token>public int GetCurrentLevelS()</token>
+    <scope>Profile</scope>
+  </Profile.GetCurrentLevelS_x0028__x0029_>
+  <Profile.SetCurrentLevelS_x0028_int_x0029_>
+    <signature>Profile.SetCurrentLevelS(int)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>SetCurrentLevelS</name>
+    <token>public void SetCurrentLevelS(int level)</token>
+    <scope>Profile</scope>
+    <params>
+      <level>int</level>
+    </params>
+  </Profile.SetCurrentLevelS_x0028_int_x0029_>
+  <Profile.GetMaxLevelS_x0028__x0029_>
+    <signature>Profile.GetMaxLevelS()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetMaxLevelS</name>
+    <token>public int GetMaxLevelS()</token>
+    <scope>Profile</scope>
+  </Profile.GetMaxLevelS_x0028__x0029_>
+  <Profile.SetMaxLevelS_x0028_int_x0029_>
+    <signature>Profile.SetMaxLevelS(int)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>SetMaxLevelS</name>
+    <token>public void SetMaxLevelS(int level)</token>
+    <scope>Profile</scope>
+    <params>
+      <level>int</level>
+    </params>
+  </Profile.SetMaxLevelS_x0028_int_x0029_>
+  <Profile.GetCurrentLevelM_x0028__x0029_>
+    <signature>Profile.GetCurrentLevelM()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetCurrentLevelM</name>
+    <token>public int GetCurrentLevelM()</token>
+    <scope>Profile</scope>
+  </Profile.GetCurrentLevelM_x0028__x0029_>
+  <Profile.SetCurrentLevelM_x0028_int_x0029_>
+    <signature>Profile.SetCurrentLevelM(int)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>SetCurrentLevelM</name>
+    <token>public void SetCurrentLevelM(int level)</token>
+    <scope>Profile</scope>
+    <params>
+      <level>int</level>
+    </params>
+  </Profile.SetCurrentLevelM_x0028_int_x0029_>
+  <Profile.GetMaxLevelM_x0028__x0029_>
+    <signature>Profile.GetMaxLevelM()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetMaxLevelM</name>
+    <token>public int GetMaxLevelM()</token>
+    <scope>Profile</scope>
+  </Profile.GetMaxLevelM_x0028__x0029_>
+  <Profile.SetMaxLevelM_x0028_int_x0029_>
+    <signature>Profile.SetMaxLevelM(int)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>SetMaxLevelM</name>
+    <token>public void SetMaxLevelM(int level)</token>
+    <scope>Profile</scope>
+    <params>
+      <level>int</level>
+    </params>
+  </Profile.SetMaxLevelM_x0028_int_x0029_>
+  <Profile.GetAutoRespawn_x0028__x0029_>
+    <signature>Profile.GetAutoRespawn()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetAutoRespawn</name>
+    <token>public bool GetAutoRespawn()</token>
+    <scope>Profile</scope>
+  </Profile.GetAutoRespawn_x0028__x0029_>
+  <Profile.SetAutoContinue_x0028_bool_x0029_>
+    <signature>Profile.SetAutoContinue(bool)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>SetAutoContinue</name>
+    <token>public void SetAutoContinue(bool autoContinue)</token>
+    <scope>Profile</scope>
+    <params>
+      <autoContinue>bool</autoContinue>
+    </params>
+  </Profile.SetAutoContinue_x0028_bool_x0029_>
+  <Profile.GetAutoContinue_x0028__x0029_>
+    <signature>Profile.GetAutoContinue()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetAutoContinue</name>
+    <token>public bool GetAutoContinue()</token>
+    <scope>Profile</scope>
+  </Profile.GetAutoContinue_x0028__x0029_>
+  <Profile.SetAutoRespawn_x0028_bool_x0029_>
+    <signature>Profile.SetAutoRespawn(bool)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>SetAutoRespawn</name>
+    <token>public void SetAutoRespawn(bool respawn)</token>
+    <scope>Profile</scope>
+    <params>
+      <respawn>bool</respawn>
+    </params>
+  </Profile.SetAutoRespawn_x0028_bool_x0029_>
+  <Profile.ToString_x0028__x0029_>
+    <signature>Profile.ToString()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ToString</name>
+    <token>public string ToString()</token>
+    <scope>Profile</scope>
+  </Profile.ToString_x0028__x0029_>
+  <Profile.FromString_x0028_string_x0029_>
+    <signature>Profile.FromString(string)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>FromString</name>
+    <token>public static Profile FromString(string input)</token>
+    <scope>Profile</scope>
+    <params>
+      <input>string</input>
+    </params>
+  </Profile.FromString_x0028_string_x0029_>
+  <ProfileDetailMenu>
+    <signature>ProfileDetailMenu</signature>
+    <childcount>6</childcount>
+    <type>Class</type>
+    <name>ProfileDetailMenu</name>
+    <token>public class ProfileDetailMenu : MenuView </token>
+    <scope></scope>
+  </ProfileDetailMenu>
+  <ProfileDetailMenu.DeleteProfile_x0028__x0029_>
+    <signature>ProfileDetailMenu.DeleteProfile()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>DeleteProfile</name>
+    <token>public void DeleteProfile()</token>
+    <scope>ProfileDetailMenu</scope>
+  </ProfileDetailMenu.DeleteProfile_x0028__x0029_>
+  <ProfileDetailMenu.ChangeVolume_x0028_int_x0029_>
+    <signature>ProfileDetailMenu.ChangeVolume(int)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ChangeVolume</name>
+    <token>public void ChangeVolume(int volume)</token>
+    <scope>ProfileDetailMenu</scope>
+    <params>
+      <volume>int</volume>
+    </params>
+  </ProfileDetailMenu.ChangeVolume_x0028_int_x0029_>
+  <ProfileDetailMenu.ChangeName_x0028_string_x0029_>
+    <signature>ProfileDetailMenu.ChangeName(string)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ChangeName</name>
+    <token>public void ChangeName(string name)</token>
+    <scope>ProfileDetailMenu</scope>
+    <params>
+      <name>string</name>
+    </params>
+  </ProfileDetailMenu.ChangeName_x0028_string_x0029_>
+  <ProfileDetailMenu.ChangeAutoRespawn_x0028_bool_x0029_>
+    <signature>ProfileDetailMenu.ChangeAutoRespawn(bool)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ChangeAutoRespawn</name>
+    <token>public void ChangeAutoRespawn(bool respawn)</token>
+    <scope>ProfileDetailMenu</scope>
+    <params>
+      <respawn>bool</respawn>
+    </params>
+  </ProfileDetailMenu.ChangeAutoRespawn_x0028_bool_x0029_>
+  <ProfileDetailMenu.ChangeAutoContinue_x0028_bool_x0029_>
+    <signature>ProfileDetailMenu.ChangeAutoContinue(bool)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ChangeAutoContinue</name>
+    <token>public void ChangeAutoContinue(bool respawn)</token>
+    <scope>ProfileDetailMenu</scope>
+    <params>
+      <respawn>bool</respawn>
+    </params>
+  </ProfileDetailMenu.ChangeAutoContinue_x0028_bool_x0029_>
+  <ProfileDetailMenu.Show_x0028__x0029_>
+    <signature>ProfileDetailMenu.Show()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Show</name>
+    <token>public override void Show()</token>
+    <scope>ProfileDetailMenu</scope>
+  </ProfileDetailMenu.Show_x0028__x0029_>
+  <ProfileManager>
+    <signature>ProfileManager</signature>
+    <childcount>19</childcount>
+    <type>Class</type>
+    <name>ProfileManager</name>
+    <token>public class ProfileManager : MonoBehaviour </token>
+    <scope></scope>
+  </ProfileManager>
+  <ProfileManager.singleton>
+    <signature>ProfileManager.singleton</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>singleton</name>
+    <token>private static ProfileManager singleton </token>
+    <scope>ProfileManager</scope>
+  </ProfileManager.singleton>
+  <ProfileManager.profileID>
+    <signature>ProfileManager.profileID</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>profileID</name>
+    <token>private int profileID </token>
+    <scope>ProfileManager</scope>
+  </ProfileManager.profileID>
+  <ProfileManager.maxID>
+    <signature>ProfileManager.maxID</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>maxID</name>
+    <token>private int maxID </token>
+    <scope>ProfileManager</scope>
+  </ProfileManager.maxID>
+  <ProfileManager.profiles>
+    <signature>ProfileManager.profiles</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>profiles</name>
+    <token>private Profile[] profiles </token>
+    <scope>ProfileManager</scope>
+  </ProfileManager.profiles>
+  <ProfileManager.path>
+    <signature>ProfileManager.path</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>path</name>
+    <token>private const string path = "profiles.txt";</token>
+    <scope>ProfileManager</scope>
+  </ProfileManager.path>
+  <ProfileManager.Start_x0028__x0029_>
+    <signature>ProfileManager.Start()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Start</name>
+    <token>public void Start()</token>
+    <scope>ProfileManager</scope>
+  </ProfileManager.Start_x0028__x0029_>
+  <ProfileManager.GetInstance_x0028__x0029_>
+    <signature>ProfileManager.GetInstance()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetInstance</name>
+    <token>public static ProfileManager GetInstance()</token>
+    <scope>ProfileManager</scope>
+  </ProfileManager.GetInstance_x0028__x0029_>
+  <ProfileManager.ClearInstance_x0028__x0029_>
+    <signature>ProfileManager.ClearInstance()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ClearInstance</name>
+    <token>public static void ClearInstance()</token>
+    <scope>ProfileManager</scope>
+  </ProfileManager.ClearInstance_x0028__x0029_>
+  <ProfileManager.ClearProfiles_x0028__x0029_>
+    <signature>ProfileManager.ClearProfiles()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ClearProfiles</name>
+    <token>public void ClearProfiles()</token>
+    <scope>ProfileManager</scope>
+  </ProfileManager.ClearProfiles_x0028__x0029_>
+  <ProfileManager.LoadProfiles_x0028__x0029_>
+    <signature>ProfileManager.LoadProfiles()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>LoadProfiles</name>
+    <token>public void LoadProfiles()</token>
+    <scope>ProfileManager</scope>
+  </ProfileManager.LoadProfiles_x0028__x0029_>
+  <ProfileManager.SaveProfiles_x0028__x0029_>
+    <signature>ProfileManager.SaveProfiles()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>SaveProfiles</name>
+    <token>public void SaveProfiles()</token>
+    <scope>ProfileManager</scope>
+  </ProfileManager.SaveProfiles_x0028__x0029_>
+  <ProfileManager.AddProfile_x0028__x0029_>
+    <signature>ProfileManager.AddProfile()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>AddProfile</name>
+    <token>public void AddProfile()</token>
+    <scope>ProfileManager</scope>
+  </ProfileManager.AddProfile_x0028__x0029_>
+  <ProfileManager.GetProfile_x0028__x0029_>
+    <signature>ProfileManager.GetProfile()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetProfile</name>
+    <token>public Profile GetProfile()</token>
+    <scope>ProfileManager</scope>
+  </ProfileManager.GetProfile_x0028__x0029_>
+  <ProfileManager.DeleteProfile_x0028_int_x0029_>
+    <signature>ProfileManager.DeleteProfile(int)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>DeleteProfile</name>
+    <token>public void DeleteProfile(int id)</token>
+    <scope>ProfileManager</scope>
+    <params>
+      <id>int</id>
+    </params>
+  </ProfileManager.DeleteProfile_x0028_int_x0029_>
+  <ProfileManager.GetProfileID_x0028__x0029_>
+    <signature>ProfileManager.GetProfileID()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetProfileID</name>
+    <token>public int GetProfileID()</token>
+    <scope>ProfileManager</scope>
+  </ProfileManager.GetProfileID_x0028__x0029_>
+  <ProfileManager.SetProfileID_x0028_int_x0029_>
+    <signature>ProfileManager.SetProfileID(int)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>SetProfileID</name>
+    <token>public void SetProfileID(int id)</token>
+    <scope>ProfileManager</scope>
+    <params>
+      <id>int</id>
+    </params>
+  </ProfileManager.SetProfileID_x0028_int_x0029_>
+  <ProfileManager.GetProfileCount_x0028__x0029_>
+    <signature>ProfileManager.GetProfileCount()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetProfileCount</name>
+    <token>public int GetProfileCount()</token>
+    <scope>ProfileManager</scope>
+  </ProfileManager.GetProfileCount_x0028__x0029_>
+  <ProfileManager.GetProfile_x0028_int_x0029_>
+    <signature>ProfileManager.GetProfile(int)</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetProfile</name>
+    <token>public Profile GetProfile(int id)</token>
+    <scope>ProfileManager</scope>
+    <params>
+      <id>int</id>
+    </params>
+  </ProfileManager.GetProfile_x0028_int_x0029_>
+  <ProfileManager.GetMaxID_x0028__x0029_>
+    <signature>ProfileManager.GetMaxID()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GetMaxID</name>
+    <token>public int GetMaxID()</token>
+    <scope>ProfileManager</scope>
+  </ProfileManager.GetMaxID_x0028__x0029_>
+  <ProfileMenu>
+    <signature>ProfileMenu</signature>
+    <childcount>6</childcount>
+    <type>Class</type>
+    <name>ProfileMenu</name>
+    <token>public class ProfileMenu : MenuView </token>
+    <scope></scope>
+  </ProfileMenu>
+  <ProfileMenu.content>
+    <signature>ProfileMenu.content</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>content</name>
+    <token>public Transform content </token>
+    <scope>ProfileMenu</scope>
+  </ProfileMenu.content>
+  <ProfileMenu.profileSelectListItemPrefab>
+    <signature>ProfileMenu.profileSelectListItemPrefab</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>profileSelectListItemPrefab</name>
+    <token>public GameObject profileSelectListItemPrefab </token>
+    <scope>ProfileMenu</scope>
+  </ProfileMenu.profileSelectListItemPrefab>
+  <ProfileMenu.AddProfile_x0028__x0029_>
+    <signature>ProfileMenu.AddProfile()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>AddProfile</name>
+    <token>public void AddProfile()</token>
+    <scope>ProfileMenu</scope>
+  </ProfileMenu.AddProfile_x0028__x0029_>
+  <ProfileMenu.Show_x0028__x0029_>
+    <signature>ProfileMenu.Show()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Show</name>
+    <token>public override void Show()</token>
+    <scope>ProfileMenu</scope>
+  </ProfileMenu.Show_x0028__x0029_>
+  <ProfileMenu.ResetUI_x0028__x0029_>
+    <signature>ProfileMenu.ResetUI()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ResetUI</name>
+    <token>private void ResetUI()</token>
+    <scope>ProfileMenu</scope>
+  </ProfileMenu.ResetUI_x0028__x0029_>
+  <ProfileMenu.LoadProfileSelectItems_x0028__x0029_>
+    <signature>ProfileMenu.LoadProfileSelectItems()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>LoadProfileSelectItems</name>
+    <token>private void LoadProfileSelectItems()</token>
+    <scope>ProfileMenu</scope>
+  </ProfileMenu.LoadProfileSelectItems_x0028__x0029_>
+  <SinglePlayerMenu>
+    <signature>SinglePlayerMenu</signature>
+    <childcount>3</childcount>
+    <type>Class</type>
+    <name>SinglePlayerMenu</name>
+    <token>public class SinglePlayerMenu : MenuView </token>
+    <scope></scope>
+  </SinglePlayerMenu>
+  <SinglePlayerMenu.NewGame_x0028__x0029_>
+    <signature>SinglePlayerMenu.NewGame()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>NewGame</name>
+    <token>public void NewGame()</token>
+    <scope>SinglePlayerMenu</scope>
+  </SinglePlayerMenu.NewGame_x0028__x0029_>
+  <SinglePlayerMenu.Continue_x0028__x0029_>
+    <signature>SinglePlayerMenu.Continue()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>Continue</name>
+    <token>public void Continue()</token>
+    <scope>SinglePlayerMenu</scope>
+  </SinglePlayerMenu.Continue_x0028__x0029_>
+  <SinglePlayerMenu.LevelSelect_x0028__x0029_>
+    <signature>SinglePlayerMenu.LevelSelect()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>LevelSelect</name>
+    <token>public void LevelSelect()</token>
+    <scope>SinglePlayerMenu</scope>
+  </SinglePlayerMenu.LevelSelect_x0028__x0029_>
+  <CombatTest>
+    <signature>CombatTest</signature>
+    <childcount>5</childcount>
+    <type>Class</type>
+    <name>CombatTest</name>
+    <token>public class CombatTest : MonoBehaviour </token>
+    <scope></scope>
+  </CombatTest>
+  <CombatTest.TestOpenMenuOnDefeat_x0028__x0029_>
+    <signature>CombatTest.TestOpenMenuOnDefeat()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestOpenMenuOnDefeat</name>
+    <token>[Test]
+public void TestOpenMenuOnDefeat()</token>
+    <scope>CombatTest</scope>
+  </CombatTest.TestOpenMenuOnDefeat_x0028__x0029_>
+  <CombatTest.TestNotDefeatOnCollisionWithRandomObject_x0028__x0029_>
+    <signature>CombatTest.TestNotDefeatOnCollisionWithRandomObject()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestNotDefeatOnCollisionWithRandomObject</name>
+    <token>[Test]
+public void TestNotDefeatOnCollisionWithRandomObject()</token>
+    <scope>CombatTest</scope>
+  </CombatTest.TestNotDefeatOnCollisionWithRandomObject_x0028__x0029_>
+  <CombatTest.TestDefeatOnCollisionWithEnemy_x0028__x0029_>
+    <signature>CombatTest.TestDefeatOnCollisionWithEnemy()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestDefeatOnCollisionWithEnemy</name>
+    <token>[Test]
+public void TestDefeatOnCollisionWithEnemy()</token>
+    <scope>CombatTest</scope>
+  </CombatTest.TestDefeatOnCollisionWithEnemy_x0028__x0029_>
+  <CombatTest.TestDisableMovementOnDefeat_x0028__x0029_>
+    <signature>CombatTest.TestDisableMovementOnDefeat()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestDisableMovementOnDefeat</name>
+    <token>[Test]
+public void TestDisableMovementOnDefeat()</token>
+    <scope>CombatTest</scope>
+  </CombatTest.TestDisableMovementOnDefeat_x0028__x0029_>
+  <CombatTest.TestUndefeatableInMenu_x0028__x0029_>
+    <signature>CombatTest.TestUndefeatableInMenu()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestUndefeatableInMenu</name>
+    <token>[Test]
+public void TestUndefeatableInMenu()</token>
+    <scope>CombatTest</scope>
+  </CombatTest.TestUndefeatableInMenu_x0028__x0029_>
+  <Tests>
+    <signature>Tests</signature>
+    <childcount>9</childcount>
+    <type>Namespace</type>
+    <name>Tests</name>
+    <token>namespace Tests</token>
+    <scope></scope>
+  </Tests>
+  <Tests.EnemyTest>
+    <signature>Tests.EnemyTest</signature>
+    <childcount>1</childcount>
+    <type>Class</type>
+    <name>EnemyTest</name>
+    <token>public class EnemyTest </token>
+    <scope>Tests</scope>
+  </Tests.EnemyTest>
+  <Tests.EnemyTest.EnemyBasicMovementTest_x0028__x0029_>
+    <signature>Tests.EnemyTest.EnemyBasicMovementTest()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>EnemyBasicMovementTest</name>
+    <token>[Test]
+public void EnemyBasicMovementTest()</token>
+    <scope>Tests.EnemyTest</scope>
+  </Tests.EnemyTest.EnemyBasicMovementTest_x0028__x0029_>
+  <Tests.GameManagerTest>
+    <signature>Tests.GameManagerTest</signature>
+    <childcount>2</childcount>
+    <type>Class</type>
+    <name>GameManagerTest</name>
+    <token>public class GameManagerTest </token>
+    <scope>Tests</scope>
+  </Tests.GameManagerTest>
+  <Tests.GameManagerTest.StartTest_x0028__x0029_>
+    <signature>Tests.GameManagerTest.StartTest()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>StartTest</name>
+    <token>[Test]
+public void StartTest()</token>
+    <scope>Tests.GameManagerTest</scope>
+  </Tests.GameManagerTest.StartTest_x0028__x0029_>
+  <Tests.GameManagerTest.NextLevelTest_x0028__x0029_>
+    <signature>Tests.GameManagerTest.NextLevelTest()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>NextLevelTest</name>
+    <token>[Test]
+public void NextLevelTest()</token>
+    <scope>Tests.GameManagerTest</scope>
+  </Tests.GameManagerTest.NextLevelTest_x0028__x0029_>
+  <Tests.InterActableTest>
+    <signature>Tests.InterActableTest</signature>
+    <childcount>7</childcount>
+    <type>Class</type>
+    <name>InterActableTest</name>
+    <token>public class InterActableTest </token>
+    <scope>Tests</scope>
+  </Tests.InterActableTest>
+  <Tests.InterActableTest.TestGetChildCollider_x0028__x0029_>
+    <signature>Tests.InterActableTest.TestGetChildCollider()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestGetChildCollider</name>
+    <token>[Test]
+public void TestGetChildCollider()</token>
+    <scope>Tests.InterActableTest</scope>
+  </Tests.InterActableTest.TestGetChildCollider_x0028__x0029_>
+  <Tests.InterActableTest.TestSetAmount_x0028__x0029_>
+    <signature>Tests.InterActableTest.TestSetAmount()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestSetAmount</name>
+    <token>[Test]
+public void TestSetAmount()</token>
+    <scope>Tests.InterActableTest</scope>
+  </Tests.InterActableTest.TestSetAmount_x0028__x0029_>
+  <Tests.InterActableTest.TestGetChild_x0028__x0029_>
+    <signature>Tests.InterActableTest.TestGetChild()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestGetChild</name>
+    <token>[Test]
+public void TestGetChild()</token>
+    <scope>Tests.InterActableTest</scope>
+  </Tests.InterActableTest.TestGetChild_x0028__x0029_>
+  <Tests.InterActableTest.TestRotateCorrectly_x0028__x0029_>
+    <signature>Tests.InterActableTest.TestRotateCorrectly()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestRotateCorrectly</name>
+    <token>[Test]
+public void TestRotateCorrectly()</token>
+    <scope>Tests.InterActableTest</scope>
+  </Tests.InterActableTest.TestRotateCorrectly_x0028__x0029_>
+  <Tests.InterActableTest.TestRotateOnChildCollisionInteractiveObject_x0028__x0029_>
+    <signature>Tests.InterActableTest.TestRotateOnChildCollisionInteractiveObject()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestRotateOnChildCollisionInteractiveObject</name>
+    <token>[Test]
+public void TestRotateOnChildCollisionInteractiveObject()</token>
+    <scope>Tests.InterActableTest</scope>
+  </Tests.InterActableTest.TestRotateOnChildCollisionInteractiveObject_x0028__x0029_>
+  <Tests.InterActableTest.TestNotRotateOnChildCollisionRandomObject_x0028__x0029_>
+    <signature>Tests.InterActableTest.TestNotRotateOnChildCollisionRandomObject()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestNotRotateOnChildCollisionRandomObject</name>
+    <token>[Test]
+public void TestNotRotateOnChildCollisionRandomObject()</token>
+    <scope>Tests.InterActableTest</scope>
+  </Tests.InterActableTest.TestNotRotateOnChildCollisionRandomObject_x0028__x0029_>
+  <Tests.InterActableTest.TestNotInteractTwice_x0028__x0029_>
+    <signature>Tests.InterActableTest.TestNotInteractTwice()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestNotInteractTwice</name>
+    <token>[Test]
+public void TestNotInteractTwice()</token>
+    <scope>Tests.InterActableTest</scope>
+  </Tests.InterActableTest.TestNotInteractTwice_x0028__x0029_>
+  <Tests.JumpLimitTest>
+    <signature>Tests.JumpLimitTest</signature>
+    <childcount>1</childcount>
+    <type>Class</type>
+    <name>JumpLimitTest</name>
+    <token>public class JumpLimitTest </token>
+    <scope>Tests</scope>
+  </Tests.JumpLimitTest>
+  <Tests.JumpLimitTest.JumpCountTest_x0028__x0029_>
+    <signature>Tests.JumpLimitTest.JumpCountTest()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>JumpCountTest</name>
+    <token>[Test]
+public void JumpCountTest()</token>
+    <scope>Tests.JumpLimitTest</scope>
+  </Tests.JumpLimitTest.JumpCountTest_x0028__x0029_>
+  <Tests.MenuTest>
+    <signature>Tests.MenuTest</signature>
+    <childcount>8</childcount>
+    <type>Class</type>
+    <name>MenuTest</name>
+    <token>public class MenuTest </token>
+    <scope>Tests</scope>
+  </Tests.MenuTest>
+  <Tests.MenuTest.MenuManagerTest_x0028__x0029_>
+    <signature>Tests.MenuTest.MenuManagerTest()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>MenuManagerTest</name>
+    <token>[Test]
+public void MenuManagerTest()</token>
+    <scope>Tests.MenuTest</scope>
+  </Tests.MenuTest.MenuManagerTest_x0028__x0029_>
+  <Tests.MenuTest.MenuViewTest_x0028__x0029_>
+    <signature>Tests.MenuTest.MenuViewTest()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>MenuViewTest</name>
+    <token>[Test]
+public void MenuViewTest()</token>
+    <scope>Tests.MenuTest</scope>
+  </Tests.MenuTest.MenuViewTest_x0028__x0029_>
+  <Tests.MenuTest.LevelSelectMenuTest_x0028__x0029_>
+    <signature>Tests.MenuTest.LevelSelectMenuTest()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>LevelSelectMenuTest</name>
+    <token>[Test]
+public void LevelSelectMenuTest()</token>
+    <scope>Tests.MenuTest</scope>
+  </Tests.MenuTest.LevelSelectMenuTest_x0028__x0029_>
+  <Tests.MenuTest.ProfileSelectMenuTest_x0028__x0029_>
+    <signature>Tests.MenuTest.ProfileSelectMenuTest()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ProfileSelectMenuTest</name>
+    <token>[Test]
+public void ProfileSelectMenuTest()</token>
+    <scope>Tests.MenuTest</scope>
+  </Tests.MenuTest.ProfileSelectMenuTest_x0028__x0029_>
+  <Tests.MenuTest.ProfileDetailMenuTest_x0028__x0029_>
+    <signature>Tests.MenuTest.ProfileDetailMenuTest()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ProfileDetailMenuTest</name>
+    <token>[Test]
+public void ProfileDetailMenuTest()</token>
+    <scope>Tests.MenuTest</scope>
+  </Tests.MenuTest.ProfileDetailMenuTest_x0028__x0029_>
+  <Tests.MenuTest.SinglePlayerMenuTest_x0028__x0029_>
+    <signature>Tests.MenuTest.SinglePlayerMenuTest()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>SinglePlayerMenuTest</name>
+    <token>[Test]
+public void SinglePlayerMenuTest()</token>
+    <scope>Tests.MenuTest</scope>
+  </Tests.MenuTest.SinglePlayerMenuTest_x0028__x0029_>
+  <Tests.MenuTest.MultiPlayerMenuTest_x0028__x0029_>
+    <signature>Tests.MenuTest.MultiPlayerMenuTest()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>MultiPlayerMenuTest</name>
+    <token>[Test]
+public void MultiPlayerMenuTest()</token>
+    <scope>Tests.MenuTest</scope>
+  </Tests.MenuTest.MultiPlayerMenuTest_x0028__x0029_>
+  <Tests.MenuTest.GameMenuTest_x0028__x0029_>
+    <signature>Tests.MenuTest.GameMenuTest()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>GameMenuTest</name>
+    <token>[Test]
+public void GameMenuTest()</token>
+    <scope>Tests.MenuTest</scope>
+  </Tests.MenuTest.GameMenuTest_x0028__x0029_>
+  <Tests.MovementTest>
+    <signature>Tests.MovementTest</signature>
+    <childcount>5</childcount>
+    <type>Class</type>
+    <name>MovementTest</name>
+    <token>public class MovementTest </token>
+    <scope>Tests</scope>
+  </Tests.MovementTest>
+  <Tests.MovementTest.delta>
+    <signature>Tests.MovementTest.delta</signature>
+    <childcount>0</childcount>
+    <type>Field</type>
+    <name>delta</name>
+    <token>double delta </token>
+    <scope>Tests.MovementTest</scope>
+  </Tests.MovementTest.delta>
+  <Tests.MovementTest.BasicMovementCalculationTest_x0028__x0029_>
+    <signature>Tests.MovementTest.BasicMovementCalculationTest()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>BasicMovementCalculationTest</name>
+    <token>[Test]
+public void BasicMovementCalculationTest()</token>
+    <scope>Tests.MovementTest</scope>
+  </Tests.MovementTest.BasicMovementCalculationTest_x0028__x0029_>
+  <Tests.MovementTest.ActualBasicMovementTest_x0028__x0029_>
+    <signature>Tests.MovementTest.ActualBasicMovementTest()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ActualBasicMovementTest</name>
+    <token>[Test]
+public void ActualBasicMovementTest()</token>
+    <scope>Tests.MovementTest</scope>
+  </Tests.MovementTest.ActualBasicMovementTest_x0028__x0029_>
+  <Tests.MovementTest.TestNotJumpWhenNotGrounded_x0028__x0029_>
+    <signature>Tests.MovementTest.TestNotJumpWhenNotGrounded()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestNotJumpWhenNotGrounded</name>
+    <token>[Test]
+public void TestNotJumpWhenNotGrounded()</token>
+    <scope>Tests.MovementTest</scope>
+  </Tests.MovementTest.TestNotJumpWhenNotGrounded_x0028__x0029_>
+  <Tests.MovementTest.TestJumpWhenGrounded_x0028__x0029_>
+    <signature>Tests.MovementTest.TestJumpWhenGrounded()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestJumpWhenGrounded</name>
+    <token>[Test]
+public void TestJumpWhenGrounded()</token>
+    <scope>Tests.MovementTest</scope>
+  </Tests.MovementTest.TestJumpWhenGrounded_x0028__x0029_>
+  <Tests.ProfileTest>
+    <signature>Tests.ProfileTest</signature>
+    <childcount>6</childcount>
+    <type>Class</type>
+    <name>ProfileTest</name>
+    <token>public class ProfileTest </token>
+    <scope>Tests</scope>
+  </Tests.ProfileTest>
+  <Tests.ProfileTest.ProfileManagerInstanceTest_x0028__x0029_>
+    <signature>Tests.ProfileTest.ProfileManagerInstanceTest()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ProfileManagerInstanceTest</name>
+    <token>[Test]
+public void ProfileManagerInstanceTest()</token>
+    <scope>Tests.ProfileTest</scope>
+  </Tests.ProfileTest.ProfileManagerInstanceTest_x0028__x0029_>
+  <Tests.ProfileTest.ProfileInstanceTest_x0028__x0029_>
+    <signature>Tests.ProfileTest.ProfileInstanceTest()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>ProfileInstanceTest</name>
+    <token>[Test]
+public void ProfileInstanceTest()</token>
+    <scope>Tests.ProfileTest</scope>
+  </Tests.ProfileTest.ProfileInstanceTest_x0028__x0029_>
+  <Tests.ProfileTest.SaveAndLoadTest_x0028__x0029_>
+    <signature>Tests.ProfileTest.SaveAndLoadTest()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>SaveAndLoadTest</name>
+    <token>[Test]
+public void SaveAndLoadTest()</token>
+    <scope>Tests.ProfileTest</scope>
+  </Tests.ProfileTest.SaveAndLoadTest_x0028__x0029_>
+  <Tests.ProfileTest.CreateProfileTest_x0028__x0029_>
+    <signature>Tests.ProfileTest.CreateProfileTest()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>CreateProfileTest</name>
+    <token>[Test]
+public void CreateProfileTest()</token>
+    <scope>Tests.ProfileTest</scope>
+  </Tests.ProfileTest.CreateProfileTest_x0028__x0029_>
+  <Tests.ProfileTest.MultipleProfilesTest_x0028__x0029_>
+    <signature>Tests.ProfileTest.MultipleProfilesTest()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>MultipleProfilesTest</name>
+    <token>[Test]
+public void MultipleProfilesTest()</token>
+    <scope>Tests.ProfileTest</scope>
+  </Tests.ProfileTest.MultipleProfilesTest_x0028__x0029_>
+  <Tests.ProfileTest.DeleteProfile_x0028__x0029_>
+    <signature>Tests.ProfileTest.DeleteProfile()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>DeleteProfile</name>
+    <token>[Test]
+public void DeleteProfile()</token>
+    <scope>Tests.ProfileTest</scope>
+  </Tests.ProfileTest.DeleteProfile_x0028__x0029_>
+  <Tests.NewTestScript>
+    <signature>Tests.NewTestScript</signature>
+    <childcount>1</childcount>
+    <type>Class</type>
+    <name>NewTestScript</name>
+    <token>public class NewTestScript </token>
+    <scope>Tests</scope>
+  </Tests.NewTestScript>
+  <Tests.NewTestScript.NewTestScriptSimplePasses_x0028__x0029_>
+    <signature>Tests.NewTestScript.NewTestScriptSimplePasses()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>NewTestScriptSimplePasses</name>
+    <token>[Test]
+public void NewTestScriptSimplePasses()</token>
+    <scope>Tests.NewTestScript</scope>
+  </Tests.NewTestScript.NewTestScriptSimplePasses_x0028__x0029_>
+  <Tests.WaspTest>
+    <signature>Tests.WaspTest</signature>
+    <childcount>5</childcount>
+    <type>Class</type>
+    <name>WaspTest</name>
+    <token>public class WaspTest </token>
+    <scope>Tests</scope>
+  </Tests.WaspTest>
+  <Tests.WaspTest.TestProjectileSpawning_x0028__x0029_>
+    <signature>Tests.WaspTest.TestProjectileSpawning()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestProjectileSpawning</name>
+    <token>[Test]
+public void TestProjectileSpawning()</token>
+    <scope>Tests.WaspTest</scope>
+  </Tests.WaspTest.TestProjectileSpawning_x0028__x0029_>
+  <Tests.WaspTest.TestProjectileDirection_x0028__x0029_>
+    <signature>Tests.WaspTest.TestProjectileDirection()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestProjectileDirection</name>
+    <token>[Test]
+public void TestProjectileDirection()</token>
+    <scope>Tests.WaspTest</scope>
+  </Tests.WaspTest.TestProjectileDirection_x0028__x0029_>
+  <Tests.WaspTest.TestOnlyFireInRange_x0028__x0029_>
+    <signature>Tests.WaspTest.TestOnlyFireInRange()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestOnlyFireInRange</name>
+    <token>[Test]
+public void TestOnlyFireInRange()</token>
+    <scope>Tests.WaspTest</scope>
+  </Tests.WaspTest.TestOnlyFireInRange_x0028__x0029_>
+  <Tests.WaspTest.TestOnlyFireAfterCooldownTime_x0028__x0029_>
+    <signature>Tests.WaspTest.TestOnlyFireAfterCooldownTime()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestOnlyFireAfterCooldownTime</name>
+    <token>[Test]
+public void TestOnlyFireAfterCooldownTime()</token>
+    <scope>Tests.WaspTest</scope>
+  </Tests.WaspTest.TestOnlyFireAfterCooldownTime_x0028__x0029_>
+  <Tests.WaspTest.TestFindTarget_x0028__x0029_>
+    <signature>Tests.WaspTest.TestFindTarget()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestFindTarget</name>
+    <token>[Test]
+public void TestFindTarget()</token>
+    <scope>Tests.WaspTest</scope>
+  </Tests.WaspTest.TestFindTarget_x0028__x0029_>
+  <FriendlyProjectileTest>
+    <signature>FriendlyProjectileTest</signature>
+    <childcount>4</childcount>
+    <type>Class</type>
+    <name>FriendlyProjectileTest</name>
+    <token>public class FriendlyProjectileTest : MonoBehaviour </token>
+    <scope></scope>
+  </FriendlyProjectileTest>
+  <FriendlyProjectileTest.TestGettingTargetLocation_x0028__x0029_>
+    <signature>FriendlyProjectileTest.TestGettingTargetLocation()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestGettingTargetLocation</name>
+    <token>[Test]
+public void TestGettingTargetLocation()</token>
+    <scope>FriendlyProjectileTest</scope>
+  </FriendlyProjectileTest.TestGettingTargetLocation_x0028__x0029_>
+  <FriendlyProjectileTest.TestNotDyingOnCollisionWithPlayer_x0028__x0029_>
+    <signature>FriendlyProjectileTest.TestNotDyingOnCollisionWithPlayer()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestNotDyingOnCollisionWithPlayer</name>
+    <token>[Test]
+public void TestNotDyingOnCollisionWithPlayer()</token>
+    <scope>FriendlyProjectileTest</scope>
+  </FriendlyProjectileTest.TestNotDyingOnCollisionWithPlayer_x0028__x0029_>
+  <FriendlyProjectileTest.TestDyingOnCollisionWithEnemy_x0028__x0029_>
+    <signature>FriendlyProjectileTest.TestDyingOnCollisionWithEnemy()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestDyingOnCollisionWithEnemy</name>
+    <token>[Test]
+public void TestDyingOnCollisionWithEnemy()</token>
+    <scope>FriendlyProjectileTest</scope>
+  </FriendlyProjectileTest.TestDyingOnCollisionWithEnemy_x0028__x0029_>
+  <FriendlyProjectileTest.TestDestructionOnGroundCollision_x0028__x0029_>
+    <signature>FriendlyProjectileTest.TestDestructionOnGroundCollision()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestDestructionOnGroundCollision</name>
+    <token>[Test]
+public void TestDestructionOnGroundCollision()</token>
+    <scope>FriendlyProjectileTest</scope>
+  </FriendlyProjectileTest.TestDestructionOnGroundCollision_x0028__x0029_>
+  <MushroomJumpTest>
+    <signature>MushroomJumpTest</signature>
+    <childcount>8</childcount>
+    <type>Class</type>
+    <name>MushroomJumpTest</name>
+    <token>public class MushroomJumpTest : MonoBehaviour </token>
+    <scope></scope>
+  </MushroomJumpTest>
+  <MushroomJumpTest.TestGetCollision_x0028__x0029_>
+    <signature>MushroomJumpTest.TestGetCollision()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestGetCollision</name>
+    <token>[Test]
+public void TestGetCollision()</token>
+    <scope>MushroomJumpTest</scope>
+  </MushroomJumpTest.TestGetCollision_x0028__x0029_>
+  <MushroomJumpTest.TestGettingPlayerJumpHeight_x0028__x0029_>
+    <signature>MushroomJumpTest.TestGettingPlayerJumpHeight()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestGettingPlayerJumpHeight</name>
+    <token>[Test]
+public void TestGettingPlayerJumpHeight()</token>
+    <scope>MushroomJumpTest</scope>
+  </MushroomJumpTest.TestGettingPlayerJumpHeight_x0028__x0029_>
+  <MushroomJumpTest.TestGettingPlayerVelocity_x0028__x0029_>
+    <signature>MushroomJumpTest.TestGettingPlayerVelocity()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestGettingPlayerVelocity</name>
+    <token>[Test]
+public void TestGettingPlayerVelocity()</token>
+    <scope>MushroomJumpTest</scope>
+  </MushroomJumpTest.TestGettingPlayerVelocity_x0028__x0029_>
+  <MushroomJumpTest.TestMakingPlayerJump_x0028__x0029_>
+    <signature>MushroomJumpTest.TestMakingPlayerJump()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestMakingPlayerJump</name>
+    <token>[Test]
+public void TestMakingPlayerJump()</token>
+    <scope>MushroomJumpTest</scope>
+  </MushroomJumpTest.TestMakingPlayerJump_x0028__x0029_>
+  <MushroomJumpTest.TestNotWorkWithCooldownUp_x0028__x0029_>
+    <signature>MushroomJumpTest.TestNotWorkWithCooldownUp()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestNotWorkWithCooldownUp</name>
+    <token>[Test]
+public void TestNotWorkWithCooldownUp()</token>
+    <scope>MushroomJumpTest</scope>
+  </MushroomJumpTest.TestNotWorkWithCooldownUp_x0028__x0029_>
+  <MushroomJumpTest.TestWorkWithCooldownDown_x0028__x0029_>
+    <signature>MushroomJumpTest.TestWorkWithCooldownDown()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestWorkWithCooldownDown</name>
+    <token>public void TestWorkWithCooldownDown()</token>
+    <scope>MushroomJumpTest</scope>
+  </MushroomJumpTest.TestWorkWithCooldownDown_x0028__x0029_>
+  <MushroomJumpTest.TestMakingPlayerTwoJump_x0028__x0029_>
+    <signature>MushroomJumpTest.TestMakingPlayerTwoJump()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestMakingPlayerTwoJump</name>
+    <token>[Test]
+public void TestMakingPlayerTwoJump()</token>
+    <scope>MushroomJumpTest</scope>
+  </MushroomJumpTest.TestMakingPlayerTwoJump_x0028__x0029_>
+  <MushroomJumpTest.TestSwtichTarget_x0028__x0029_>
+    <signature>MushroomJumpTest.TestSwtichTarget()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestSwtichTarget</name>
+    <token>[Test]
+public void TestSwtichTarget()</token>
+    <scope>MushroomJumpTest</scope>
+  </MushroomJumpTest.TestSwtichTarget_x0028__x0029_>
+  <ProjectileTest>
+    <signature>ProjectileTest</signature>
+    <childcount>5</childcount>
+    <type>Class</type>
+    <name>ProjectileTest</name>
+    <token>public class ProjectileTest : MonoBehaviour </token>
+    <scope></scope>
+  </ProjectileTest>
+  <ProjectileTest.TestNotDyingOnCollisionWithEnemy_x0028__x0029_>
+    <signature>ProjectileTest.TestNotDyingOnCollisionWithEnemy()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestNotDyingOnCollisionWithEnemy</name>
+    <token>[Test]
+public void TestNotDyingOnCollisionWithEnemy()</token>
+    <scope>ProjectileTest</scope>
+  </ProjectileTest.TestNotDyingOnCollisionWithEnemy_x0028__x0029_>
+  <ProjectileTest.TestDyingOnCollisionWithPlayer_x0028__x0029_>
+    <signature>ProjectileTest.TestDyingOnCollisionWithPlayer()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestDyingOnCollisionWithPlayer</name>
+    <token>[Test]
+public void TestDyingOnCollisionWithPlayer()</token>
+    <scope>ProjectileTest</scope>
+  </ProjectileTest.TestDyingOnCollisionWithPlayer_x0028__x0029_>
+  <ProjectileTest.TestDestructionOnGroundCollision_x0028__x0029_>
+    <signature>ProjectileTest.TestDestructionOnGroundCollision()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestDestructionOnGroundCollision</name>
+    <token>[Test]
+public void TestDestructionOnGroundCollision()</token>
+    <scope>ProjectileTest</scope>
+  </ProjectileTest.TestDestructionOnGroundCollision_x0028__x0029_>
+  <ProjectileTest.TestReceivingTarget_x0028__x0029_>
+    <signature>ProjectileTest.TestReceivingTarget()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestReceivingTarget</name>
+    <token>[Test]
+public void TestReceivingTarget()</token>
+    <scope>ProjectileTest</scope>
+  </ProjectileTest.TestReceivingTarget_x0028__x0029_>
+  <ProjectileTest.TestGettingTargetLocation_x0028__x0029_>
+    <signature>ProjectileTest.TestGettingTargetLocation()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestGettingTargetLocation</name>
+    <token>[Test]
+public void TestGettingTargetLocation()</token>
+    <scope>ProjectileTest</scope>
+  </ProjectileTest.TestGettingTargetLocation_x0028__x0029_>
+  <SlingshotTest>
+    <signature>SlingshotTest</signature>
+    <childcount>6</childcount>
+    <type>Class</type>
+    <name>SlingshotTest</name>
+    <token>public class SlingshotTest : MonoBehaviour </token>
+    <scope></scope>
+  </SlingshotTest>
+  <SlingshotTest.TestProjectileSpawning_x0028__x0029_>
+    <signature>SlingshotTest.TestProjectileSpawning()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestProjectileSpawning</name>
+    <token>[Test]
+public void TestProjectileSpawning()</token>
+    <scope>SlingshotTest</scope>
+  </SlingshotTest.TestProjectileSpawning_x0028__x0029_>
+  <SlingshotTest.TestProjectileDirection_x0028__x0029_>
+    <signature>SlingshotTest.TestProjectileDirection()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestProjectileDirection</name>
+    <token>[Test]
+public void TestProjectileDirection()</token>
+    <scope>SlingshotTest</scope>
+  </SlingshotTest.TestProjectileDirection_x0028__x0029_>
+  <SlingshotTest.TestOnlyFireAfterCooldownTime_x0028__x0029_>
+    <signature>SlingshotTest.TestOnlyFireAfterCooldownTime()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestOnlyFireAfterCooldownTime</name>
+    <token>[Test]
+public void TestOnlyFireAfterCooldownTime()</token>
+    <scope>SlingshotTest</scope>
+  </SlingshotTest.TestOnlyFireAfterCooldownTime_x0028__x0029_>
+  <SlingshotTest.TestDistanceCalc_x0028__x0029_>
+    <signature>SlingshotTest.TestDistanceCalc()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestDistanceCalc</name>
+    <token>[Test]
+public void TestDistanceCalc()</token>
+    <scope>SlingshotTest</scope>
+  </SlingshotTest.TestDistanceCalc_x0028__x0029_>
+  <SlingshotTest.TestDirectionCalc_x0028__x0029_>
+    <signature>SlingshotTest.TestDirectionCalc()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestDirectionCalc</name>
+    <token>[Test]
+public void TestDirectionCalc()</token>
+    <scope>SlingshotTest</scope>
+  </SlingshotTest.TestDirectionCalc_x0028__x0029_>
+  <SlingshotTest.TestCooldownManagement_x0028__x0029_>
+    <signature>SlingshotTest.TestCooldownManagement()</signature>
+    <childcount>0</childcount>
+    <type>Method</type>
+    <name>TestCooldownManagement</name>
+    <token>[Test]
+public void TestCooldownManagement()</token>
+    <scope>SlingshotTest</scope>
+  </SlingshotTest.TestCooldownManagement_x0028__x0029_>
+</members>
