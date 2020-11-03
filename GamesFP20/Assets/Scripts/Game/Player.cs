@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
 	float distance;
 
 	// How far away the camera should be
-	float localCamOffsetZ = 7f;
+	float localCamOffsetZ = 9f;
 
 	// Our Velocity which is needed by other objects
 	public Vector3 velocity;
@@ -125,7 +125,7 @@ public class Player : MonoBehaviour
 	public void MoveCamera()
     {
 		// Make sure the camera stays behind us
-		transform.Find("Camera").localPosition = new Vector3(0, 3.7f - transform.position.y, -localCamOffsetZ);
+		transform.Find("Camera").localPosition = new Vector3(0, 4.8f - transform.position.y, -localCamOffsetZ);
 	}
 	// Calculate movement based on whether we pressed the jump button, the direction the player wants to walk
 	// and the time passed
