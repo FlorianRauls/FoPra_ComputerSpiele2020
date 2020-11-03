@@ -2,21 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+///  This class is a child of MenuView and represents the Menu which is used for selecting Profiles.
+/// </summary>
 public class ProfileMenu : MenuView
 {
 	public Transform content;
 	public GameObject profileSelectListItemPrefab;
 
-	//Will be called from the AddProfile button
+	///Will be called from the AddProfile button
 	public void AddProfile()
 	{
 		ProfileManager.GetInstance().AddProfile();
 		Show();
 	}
 
-	//Override of the Standard Show method
-	//First cleares the view, then loads LevelSelectItems for the level
+	///Override of the Standard Show method
+	///First cleares the view, then loads LevelSelectItems for the level
 	public override void Show()
     {
 		ResetUI();
@@ -24,7 +26,7 @@ public class ProfileMenu : MenuView
 		gameObject.SetActive(true);
     }
 
-	//Cleares the view, if there is already some content from earlier call
+	///Cleares the view, if there is already some content from earlier call
 	private  void ResetUI()
 	{
 		for (int i = 0; i < content.transform.childCount; i++)
@@ -33,7 +35,7 @@ public class ProfileMenu : MenuView
 		}
 	}
 
-	// For every current profile, show one ProfileSelectItem with a button to use and to edit this profile
+	/// For every current profile, show one ProfileSelectItem with a button to use and to edit this profile
 	private void LoadProfileSelectItems()
     {
 		for (int i = 0; i < ProfileManager.GetInstance().GetProfileCount(); i++)

@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+///  This class handles all behaviours associated with the Slingshot Asset
+/// which can be used by Player to shoot FriendlyProjectile
+/// </summary>
 public class Slingshot : MonoBehaviour
 {
-    // The projectile we will shoot
+    /// The projectile we will shoot
     public GameObject projectilePrefab;
-    // Cooldown after which we are allowed to shoot again
+    /// Cooldown after which we are allowed to shoot again
     public float cooldown = 4f;
-    // Timer to keep track of cooldowns
+    /// Timer to keep track of cooldowns
     private float timer = 0f;
 
     // Update is called once per frame
@@ -17,7 +20,9 @@ public class Slingshot : MonoBehaviour
         // Update the timer
         timer += Time.deltaTime;
     }
-
+    /// This method handles all 
+    /// necessary steps for shooting a FriendlyProjectile
+    /// onto the given target GameObject.
     public GameObject shootProjectile(GameObject target)
     {
         // If our cooldown is up we won't shoot
@@ -72,13 +77,13 @@ public class Slingshot : MonoBehaviour
         timer = newTimer;
     }
 
-    // Calculate the direction towards an object
+    /// Calculate the direction towards an object
     public Vector3 directionToTarget(GameObject target)
     {
         return transform.position - target.transform.position;
     }
 
-    // Calculates the distance to an object, given the direction
+    /// Calculates the distance to an object, given the direction
     public float distanceToTarget(Vector3 direction)
     {
         return direction.magnitude;

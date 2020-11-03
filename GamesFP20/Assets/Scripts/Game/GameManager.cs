@@ -4,12 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// This class handles Loadling the Levels, handling Menu Events
+/// Loading Profiles and Saving.
+/// </summary>
 public class GameManager : MonoBehaviour
 {
-    // Current Level
+    /// This int indexes the current Level.
     public static int levelIndex = 1;
 
-    // Check whether or not we are playing singleplayer
+    /// Check whether or not we are playing singleplayer
     public static bool singleplayer = true;
     private GameObject boy;
     private GameObject dog;
@@ -61,7 +65,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Load the next level
+    /// This method wraps all other methods needed to load the next level.
     public void LoadNextLevel()
     {
         IncreaseLevel();
@@ -71,8 +75,8 @@ public class GameManager : MonoBehaviour
         LoadLevelDivider();
     }
 
-    // Check whether or not this is singleplayer
-    // Write into the Profile that we finished the level
+    /// Check whether or not this is singleplayer
+    /// Write into the Profile that we finished the level
     private void UpdateProfile()
     {
         if (singleplayer)
@@ -129,32 +133,33 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    ///Getter
     public Level GetCurrentLevel()
     {
         return level.GetComponent<Level>();
     }
-
+    ///Getter
     public Level GetCurrentDividerLevel()
     {
         return levelDivider.GetComponent<Level>();
     }
-
+    ///Getter
     public static GameManager GetInstance()
     {
         return singleton;
     }
-
+    /// This method reloads the current GameManager instance.
     public static void ClearInstance()
     {
         singleton = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/GameManager")).GetComponent<GameManager>();
         singleton.Start();
     }
-
+    /// Wraps all methods which trigger, if the player should die.
     public void PlayerDefeated()
     {
         ShowDeathMenu();
     }
-
+    /// Handles opening the DeathMenu
     private void ShowDeathMenu()
     {
         if (!ProfileManager.GetInstance().GetProfile().GetAutoRespawn())
@@ -183,7 +188,10 @@ public class GameManager : MonoBehaviour
         MenuManager.GetInstance().Show(MenuEnum.GamePause);
         SetPlayerInMenu(true);
     }
-
+    /// <summary>
+    /// This is used by any menu to handle events happening
+    /// when the Player opens up any menu.
+    ///</summary>
     public void SetPlayerInMenu(bool newValue)
     {
         if (newValue)

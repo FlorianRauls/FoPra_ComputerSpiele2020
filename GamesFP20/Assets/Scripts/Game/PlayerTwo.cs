@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+///  This class handles all behaviours associated with the second Player
+/// character and his interactions with the game world.
+/// </summary>
 public class PlayerTwo : Player
 {
 

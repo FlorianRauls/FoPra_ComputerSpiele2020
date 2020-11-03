@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+///  This class handles all behaviours associated with objects in the gameworld
+/// which Player, PlayerTwo or FriendlyProjectile could interact with.
+/// </summary>
 public class Interactable : MonoBehaviour
 {
     // This is the amount we want to rotate on interaction

@@ -1,32 +1,34 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+/// <summary>
+///  This class is a child of MenuView and represents the Menu which is used while the game is paused for continuing, reloading the level or quitting.
+/// </summary>
 public class GameMenu : MenuView
 {
-	//Goes back to Menu Scene
+	/// Goes back to Menu Scene
 	public void GoToMenu()
 	{
 		Time.timeScale = 1f;
 		SceneManager.LoadScene("MainMenu");
 	}
 
-	//Restarts Game Scene
+	/// Restarts Game Scene
 	public void RestartLevel()
 	{
 		Time.timeScale = 1f;
 		SceneManager.LoadScene("Game");
 	}
 
-	//Closes Menu and continues game
+	/// Closes Menu and continues game
 	public void Back()
 	{
 		GameManager.GetInstance().SetPlayerInMenu(false);
 		MenuManager.GetInstance().Back();
 	}
 
-	//Override of the Standard Show method
-	//Checks for the two checkboxes and sets the value if one of them exists -> Not quite necessary, because the checkboxes are probably only shown when isOn = false
+	///Override of the Standard Show method
+	///Checks for the two checkboxes and sets the value if one of them exists -> Not quite necessary, because the checkboxes are probably only shown when isOn = false
 	public override void Show()
     {
 		Transform autoContinue = transform.Find("AutoContinue");
@@ -42,14 +44,14 @@ public class GameMenu : MenuView
 		gameObject.SetActive(true);
 	}
 
-	//Updates the AutoRespawn Value -> Will be called when checking the checkbox -> Parameter is Hardcoded by Unity, so it will not be used, instead the value is taken explicitly
+	///Updates the AutoRespawn Value -> Will be called when checking the checkbox -> Parameter is Hardcoded by Unity, so it will not be used, instead the value is taken explicitly
 	public void ChangeAutoRespawn(bool respawn)
 	{
 		int currentProfile = ProfileManager.GetInstance().GetProfileID();
 		ProfileManager.GetInstance().GetProfile(currentProfile).SetAutoRespawn(transform.GetComponentInChildren<Toggle>().isOn);
 	}
 
-	//Updates the AutoContinue Value -> Will be called when checking the checkbox -> Parameter is Hardcoded by Unity, so it will not be used, instead the value is taken explicitly
+	///Updates the AutoContinue Value -> Will be called when checking the checkbox -> Parameter is Hardcoded by Unity, so it will not be used, instead the value is taken explicitly
 	public void ChangeAutoContinue(bool respawn)
 	{
 		int currentProfile = ProfileManager.GetInstance().GetProfileID();

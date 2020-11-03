@@ -1,6 +1,8 @@
 ﻿using System;
 using UnityEngine;
-
+/// <summary>
+///  This class handles all behaviours of any open Menu.
+/// </summary>
 public class MenuView : MonoBehaviour
 {
     public MenuEnum menuType = MenuEnum.Dummy;

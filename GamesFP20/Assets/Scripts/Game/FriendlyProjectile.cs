@@ -2,23 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// This class is used for the projectiles, fired by the player
+/// <summary>
+/// This class handles all the behaviours associated
+/// with the projectiles shot by Player and Slingshot.
+/// </summary>
 public class FriendlyProjectile : MonoBehaviour
 {
-    // target is the (often empty) GameObject
-    // from which we can derive properties like direction etc
-    GameObject target;
+    /// This is the target every FriendlyProjectile needs to calculate it's Direction.
+    protected GameObject target;
     Vector3 targetDirection;
 
     // Check if this is destroyed
     bool destroyed = false;
 
-    // This is fluff to make the projectile rotate when flying 
+    /// This is fluff to make the projectile rotate when flying 
    public Vector3 rotationDirection = new Vector3(0,0,1);
    public float smoothTime = 5f;
    private float convertedTime = 200;
    private float smooth = 5f;
-   // Movementspeed
+   /// This is used to determine how fast the FriendlyProjectile can move through the game world in any direction
    public float speed = 4f;
 
     // Update is called once per frame
@@ -32,13 +34,14 @@ public class FriendlyProjectile : MonoBehaviour
         transform.Rotate(rotationDirection * smooth);
     }
 
-    // Interface to destroy this object
+    /// This method gets triggered if the FriendlyProjectile should be removed
+    /// from the game world.
     public void Die()
     {
         Destroy(this.gameObject);
     }
 
-    // Common collision interface
+    /// Common collision interface used by any Player, Enemy and Projectile.
     public void collide(GameObject other)
     {
         if(other.tag == "Enemy" || other.tag == "Untagged" || other.tag == "Ground")
@@ -48,42 +51,42 @@ public class FriendlyProjectile : MonoBehaviour
         }
     }
 
-    // Getter
+    /// Getter
     public bool getDestroyed()
     {
         return destroyed;
     }
 
-    // Setter
+    /// Setter
     public void setDetroyed(bool newDestroyed)
     {
         destroyed = newDestroyed;
     }
-    // Getter
+    /// Getter
     public GameObject getTarget()
     {
         return target;
     }
-    //Setter
+    ///Setter
     public void setTarget(GameObject newTarget)
     {
         target = newTarget;
     }
 
-    // Getter
+    /// Getter
     public Vector3 getTargetDirection()
     {
         return targetDirection;
     }
 
-    // Setter
+    /// Setter
     public void setTargetDirection(Vector3 newLocation)
     {
         targetDirection = newLocation;
     }
 
-    // We send a Message to the enemies collision interface
-    // Since Character Controllers are awful at detecing collision themselves
+    /// We send a Message to the enemies collision interface
+    /// Since Character Controllers are awful at detecing collision themselves
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "Enemy")
         {

@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+///  This class handles all behaviours associated with Projectiles shot by Enemy characters 
+/// and their interaction with the Player.
+/// </summary>
 public class Projectile : Enemy
 {
     // our target ibject used for reference

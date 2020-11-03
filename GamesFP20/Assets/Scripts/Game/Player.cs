@@ -1,30 +1,33 @@
 ﻿using UnityEngine;
-
+/// <summary>
+///  This class handles all behaviours associated with the Player character
+/// and his interactions with the game world.
+/// </summary>
 public class Player : MonoBehaviour
 {
 	public float yOffset = 6f;
-	// Movementspeed
+	/// Movementspeed
 	public float speed = 6;
-	// How high we can jump
+	/// How high we can jump
 	public float jumpForce = 11;
-	// We save gravity internally
+	/// We save gravity internally
 	public float gravity = 20;
 	public float slingshotOffset = 15.5f;
-	// Distance to "mouseobject" whihc is used for the slingshot as reference
+	/// Distance to "mouseobject" whihc is used for the slingshot as reference
 	float distance;
 
-	// How far away the camera should be
+	/// How far away the camera should be
 	float localCamOffsetZ = 9f;
 
-	// Our Velocity which is needed by other objects
+	/// Our Velocity which is needed by other objects
 	public Vector3 velocity;
-	// contains information to whether or not the character touched
-	// ground at the last frame
+	/// contains information to whether or not the character touched
+	/// ground at the last frame
 	protected bool grounded = true;
 	protected bool defeated = false;
 
 	protected bool inMenu;
-	// Movement is done by Unitys ChracterController
+	/// Movement is done by Unitys ChracterController
 	protected CharacterController controller;
 	private Slingshot slingshot;
 
@@ -56,12 +59,12 @@ public class Player : MonoBehaviour
 		Shoot();
 		MoveCamera();
 	}
-	// Getter
+	/// Getter
 	public CharacterController GetController()
 	{
 		return controller;
 	}
-	// Handle Movement as calculated by CalculateMovement()
+	/// Handle Movement as calculated by CalculateMovement()
 	public void Move(float horizontalInput, bool jumpPressed)
     {
 		// This makes sure that the player does not move onto the Z axis
@@ -91,7 +94,8 @@ public class Player : MonoBehaviour
 			transform.GetChild(0).GetChild(0).localScale = new Vector3(1, 1, 1);
 		}
 	}
-
+	/// This methods handles all necessary calculations for Slinghots shootProjectile()
+	/// method and passes them down to it.
 	private void Shoot()
     {
 		var plane = new Plane(Vector3.down,0);
@@ -121,14 +125,14 @@ public class Player : MonoBehaviour
 			GameObject shot = slingshot.shootProjectile(mousePositionObject);
 		}
 	}
-
+	/// This method finds the Main Camera in a scene and makes it stay focued on Player.
 	public void MoveCamera()
     {
 		// Make sure the camera stays behind us
 		transform.Find("Camera").localPosition = new Vector3(0, 4.8f - transform.position.y, -localCamOffsetZ);
 	}
-	// Calculate movement based on whether we pressed the jump button, the direction the player wants to walk
-	// and the time passed
+	/// Calculate movement based on whether we pressed the jump button, the direction the player wants to walk
+	/// and the time passed
 	public Vector3 CalculateMovement(Vector3 currentMovement, float horizontalInput, bool jumpPressed, float deltaTime)
     {
 		currentMovement.x = horizontalInput * speed;
@@ -141,24 +145,24 @@ public class Player : MonoBehaviour
 		currentMovement.y -= gravity * deltaTime;
 		return currentMovement;
 	}
-	//Getter
+	///Getter
 	public bool getGrounded()
 	{
 		return grounded;
 	}
-	//Setter
+	///Setter
 	public void setGrounded(bool newGrounding)
 	{
 		grounded = newGrounding;
 	}
-	// Getter
+	/// Getter
 	public float getGravity()
 	{
 		return gravity;
 	}
-	// This triggers our Collision Interface
-	// When colliding with an enemy we die
-	// When collidion with an Mushroom we jump
+	/// This triggers our Collision Interface
+	/// When colliding with an enemy we die
+	/// When collidion with an Mushroom we jump
 	public void OnControllerColliderHit(ControllerColliderHit hit)
 	{
 		if(hit.gameObject.tag == "Enemy")
@@ -178,7 +182,7 @@ public class Player : MonoBehaviour
 		collide(collider.gameObject);
 	}
 
-	// Common Collision Interface
+	/// Common Collision Interface
 	public void collide(GameObject other)
 	{
 		if(other.tag == "Enemy")
@@ -186,8 +190,8 @@ public class Player : MonoBehaviour
 			defeat();
 		}
 	}
-	// When we are not in any menu and we die
-	// We are defeated
+	/// When we are not in any menu and we die
+	/// We are defeated
 	public void defeat()
 	{
 		if(!inMenu)
